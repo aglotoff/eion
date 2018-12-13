@@ -1,5 +1,6 @@
 include ../../blocks/common/header/header.pug
 include ../../blocks/common/icon/icon.pug
+include ../../blocks/common/side-nav/side-nav.pug
 //- TODO: include common block templates
 
 <!DOCTYPE html>
@@ -17,6 +18,7 @@ html(lang="en")
         link(rel="stylesheet", href="css/style.css")
     body.page
         +header(data.header).page__header
+        +side-nav(data.sideNav).page__nav
 
         block page
 

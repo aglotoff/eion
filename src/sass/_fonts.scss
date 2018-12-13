@@ -15,3 +15,12 @@
          url('../fonts/PTSerif-Regular.woff2') format('woff2'),
          url('../fonts/PTSerif-Regular.woff') format('woff');
 }
+
+@font-face {
+    font-family: 'PT Serif Italic';
+    font-style: italic;
+    src: local('PT Serif Italic'),
+         local('PTSerif-Italic'),
+         url('../fonts/PTSerif-Italic.woff2') format('woff2'),
+         url('../fonts/PTSerif-Italic.woff') format('woff');
+}

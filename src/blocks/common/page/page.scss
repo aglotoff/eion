@@ -7,4 +7,13 @@
     line-height: $line-height-base;
 
     background: #bfbfbf;
+
+    &__nav {
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        top: 0;
+
+        width: 320px;
+    }
 }

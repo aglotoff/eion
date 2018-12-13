@@ -1,0 +1,67 @@
+mixin side-nav__menu(data, lvl=1)
+    ul.side-nav__menu(class = (lvl>1) && "side-nav__menu_submenu")
+        each item in data
+            li.side-nav__menu-item
+                a.side-nav__menu-link(
+                    href          = item.link
+                    class         = (lvl > 1) && "side-nav__menu-link_submenu"
+                    role          = item.submenu && "button"
+                    aria-haspopup = item.submenu && "true"
+                    aria-expanded = item.submenu && "false"
+                )= item.text
+                    if item.label
+                        .side-nav__menu-label= item.label
+                    if item.submenu
+                        i.icon-arrow-down.icons.side-nav__menu-arrow(
+                            aria-hidden="true"
+                        )
+                if item.submenu
+                    +side-nav__menu(item.submenu, lvl+1)
+
+mixin side-nav(data, mods = {})
+    nav.side-nav&attributes(attributes)
+        .side-nav__logo
+            img(src="img/logo-alt.png", alt="Eion")
+        
+        button.side-nav__close
+            i.icon-close.icons(aria-label="Hide side nav")
+
+        ul.side-nav__social
+            li.side-nav__social-item
+                a(href="javascript:void(0);").side-nav__social-link
+                    i.icon-social-twitter.icons(
+                        aria-label="Follow us on Twitter"
+                    )
+            li.side-nav__social-item
+                a(href="javascript:void(0);").side-nav__social-link
+                    i.icon-social-facebook.icons(
+                        aria-label="Follow us on Facebook"
+                    )
+            li.side-nav__social-item
+                a(href="javascript:void(0);").side-nav__social-link
+                    i.icon-social-instagram.icons(
+                        aria-label="Follow us on Instagram"
+                    )
+            li.side-nav__social-item
+                a(href="javascript:void(0);").side-nav__social-link
+                    i.icon-social-google.icons(
+                        aria-label="Follow us on Google Plus"
+                    )
+            li.side-nav__social-item
+                a(href="javascript:void(0);").side-nav__social-link
+                    i.icon-social-dribbble.icons(
+                        aria-label="Follow us on Dribbble"
+                    )
+        
+        +side-nav__menu(data.menu)
+
+        form.side-nav__search(method="post" action=".")
+            label.side-nav__search-inner
+                i.icon-magnifier.icons.side-nav__search-icon(
+                    aria-label="Search"
+                )
+                input(
+                    type        = "text"
+                    name        = "search"
+                    placeholder = "Search..."
+                ).side-nav__search-input
