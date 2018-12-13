@@ -1,1 +1,17 @@
-// insert @font-face rules here
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    src: local('Montserrat Regular'),
+         local('Montserrat-Regular'),
+         url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+         url('../fonts/Montserrat-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    font-weight: 400;
+    src: local('PT Serif Regular'),
+         local('PTSerif-Regular'),
+         url('../fonts/PTSerif-Regular.woff2') format('woff2'),
+         url('../fonts/PTSerif-Regular.woff') format('woff');
+}

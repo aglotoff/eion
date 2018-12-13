@@ -1,3 +1,4 @@
+include ../../blocks/common/header/header.pug
 include ../../blocks/common/icon/icon.pug
 //- TODO: include common block templates
 
@@ -15,6 +16,8 @@ html(lang="en")
 
         link(rel="stylesheet", href="css/style.css")
     body.page
+        +header(data.header).page__header
+
         block page
 
         block scripts

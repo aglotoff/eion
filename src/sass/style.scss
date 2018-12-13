@@ -3,10 +3,9 @@
 @import "fonts";
 @import "base";
 
-// TODO: Include third-party styles here
-// ...
+@import "../../node_modules/simple-line-icons/scss/simple-line-icons.scss";
 
 @import "../blocks/common/page/page.scss";
 
-// TODO: Include other block styles here
-// ...
+@import "../blocks/common/header/header";
+

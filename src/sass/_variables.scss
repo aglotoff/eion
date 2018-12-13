@@ -37,7 +37,8 @@ $container-lg: 970px;
 $container-md: 750px;
 
 // Fonts
-$font-family-sans-serif: Helvetica, Arial, sans-serif;
+$font-family-sans-serif: "Montserrat", sans-serif;
+$font-family-serif: "PT Serif", serif;
 
 // Font sizes
 $font-size-default: 16px;
@@ -51,4 +52,11 @@ $line-height-base: 1.5;
 
 // Color palette
 $color-black: #000;
+$color-emperor: #555555;
+$color-dusty-gray: #959595;
+$color-brilliant-rose: #eb55a3;
 $color-white: #fff;
+
+// Semantic colors
+$color-primary: $color-brilliant-rose;
+$color-text: $color-dusty-gray;

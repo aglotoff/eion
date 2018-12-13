@@ -1,0 +1,40 @@
+mixin header__menu(data)
+    ul.header__menu
+        each item in data
+            li.header__menu-item
+                if item.label
+                    .header__menu-label
+                        i.icon-bell.icons(aria-hedden="true")
+                
+                a(href=item.link).header__menu-link= item.text
+                    if item.arrow
+                        i.icon-arrow-down.icons.header__menu-arrow(
+                            aria-hidden="true"
+                        )
+
+mixin header(data, mods = {})
+    header.header&attributes(attributes)
+        .header__left
+            .header__actions
+                button.header__btn
+                    i.icon-list.icons(aria-label="Toggle menu")
+                button.header__btn
+                    i.icon-user.icons(aria-label="Toggle account")
+
+        .header__center
+            nav.header__nav
+                +header__menu(data.menuLeft)
+                
+                h1.header__logo
+                    img(src="img/logo.png", alt="Eion").header__logo-img
+                    .header__logo-alt Eion
+
+                +header__menu(data.menuRight)
+
+        .header__right
+            .header__actions
+                button.header__btn
+                    i.icon-basket.icons(aria-label="Toggle shopping cart")
+                    .header__cart-items(aria-hidden="true") 3
+                button.header__btn
+                    i.icon-magnifier.icons(aria-label="Toggle search")

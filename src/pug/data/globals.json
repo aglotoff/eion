@@ -1,4 +1,30 @@
 {
-    "siteTitle": "Site Title",
-    "siteTagline": "Site Tagline"
+    "siteTitle": "Eion",
+    "siteTagline": "HTML template for flower & beauty shops",
+
+    "header": {
+        "menuLeft": [{
+            "text": "About",
+            "link": "javascript:void(0);"
+        }, {
+            "text": "Flower",
+            "link": "javascript:void(0);"
+        }, {
+            "text": "Shop",
+            "link": "javascript:void(0);"
+        }],
+
+        "menuRight": [{
+            "text": "Pages",
+            "link": "javascript:void(0);",
+            "label": true,
+            "arrow": true
+        }, {
+            "text": "Blog",
+            "link": "javascript:void(0);"
+        }, {
+            "text": "Contact",
+            "link": "javascript:void(0);"
+        }]
+    }
 }
