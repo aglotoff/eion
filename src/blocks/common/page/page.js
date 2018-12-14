@@ -2,7 +2,8 @@
  * @file Implementation of the page block
  */
 
-// TODO: block imports here
+import * as Header from '../header/header';
+import * as SideNav from '../side-nav/side-nav';
 
 // -------------------------- BEGIN MODULE VARIABLES --------------------------
 const RESIZE_INTERVAL = 200;    // Resize debouncing interval
@@ -57,7 +58,8 @@ export const initModule = function() {
     });
 
     // Initialize blocks.
-    // TODO: add code here
+    Header.initModule();
+    SideNav.initModule();
 
     // Process the initial window size and scroll position.
     onWindowResize();

@@ -24,7 +24,15 @@
  * @return true;
  */
 export const initModule = function() {
-    // TODO: add code here
+    const $page      = $('.page');
+    const $header    = $('.header');
+    const $navToggle = $header.find('.header__nav-toggle');
+
+    // Use a global event to show the vertical menu.
+    $navToggle.click(function() {
+        $page.trigger('sidenav-show');
+    });
+
     return true;
 };
 // ---------------------------- END PUBLIC METHODS ----------------------------

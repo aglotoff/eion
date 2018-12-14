@@ -16,7 +16,7 @@ mixin header(data, mods = {})
     header.header&attributes(attributes)
         .header__left
             .header__actions
-                button.header__btn
+                button.header__btn.header__nav-toggle
                     i.icon-list.icons(aria-label="Toggle menu")
                 button.header__btn
                     i.icon-user.icons(aria-label="Toggle account")
@@ -38,3 +38,4 @@ mixin header(data, mods = {})
                     .header__cart-items(aria-hidden="true") 3
                 button.header__btn
                     i.icon-magnifier.icons(aria-label="Toggle search")
+    // /.header 

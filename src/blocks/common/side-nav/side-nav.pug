@@ -19,7 +19,7 @@ mixin side-nav__menu(data, lvl=1)
                     +side-nav__menu(item.submenu, lvl+1)
 
 mixin side-nav(data, mods = {})
-    nav.side-nav&attributes(attributes)
+    nav.side-nav(role="dialog")&attributes(attributes)
         .side-nav__logo
             img(src="img/logo-alt.png", alt="Eion")
         
@@ -65,3 +65,4 @@ mixin side-nav(data, mods = {})
                     name        = "search"
                     placeholder = "Search..."
                 ).side-nav__search-input
+    // /.side-nav 
