@@ -4,7 +4,7 @@
 .lang-menu {
     position: relative;
 
-    &__btn {
+    &__toggle {
         padding: 12px 18px 24px;
 
         color: $color-primary;
@@ -25,12 +25,24 @@
 
         background: $color-white;
         border: 1px solid $color-gray;
+        opacity: 0;
+
+        transition: opacity 0.25s ease,
+                    visibility 0s step-start 0.25s;
+        visibility: hidden;
 
         @include breakpoint-up(sm) {
             bottom: auto;
             left: 100%;
             right: auto;
             top: 0;
+        }
+
+        .lang-menu_visible & {
+            opacity: 1;
+
+            transition-delay: 0s;
+            visibility: visible;
         }
     }
 

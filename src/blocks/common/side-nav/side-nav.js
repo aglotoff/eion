@@ -2,7 +2,7 @@
  * @file Implementation of the vertical menu block
  */
 
-/* global focusTrap */
+import {makeModal} from '../../../js/utils';
 
 // --------------------------- BEGIN PUBLIC METHODS ---------------------------
 /**
@@ -25,27 +25,25 @@ export const initModule = function() {
             .attr('aria-expanded', 'false');
     };
 
-    // Trap focus inside the menu
-    const navFocusTrap = focusTrap($drawer.get(0), {
-        clickOutsideDeactivates : true,
-        onDeactivate            : function onTrapDeactivate() {
-            closeSubmenu($submenus);
+    const modalLogic = makeModal($drawer, {
+        onToggle(open) {
+            if (!open) {
+                closeSubmenu($submenus);
+            }
+
             $nav
-                .attr('aria-hidden', 'true')
-                .removeClass('side-nav_visible');
+                .attr('aria-hidden', String(!open))
+                .toggleClass('side-nav_visible', open);
         },
     });
 
     $close.click(function closeSidenav() {
-        navFocusTrap.deactivate();
+        modalLogic.hide();
     });
 
     // Listen for a global event to show the menu
     $page.on('sidenav-show', function showSidenav() {
-        $nav
-            .attr('aria-hidden', 'false')
-            .addClass('side-nav_visible');
-        navFocusTrap.activate();
+        modalLogic.show();
     });
 
     $submenus.prev('.side-nav__menu-link').click(function toggleSubmenu() {

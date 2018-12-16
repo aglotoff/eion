@@ -3,12 +3,16 @@
  */
 
 import * as Header from '../header/header';
+import * as HeaderDropdown from '../header-dropdown/header-dropdown';
+import * as LangMenu from '../lang-menu/lang-menu';
 import * as SideNav from '../side-nav/side-nav';
 
 // -------------------------- BEGIN MODULE VARIABLES --------------------------
-const RESIZE_INTERVAL = 200;    // Resize debouncing interval
-const SCROLL_INTERVAL = 200;    // Scroll throttling interval
+const DESKTOP_BREAKPOINT = 992; // Minimum desktop screen width
+const RESIZE_INTERVAL    = 200; // Resize debouncing interval
+const SCROLL_INTERVAL    = 200; // Scroll throttling interval
 
+let isMobile    = true;
 let resizeTimer = null;
 let scrollTimer = null;
 let wasScrolled = false;
@@ -20,7 +24,15 @@ const onWindowScroll = function() {
 };
 
 const onWindowResize = function() {
-    // TODO: add code here
+    if (!isMobile && ($(window).outerWidth() < DESKTOP_BREAKPOINT)) {
+        isMobile = true;
+
+        HeaderDropdown.handleResize(true);
+    } else if (isMobile && ($(window).outerWidth() >= DESKTOP_BREAKPOINT)) {
+        isMobile = false;
+
+        HeaderDropdown.handleResize(false);
+    }
 };
 // ---------------------------- END EVENT HANDLERS ----------------------------
 
@@ -59,6 +71,8 @@ export const initModule = function() {
 
     // Initialize blocks.
     Header.initModule();
+    HeaderDropdown.initModule();
+    LangMenu.initModule();
     SideNav.initModule();
 
     // Process the initial window size and scroll position.
