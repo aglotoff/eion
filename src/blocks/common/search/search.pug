@@ -1,0 +1,24 @@
+mixin search(data = {}, mods = {})
+    .search&attributes(attributes)
+        input(type="text" placeholder="Type to Search...").search__input
+
+        ul.search__results
+            li.search__result
+                .search__result-info
+                    .search__rating
+                        .search__rating-text Rating: 5
+                        .search__rating-stars
+                            i.fas.fa-star
+                            i.fas.fa-star
+                            i.fas.fa-star
+                            i.fas.fa-star
+                            i.fas.fa-star
+                
+                    a(href="javascript:void(0);").search__name Velo Model A351
+                    .search__price $530
+
+                a(href="javascript:void(0);").search__thumb
+                    img(
+                        src = "img/content/products/thumbs/80x60/a351.jpg"
+                        alt = "Velo Model A351"
+                    ).search__img

@@ -57,6 +57,17 @@ mixin header(data, mods = {})
 
                         .header-dropdown__content
                             +minicart()
-                button.header__btn
-                    i.icon-magnifier.icons(aria-label="Toggle search")
+                
+                .header-dropdown.header-dropdown_bottom-right
+                    button.header-dropdown__toggle.header__btn
+                        i.icon-magnifier.icons(aria-label="Toggle search")
+                    .header-dropdown__backdrop
+                    .header-dropdown__popover
+                        .header-dropdown__top
+                            h2.header-dropdown__title Search
+                            button.header-dropdown__close
+                                i.icon-close.icons(aria-label="Hide search")
+
+                        .header-dropdown__content
+                            +search()
     // /.header 
