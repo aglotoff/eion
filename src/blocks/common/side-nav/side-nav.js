@@ -12,9 +12,10 @@
 export const initModule = function() {
     const $page        = $('.page');
     const $nav         = $('.side-nav');
-    const $close       = $nav.find('.side-nav__close');
-    const $submenus    = $nav.find('.side-nav__menu_submenu');
-    const $searchForm  = $nav.find('.side-nav__search');
+    const $drawer      = $nav.find('.side-nav__drawer');
+    const $close       = $drawer.find('.side-nav__close');
+    const $submenus    = $drawer.find('.side-nav__menu_submenu');
+    const $searchForm  = $drawer.find('.side-nav__search');
     const $searchInput = $searchForm.find('.side-nav__search-input');
 
     const closeSubmenu = function($submenu) {
@@ -25,7 +26,7 @@ export const initModule = function() {
     };
 
     // Trap focus inside the menu
-    const navFocusTrap = focusTrap($nav.get(0), {
+    const navFocusTrap = focusTrap($drawer.get(0), {
         clickOutsideDeactivates : true,
         onDeactivate            : function onTrapDeactivate() {
             closeSubmenu($submenus);

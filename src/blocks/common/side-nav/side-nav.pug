@@ -20,49 +20,52 @@ mixin side-nav__menu(data, lvl=1)
 
 mixin side-nav(data, mods = {})
     nav.side-nav(role="dialog")&attributes(attributes)
-        .side-nav__logo
-            img(src="img/logo-alt.png", alt="Eion")
-        
-        button.side-nav__close
-            i.icon-close.icons(aria-label="Hide side nav")
+        .side-nav__backdrop
 
-        ul.side-nav__social
-            li.side-nav__social-item
-                a(href="javascript:void(0);").side-nav__social-link
-                    i.icon-social-twitter.icons(
-                        aria-label="Follow us on Twitter"
-                    )
-            li.side-nav__social-item
-                a(href="javascript:void(0);").side-nav__social-link
-                    i.icon-social-facebook.icons(
-                        aria-label="Follow us on Facebook"
-                    )
-            li.side-nav__social-item
-                a(href="javascript:void(0);").side-nav__social-link
-                    i.icon-social-instagram.icons(
-                        aria-label="Follow us on Instagram"
-                    )
-            li.side-nav__social-item
-                a(href="javascript:void(0);").side-nav__social-link
-                    i.icon-social-google.icons(
-                        aria-label="Follow us on Google Plus"
-                    )
-            li.side-nav__social-item
-                a(href="javascript:void(0);").side-nav__social-link
-                    i.icon-social-dribbble.icons(
-                        aria-label="Follow us on Dribbble"
-                    )
-        
-        +side-nav__menu(data.menu)
+        .side-nav__drawer
+            .side-nav__logo
+                img(src="img/logo-alt.png", alt="Eion")
+            
+            button.side-nav__close
+                i.icon-close.icons(aria-label="Hide side nav")
 
-        form.side-nav__search(method="post" action=".")
-            label.side-nav__search-inner
-                i.icon-magnifier.icons.side-nav__search-icon(
-                    aria-label="Search"
-                )
-                input(
-                    type        = "text"
-                    name        = "search"
-                    placeholder = "Search..."
-                ).side-nav__search-input
+            ul.side-nav__social
+                li.side-nav__social-item
+                    a(href="javascript:void(0);").side-nav__social-link
+                        i.icon-social-twitter.icons(
+                            aria-label="Follow us on Twitter"
+                        )
+                li.side-nav__social-item
+                    a(href="javascript:void(0);").side-nav__social-link
+                        i.icon-social-facebook.icons(
+                            aria-label="Follow us on Facebook"
+                        )
+                li.side-nav__social-item
+                    a(href="javascript:void(0);").side-nav__social-link
+                        i.icon-social-instagram.icons(
+                            aria-label="Follow us on Instagram"
+                        )
+                li.side-nav__social-item
+                    a(href="javascript:void(0);").side-nav__social-link
+                        i.icon-social-google.icons(
+                            aria-label="Follow us on Google Plus"
+                        )
+                li.side-nav__social-item
+                    a(href="javascript:void(0);").side-nav__social-link
+                        i.icon-social-dribbble.icons(
+                            aria-label="Follow us on Dribbble"
+                        )
+            
+            +side-nav__menu(data.menu)
+
+            form.side-nav__search(method="post" action=".")
+                label.side-nav__search-inner
+                    i.icon-magnifier.icons.side-nav__search-icon(
+                        aria-label="Search"
+                    )
+                    input(
+                        type        = "text"
+                        name        = "search"
+                        placeholder = "Search..."
+                    ).side-nav__search-input
     // /.side-nav 

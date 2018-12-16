@@ -8,6 +8,15 @@
 }
 
 @font-face {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    src: local('Montserrat Bold'),
+         local('Montserrat-Bold'),
+         url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+         url('../fonts/Montserrat-Bold.woff') format('woff');
+}
+
+@font-face {
     font-family: 'PT Serif';
     font-weight: 400;
     src: local('PT Serif Regular'),
@@ -19,6 +28,7 @@
 @font-face {
     font-family: 'PT Serif Italic';
     font-style: italic;
+    font-weight: 400;
     src: local('PT Serif Italic'),
          local('PTSerif-Italic'),
          url('../fonts/PTSerif-Italic.woff2') format('woff2'),

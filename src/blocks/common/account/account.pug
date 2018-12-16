@@ -1,0 +1,55 @@
+mixin account(data = {}, mods = {})
+    .account&attributes(attributes)
+        form.account__form(method="post" action="#")
+            label.account__label
+                i.icon-user.icons.account__icon(
+                    aria-label="Username or Email Address"
+                )
+                input.account__input(
+                    type        = "text"
+                    name        = "username"
+                    placeholder = "Username or Email Address"
+                    required    = true
+                )
+            label.account__label
+                i.icon-lock.icons.account__icon(
+                    aria-label="Passwords"
+                )
+                input.account__input(
+                    type        = "password"
+                    name        = "password"
+                    placeholder = "Password"
+                    required    = true
+                )
+            
+            .account__btns
+                +btn({text: 'Register'}, {theme: 'secondary'})(
+                    type = "submit"
+                    name = "register"
+                ).account__btn
+                +btn({text: 'Login'}, {theme: 'primary'})(
+                    type = "submit"
+                    name = "login"
+                ).account__btn
+        
+        .account__social
+            .account__social-text Connect with
+            ul.account__social-list
+                li.account__social-item
+                    a(href="javascript:void(0);").account__social-link
+                        i.icon-social-twitter.icons(
+                            aria-label="Follow us on Twitter"
+                        )
+                li.account__social-item
+                    a(href="javascript:void(0);").account__social-link
+                        i.icon-social-facebook.icons(
+                            aria-label="Follow us on Facebook"
+                        )
+                li.account__social-item
+                    a(href="javascript:void(0);").account__social-link
+                        i.icon-social-google.icons(
+                            aria-label="Follow us on Google Plus"
+                        )
+
+        .account__lang
+            +lang-menu()

@@ -1,0 +1,41 @@
+/**
+ * Styles for the button block.
+ */
+.btn {
+    display: inline-block;
+    height: 30px;
+
+    font-family: $font-family-serif;
+    @include font-size(10px);
+    text-align: center;
+    text-transform: uppercase;
+
+    border-radius: 15px;
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+
+    &_theme_primary {
+        color: $color-white;
+
+        background: $color-primary;
+        border: 0;
+
+        &:hover {
+            background: $color-secondary;
+        }
+    }
+
+    &_theme_secondary {
+        color: $color-primary;
+
+        background: $color-white;
+        border: 1px dashed $color-primary;
+
+        &:hover {
+            color: $color-white;
+
+            background: $color-primary;
+        }
+    }
+}

@@ -1,14 +1,14 @@
-mixin header__menu(data)
-    ul.header__menu
+mixin header__nav-list(data)
+    ul.header__nav-list
         each item in data
-            li.header__menu-item
+            li.header__nav-item
                 if item.label
-                    .header__menu-label
-                        i.icon-bell.icons(aria-hedden="true")
+                    .header__nav-label
+                        i.icon-bell.icons(aria-hidden="true")
                 
-                a(href=item.link).header__menu-link= item.text
+                a(href=item.link).header__nav-link= item.text
                     if item.arrow
-                        i.icon-arrow-down.icons.header__menu-arrow(
+                        i.icon-arrow-down.icons.header__nav-arrow(
                             aria-hidden="true"
                         )
 
@@ -18,18 +18,29 @@ mixin header(data, mods = {})
             .header__actions
                 button.header__btn.header__nav-toggle
                     i.icon-list.icons(aria-label="Toggle menu")
-                button.header__btn
-                    i.icon-user.icons(aria-label="Toggle account")
+                
+                .header-dropdown.header-dropdown_bottom-left
+                    button.header-dropdown__toggle.header__btn
+                        i.icon-user.icons(aria-label="Toggle account")
+                    .header-dropdown__backdrop
+                    .header-dropdown__popover
+                        .header-dropdown__top
+                            h2.header-dropdown__title Account
+                            button.header-dropdown__close
+                                i.icon-close.icons(aria-label="Hide account")
+
+                        .header-dropdown__content
+                            +account()
 
         .header__center
             nav.header__nav
-                +header__menu(data.menuLeft)
+                +header__nav-list(data.menuLeft)
                 
                 h1.header__logo
                     img(src="img/logo.png", alt="Eion").header__logo-img
                     .header__logo-alt Eion
 
-                +header__menu(data.menuRight)
+                +header__nav-list(data.menuRight)
 
         .header__right
             .header__actions

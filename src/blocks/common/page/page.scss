@@ -2,9 +2,10 @@
  * Styles for the page block
  */
 .page {
+    color: $color-text;
     font-family: $font-family-sans-serif;
     font-weight: $font-weight-regular;
     line-height: $line-height-base;
 
-    background: #bfbfbf;
+    background: $color-gray;
 }

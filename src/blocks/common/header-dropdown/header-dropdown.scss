@@ -1,0 +1,73 @@
+/**
+ * Styles for the header dropdown block.
+ */
+.header-dropdown {
+    @include breakpoint-up(md) {
+        position: relative;
+    }
+
+    &__backdrop {
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 100;
+
+        background: rgba($color-black, 0.5);
+
+        @include breakpoint-up(md) {
+            display: none;
+        }
+    }
+
+    &__popover {
+        bottom: 0;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+
+        background: $color-white;
+
+        @include breakpoint-up(md) {  
+            bottom: auto;      
+            position: absolute;
+            top: 100%;
+
+            border-top: 1px solid $color-mercury;
+        }
+
+        .header-dropdown_bottom-left > & {
+            left: 0;
+        }
+
+        .header-dropdown_bottom-right > & {
+            right: 0;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    
+        @include breakpoint-up(md) {
+            display: none;
+        }
+    }
+    
+    &__title {
+        color: $color-secondary;
+        @include font-size(14px);
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+    }
+    
+    &__close {
+        padding: 0;
+    
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+    }
+}

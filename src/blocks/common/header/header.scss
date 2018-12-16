@@ -71,7 +71,7 @@
         display: none;
     }
 
-    &__menu {
+    &__nav-list {
         display: none;
 
         @include breakpoint-up(lg) {
@@ -79,11 +79,11 @@
         }
     }
 
-    &__menu-item {
+    &__nav-item {
         position: relative;
     }
 
-    &__menu-link {
+    &__nav-link {
         display: block;
         height: 100px;
         padding: 0 20px;
@@ -105,7 +105,7 @@
         }
     }
 
-    &__menu-label {
+    &__nav-label {
         left: 50%;
         position: absolute;
         top: 12px;
@@ -151,7 +151,7 @@
         }
     }
 
-    &__menu-arrow {
+    &__nav-arrow {
         margin-left: 5px;
 
         @include font-size(10px);
