@@ -2,15 +2,19 @@ mixin header__nav-list(data)
     ul.header__nav-list
         each item in data
             li.header__nav-item
-                if item.label
-                    .header__nav-label
-                        i.icon-bell.icons(aria-hidden="true")
-                
-                a(href=item.link).header__nav-link= item.text
-                    if item.arrow
+                a(
+                    href = item.link
+                    role = item.submenu && "button"
+                ).header__nav-link= item.text
+                    if item.label
+                        .header__nav-label
+                            i.icon-bell.icons(aria-hidden="true")
+                    if item.submenu
                         i.icon-arrow-down.icons.header__nav-arrow(
                             aria-hidden="true"
                         )
+                if item.submenu
+                    +megamenu(item.submenu).header__megamenu
 
 mixin header(data, mods = {})
     header.header&attributes(attributes)

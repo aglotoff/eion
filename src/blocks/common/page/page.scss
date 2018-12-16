@@ -8,4 +8,11 @@
     line-height: $line-height-base;
 
     background: $color-gray;
+
+    &__header {
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
 }

@@ -1,0 +1,56 @@
+/**
+ * Styles for the megamenu block.
+ */
+.megamenu {
+    @include font-size(14px);
+
+    background: $color-white;
+    border-top: 1px solid $color-mercury;
+
+    &__inner {
+        display: flex;
+        margin: 0 auto;
+        max-width: $container-lg;
+        padding: 18px 0 48px;
+
+        @include breakpoint-up(xl) {
+            max-width: $container-xl;
+        }
+    }
+
+    &__cat {
+        flex: 1;
+        padding: 0 15px;
+    }
+
+    &__title {
+        display: block;
+        max-width: 200px;
+        padding: 15px 0;
+
+        color: $color-secondary;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        border-bottom: 1px dashed $color-secondary;
+    }
+
+    &__list {
+        margin-top: 12px;
+    }
+
+    &__link {
+        display: block;
+        padding: 8px 0;
+
+        color: $color-text;
+        font-family: $font-family-serif;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}

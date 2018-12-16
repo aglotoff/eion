@@ -17,8 +17,84 @@
         "menuRight": [{
             "text": "Pages",
             "link": "javascript:void(0);",
-            "label": true,
-            "arrow": true
+            "label": "New",
+            "submenu": [{
+                "text": "General",
+                "link": "javascript:void(0);",
+                "submenu": [{
+                    "text": "About Us",
+                    "link": "javascript:void(0);"
+                }, {
+                    "text": "Our Services",
+                    "link": "javascript:void(0);"
+                }, {
+                    "text": "404 Errors",
+                    "link": "javascript:void(0);"
+                }, {
+                    "text": "Under Construction",
+                    "link": "javascript:void(0);"
+                }, {
+                    "text": "Coming Soon",
+                    "link": "javascript:void(0);"
+                }]
+            }, {
+                "text": "Product",
+                "link": "javascript:void(0);",
+                "submenu": [{
+                    "text": "Product Category Default",
+                    "link": "javascript:void(0);"
+                }, {
+                    "text": "Product Category 2 Column",
+                    "link": "javascript:void(0);"
+                }, {
+                    "text": "Standard Product",
+                    "link": "javascript:void(0);"
+                }, {
+                    "text": "Extended Product",
+                    "link": "javascript:void(0);"
+                }, {
+                    "text": "Full-screen Product",
+                    "link": "javascript:void(0);"
+                }]
+            }, {
+                "text": "Portfolio",
+                "link": "javascript:void(0);",
+                "submenu": [{
+                    "text": "Portfolio Category",
+                    "link": "javascript:void(0);"
+                }, {
+                    "text": "Single Portfolio",
+                    "link": "javascript:void(0);"
+                }, {
+                    "text": "Lookbook",
+                    "link": "javascript:void(0);"
+                }, {
+                    "text": "Photo Gallery",
+                    "link": "javascript:void(0);"
+                }, {
+                    "text": "Video Gallery",
+                    "link": "javascript:void(0);"
+                }]
+            }, {
+                "text": "Shop Pages",
+                "link": "javascript:void(0);",
+                "submenu": [{
+                    "text": "Shopping Cart",
+                    "link": "javascript:void(0);"
+                }, {
+                    "text": "My Wishlist",
+                    "link": "javascript:void(0);"
+                }, {
+                    "text": "Track Your Order",
+                    "link": "javascript:void(0);"
+                }, {
+                    "text": "My Account",
+                    "link": "javascript:void(0);"
+                }, {
+                    "text": "Checkout",
+                    "link": "javascript:void(0);"
+                }]
+            }]
         }, {
             "text": "Blog",
             "link": "javascript:void(0);"
