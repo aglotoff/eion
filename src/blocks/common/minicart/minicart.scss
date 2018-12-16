@@ -1,0 +1,104 @@
+/**
+ * Styles for the minicart block.
+ */
+.minicart {
+    min-width: 270px;
+    padding: 29px 20px 25px;
+
+    &__item {
+        position: relative;
+
+        display: flex;
+        padding-bottom: 10px;
+
+        border-bottom: 1px dashed $color-silver;
+
+        &:not(:first-child) {
+            margin-top: 20px;
+        }
+    }
+
+    &__thumb {
+        display: block;
+    }
+
+    &__img {
+        display: block;
+        max-width: 80px;
+    }
+
+    &__product-info {
+        margin-left: 20px;
+
+        @include font-size(14px);
+    }
+
+    &__name {
+        display: block;
+
+        color: $color-secondary;
+        font-family: $font-family-serif;
+        
+        font-style: italic;
+        text-decoration: none;
+    }
+
+    &__price {
+        margin-top: 5px;
+
+        color: $color-primary;
+    }
+
+    &__qty {
+        bottom: 10px;
+        left: 0;
+        position: absolute;
+
+        width: 30px;
+
+        color: $color-white;
+        @include font-size(10px);
+        text-align: center;
+
+        background: $color-secondary;
+    }
+
+    &__remove {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        padding: 0 3px;
+
+        color: $color-text;
+        @include font-size(14px);
+
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        opacity: 0;
+
+        &:focus,
+        .minicart__item:hover & {
+            opacity: 1;
+        }
+    }
+
+    &__total {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 18px;
+
+        color: $color-secondary;
+        font-weight: $font-weight-bold;
+    }
+
+    &__total-text {
+        @include font-size(14px);
+        text-transform: uppercase;
+    }
+
+    &__btns {
+        margin-top: 26px;
+    }
+}

@@ -44,9 +44,19 @@ mixin header(data, mods = {})
 
         .header__right
             .header__actions
-                button.header__btn
-                    i.icon-basket.icons(aria-label="Toggle shopping cart")
-                    .header__cart-items(aria-hidden="true") 3
+                .header-dropdown.header-dropdown_bottom-right
+                    button.header-dropdown__toggle.header__btn
+                        i.icon-basket.icons(aria-label="Toggle shopping cart")
+                        .header__cart-items(aria-hidden="true") 3
+                    .header-dropdown__backdrop
+                    .header-dropdown__popover
+                        .header-dropdown__top
+                            h2.header-dropdown__title Shopping Cart
+                            button.header-dropdown__close
+                                i.icon-close.icons(aria-label="Hide minicart")
+
+                        .header-dropdown__content
+                            +minicart()
                 button.header__btn
                     i.icon-magnifier.icons(aria-label="Toggle search")
     // /.header 
