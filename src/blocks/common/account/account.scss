@@ -45,16 +45,7 @@
     }
 
     &__btns {
-        display: flex;
         margin-top: 20px;
-    }
-
-    &__btn {
-        flex: 1;
-
-        &:not(:first-child) {
-            margin-left: 10px;
-        }
     }
 
     &__social {

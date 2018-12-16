@@ -22,32 +22,32 @@ mixin account(data = {}, mods = {})
                     required    = true
                 )
             
-            .account__btns
+            .btn-group.account__btns
                 +btn({text: 'Register'}, {theme: 'secondary'})(
                     type = "submit"
                     name = "register"
-                ).account__btn
+                ).btn-group__btn
                 +btn({text: 'Login'}, {theme: 'primary'})(
                     type = "submit"
                     name = "login"
-                ).account__btn
+                ).btn-group__btn
         
         .account__social
             .account__social-text Connect with
             ul.account__social-list
                 li.account__social-item
                     a(href="javascript:void(0);").account__social-link
-                        i.icon-social-twitter.icons(
+                        i.fab.fa-twitter(
                             aria-label="Follow us on Twitter"
                         )
                 li.account__social-item
                     a(href="javascript:void(0);").account__social-link
-                        i.icon-social-facebook.icons(
+                        i.fab.fa-facebook-f(
                             aria-label="Follow us on Facebook"
                         )
                 li.account__social-item
                     a(href="javascript:void(0);").account__social-link
-                        i.icon-social-google.icons(
+                        i.fab.fa-google-plus-g(
                             aria-label="Follow us on Google Plus"
                         )
 
