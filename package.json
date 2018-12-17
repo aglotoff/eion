@@ -60,6 +60,7 @@
     "require-dir": "^1.2.0",
     "run-sequence": "^2.2.1",
     "simple-line-icons": "^2.4.1",
+    "slick-carousel": "^1.8.1",
     "stylelint": "^9.9.0",
     "stylelint-scss": "^3.4.0",
     "svg4everybody": "^2.1.9",

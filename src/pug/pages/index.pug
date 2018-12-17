@@ -1,6 +1,7 @@
 extends ../layouts/base.pug
 
-//- TODO: include page-specific block templates
+include ../../blocks/index/slider/slider.pug
 
 block page
     //- TODO: add code here
+    +slider(data.slider)

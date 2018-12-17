@@ -9,6 +9,8 @@
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "../../node_modules/simple-line-icons/scss/simple-line-icons.scss";
 
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+
 @import "../blocks/common/page/page.scss";
 
 @import "../blocks/common/header/header";
@@ -21,3 +23,5 @@
 @import "../blocks/common/btn-group/btn-group";
 @import "../blocks/common/side-nav/side-nav";
 @import "../blocks/common/megamenu/megamenu";
+
+@import "../blocks/index/slider/slider";

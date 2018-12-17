@@ -1,0 +1,175 @@
+/**
+ * Styles for the slider block.
+ */
+.slider {
+    position: relative;
+
+    &__slide {
+        height: 400px;
+
+        background: {
+            color: $color-gray;
+            position: center;
+            repeat: no-repeat;
+            size: cover;
+        }
+
+        @include breakpoint-up(sm) {
+            height: 500px;
+        }
+
+        @include breakpoint-up(md) {
+            height: 600px;
+        }
+
+        @include breakpoint-up(lg) {
+            height: 700px;
+        }
+
+        @include breakpoint-up(xl) {
+            height: 800px;
+        }
+    }
+
+    &__content {
+        margin: 100px 15px 0;
+
+        text-align: center;
+
+        border: 3px solid $color-secondary;
+        border-top: 0;
+        opacity: 0;
+
+        transition: opacity 0.5s linear;
+
+        @include breakpoint-up(sm) {
+            margin-top: 190px;
+        }
+
+        @include breakpoint-up(md) {
+            margin: 240px auto 0;
+            max-width: 700px;
+        }
+
+        @include breakpoint-up(lg) {
+            margin-top: 290px;
+        }
+
+        @include breakpoint-up(xl) {
+            margin-top: 340px;
+        }
+
+        .slider__slide_active & {
+            opacity: 1;
+
+            transition-delay: 0.6s;
+        }
+    }
+
+    &__title {
+        display: flex;
+
+        &:before,
+        &:after {
+            content: "";
+
+            flex: 1;
+            height: 3px;
+
+            background: $color-secondary;
+        }
+    }
+
+    &__title-img {
+        margin: -37px 30px 0;
+    }
+
+    &__text {
+        padding: 20px 40px 26px;
+
+        color: $color-secondary;
+        font-family: $font-family-serif;
+        @include font-size(16px);
+        line-height: 1.875;
+
+        @include breakpoint-up(md) {
+            padding-left: 80px;
+            padding-right: 80px;
+
+            @include font-size(18px);
+        }
+    }
+
+    &__arrow {
+        bottom: 50%;
+        position: absolute;
+
+        display: block;
+        height: 50px;
+        width: 50px;
+
+        color: $color-secondary;
+        @include font-size(16px);
+        line-height: 50px;
+        text-align: center;
+        
+        background: $color-white;
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0;
+
+        transition: all 0.25s ease;
+
+        &:hover,
+        &:focus {
+            color: $color-primary;
+            opacity: 1;
+        }
+
+        .slider:hover & {
+            opacity: 1;
+        }
+
+        &_prev {
+            left: 15px;
+            
+            @include breakpoint-up(lg) {
+                left: 45px;
+            }
+
+            @include breakpoint-up(xl) {
+                left: 120px;
+            }
+        }
+
+        &_next {
+            right: 15px;
+
+            @include breakpoint-up(lg) {
+                right: 45px;
+            }
+
+            @include breakpoint-up(xl) {
+                right: 120px;
+            }
+        }
+    }
+
+    &__skip-link {
+        bottom: 26px;
+        left: 50%;
+        position: absolute;
+
+        color: $color-white;
+        @include font-size(30px);
+
+        transition: color 0.25s ease;
+        transform: translateX(-50%);
+
+        &:hover,
+        &:focus {
+            color: $color-primary;
+        }
+    }
+}

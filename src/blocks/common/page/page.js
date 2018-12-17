@@ -7,6 +7,8 @@ import * as HeaderDropdown from '../header-dropdown/header-dropdown';
 import * as LangMenu from '../lang-menu/lang-menu';
 import * as SideNav from '../side-nav/side-nav';
 
+import * as Slider from '../../index/slider/slider';
+
 // -------------------------- BEGIN MODULE VARIABLES --------------------------
 const DESKTOP_BREAKPOINT = 992; // Minimum desktop screen width
 const RESIZE_INTERVAL    = 200; // Resize debouncing interval
@@ -74,6 +76,8 @@ export const initModule = function() {
     HeaderDropdown.initModule();
     LangMenu.initModule();
     SideNav.initModule();
+
+    Slider.initModule();
 
     // Process the initial window size and scroll position.
     onWindowResize();

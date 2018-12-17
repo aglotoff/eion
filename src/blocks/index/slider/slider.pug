@@ -1,0 +1,20 @@
+mixin slider(data = {}, mods = {})
+    .slider&attributes(attributes)
+        .slider__container
+            each slide in data
+                .slider__slide(style=`background-image: url(${slide.img})`)
+                    .slider__content
+                        .slider__title
+                            img(
+                                src = slide.titleImg
+                                alt = slide.title
+                            ).slider__title-img
+                        .slider__text= slide.text
+
+        button.slider__arrow.slider__arrow_prev
+            i.fas.fa-angle-left(aria-label="Previous Slide")
+        button.slider__arrow.slider__arrow_next
+            i.fas.fa-angle-right(aria-label="Next Slide")
+
+        a(href="javascript:void(0);").slider__skip-link
+            .fas.fa-long-arrow-alt-down(aria-label="Skip to content")

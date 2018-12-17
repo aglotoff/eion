@@ -1,0 +1,18 @@
+{
+    "slider": [{
+        "img": "img/content/slider/slide-01.jpg",
+        "titleImg": "img/content/slider/title-01.png",
+        "title": "Flower",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+    }, {
+        "img": "img/content/slider/slide-02.jpg",
+        "titleImg": "img/content/slider/title-01.png",
+        "title": "Flower",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+    }, {
+        "img": "img/content/slider/slide-03.jpg",
+        "titleImg": "img/content/slider/title-01.png",
+        "title": "Flower",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+    }]
+}
