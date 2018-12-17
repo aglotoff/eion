@@ -6,6 +6,7 @@
 // fonts
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "../../node_modules/simple-line-icons/scss/simple-line-icons.scss";
 
@@ -23,6 +24,10 @@
 @import "../blocks/common/btn-group/btn-group";
 @import "../blocks/common/side-nav/side-nav";
 @import "../blocks/common/megamenu/megamenu";
+@import "../blocks/common/section/section";
+@import "../blocks/common/products/products";
+@import "../blocks/common/product/product";
+@import "../blocks/common/rating/rating";
 
 @import "../blocks/index/slider/slider";
 @import "../blocks/index/banners/banners";

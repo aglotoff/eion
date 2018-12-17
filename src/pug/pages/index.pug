@@ -6,3 +6,8 @@ include ../../blocks/index/banners/banners.pug
 block page
     +slider(data.slider)
     +banners(data.banners)
+    +section({
+        title : data.products.title,
+        text  : data.products.text,
+    })
+        +products(data.products.items)

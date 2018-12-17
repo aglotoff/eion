@@ -1,0 +1,22 @@
+/**
+ * Styles for the products block.
+ */
+.products {
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+
+    &__product {
+        flex: 1 0 300px;
+        margin-bottom: 30px;
+        padding: 0 15px;
+    }
+
+    &__view-more {
+        display: block;
+        margin: 40px auto 0;
+        width: 170px;
+    }
+}

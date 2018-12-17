@@ -4,10 +4,12 @@
 .btn {
     display: inline-block;
     height: 30px;
+    padding: 0 15px;
 
-    font-family: $font-family-serif;
+    font-family: $font-family-sans-serif;
     @include font-size(10px);
     text-align: center;
+    text-decoration: none;
     text-transform: uppercase;
 
     border-radius: 15px;
@@ -37,5 +39,15 @@
 
             background: $color-primary;
         }
+    }
+
+    &_size_large {
+        height: 60px;
+        padding: 0 30px;
+
+        @include font-size(14px);
+        line-height: 60px;
+
+        border-radius: 30px;
     }
 }

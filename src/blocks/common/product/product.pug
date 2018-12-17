@@ -1,0 +1,22 @@
+mixin product(data = {}, mods = {})
+    .product&attributes(attributes)
+        .product__inner
+            if data.sale
+                .product__sale Sale
+            
+            .product__thumb
+                a(href=data.link).product__thumb-link
+                    img(src=data.img, alt=data.name).product__thumb-img
+            
+            .product__info
+                +rating(data.rating).product__rating
+
+                .product__info-bottom
+                    a(href=data.link).product__name= data.name
+
+                    if data.oldPrice
+                        .product__price
+                            del.product__price-old $#{data.oldPrice}
+                            ins.product__price-new $#{data.price}
+                    else
+                        .product__price $#{data.price}

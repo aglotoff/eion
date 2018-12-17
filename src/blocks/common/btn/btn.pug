@@ -1,5 +1,12 @@
-mixin btn(data = {}, mods = {theme: 'primary'})
-    - const className = 'btn btn_theme_' + mods.theme;
+mixin btn(data = {}, mods = {})
+    -
+        const theme = mods.theme || 'primary';
+        const size  = mods.size  || 'default';
+        const className = {
+            btn                    : true,
+            ['btn_theme_' + theme] : true,
+            ['btn_size_'  + size ] : true,
+        };
     if (data.url)
         a(href=data.url class=className)&attributes(attributes)= data.text
     else

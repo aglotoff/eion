@@ -29,12 +29,7 @@
         flex: 1;
     }
 
-    &__rating-text {
-        display: none;
-    }
-
-    &__rating-stars {
-        color: $color-bright-sun;
+    &__rating {
         @include font-size(10px);
     }
 
