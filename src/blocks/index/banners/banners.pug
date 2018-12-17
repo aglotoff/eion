@@ -1,0 +1,12 @@
+mixin banners(data = {}, mods = {})
+    .banners&attributes(attributes)
+        .page__container
+            .banners__grid
+                each banner in data
+                    .banners__banner(
+                        style = `background-image: url(${banner.img})`
+                        class = 'banners__banner_size_' + banner.size
+                    )
+                        .banners__banner-inner
+                            a(href=banner.link).banners__banner-link
+                                .banners__banner-text= banner.text

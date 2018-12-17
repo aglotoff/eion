@@ -7,7 +7,7 @@
     font-weight: $font-weight-regular;
     line-height: $line-height-base;
 
-    background: $color-gray;
+    background: $color-gallery;
 
     &__header {
         left: 0;
@@ -16,5 +16,22 @@
         top: 0;
 
         z-index: 100;
+    }
+
+    &__container {
+        padding: 0 15px;
+
+        @include breakpoint-up(md) {
+            margin: 0 auto;
+            max-width: $container-md;
+        }
+
+        @include breakpoint-up(lg) {
+            max-width: $container-lg;
+        }
+
+        @include breakpoint-up(xl) {
+            max-width: $container-xl;
+        }
     }
 }

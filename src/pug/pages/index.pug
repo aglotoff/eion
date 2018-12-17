@@ -1,7 +1,8 @@
 extends ../layouts/base.pug
 
 include ../../blocks/index/slider/slider.pug
+include ../../blocks/index/banners/banners.pug
 
 block page
-    //- TODO: add code here
     +slider(data.slider)
+    +banners(data.banners)

@@ -14,5 +14,27 @@
         "titleImg": "img/content/slider/title-01.png",
         "title": "Flower",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+    }],
+
+    "banners": [{
+        "img": "img/content/banners/banner-01-bg.jpg",
+        "link": "javascript:void(0);",
+        "text": "All flower",
+        "size": "large"
+    }, {
+        "img": "img/content/banners/banner-02-bg.jpg",
+        "link": "javascript:void(0);",
+        "text": "Flower table",
+        "size": "default"
+    }, {
+        "img": "img/content/banners/banner-03-bg.jpg",
+        "link": "javascript:void(0);",
+        "text": "Flower decoration",
+        "size": "default"
+    }, {
+        "img": "img/content/banners/banner-04-bg.jpg",
+        "link": "javascript:void(0);",
+        "text": "Wedding flowers",
+        "size": "wide"
     }]
 }

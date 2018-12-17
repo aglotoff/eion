@@ -1,0 +1,114 @@
+/**
+ * Styles for the banners block.
+ */
+.banners {
+    padding-top: 60px;
+    &__grid {
+        @include breakpoint-up(md) {
+            display: grid;
+            grid-gap: 30px;
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+        @include breakpoint-up(lg) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__banner {
+        position: relative;
+
+        @include font-size(18px);
+
+        background: {
+            color: $color-gray;
+            position: center;
+            repeat: no-repeat;
+            size: cover;
+        }
+
+        &_size_default {
+            grid-area: span 1 / span 1;
+        }
+
+        &_size_wide {
+            grid-area: span 1 / span 2;
+        }
+
+        &_size_large {
+            grid-area: span 2 / span 2;
+
+            @include font-size(48px);
+        }
+
+        &:not(:first-child) {
+            margin-top: 30px;
+
+            @include breakpoint-up(md) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__banner-inner {
+        display: block;
+        padding-bottom: 100%;
+
+        .banners__banner_size_wide & {
+            padding-bottom: 50%;
+        }
+    }
+
+    &__banner-link {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        color: $color-white;
+        font-weight: $font-weight-bold;
+        line-height: 1.5;
+        letter-spacing: 0.3em;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        background: rgba($color-black, 0.25);
+
+        transition: background-color 0.25s ease;
+
+        &:hover,
+        &:focus {
+            background: rgba($color-black, 0.6);
+        }
+    }
+
+    &__banner-text {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 200px;
+        width: 200px;
+
+        border: 2px dashed transparent;
+        border-radius: 50%;
+
+        transition: border-color 0.25s ease;
+
+        .banners__banner_size_large & {
+            height: 400px;
+            width: 400px;
+        }
+
+        .banners__banner:hover &,
+        .banners__banner-link:focus & {
+            border-color: $color-white;
+        }
+    }
+}
