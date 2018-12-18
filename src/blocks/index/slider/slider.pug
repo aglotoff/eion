@@ -1,8 +1,11 @@
 mixin slider(data = {}, mods = {})
     .slider&attributes(attributes)
         .slider__container
-            each slide in data
-                .slider__slide(style=`background-image: url(${slide.img})`)
+            each slide, i in data
+                .slider__slide(
+                    class = (i === 0) && 'slider__slide_active'
+                    style = `background-image: url(${slide.img})`
+                )
                     .slider__content
                         .slider__title
                             img(

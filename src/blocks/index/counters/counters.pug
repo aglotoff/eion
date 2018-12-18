@@ -1,0 +1,11 @@
+mixin counters(data = {}, mods = {})
+    .counters&attributes(attributes)
+        .page__container
+            .counters__container
+                each counter in data
+                    -
+                        const formattedValue = counter.value.toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                    .counters__counter(data-value=counter.value)
+                        .counters__title= counter.title
+                        .counters__value= formattedValue

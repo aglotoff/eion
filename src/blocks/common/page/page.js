@@ -2,12 +2,13 @@
  * @file Implementation of the page block
  */
 
-import * as Header from '../header/header';
+import * as Header         from '../header/header';
 import * as HeaderDropdown from '../header-dropdown/header-dropdown';
-import * as LangMenu from '../lang-menu/lang-menu';
-import * as SideNav from '../side-nav/side-nav';
+import * as LangMenu       from '../lang-menu/lang-menu';
+import * as SideNav        from '../side-nav/side-nav';
 
-import * as Slider from '../../index/slider/slider';
+import * as Slider         from '../../index/slider/slider';
+import * as Counters       from '../../index/counters/counters';
 
 // -------------------------- BEGIN MODULE VARIABLES --------------------------
 const DESKTOP_BREAKPOINT = 992; // Minimum desktop screen width
@@ -22,7 +23,7 @@ let wasScrolled = false;
 
 // --------------------------- BEGIN EVENT HANDLERS ---------------------------
 const onWindowScroll = function() {
-    // TODO: add code here
+    Counters.handleScroll();
 };
 
 const onWindowResize = function() {
@@ -78,6 +79,7 @@ export const initModule = function() {
     SideNav.initModule();
 
     Slider.initModule();
+    Counters.initModule();
 
     // Process the initial window size and scroll position.
     onWindowResize();

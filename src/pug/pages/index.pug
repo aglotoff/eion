@@ -2,6 +2,7 @@ extends ../layouts/base.pug
 
 include ../../blocks/index/slider/slider.pug
 include ../../blocks/index/banners/banners.pug
+include ../../blocks/index/counters/counters.pug
 
 block page
     +slider(data.slider)
@@ -11,3 +12,4 @@ block page
         text  : data.products.text,
     })
         +products(data.products.items)
+    +counters(data.counters)

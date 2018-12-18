@@ -81,5 +81,19 @@
             "rating": 4.5,
             "link": "javascript:void(0);"
         }]
-    }
+    },
+
+    "counters": [{
+        "title": "Coffee Cups",
+        "value": 24622
+    }, {
+        "title": "Flower Sold",
+        "value": 6134
+    }, {
+        "title": "Flower Hired",
+        "value": 7516
+    }, {
+        "title": "Happy Customers",
+        "value": 12023
+    }]
 }
