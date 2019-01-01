@@ -1,0 +1,75 @@
+/**
+ * Styles for the share block.
+ */
+.share {
+    position: relative;
+
+    transition: all 0.25s ease;
+
+    &__toggle,
+    &__link {
+        display: block;
+        height: 30px;
+        padding: 0;
+        width: 30px;
+
+        @include font-size(10px);
+        line-height: 30px;
+        text-align: center;
+
+        border-radius: 50%;
+    }
+
+    &__toggle {
+        color: $color-primary;
+
+        background: $color-white;
+        border: 1px dashed $color-primary;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: $color-white;
+
+            background: $color-primary;
+        }
+    }
+
+    &__link {
+        color: $color-white;
+
+        background: $color-silver;
+
+        &:hover,
+        &:focus {
+            background: $color-primary;
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        right: 100%;
+        top: 50%;
+
+        display: flex;
+        padding: 5px;
+
+        opacity: 0;
+
+        transform: translateY(-50%);
+        transition: opacity 0.25s ease-out,
+                    visibility 0s step-start 0.25s;
+        visibility: hidden;
+
+        &_visible {
+            opacity: 1;
+
+            transition-delay: 0s;
+            visibility: visible;
+        }
+    }
+
+    &__item {
+        padding: 5px;
+    }
+}

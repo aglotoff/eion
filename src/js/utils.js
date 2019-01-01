@@ -5,13 +5,19 @@
 
 /* global focusTrap */
 
-const ESC_KEYCODE = 27;
+const KEY_ESC   = 27;
+const KEY_SPACE = 32;
 
 const $document = $(document);
 
 const dropdownProto = {
     _onOutsideClick(event) {
-        if (!$.contains(this._$container.get(0), event.target)) {
+        const target = event.target;
+        if (!(
+            target === document
+            || this._$container.is($(target))
+            || $.contains(this._$container.get(0), target)
+        )) {
             this.hide();
         }
     },
@@ -24,8 +30,26 @@ const dropdownProto = {
         }
     },
 
+    _onSwitcherKeydown(event) {
+        if (event.which === KEY_SPACE) {
+            event.preventDefault();
+            
+            if (!this._isExpanded) {
+                this.show();
+            } else {
+                this.hide();
+            }
+        }
+    },
+
+    _onSwitcherKeyup(event) {
+        if (event.which === KEY_SPACE) {
+            event.preventDefault();
+        }
+    },
+
     _onKeydown(event) {
-        if (event.which === ESC_KEYCODE) {
+        if (event.which === KEY_ESC) {
             this.hide();
             this._$switcher.focus();
         }
@@ -34,23 +58,23 @@ const dropdownProto = {
     show() {
         this._isExpanded = true;
 
-        this._$switcher.attr('aria-expanded', 'true');
+        setTimeout(() => {
+            $document.on({
+                click   : this._onOutsideClick,
+                focusin : this._onOutsideClick,
+            });
+            this._$container.on('keydown', this._onKeydown);
 
-        $document.on({
-            click   : this._onOutsideClick,
-            focusin : this._onOutsideClick,
-        });
-        this._$container.on('keydown', this._onKeydown);
+            if (this._onToggle) {
+                this._onToggle(true);
+            }
+        }, 0);
 
-        if (this._onToggle) {
-            this._onToggle(true);
-        }
+        return this;
     },
 
     hide() {
         this._isExpanded = false;
-
-        this._$switcher.attr('aria-expanded', 'false');
 
         $document.off({
             click   : this._onOutsideClick,
@@ -61,22 +85,17 @@ const dropdownProto = {
         if (this._onToggle) {
             this._onToggle(false);
         }
+
+        return this;
     },
 
     pause() {
         this._$switcher
-            .off('click', this._onSwitcherClick)
-            .attr({
-                'aria-expanded': '',
-                'aria-haspopup': '',
+            .off({
+                click   : this._onSwitcherClick,
+                keydown : this._onSwitcherKeydown,
+                keyup   : this._onSwitcherKeyup,
             });
-
-        if (this._isExpanded) {
-            $document.off({
-                click   : this._onOutsideClick,
-                focusin : this._onOutsideClick,
-            });
-        }
 
         if (this._hoverToggles) {
             this._$container.off({
@@ -84,26 +103,21 @@ const dropdownProto = {
                 mouseleave : this._onMouseleave,
             });
         }
+
+        return this;
     },
 
     unpause() {
         this._$switcher
             .click(this._onSwitcherClick)
-            .attr({
-                'aria-expanded': String(this._isExpanded),
-                'aria-haspopup': 'true'
-            });
-
-        if (this._isExpanded) {
-            $document.on({
-                click   : this._onOutsideClick,
-                focusin : this._onOutsideClick,
-            });
-        }
+            .keydown(this._onSwitcherKeydown)
+            .keyup(this._onSwitcherKeyup);
 
         if (this._hoverToggles) {
             this._$container.hover(this._onMouseenter, this._onMouseleave);
         }
+
+        return this;
     },
 };
 
@@ -117,9 +131,11 @@ export const makeDropdown = function($container, $switcher, options) {
     dropdown._isExpanded   = false;
 
     // Bind the event handlers
-    dropdown._onOutsideClick  = dropdown._onOutsideClick.bind(dropdown);
-    dropdown._onSwitcherClick = dropdown._onSwitcherClick.bind(dropdown);
-    dropdown._onKeydown       = dropdown._onKeydown.bind(dropdown);
+    dropdown._onOutsideClick    = dropdown._onOutsideClick.bind(dropdown);
+    dropdown._onSwitcherClick   = dropdown._onSwitcherClick.bind(dropdown);
+    dropdown._onSwitcherKeydown = dropdown._onSwitcherKeydown.bind(dropdown);
+    dropdown._onSwitcherKeyup   = dropdown._onSwitcherKeyup.bind(dropdown);
+    dropdown._onKeydown         = dropdown._onKeydown.bind(dropdown);
 
     if (options.hoverToggles) {
         dropdown._onMouseenter = dropdown.show.bind(dropdown);

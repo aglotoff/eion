@@ -1,0 +1,7 @@
+mixin post-carousel(data = {}, mods = {})
+    .post-carousel&attributes(attributes)
+        .post-carousel__inner
+            .post-carousel__container.owl-carousel.owl-theme
+                each post in data
+                    .post-carousel__post.item
+                        +post(post)

@@ -8,6 +8,10 @@ mixin btn(data = {}, mods = {})
             ['btn_size_'  + size ] : true,
         };
     if (data.url)
-        a(href=data.url class=className)&attributes(attributes)= data.text
+        a(href=data.url class=className)&attributes(attributes)
+            if block
+                block
     else
-        button(class=className)&attributes(attributes)= data.text
+        button(class=className)&attributes(attributes)
+            if block
+                block

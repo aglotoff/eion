@@ -1,8 +1,10 @@
 mixin section(data = {}, mods = {})
     section.section&attributes(attributes)
         .page__container
-            h2.section__title= data.title
-            p.section__intro= data.text
+            .section__heading
+                h2.section__title= data.title
+                if data.text
+                    p.section__intro= data.text
         
             if block
                 block

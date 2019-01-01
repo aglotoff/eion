@@ -8,5 +8,7 @@ import 'slick-carousel';
 window.$ = window.jQuery = jQuery;
 window.focusTrap = focusTrap;
 
+
 // Manually initialize third-party libraries
 svg4everybody();
+require('owl.carousel');

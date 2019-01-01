@@ -23,14 +23,14 @@ mixin account(data = {}, mods = {})
                 )
             
             .btn-group.account__btns
-                +btn({text: 'Register'}, {theme: 'secondary'})(
+                +btn({}, {theme: 'secondary'})(
                     type = "submit"
                     name = "register"
-                ).btn-group__btn
-                +btn({text: 'Login'}, {theme: 'primary'})(
+                ).btn-group__btn Register
+                +btn({}, {theme: 'primary'})(
                     type = "submit"
                     name = "login"
-                ).btn-group__btn
+                ).btn-group__btn Login
         
         .account__social
             .account__social-text Connect with

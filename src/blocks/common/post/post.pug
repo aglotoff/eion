@@ -1,0 +1,44 @@
+mixin post(data = {}, mods = {})
+    -
+        const blogDate = function(datestr) {
+            const date = new Date(datestr);
+            const month = date.toLocaleString('en-us', { month: 'long'});
+            const day = date.getDate();
+            const year = date.getFullYear();
+            return `${day} ${month}, ${year}`;
+        };
+
+    article.post&attributes(attributes)
+        a(href=data.link).post__thumb
+            img(src=data.img, alt=data.title).post__thumb-img
+            .post__thumb-overlay
+                i.icon-plus.icons(aria-hidden="true")
+        
+        h3.post__title= data.title
+
+        .post__meta
+            .post__pubdate
+                i.far.fa-clock(aria-label="Publised on")
+                time(datetime=data.date)= blogDate(data.date)
+                |  by 
+                a(href=data.authorLink).post__author-link= data.author
+            
+            .post__comments
+                i.far.fa-comment(aria-label="Comments")
+                | #{' '}
+                span #{data.comments}
+            .post__likes
+                i.far.fa-heart(aria-label="Likes")
+                | #{' '}
+                span #{data.likes}
+            
+        .post__excerpt
+            p= data.excerpt
+        
+        .post__bottom
+            +btn({
+                href: 'javascript:void(0);',
+            }, {theme: 'primary'}).post__read-more Read more
+
+            +share().post__share
+                

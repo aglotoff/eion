@@ -3,6 +3,7 @@ extends ../layouts/base.pug
 include ../../blocks/index/slider/slider.pug
 include ../../blocks/index/banners/banners.pug
 include ../../blocks/index/counters/counters.pug
+include ../../blocks/index/post-carousel/post-carousel.pug
 
 block page
     +slider(data.slider)
@@ -13,3 +14,7 @@ block page
     })
         +products(data.products.items)
     +counters(data.counters)
+    +section({
+        title: data.blog.title
+    })
+        +post-carousel(data.blog.posts)

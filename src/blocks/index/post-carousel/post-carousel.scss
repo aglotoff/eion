@@ -1,0 +1,49 @@
+/**
+ * Styles for the post-carousel block.
+ */
+.post-carousel {
+    overflow: hidden;
+
+    &__inner {
+        @include breakpoint-up(md) {
+            margin: 0 -15px;
+        }
+    }
+
+    &__post {
+        @include breakpoint-up(md) {
+            padding: 0 15px;
+        }
+    }
+
+    .owl-carousel {
+        .owl-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 58px;
+        }
+
+        .owl-dot {
+            margin: 0 10px;
+
+            height: 10px;
+            padding: 0;
+            width: 10px;
+
+            text-indent: 10px;
+
+            border: 1px solid $color-secondary;
+            border-radius: 50%;
+            cursor: pointer;
+
+            background: transparent;
+
+            overflow: hidden;
+            transition: background-color 0.25s ease-in;
+
+            &.active {
+                background-color: $color-secondary;
+            }
+        }
+    }
+}

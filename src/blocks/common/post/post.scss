@@ -1,0 +1,94 @@
+/**
+ * Styles for the post block.
+ */
+.post {
+    padding: 30px;
+
+    background: $color-white;
+
+    &__thumb {
+        position: relative;
+
+        display: block;
+
+        color: $color-white;
+        text-decoration: none;
+    }
+
+    &__thumb-img {
+        display: block;
+        max-width: 100%;
+    }
+
+    &__thumb-overlay {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        @include font-size(24px);
+
+        background: rgba($color-secondary, 0.5);
+        opacity: 0;
+
+        transition: opacity 0.25s ease-in;
+
+        .post__thumb:hover > &,
+        .post__thumb:focus > & {
+            opacity: 1;
+        }
+    }
+
+    &__title {
+        margin-top: 25px;
+
+        color: $color-secondary;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+    }
+
+    &__meta {
+        display: flex;
+        margin-top: 8px;
+
+        color: $color-silver;
+        font-family: $font-family-serif;
+        @include font-size(14px);
+    }
+
+    &__pubdate {
+        margin-right: auto;
+    }
+
+    &__author-link {
+        color: $color-silver;
+
+        transition: color 0.25s ease-out;
+
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+
+    &__likes {
+        margin-left: 10px;
+    }
+
+    &__excerpt {
+        margin-top: 10px;
+
+        font-family: $font-family-serif;
+        line-height: 1.875;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+}

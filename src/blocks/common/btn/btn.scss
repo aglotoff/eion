@@ -4,7 +4,7 @@
 .btn {
     display: inline-block;
     height: 30px;
-    padding: 0 15px;
+    padding: 0 18px;
 
     font-family: $font-family-sans-serif;
     @include font-size(10px);
@@ -23,7 +23,8 @@
         background: $color-primary;
         border: 0;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background: $color-secondary;
         }
     }
@@ -34,7 +35,8 @@
         background: $color-white;
         border: 1px dashed $color-primary;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $color-white;
 
             background: $color-primary;
