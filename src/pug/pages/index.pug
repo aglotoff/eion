@@ -5,6 +5,7 @@ include ../../blocks/index/banners/banners.pug
 include ../../blocks/index/counters/counters.pug
 include ../../blocks/index/post-carousel/post-carousel.pug
 include ../../blocks/index/special-offers/special-offers.pug
+include ../../blocks/index/instagram-feed/instagram-feed.pug
 
 block page
     +slider(data.slider)
@@ -20,3 +21,4 @@ block page
     })
         +post-carousel(data.blog.posts)
     +special-offers(data.specialOffers)
+    +instagram-feed(data.instagramFeed)

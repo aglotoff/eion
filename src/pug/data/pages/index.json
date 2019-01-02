@@ -200,5 +200,16 @@
         "desc": "Hey! How we can support you?",
         "title": "Eion Care Protection Plan",
         "link": "javascript:void(0);"
-    }]
+    }],
+
+    "instagramFeed": [
+        "img/content/instagram-feed/feed-01.jpg",
+        "img/content/instagram-feed/feed-02.jpg",
+        "img/content/instagram-feed/feed-03.jpg",
+        "img/content/instagram-feed/feed-04.jpg",
+        "img/content/instagram-feed/feed-05.jpg",
+        "img/content/instagram-feed/feed-06.jpg",
+        "img/content/instagram-feed/feed-07.jpg",
+        "img/content/instagram-feed/feed-08.jpg"
+    ]
 }

@@ -10,6 +10,7 @@ import * as SideNav        from '../side-nav/side-nav';
 
 import * as Slider         from '../../index/slider/slider';
 import * as Counters       from '../../index/counters/counters';
+import * as InstagramFeed  from '../../index/instagram-feed/instagram-feed';
 import * as PostCarousel   from '../../index/post-carousel/post-carousel';
 
 // -------------------------- BEGIN MODULE VARIABLES --------------------------
@@ -73,6 +74,7 @@ export const initModule = function() {
 
     Slider.initModule();
     Counters.initModule();
+    InstagramFeed.initModule();
     PostCarousel.initModule();
 
     // Process the initial window size and scroll position.
