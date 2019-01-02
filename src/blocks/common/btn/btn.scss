@@ -43,6 +43,20 @@
         }
     }
 
+    &_theme_inverse {
+        color: $color-primary;
+
+        background: $color-white;
+        border: 0;
+
+        &:hover,
+        &:focus {
+            color: $color-white;
+
+            background: $color-primary;
+        }
+    }
+
     &_size_large {
         height: 60px;
         padding: 0 30px;

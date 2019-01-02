@@ -1,0 +1,16 @@
+/**
+ * Styles for the text block.
+ */
+.text {
+    font-family: $font-family-serif;
+    @include font-size(14px);
+    line-height: 1.875;
+
+    em {
+        font-style: italic;
+    }
+
+    * + * {
+        margin-top: 1em;
+    }
+}

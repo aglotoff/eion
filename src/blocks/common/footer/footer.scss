@@ -1,0 +1,219 @@
+/**
+ * Styles for the footer block.
+ */
+.footer {
+    &__top {
+        padding-bottom: 30px;
+        padding-top: 45px;
+
+        background: $color-hot-pink;
+    }
+
+    &__top-inner {
+        @include breakpoint-up(md) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+    }
+
+    &__block {
+        padding-top: 30px 0;
+
+        color: $color-white;
+
+        @include breakpoint-up(md) {
+            flex: 0 0 50%;
+            padding: 30px 15px;
+        }
+
+        @include breakpoint-up(lg) {
+            flex-basis: 25%;
+        }
+    }
+
+    &__block-title {
+        @include font-size(14px);
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+
+        &:after {
+            content: "";
+
+            display: block;
+            height: 1px;
+            margin-bottom: 22px;
+            margin-top: 12px;
+            width: 50px;
+
+            border-top: 1px dashed $color-white;
+        }
+    }
+
+    &__signature {
+        margin-top: 20px;
+    }
+
+    &__menu {
+        columns: 2;
+
+        font-family: $font-family-serif;
+        @include font-size(14px);
+        line-height: 1.875;
+    }
+
+    &__menu-link {
+        color: $color-white;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    &__subscribe-form {
+        margin-top: 16px;
+    }
+
+    &__subscribe-input {
+        display: block;
+        padding: 15px 18px;
+        width: 100%;
+
+        color: $color-white;
+        font-family: $font-family-serif;
+        @include font-size(14px);
+        font-style: italic;
+
+        background: transparent;
+        border: 1px dashed $color-white;
+
+        &::placeholder {
+            opacity: 0.5;
+        }
+    }
+
+    &__subscribe-btn {
+        margin-top: 30px;
+        width: 100px;
+    }
+
+    &__address {
+        font-family: $font-family-serif;
+        @include font-size(14px);
+        font-style: italic;
+        line-height: 1.875;
+    }
+
+    &__contacts {
+        margin-top: 10px;
+
+        font-family: $font-family-serif;
+        @include font-size(14px);
+        line-height: 1.875;
+    }
+
+    &__social {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 18px;
+    }
+
+    &__social-item {
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+
+    &__social-link {
+        display: block;
+        height: 40px;
+        width: 40px;
+
+        color: $color-white;
+        line-height: 40px;
+        text-align: center;
+        text-decoration: none;
+
+        background: transparent;
+        border: 1px dashed $color-white;
+        border-radius: 50%;
+
+        transition: all 0.25s ease-in;
+
+        &:hover,
+        &:focus {
+            color: $color-primary;
+
+            background: $color-white;
+        }
+    }
+
+    &__bottom {
+        background: $color-white;
+    }
+
+    &__bottom-inner {
+        padding: 36px 0;
+
+        @include breakpoint-up(md) {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__logo {
+        display: block;
+    }
+
+    &__logo-img {
+        display: block;
+        max-width: 100%;
+    }
+
+    &__copyright {
+        margin-top: 30px;
+
+        color: $color-silver;
+        @include font-size(10px);
+        text-transform: uppercase;
+
+        @include breakpoint-up(md) {
+            margin-left: 12px;
+            margin-top: 0;
+        }
+    }
+
+    &__payments {
+        display: flex;
+        margin-top: 30px;
+
+        @include breakpoint-up(lg) {
+            margin-left: auto;
+            margin-top: 0;
+        }
+    }
+
+    &__payment-item:not(:first-child) {
+        margin-left: 10px;
+    }
+
+    &__payment-link {
+        display: block;
+
+        opacity: 0.2;
+
+        transition: opacity 0.25s ease-in;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+    }
+
+    &__payment-img {
+        display: block;
+        max-width: 100%;
+    }
+}

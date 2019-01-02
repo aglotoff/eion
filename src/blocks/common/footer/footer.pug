@@ -1,0 +1,109 @@
+mixin footer(data = {}, mods = {})
+    .footer&attributes(attributes)
+        .footer__top
+            .page__container
+                .footer__top-inner
+                    .footer__block
+                        h2.footer__block-title About Us
+
+                        .footer__text.text !{data.about}
+
+                        img(
+                            src = "img/signature.png"
+                            alt = "John Doe"
+                        ).footer__signature
+                    // /.footer__block 
+
+                    .footer__block
+                        h2.footer__block-title Information
+
+                        ul.footer__menu
+                            each item in data.menu
+                                li.footer__menu-item
+                                    a(href=item.link).footer__menu-link
+                                        | #{item.text}
+                    // /.footer__block 
+
+                    .footer__block
+                        h2.footer__block-title Newsletter
+
+                        .footer__text.text
+                            p Enter your email and we'll send you a coupon with 10% off your next order.
+
+                        form.footer__subscribe-form
+                            input(
+                                type        = "email"
+                                placeholder = "Your email..."
+                                aria-label  = "Your email"
+                                required
+                            ).footer__subscribe-input
+                            +btn({}, {theme: 'inverse'})(
+                                type = "submit"
+                                name = "subscribe"
+                            ).footer__subscribe-btn Submit
+                    // /.footer__block 
+
+                    .footer__block
+                        h2.footer__block-title Contact us
+
+                        address.footer__address= data.address
+
+                        ul.footer__contacts
+                            li.footer__contact-item Phone: #{data.phone}
+                            li.footer__contact-item Fax: #{data.fax}
+                            li.footer__contact-item Email: #{data.email}
+
+                        ul.footer__social
+                            li.footer__social-item
+                                a(href="javascript:void(0);").footer__social-link
+                                    i.fab.fa-twitter(
+                                        aria-label="Follow us on Twitter"
+                                    )
+                            li.footer__social-item
+                                a(href="javascript:void(0);").footer__social-link
+                                    i.fab.fa-facebook-f(
+                                        aria-label="Follow us on Facebook"
+                                    )
+                            li.footer__social-item
+                                a(href="javascript:void(0);").footer__social-link
+                                    i.fab.fa-instagram(
+                                        aria-label="Follow us on Instagram"
+                                    )
+                            li.footer__social-item
+                                a(href="javascript:void(0);").footer__social-link
+                                    i.fab.fa-google-plus-g(
+                                        aria-label="Follow us on Google Plus"
+                                    )
+                            li.footer__social-item
+                                a(href="javascript:void(0);").footer__social-link
+                                    i.fab.fa-pinterest(
+                                        aria-label="Follow us on Pinterest"
+                                    )
+
+                    // /.footer__block 
+                // /.footer__top-inner 
+            // /.page__container 
+        // /.footer__top 
+    
+        .footer__bottom
+            .page__container
+                .footer__bottom-inner
+                    a(href="javascript:void(0)").footer__logo
+                        img(
+                            src = "img/logo-footer.png"
+                            alt = "Eion"
+                        ).footer__logo-img
+
+                    .footer__copyright= data.copyright
+
+                    ul.footer__payments
+                        each payment in data.payments
+                            li.footer__payment-item
+                                a(href="javascript:void(0);").footer__payment-link
+                                    img(
+                                        src = payment.img
+                                        alt = payment.title
+                                    ).footer__payment-img
+                // /.footer__bottom-inner 
+            // /.page__container 
+        // /.footer__bottom 
