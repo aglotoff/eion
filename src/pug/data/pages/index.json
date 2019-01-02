@@ -190,5 +190,15 @@
             "likes": 8,
             "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
         }]
-    }
+    },
+
+    "specialOffers": [{
+        "desc": "For all standard order in 30 days",
+        "title": "Free Shipping & Gift",
+        "link": "javascript:void(0);"
+    }, {
+        "desc": "Hey! How we can support you?",
+        "title": "Eion Care Protection Plan",
+        "link": "javascript:void(0);"
+    }]
 }

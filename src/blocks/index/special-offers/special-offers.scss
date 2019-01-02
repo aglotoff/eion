@@ -1,0 +1,70 @@
+/**
+ * Styles for the special offers block.
+ */
+.special-offers {
+    padding-bottom: 40px;
+
+    @include breakpoint-up(lg) {
+        padding-bottom: 70px;
+    }
+
+    &__inner {
+        @include breakpoint-up(md) {
+            display: flex;
+            margin: 0 -15px;
+        }
+    }
+
+    &__box-wrap {
+        margin-bottom: 30px;
+
+        @include breakpoint-up(md) {
+            flex: 1;
+            padding: 0 15px;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 24px 15px;
+
+        text-align: center;
+
+        border: 1px dashed $color-text;
+    }
+
+    &__desc {
+        @include font-size(14px);
+        letter-spacing: 0.1em;
+    }
+
+    &__title {
+        margin-bottom: auto;
+        margin-top: 5px;
+
+        color: $color-secondary;
+        @include font-size(24px);
+        font-weight: $font-weight-bold;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    &__learn-more {
+        margin-top: 3px;
+    }
+
+    &__link {
+        color: $color-primary;
+        font-family: $font-family-serif;
+        @include font-size(12px);
+        font-style: italic;
+
+        transition: color 0.25s ease-in;
+
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+}
