@@ -1,0 +1,28 @@
+/**
+ * Styles for the payments block.
+ */
+.payments {
+    display: flex;
+
+    &__item:not(:first-child) {
+        margin-left: 10px;
+    }
+
+    &__link {
+        display: block;
+
+        opacity: 0.2;
+
+        transition: opacity 0.25s ease-in;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+    }
+
+    &__img {
+        display: block;
+        max-width: 100%;
+    }
+}

@@ -135,6 +135,7 @@
         width: 40px;
 
         color: $color-white;
+        @include font-size(14px);
         line-height: 40px;
         text-align: center;
         text-decoration: none;
@@ -190,34 +191,11 @@
     }
 
     &__payments {
-        display: flex;
         margin-top: 30px;
 
         @include breakpoint-up(lg) {
             margin-left: auto;
             margin-top: 0;
         }
-    }
-
-    &__payment-item:not(:first-child) {
-        margin-left: 10px;
-    }
-
-    &__payment-link {
-        display: block;
-
-        opacity: 0.2;
-
-        transition: opacity 0.25s ease-in;
-
-        &:hover,
-        &:focus {
-            opacity: 1;
-        }
-    }
-
-    &__payment-img {
-        display: block;
-        max-width: 100%;
     }
 }

@@ -96,14 +96,7 @@ mixin footer(data = {}, mods = {})
 
                     .footer__copyright= data.copyright
 
-                    ul.footer__payments
-                        each payment in data.payments
-                            li.footer__payment-item
-                                a(href="javascript:void(0);").footer__payment-link
-                                    img(
-                                        src = payment.img
-                                        alt = payment.title
-                                    ).footer__payment-img
+                    +payments(data.payments).footer__payments
                 // /.footer__bottom-inner 
             // /.page__container 
         // /.footer__bottom 
