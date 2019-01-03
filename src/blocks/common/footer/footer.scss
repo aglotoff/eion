@@ -50,6 +50,10 @@
         }
     }
 
+    &__text {
+        @include font-size(14px);
+    }
+
     &__signature {
         margin-top: 20px;
     }

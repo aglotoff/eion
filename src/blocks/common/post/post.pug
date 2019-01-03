@@ -31,14 +31,16 @@ mixin post(data = {}, mods = {})
                 i.far.fa-heart(aria-label="Likes")
                 | #{' '}
                 span #{data.likes}
-            
-        .post__excerpt
+        // /.post__meta 
+
+        .post__excerpt.text
             p= data.excerpt
-        
+        // /.post__excerpt 
+
         .post__bottom
             +btn({
                 href: 'javascript:void(0);',
             }, {theme: 'primary'}).post__read-more Read more
 
             +share().post__share
-                
+        // /.post__bottom 

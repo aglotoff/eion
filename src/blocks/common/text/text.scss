@@ -3,7 +3,6 @@
  */
 .text {
     font-family: $font-family-serif;
-    @include font-size(14px);
     line-height: 1.875;
 
     em {

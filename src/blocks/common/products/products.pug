@@ -4,7 +4,9 @@ mixin products(data = {}, mods = {})
             each product in data
                 .products__product
                     +product(product)
+        // /.products__grid 
 
         +btn({
             url  : 'javascript:void(0);',
         }, {size: 'large'}).products__view-more View more
+    // /.products 

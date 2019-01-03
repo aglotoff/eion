@@ -13,11 +13,13 @@ mixin slider(data = {}, mods = {})
                                 alt = slide.title
                             ).slider__title-img
                         .slider__text= slide.text
+            // /.slider__container 
 
         button.slider__arrow.slider__arrow_prev
             i.fas.fa-angle-left(aria-label="Previous Slide")
         button.slider__arrow.slider__arrow_next
             i.fas.fa-angle-right(aria-label="Next Slide")
 
-        a(href="javascript:void(0);").slider__skip-link
+        a(href="#banners").slider__skip-link
             .fas.fa-long-arrow-alt-down(aria-label="Skip to content")
+    // /.slider 

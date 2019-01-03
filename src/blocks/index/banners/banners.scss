@@ -4,11 +4,10 @@
 .banners {
     padding-top: 60px;
     &__grid {
-        @include breakpoint-up(md) {
+        @include breakpoint-up(sm) {
             display: grid;
             grid-gap: 30px;
             grid-template-columns: repeat(2, 1fr);
-
         }
 
         @include breakpoint-up(lg) {
@@ -29,23 +28,29 @@
         }
 
         &_size_default {
-            grid-area: span 1 / span 1;
+            @include breakpoint-up(sm) {
+                grid-area: span 1 / span 1;
+            }
         }
 
         &_size_wide {
-            grid-area: span 1 / span 2;
+            @include breakpoint-up(sm) {
+                grid-area: span 1 / span 2;
+            }
         }
 
         &_size_large {
-            grid-area: span 2 / span 2;
+            @include breakpoint-up(sm) {
+                grid-area: span 2 / span 2;
 
-            @include font-size(48px);
+                @include font-size(48px);
+            }
         }
 
         &:not(:first-child) {
             margin-top: 30px;
 
-            @include breakpoint-up(md) {
+            @include breakpoint-up(sm) {
                 margin-top: 0;
             }
         }
@@ -56,7 +61,9 @@
         padding-bottom: 100%;
 
         .banners__banner_size_wide & {
-            padding-bottom: 50%;
+            @include breakpoint-up(sm) {
+                padding-bottom: 50%;
+            }
         }
     }
 
@@ -102,8 +109,10 @@
         transition: border-color 0.25s ease;
 
         .banners__banner_size_large & {
-            height: 400px;
-            width: 400px;
+            @include breakpoint-up(sm) {
+                height: 400px;
+                width: 400px;
+            }
         }
 
         .banners__banner:hover &,

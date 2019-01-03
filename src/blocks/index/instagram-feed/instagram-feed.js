@@ -4,7 +4,7 @@
 
 // --------------------------- BEGIN PUBLIC METHODS ---------------------------
 /**
- * Initialize the instagram-feed module.
+ * Initialize the instagram feed module.
  * @return true;
  */
 export const initModule = function() {
@@ -15,23 +15,12 @@ export const initModule = function() {
             loop       : true,
             nav        : false,
             dots       : false,
-
             responsive : {
-                0: {
-                    items: 2
-                },
-                480: {
-                    items: 4
-                },
-                768: {
-                    items: 5
-                },
-                992: {
-                    items: 6,
-                },
-                1200: {
-                    items: 8
-                }
+                0    : {items: 2},
+                480  : {items: 4},
+                768  : {items: 5},
+                992  : {items: 6},
+                1200 : {items: 8},
             }
         });
     });
