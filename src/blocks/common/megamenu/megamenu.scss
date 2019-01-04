@@ -6,6 +6,7 @@
 
     background: $color-white;
     border-top: 1px solid $color-mercury;
+    box-shadow: 0 2px 5px rgba($color-black, 0.1);
 
     &__inner {
         display: flex;

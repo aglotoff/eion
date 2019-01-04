@@ -15,6 +15,7 @@ include ../../blocks/common/post/post.pug
 include ../../blocks/common/share/share.pug
 include ../../blocks/common/footer/footer.pug
 include ../../blocks/common/payments/payments.pug
+include ../../blocks/common/back-to-top/back-to-top.pug
 
 <!DOCTYPE html>
 html(lang="en")
@@ -29,13 +30,14 @@ html(lang="en")
             title #{data.siteTitle} &#8211; #{data.siteTagline}
 
         link(rel="stylesheet", href="css/style.css")
-    body.page
+    body.page#top
         +header(data.header).page__header
         +side-nav(data.sideNav).page__nav
 
         block page
 
-        +footer(data.footer)
+        +footer(data.footer).page__footer
+        +back-to-top().page__back-to-top
 
         block scripts
             script(src="js/vendor.js")

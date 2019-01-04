@@ -2,6 +2,7 @@
  * @file Implementation of the page block
  */
 
+import * as BackToTop      from '../back-to-top/back-to-top';
 import * as Header         from '../header/header';
 import * as HeaderDropdown from '../header-dropdown/header-dropdown';
 import * as LangMenu       from '../lang-menu/lang-menu';
@@ -14,7 +15,7 @@ import * as InstagramFeed  from '../../index/instagram-feed/instagram-feed';
 import * as PostCarousel   from '../../index/post-carousel/post-carousel';
 
 // -------------------------- BEGIN MODULE VARIABLES --------------------------
-const STICKY_HEADER_OFFSET  = 100;  // Scroll offset to make the header "sticky"
+const STICKY_HEADER_OFFSET  = 300;  // Scroll offset to make the header "sticky"
 const VISIBLE_HEADER_OFFSET = 600; // Scroll offset to show the "sticky" header
 const RESIZE_INTERVAL       = 200; // Resize debouncing interval
 const SCROLL_INTERVAL       = 200; // Scroll throttling interval
@@ -22,7 +23,8 @@ const SCROLL_INTERVAL       = 200; // Scroll throttling interval
 const HeaderStates = {NORMAL: 0, STICKY: 1, VISIBLE: 2};
 let headerState    = HeaderStates.NORMAL;
 
-const $header = $('.header');
+const $header    = $('.header');
+const $backToTop = $('.back-to-top');
 
 let resizeTimer = null;
 let scrollTimer = null;
@@ -46,16 +48,18 @@ const updateHeaderStyles = function() {
         if (newState === HeaderStates.NORMAL) {
             $header
                 .removeClass('page__header_scroll')
-                .removeClass('page__header_hidden')
-                .removeClass('header_sticky');
+                .removeClass('page__header_hidden');
+            $backToTop.removeClass('page__back-to-top_visible');
+        } else if (newState === HeaderStates.STICKY) {
+            $header
+                .addClass('page__header_scroll')
+                .addClass('page__header_hidden');
+            $backToTop.removeClass('page__back-to-top_visible');
         } else {
             $header
                 .addClass('page__header_scroll')
-                .toggleClass(
-                    'page__header_hidden',
-                    newState === HeaderStates.STICKY
-                )
-                .addClass('header_sticky');
+                .removeClass('page__header_hidden');
+            $backToTop.addClass('page__back-to-top_visible');
         }
 
         headerState = newState;
@@ -108,6 +112,7 @@ export const initModule = function() {
     });
 
     // Initialize blocks.
+    BackToTop.initModule();
     Header.initModule();
     HeaderDropdown.initModule();
     LangMenu.initModule();

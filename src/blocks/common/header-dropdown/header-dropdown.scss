@@ -51,6 +51,7 @@
             top: 100%;
 
             border-top: 1px solid $color-mercury;
+            box-shadow: 0 2px 5px rgba($color-black, 0.1);
             opacity: 0;
 
             transition: visibility 0s step-start 0.25s,
