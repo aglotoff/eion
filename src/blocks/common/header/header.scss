@@ -16,16 +16,28 @@
     &__btn {
         position: relative;
 
-        height: 100px;
+        height: 70px;
         padding: 0 15px;
 
         color: $color-primary;
         @include font-size(20px);
-        line-height: 100px;
+        line-height: 70px;
 
         background: transparent;
         border: 0;
         cursor: pointer;
+
+        @include breakpoint-up(lg) {
+            height: 100px;
+
+            line-height: 100px;
+
+            .header_sticky & {
+                height: 80px;
+
+                line-height: 80px;
+            }
+        }
     }
 
     &__cart-items {
@@ -94,6 +106,14 @@
 
         transition: color 0.25s ease;
 
+        @include breakpoint-up(lg) {
+            .header_sticky & {
+                height: 80px;
+
+                line-height: 80px;
+            }
+        }
+
         @include breakpoint-up(xl) {
             padding: 0 40px;
         }
@@ -147,6 +167,10 @@
 
             transform: translate(-50%, -1px);
         }
+
+        .header_sticky & {
+            top: 5px;
+        }
     }
 
     &__nav-arrow {
@@ -173,5 +197,9 @@
             transition-delay: 0s;
             visibility: visible;
         }
+    }
+
+    &_sticky {
+        box-shadow: 0 2px 5px rgba($color-black, 0.1);
     }
 }

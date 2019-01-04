@@ -25,10 +25,12 @@ mixin minicart(data = {}, mods = {})
                     .minicart__price $399
                 button.minicart__remove
                     span(aria-hidden="true") &times;
+        // /.minicart__items 
             
         .minicart__total
             span.minicart__total-text Total:
             span.minicart__total-price $1,459
+        // /.minicart__total 
 
         .btn-group.minicart__btns
             +btn({
@@ -37,3 +39,5 @@ mixin minicart(data = {}, mods = {})
             +btn({
                 href: 'javascript:void(0);',
             }, {theme: 'primary'}).btn-group__btn Checkout
+        // /.minicart__btns 
+    // /.minicart 

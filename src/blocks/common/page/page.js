@@ -14,17 +14,59 @@ import * as InstagramFeed  from '../../index/instagram-feed/instagram-feed';
 import * as PostCarousel   from '../../index/post-carousel/post-carousel';
 
 // -------------------------- BEGIN MODULE VARIABLES --------------------------
-const RESIZE_INTERVAL    = 200; // Resize debouncing interval
-const SCROLL_INTERVAL    = 200; // Scroll throttling interval
+const STICKY_HEADER_OFFSET  = 100;  // Scroll offset to make the header "sticky"
+const VISIBLE_HEADER_OFFSET = 600; // Scroll offset to show the "sticky" header
+const RESIZE_INTERVAL       = 200; // Resize debouncing interval
+const SCROLL_INTERVAL       = 200; // Scroll throttling interval
+
+const HeaderStates = {NORMAL: 0, STICKY: 1, VISIBLE: 2};
+let headerState    = HeaderStates.NORMAL;
+
+const $header = $('.header');
 
 let resizeTimer = null;
 let scrollTimer = null;
 let wasScrolled = false;
 // --------------------------- END MODULE VARIABLES ---------------------------
 
+// ---------------------------- BEGIN DOM METHODS -----------------------------
+/**
+ * Add or remove header classes basd on the current scroll offset to create an
+ * animated sticky header effect.
+ */
+const updateHeaderStyles = function() {
+    const offset = $(window).scrollTop();
+    const newState = offset < STICKY_HEADER_OFFSET
+        ? HeaderStates.NORMAL
+        : (offset < VISIBLE_HEADER_OFFSET
+            ? HeaderStates.STICKY
+            : HeaderStates.VISIBLE);
+
+    if (newState !== headerState) {
+        if (newState === HeaderStates.NORMAL) {
+            $header
+                .removeClass('page__header_scroll')
+                .removeClass('page__header_hidden')
+                .removeClass('header_sticky');
+        } else {
+            $header
+                .addClass('page__header_scroll')
+                .toggleClass(
+                    'page__header_hidden',
+                    newState === HeaderStates.STICKY
+                )
+                .addClass('header_sticky');
+        }
+
+        headerState = newState;
+    }
+};
+// ----------------------------- END DOM METHODS ------------------------------
+
 // --------------------------- BEGIN EVENT HANDLERS ---------------------------
 const onWindowScroll = function() {
     Counters.handleScroll();
+    updateHeaderStyles();
 };
 
 const onWindowResize = function() {

@@ -5,7 +5,7 @@
 import {makeDropdown, makeModal} from '../../../js/utils';
 
 // -------------------------- BEGIN MODULE VARIABLES --------------------------
-const DESKTOP_BREAKPOINT = 992; // Minimum desktop screen width
+const TABLET_BREAKPOINT = 768; // Minimum tablet screen width
 
 let isMobile    = true;
 const dropdowns = [];
@@ -89,7 +89,7 @@ export const initModule = function() {
  * Respond to window resize event.
  */
 export const handleResize = function() {
-    if (!isMobile && ($(window).outerWidth() < DESKTOP_BREAKPOINT)) {
+    if (!isMobile && ($(window).outerWidth() < TABLET_BREAKPOINT)) {
         isMobile = true;
 
         // On mobile screens, disable the dropdown behavior of submenus and
@@ -100,7 +100,7 @@ export const handleResize = function() {
             
             drop.modalLogic.unpause();
         });
-    } else if (isMobile && ($(window).outerWidth() >= DESKTOP_BREAKPOINT)) {
+    } else if (isMobile && ($(window).outerWidth() >= TABLET_BREAKPOINT)) {
         isMobile = false;
 
         // On desktop screens, disable the modal behavior of submenus and enable

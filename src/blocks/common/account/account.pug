@@ -31,6 +31,7 @@ mixin account(data = {}, mods = {})
                     type = "submit"
                     name = "login"
                 ).btn-group__btn Login
+        // /.account__form 
         
         .account__social
             .account__social-text Connect with
@@ -50,6 +51,9 @@ mixin account(data = {}, mods = {})
                         i.fab.fa-google-plus-g(
                             aria-label="Follow us on Google Plus"
                         )
+        // /.account__social 
 
         .account__lang
             +lang-menu()
+        // /.account__lang 
+    // /.account 

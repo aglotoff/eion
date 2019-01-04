@@ -17,6 +17,7 @@ mixin side-nav__menu(data, lvl=1)
                         )
                 if item.submenu
                     +side-nav__menu(item.submenu, lvl+1)
+    // /.side-nav__menu 
 
 mixin side-nav(data, mods = {})
     nav.side-nav(role="dialog")&attributes(attributes)
@@ -55,6 +56,7 @@ mixin side-nav(data, mods = {})
                         i.fab.fa-pinterest(
                             aria-label="Follow us on Pinterest"
                         )
+            // /.side-nav__social 
             
             +side-nav__menu(data.menu)
 
@@ -68,4 +70,6 @@ mixin side-nav(data, mods = {})
                         name        = "search"
                         placeholder = "Search..."
                     ).side-nav__search-input
+            // /.side-nav__search 
+        // /.side-nav__drawer 
     // /.side-nav 
