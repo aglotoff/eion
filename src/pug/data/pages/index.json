@@ -1,215 +1,217 @@
 {
-    "slider": [{
-        "img": "img/content/slider/slide-01.jpg",
-        "titleImg": "img/content/slider/title-01.png",
-        "title": "Flower",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
-    }, {
-        "img": "img/content/slider/slide-02.jpg",
-        "titleImg": "img/content/slider/title-01.png",
-        "title": "Flower",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
-    }, {
-        "img": "img/content/slider/slide-03.jpg",
-        "titleImg": "img/content/slider/title-01.png",
-        "title": "Flower",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
-    }],
+    "content": {
+        "slider": [{
+            "img": "img/content/slider/slide-01.jpg",
+            "titleImg": "img/content/slider/title-01.png",
+            "title": "Flower",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        }, {
+            "img": "img/content/slider/slide-02.jpg",
+            "titleImg": "img/content/slider/title-01.png",
+            "title": "Flower",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        }, {
+            "img": "img/content/slider/slide-03.jpg",
+            "titleImg": "img/content/slider/title-01.png",
+            "title": "Flower",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        }],
 
-    "banners": [{
-        "img": "img/content/banners/banner-01-bg.jpg",
-        "link": "javascript:void(0);",
-        "text": "All flower",
-        "size": "large"
-    }, {
-        "img": "img/content/banners/banner-02-bg.jpg",
-        "link": "javascript:void(0);",
-        "text": "Flower table",
-        "size": "default"
-    }, {
-        "img": "img/content/banners/banner-03-bg.jpg",
-        "link": "javascript:void(0);",
-        "text": "Flower decoration",
-        "size": "default"
-    }, {
-        "img": "img/content/banners/banner-04-bg.jpg",
-        "link": "javascript:void(0);",
-        "text": "Wedding flowers",
-        "size": "wide"
-    }],
+        "banners": [{
+            "img": "img/content/banners/banner-01-bg.jpg",
+            "link": "javascript:void(0);",
+            "text": "All flower",
+            "size": "large"
+        }, {
+            "img": "img/content/banners/banner-02-bg.jpg",
+            "link": "javascript:void(0);",
+            "text": "Flower table",
+            "size": "default"
+        }, {
+            "img": "img/content/banners/banner-03-bg.jpg",
+            "link": "javascript:void(0);",
+            "text": "Flower decoration",
+            "size": "default"
+        }, {
+            "img": "img/content/banners/banner-04-bg.jpg",
+            "link": "javascript:void(0);",
+            "text": "Wedding flowers",
+            "size": "wide"
+        }],
 
-    "products": {
-        "title": "Popular Products",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
-        
-        "items": [{
-            "name": "Fl-Model A351",
-            "price": 530,
-            "img": "img/content/products/thumbs/310x250/a351-1.jpg",
-            "rating": 4.5,
+        "products": {
+            "title": "Popular Products",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+            
+            "items": [{
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/310x250/a351-1.jpg",
+                "rating": 4.5,
+                "link": "javascript:void(0);"
+            }, {
+                "name": "Fl-Model A351",
+                "sale": true,
+                "oldPrice": 530,
+                "price": 399,
+                "img": "img/content/products/thumbs/310x250/a351-2.jpg",
+                "rating": 5,
+                "link": "javascript:void(0);"
+            }, {
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/310x250/a351-3.jpg",
+                "link": "javascript:void(0);"
+            }, {
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/310x250/a351-4.jpg",
+                "rating": 3.5,
+                "link": "javascript:void(0);"
+            }, {
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/310x250/a351-5.jpg",
+                "link": "javascript:void(0);"
+            }, {
+                "name": "Fl-Model A351",
+                "sale": true,
+                "oldPrice": 530,
+                "price": 399,
+                "img": "img/content/products/thumbs/310x250/a351-6.jpg",
+                "rating": 4.5,
+                "link": "javascript:void(0);"
+            }]
+        },
+
+        "counters": [{
+            "title": "Coffee Cups",
+            "value": 24622
+        }, {
+            "title": "Flower Sold",
+            "value": 6134
+        }, {
+            "title": "Flower Hired",
+            "value": 7516
+        }, {
+            "title": "Happy Customers",
+            "value": 12023
+        }],
+
+        "blog": {
+            "title": "Latest from the blog",
+            "posts": [{
+                "title": "Sunt in culpa qui officia desent mollit anim.",
+                "link": "javascript:void(0);",
+                "img": "img/content/blog/thumbs/660x490/post-01.jpg",
+                "date": "2015/06/02",
+                "author": "Author",
+                "authorLink": "javascript:void(0);",
+                "comments": 3,
+                "likes": 8,
+                "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
+            }, {
+                "title": "Sunt in culpa qui officia desent mollit anim.",
+                "link": "javascript:void(0);",
+                "img": "img/content/blog/thumbs/660x490/post-02.jpg",
+                "date": "2015/06/02",
+                "author": "Author",
+                "authorLink": "javascript:void(0);",
+                "comments": 3,
+                "likes": 8,
+                "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
+            }, {
+                "title": "Sunt in culpa qui officia desent mollit anim.",
+                "link": "javascript:void(0);",
+                "img": "img/content/blog/thumbs/660x490/post-03.jpg",
+                "date": "2015/06/02",
+                "author": "Author",
+                "authorLink": "javascript:void(0);",
+                "comments": 3,
+                "likes": 8,
+                "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
+            }, {
+                "title": "Sunt in culpa qui officia desent mollit anim.",
+                "link": "javascript:void(0);",
+                "img": "img/content/blog/thumbs/660x490/post-04.jpg",
+                "date": "2015/06/02",
+                "author": "Author",
+                "authorLink": "javascript:void(0);",
+                "comments": 3,
+                "likes": 8,
+                "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
+            }, {
+                "title": "Sunt in culpa qui officia desent mollit anim.",
+                "link": "javascript:void(0);",
+                "img": "img/content/blog/thumbs/660x490/post-05.jpg",
+                "date": "2015/06/02",
+                "author": "Author",
+                "authorLink": "javascript:void(0);",
+                "comments": 3,
+                "likes": 8,
+                "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
+            }, {
+                "title": "Sunt in culpa qui officia desent mollit anim.",
+                "link": "javascript:void(0);",
+                "img": "img/content/blog/thumbs/660x490/post-06.jpg",
+                "date": "2015/06/02",
+                "author": "Author",
+                "authorLink": "javascript:void(0);",
+                "comments": 3,
+                "likes": 8,
+                "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
+            }, {
+                "title": "Sunt in culpa qui officia desent mollit anim.",
+                "link": "javascript:void(0);",
+                "img": "img/content/blog/thumbs/660x490/post-07.jpg",
+                "date": "2015/06/02",
+                "author": "Author",
+                "authorLink": "javascript:void(0);",
+                "comments": 3,
+                "likes": 8,
+                "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
+            }, {
+                "title": "Sunt in culpa qui officia desent mollit anim.",
+                "link": "javascript:void(0);",
+                "img": "img/content/blog/thumbs/660x490/post-08.jpg",
+                "date": "2015/06/02",
+                "author": "Author",
+                "authorLink": "javascript:void(0);",
+                "comments": 3,
+                "likes": 8,
+                "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
+            }, {
+                "title": "Sunt in culpa qui officia desent mollit anim.",
+                "link": "javascript:void(0);",
+                "img": "img/content/blog/thumbs/660x490/post-09.jpg",
+                "date": "2015/06/02",
+                "author": "Author",
+                "authorLink": "javascript:void(0);",
+                "comments": 3,
+                "likes": 8,
+                "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
+            }]
+        },
+
+        "specialOffers": [{
+            "desc": "For all standard order in 30 days",
+            "title": "Free Shipping & Gift",
             "link": "javascript:void(0);"
         }, {
-            "name": "Fl-Model A351",
-            "sale": true,
-            "oldPrice": 530,
-            "price": 399,
-            "img": "img/content/products/thumbs/310x250/a351-2.jpg",
-            "rating": 5,
+            "desc": "Hey! How we can support you?",
+            "title": "Eion Care Protection Plan",
             "link": "javascript:void(0);"
-        }, {
-            "name": "Fl-Model A351",
-            "price": 530,
-            "img": "img/content/products/thumbs/310x250/a351-3.jpg",
-            "link": "javascript:void(0);"
-        }, {
-            "name": "Fl-Model A351",
-            "price": 530,
-            "img": "img/content/products/thumbs/310x250/a351-4.jpg",
-            "rating": 3.5,
-            "link": "javascript:void(0);"
-        }, {
-            "name": "Fl-Model A351",
-            "price": 530,
-            "img": "img/content/products/thumbs/310x250/a351-5.jpg",
-            "link": "javascript:void(0);"
-        }, {
-            "name": "Fl-Model A351",
-            "sale": true,
-            "oldPrice": 530,
-            "price": 399,
-            "img": "img/content/products/thumbs/310x250/a351-6.jpg",
-            "rating": 4.5,
-            "link": "javascript:void(0);"
-        }]
-    },
+        }],
 
-    "counters": [{
-        "title": "Coffee Cups",
-        "value": 24622
-    }, {
-        "title": "Flower Sold",
-        "value": 6134
-    }, {
-        "title": "Flower Hired",
-        "value": 7516
-    }, {
-        "title": "Happy Customers",
-        "value": 12023
-    }],
-
-    "blog": {
-        "title": "Latest from the blog",
-        "posts": [{
-            "title": "Sunt in culpa qui officia desent mollit anim.",
-            "link": "javascript:void(0);",
-            "img": "img/content/blog/thumbs/660x490/post-01.jpg",
-            "date": "2015/06/02",
-            "author": "Author",
-            "authorLink": "javascript:void(0);",
-            "comments": 3,
-            "likes": 8,
-            "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
-        }, {
-            "title": "Sunt in culpa qui officia desent mollit anim.",
-            "link": "javascript:void(0);",
-            "img": "img/content/blog/thumbs/660x490/post-02.jpg",
-            "date": "2015/06/02",
-            "author": "Author",
-            "authorLink": "javascript:void(0);",
-            "comments": 3,
-            "likes": 8,
-            "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
-        }, {
-            "title": "Sunt in culpa qui officia desent mollit anim.",
-            "link": "javascript:void(0);",
-            "img": "img/content/blog/thumbs/660x490/post-03.jpg",
-            "date": "2015/06/02",
-            "author": "Author",
-            "authorLink": "javascript:void(0);",
-            "comments": 3,
-            "likes": 8,
-            "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
-        }, {
-            "title": "Sunt in culpa qui officia desent mollit anim.",
-            "link": "javascript:void(0);",
-            "img": "img/content/blog/thumbs/660x490/post-04.jpg",
-            "date": "2015/06/02",
-            "author": "Author",
-            "authorLink": "javascript:void(0);",
-            "comments": 3,
-            "likes": 8,
-            "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
-        }, {
-            "title": "Sunt in culpa qui officia desent mollit anim.",
-            "link": "javascript:void(0);",
-            "img": "img/content/blog/thumbs/660x490/post-05.jpg",
-            "date": "2015/06/02",
-            "author": "Author",
-            "authorLink": "javascript:void(0);",
-            "comments": 3,
-            "likes": 8,
-            "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
-        }, {
-            "title": "Sunt in culpa qui officia desent mollit anim.",
-            "link": "javascript:void(0);",
-            "img": "img/content/blog/thumbs/660x490/post-06.jpg",
-            "date": "2015/06/02",
-            "author": "Author",
-            "authorLink": "javascript:void(0);",
-            "comments": 3,
-            "likes": 8,
-            "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
-        }, {
-            "title": "Sunt in culpa qui officia desent mollit anim.",
-            "link": "javascript:void(0);",
-            "img": "img/content/blog/thumbs/660x490/post-07.jpg",
-            "date": "2015/06/02",
-            "author": "Author",
-            "authorLink": "javascript:void(0);",
-            "comments": 3,
-            "likes": 8,
-            "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
-        }, {
-            "title": "Sunt in culpa qui officia desent mollit anim.",
-            "link": "javascript:void(0);",
-            "img": "img/content/blog/thumbs/660x490/post-08.jpg",
-            "date": "2015/06/02",
-            "author": "Author",
-            "authorLink": "javascript:void(0);",
-            "comments": 3,
-            "likes": 8,
-            "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
-        }, {
-            "title": "Sunt in culpa qui officia desent mollit anim.",
-            "link": "javascript:void(0);",
-            "img": "img/content/blog/thumbs/660x490/post-09.jpg",
-            "date": "2015/06/02",
-            "author": "Author",
-            "authorLink": "javascript:void(0);",
-            "comments": 3,
-            "likes": 8,
-            "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation"
-        }]
-    },
-
-    "specialOffers": [{
-        "desc": "For all standard order in 30 days",
-        "title": "Free Shipping & Gift",
-        "link": "javascript:void(0);"
-    }, {
-        "desc": "Hey! How we can support you?",
-        "title": "Eion Care Protection Plan",
-        "link": "javascript:void(0);"
-    }],
-
-    "instagramFeed": [
-        "img/content/instagram-feed/feed-01.jpg",
-        "img/content/instagram-feed/feed-02.jpg",
-        "img/content/instagram-feed/feed-03.jpg",
-        "img/content/instagram-feed/feed-04.jpg",
-        "img/content/instagram-feed/feed-05.jpg",
-        "img/content/instagram-feed/feed-06.jpg",
-        "img/content/instagram-feed/feed-07.jpg",
-        "img/content/instagram-feed/feed-08.jpg"
-    ]
+        "instagramFeed": [
+            "img/content/instagram-feed/feed-01.jpg",
+            "img/content/instagram-feed/feed-02.jpg",
+            "img/content/instagram-feed/feed-03.jpg",
+            "img/content/instagram-feed/feed-04.jpg",
+            "img/content/instagram-feed/feed-05.jpg",
+            "img/content/instagram-feed/feed-06.jpg",
+            "img/content/instagram-feed/feed-07.jpg",
+            "img/content/instagram-feed/feed-08.jpg"
+        ]
+    }
 }
