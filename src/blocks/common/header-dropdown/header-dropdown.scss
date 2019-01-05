@@ -19,7 +19,7 @@
 
         visibility: hidden;
         transition: visibility 0s step-start 0.25s,
-                    opacity 0.25s ease;
+                    opacity 0.25s ease-out;
 
         @include breakpoint-up(md) {
             display: none;
@@ -43,7 +43,7 @@
 
         visibility: hidden;
         transition: visibility 0s step-start 0.25s,
-                    transform 0.25s linear;
+                    transform 0.25s ease-out;
 
         @include breakpoint-up(md) {  
             bottom: auto;      
@@ -55,7 +55,7 @@
             opacity: 0;
 
             transition: visibility 0s step-start 0.25s,
-                        opacity 0.25s ease;
+                        opacity 0.25s ease-out;
         }
 
         .header-dropdown_bottom-left > & {

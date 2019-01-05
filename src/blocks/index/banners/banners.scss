@@ -88,7 +88,7 @@
 
         background: rgba($color-black, 0.25);
 
-        transition: background-color 0.25s ease;
+        transition: background-color 0.25s linear;
 
         &:hover,
         &:focus {
@@ -106,7 +106,7 @@
         border: 2px dashed transparent;
         border-radius: 50%;
 
-        transition: border-color 0.25s ease;
+        transition: border-color 0.25s linear;
 
         .banners__banner_size_large & {
             @include breakpoint-up(sm) {

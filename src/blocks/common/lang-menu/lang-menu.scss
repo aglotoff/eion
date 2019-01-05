@@ -27,7 +27,7 @@
         border: 1px solid $color-gray;
         opacity: 0;
 
-        transition: opacity 0.25s ease,
+        transition: opacity 0.25s ease-out,
                     visibility 0s step-start 0.25s;
         visibility: hidden;
 
@@ -75,7 +75,7 @@
 
         border-bottom: 1px dashed $color-text;
 
-        transition: all 0.25s ease;
+        transition: all 0.25s linear;
 
         &:hover,
         &:focus,

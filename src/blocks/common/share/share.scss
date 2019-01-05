@@ -4,7 +4,7 @@
 .share {
     position: relative;
 
-    transition: all 0.25s ease;
+    transition: all 0.25s linear;
 
     &__toggle,
     &__link {

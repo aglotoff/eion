@@ -144,7 +144,7 @@
         border: 1px dashed $color-white;
         border-radius: 50%;
 
-        transition: all 0.25s ease-in;
+        transition: all 0.25s linear;
 
         &:hover,
         &:focus {

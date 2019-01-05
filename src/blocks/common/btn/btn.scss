@@ -15,7 +15,7 @@
     border-radius: 15px;
     cursor: pointer;
 
-    transition: all 0.25s ease;
+    transition: all 0.25s linear;
 
     &_theme_primary {
         color: $color-white;

@@ -71,7 +71,7 @@
         @include font-size(12px);
         text-decoration: none;
 
-        transition: color 0.25s ease;
+        transition: color 0.25s linear;
 
         &:hover,
         &:focus {

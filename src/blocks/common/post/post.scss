@@ -36,7 +36,7 @@
         background: rgba($color-secondary, 0.5);
         opacity: 0;
 
-        transition: opacity 0.25s ease-in;
+        transition: opacity 0.25s linear;
 
         .post__thumb:hover > &,
         .post__thumb:focus > & {
@@ -68,7 +68,7 @@
     &__author-link {
         color: $color-silver;
 
-        transition: color 0.25s ease-out;
+        transition: color 0.25s linear;
 
         &:hover {
             color: $color-secondary;
