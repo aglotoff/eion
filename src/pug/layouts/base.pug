@@ -46,7 +46,11 @@ html(lang="en")
                 menu         : data.menu,
             }).page__header
 
-        +side-nav({menu: data.menu}).page__nav
+        +side-nav({
+            menu  : data.menu,
+        }, {
+            align : data.sideNavAlign,
+        }).page__nav
 
         block page
 

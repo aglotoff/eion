@@ -1,3 +1,4 @@
 {
-    "menuCenter": false
+    "menuCenter": false,
+    "sideNavAlign": "right"
 }

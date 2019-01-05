@@ -101,6 +101,7 @@
     }],
 
     "menuCenter": true,
+    "sideNavAlign": "left",
 
     "footer": {
         "about": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing 1992 elit London, do <em>flower</em> tempor incididunt ut labore et dolore magna aliqua.</p><p><em>Eion</em> renim ad 2015 minim veniam, quis nostrud exercitation ullamco.</p>",

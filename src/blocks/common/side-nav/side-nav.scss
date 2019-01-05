@@ -15,10 +15,10 @@
         right: 0;
         top: 0;
 
-        background: rgba($color-black, 0.5);
+        background: rgba($color-black, 0.55);
         opacity: 0;
 
-        transition: opacity ease 0.25s;
+        transition: opacity 0.25s ease-out;
 
         .side-nav_visible & {
             opacity: 1;
@@ -27,7 +27,6 @@
 
     &__drawer {
         bottom: 0;
-        left: -300px;
         position: fixed;
         top: 0;
 
@@ -39,10 +38,22 @@
         background: $color-secondary;
 
         overflow-y: auto;
-        transition: left 0.25s linear;
+        transition: transform 0.35s ease-out;
+
+        .side-nav_align_left & {
+            left: 0;
+
+            transform: translateX(-100%);
+        }
+
+        .side-nav_align_right & {
+            right: 0;
+
+            transform: translateX(100%);
+        }
 
         .side-nav_visible & {
-            left: 0;
+            transform: none;
         }
     }
 
@@ -60,7 +71,7 @@
         border: 0;
         cursor: pointer;
 
-        transition: color 0.25s ease;
+        transition: color 0.35s ease;
 
         &:hover,
         &:focus, {

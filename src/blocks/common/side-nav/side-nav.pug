@@ -20,7 +20,11 @@ mixin side-nav__menu(data, lvl=1)
     // /.side-nav__menu 
 
 mixin side-nav(data, mods = {})
-    nav.side-nav(role="dialog")&attributes(attributes)
+    - const align = mods.align || 'left';
+    nav.side-nav(
+        class = "side-nav_align_" + align
+        role  = "dialog"
+    )&attributes(attributes)
         .side-nav__backdrop
 
         .side-nav__drawer
