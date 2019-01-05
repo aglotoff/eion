@@ -2,207 +2,103 @@
     "siteTitle": "Eion",
     "siteTagline": "HTML template for flower & beauty shops",
 
-    "header": {
-        "menuLeft": [{
-            "text": "About",
-            "link": "javascript:void(0);"
-        }, {
-            "text": "Flower",
-            "link": "javascript:void(0);"
-        }, {
-            "text": "Shop",
-            "link": "javascript:void(0);"
-        }],
-
-        "menuRight": [{
-            "text": "Pages",
+    "menu": [{
+        "text": "About",
+        "link": "javascript:void(0);"
+    }, {
+        "text": "Flower",
+        "link": "javascript:void(0);"
+    }, {
+        "text": "Shop",
+        "link": "javascript:void(0);"
+    }, {
+        "text": "Pages",
+        "link": "javascript:void(0);",
+        "label": "New",
+        "submenu": [{
+            "text": "General",
             "link": "javascript:void(0);",
-            "label": "New",
             "submenu": [{
-                "text": "General",
-                "link": "javascript:void(0);",
-                "submenu": [{
-                    "text": "About Us",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Our Services",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "404 Errors",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Under Construction",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Coming Soon",
-                    "link": "javascript:void(0);"
-                }]
+                "text": "About Us",
+                "link": "javascript:void(0);"
             }, {
-                "text": "Product",
-                "link": "javascript:void(0);",
-                "submenu": [{
-                    "text": "Product Category Default",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Product Category 2 Column",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Standard Product",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Extended Product",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Full-screen Product",
-                    "link": "javascript:void(0);"
-                }]
+                "text": "Our Services",
+                "link": "javascript:void(0);"
             }, {
-                "text": "Portfolio",
-                "link": "javascript:void(0);",
-                "submenu": [{
-                    "text": "Portfolio Category",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Single Portfolio",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Lookbook",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Photo Gallery",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Video Gallery",
-                    "link": "javascript:void(0);"
-                }]
+                "text": "404 Errors",
+                "link": "javascript:void(0);"
             }, {
-                "text": "Shop Pages",
-                "link": "javascript:void(0);",
-                "submenu": [{
-                    "text": "Shopping Cart",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "My Wishlist",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Track Your Order",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "My Account",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Checkout",
-                    "link": "javascript:void(0);"
-                }]
+                "text": "Under Construction",
+                "link": "javascript:void(0);"
+            }, {
+                "text": "Coming Soon",
+                "link": "javascript:void(0);"
             }]
         }, {
-            "text": "Blog",
-            "link": "javascript:void(0);"
-        }, {
-            "text": "Contact",
-            "link": "javascript:void(0);"
-        }]
-    },
-
-    "sideNav": {
-        "menu": [{
-            "text": "About",
-            "link": "javascript:void(0);"
-        }, {
-            "text": "Flower",
-            "link": "javascript:void(0);"
-        }, {
-            "text": "Shop",
-            "link": "javascript:void(0);"
-        }, {
-            "text": "Pages",
+            "text": "Product",
             "link": "javascript:void(0);",
-            "label": "New",
             "submenu": [{
-                "text": "General",
-                "link": "javascript:void(0);",
-                "submenu": [{
-                    "text": "About Us",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Our Services",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "404 Errors",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Under Construction",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Coming Soon",
-                    "link": "javascript:void(0);"
-                }]
+                "text": "Product Category Default",
+                "link": "javascript:void(0);"
             }, {
-                "text": "Product",
-                "link": "javascript:void(0);",
-                "submenu": [{
-                    "text": "Product Category Default",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Product Category 2 Column",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Standard Product",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Extended Product",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Full-screen Product",
-                    "link": "javascript:void(0);"
-                }]
+                "text": "Product Category 2 Column",
+                "link": "javascript:void(0);"
             }, {
-                "text": "Portfolio",
-                "link": "javascript:void(0);",
-                "submenu": [{
-                    "text": "Portfolio Category",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Single Portfolio",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Lookbook",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Photo Gallery",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Video Gallery",
-                    "link": "javascript:void(0);"
-                }]
+                "text": "Standard Product",
+                "link": "javascript:void(0);"
             }, {
-                "text": "Shop Pages",
-                "link": "javascript:void(0);",
-                "submenu": [{
-                    "text": "Shopping Cart",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "My Wishlist",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Track Your Order",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "My Account",
-                    "link": "javascript:void(0);"
-                }, {
-                    "text": "Checkout",
-                    "link": "javascript:void(0);"
-                }]
+                "text": "Extended Product",
+                "link": "javascript:void(0);"
+            }, {
+                "text": "Full-screen Product",
+                "link": "javascript:void(0);"
             }]
         }, {
-            "text": "Blog",
-            "link": "javascript:void(0);"
+            "text": "Portfolio",
+            "link": "javascript:void(0);",
+            "submenu": [{
+                "text": "Portfolio Category",
+                "link": "javascript:void(0);"
+            }, {
+                "text": "Single Portfolio",
+                "link": "javascript:void(0);"
+            }, {
+                "text": "Lookbook",
+                "link": "javascript:void(0);"
+            }, {
+                "text": "Photo Gallery",
+                "link": "javascript:void(0);"
+            }, {
+                "text": "Video Gallery",
+                "link": "javascript:void(0);"
+            }]
         }, {
-            "text": "Contact",
-            "link": "javascript:void(0);"
+            "text": "Shop Pages",
+            "link": "javascript:void(0);",
+            "submenu": [{
+                "text": "Shopping Cart",
+                "link": "javascript:void(0);"
+            }, {
+                "text": "My Wishlist",
+                "link": "javascript:void(0);"
+            }, {
+                "text": "Track Your Order",
+                "link": "javascript:void(0);"
+            }, {
+                "text": "My Account",
+                "link": "javascript:void(0);"
+            }, {
+                "text": "Checkout",
+                "link": "javascript:void(0);"
+            }]
         }]
-    },
+    }, {
+        "text": "Blog",
+        "link": "javascript:void(0);"
+    }, {
+        "text": "Contact",
+        "link": "javascript:void(0);"
+    }],
 
     "footer": {
         "about": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing 1992 elit London, do <em>flower</em> tempor incididunt ut labore et dolore magna aliqua.</p><p><em>Eion</em> renim ad 2015 minim veniam, quis nostrud exercitation ullamco.</p>",

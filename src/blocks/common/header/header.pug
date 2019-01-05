@@ -17,6 +17,10 @@ mixin header__nav-list(data)
                     +megamenu(item.submenu).header__megamenu
 
 mixin header(data, mods = {})
+    -
+        const menuLeft  = data.menu.slice(0, Math.floor(data.menu.length / 2));
+        const menuRight = data.menu.slice(Math.floor(data.menu.length / 2));
+
     header.header&attributes(attributes)
         .header__left
             .header__actions
@@ -42,13 +46,13 @@ mixin header(data, mods = {})
 
         .header__center
             nav.header__nav
-                +header__nav-list(data.menuLeft)
+                +header__nav-list(menuLeft)
                 
                 h1.header__logo
                     img(src="img/logo.png", alt="Eion").header__logo-img
                     .header__logo-alt Eion
 
-                +header__nav-list(data.menuRight)
+                +header__nav-list(menuRight)
         // .header__center 
 
         .header__right
