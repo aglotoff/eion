@@ -11,18 +11,14 @@
     &__link {
         display: block;
 
-        opacity: 0.2;
+        color: $color-silver;
+        @include font-size(20px);
 
-        transition: opacity 0.25s ease-in;
+        transition: color 0.25s ease-in;
 
         &:hover,
         &:focus {
-            opacity: 1;
+            color: $color-secondary;
         }
-    }
-
-    &__img {
-        display: block;
-        max-width: 100%;
     }
 }

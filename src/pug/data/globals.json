@@ -251,29 +251,6 @@
         "fax": "+1 (2) 345 6789",
         "email": "Contact@yourdomain.com",
 
-        "copyright": "© Copyright 2015. Powered by WordPress. Eion Theme by SunriseThemes",
-
-        "payments": [{
-            "title": "Visa",
-            "img": "img/content/payments/visa.png"
-        }, {
-            "title": "MasterCard",
-            "img": "img/content/payments/master-card.png"
-        }, {
-            "title": "PayPal",
-            "img": "img/content/payments/paypal.png"
-        }, {
-            "title": "Amex",
-            "img": "img/content/payments/amex.png"
-        }, {
-            "title": "JCB",
-            "img": "img/content/payments/jcb.png"
-        }, {
-            "title": "2CO",
-            "img": "img/content/payments/2co.png"
-        }, {
-            "title": "Switch",
-            "img": "img/content/payments/switch.png"
-        }]
+        "copyright": "© Copyright 2015. Powered by WordPress. Eion Theme by SunriseThemes"
     }
 }
