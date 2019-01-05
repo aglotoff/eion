@@ -56,14 +56,24 @@
     }
 
     &__logo {
-        padding: 0 15px;
-
         @include breakpoint-up(md) {
-            padding: 0 25px;
+            padding: 0 15px;
         }
 
         @include breakpoint-up(xl) {
-            padding: 0 50px;
+            padding: 0 30px;
+        }
+
+        &_left {
+            @include breakpoint-up(xl) {
+                margin-right: 40px;
+            }
+        }
+
+        &_center {
+            @include breakpoint-up(xl) {
+                margin: 0 20px;
+            }
         }
     }
 
@@ -126,6 +136,7 @@
         border-radius: 4px;
 
         transform: translateX(-50%);
+        transition: all 0.25s linear;
 
         &:before {
             content: "";
@@ -151,6 +162,18 @@
             border-top-color: $color-white;
 
             transform: translate(-50%, -1px);
+            transition: border-color 0.25s linear;
+        }
+
+        .header__nav-link:hover &,
+        .header__nav-link:focus & {
+            color: $color-white;
+            background: $color-primary;
+        }
+
+        .header__nav-link:hover &:after,
+        .header__nav-link:focus &:after {
+            border-top-color: $color-primary;
         }
     }
 

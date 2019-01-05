@@ -1,5 +1,6 @@
 mixin lang-menu(data = {}, mods = {})
-    .lang-menu&attributes(attributes)
+    - const align = data.align || 'right';
+    .lang-menu(class = "lang-menu_align_" + align)&attributes(attributes)
         button.lang-menu__toggle
             i.icon-globe.icons(aria-label="Choose your language")
 

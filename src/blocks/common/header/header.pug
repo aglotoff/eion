@@ -1,6 +1,6 @@
 mixin header__nav-list(data)
     ul.header__nav-list
-        each item in data
+        each item in data.menu
             li.header__nav-item
                 a(
                     href = item.link
@@ -16,77 +16,115 @@ mixin header__nav-list(data)
                 if item.submenu
                     +megamenu(item.submenu).header__megamenu
 
+mixin header__account(data)
+    .header-dropdown(class = "header-dropdown_bottom-" + data.align)
+        button.header-dropdown__toggle.header__btn
+            i.icon-user.icons(aria-label="Toggle account")
+        .header-dropdown__backdrop
+        .header-dropdown__popover
+            .header-dropdown__top
+                h2.header-dropdown__title Account
+                button.header-dropdown__close
+                    i.icon-close.icons(aria-label="Hide account")
+
+            .header-dropdown__content
+                +account({
+                    langMenuAlign: (data.align === 'right') ? 'bottom' : 'right'
+                })
+        // .header-dropdown__popover 
+    // .header-dropdown 
+
+mixin header__minicart(data)
+    .header-dropdown(class = "header-dropdown_bottom-" + data.align)
+        button.header-dropdown__toggle.header__btn
+            i.icon-basket.icons(aria-label="Toggle shopping cart")
+            .header__cart-items(aria-hidden="true") 3
+        .header-dropdown__backdrop
+        .header-dropdown__popover
+            .header-dropdown__top
+                h2.header-dropdown__title Shopping Cart
+                button.header-dropdown__close
+                    i.icon-close.icons(aria-label="Hide minicart")
+
+            .header-dropdown__content
+                +minicart()
+        // .header-dropdown__popover 
+    // .header-dropdown 
+
+mixin header__search(data)
+    .header-dropdown(class = "header-dropdown_bottom-" + data.align)
+        button.header-dropdown__toggle.header__btn
+            i.icon-magnifier.icons(aria-label="Toggle search")
+        .header-dropdown__backdrop
+        .header-dropdown__popover
+            .header-dropdown__top
+                h2.header-dropdown__title Search
+                button.header-dropdown__close
+                    i.icon-close.icons(aria-label="Hide search")
+
+            .header-dropdown__content
+                +search()
+        // .header-dropdown__popover 
+    // .header-dropdown 
+
+mixin header__nav-toggle()
+    button.header__btn.header__nav-toggle
+        i.icon-list.icons(aria-label="Toggle menu")
+
+mixin header__logo(data = {})
+    h1(class={
+        header__logo        : true,
+        header__logo_left   : !!data.left,
+        header__logo_center : !!data.center,
+    })
+        img(src="img/logo.png", alt="Eion").header__logo-img
+        .header__logo-alt Eion
+
 mixin header(data, mods = {})
-    -
-        const menuLeft  = data.menu.slice(0, Math.floor(data.menu.length / 2));
-        const menuRight = data.menu.slice(Math.floor(data.menu.length / 2));
-
     header.header&attributes(attributes)
-        .header__left
-            .header__actions
-                button.header__btn.header__nav-toggle
-                    i.icon-list.icons(aria-label="Toggle menu")
-                
-                .header-dropdown.header-dropdown_bottom-left
-                    button.header-dropdown__toggle.header__btn
-                        i.icon-user.icons(aria-label="Toggle account")
-                    .header-dropdown__backdrop
-                    .header-dropdown__popover
-                        .header-dropdown__top
-                            h2.header-dropdown__title Account
-                            button.header-dropdown__close
-                                i.icon-close.icons(aria-label="Hide account")
+        if data.menu
+            .header__left
+                nav.header__nav
+                    +header__logo({left: true})
+                    +header__nav-list({
+                        menu     : data.menu,
+                        labelAlt : data.menuLabelAlt
+                    })
+            // .header__left 
 
-                        .header-dropdown__content
-                            +account()
-                    // .header-dropdown__popover 
-                // .header-dropdown 
-            // .header__actions 
-        // .header__left 
+            .header__right
+                .header__actions
+                    +header__account({align: 'right'})
+                    +header__minicart({align: 'right'})
+                    +header__search({align: 'right'})
+                    +header__nav-toggle()
+                // .header__actions 
+            // .header__right 
+        else if data.menuLeft && data.menuRight
+            .header__left
+                .header__actions
+                    +header__nav-toggle()
+                    +header__account({align: 'left'})
+                // .header__actions 
+            // .header__left 
 
-        .header__center
-            nav.header__nav
-                +header__nav-list(menuLeft)
-                
-                h1.header__logo
-                    img(src="img/logo.png", alt="Eion").header__logo-img
-                    .header__logo-alt Eion
+            .header__center
+                nav.header__nav
+                    +header__nav-list({
+                        menu     : data.menuLeft,
+                        labelAlt : data.menuLabelAlt
+                    })
+                    +header__logo({center: true})
+                    +header__nav-list({
+                        menu     : data.menuRight,
+                        labelAlt : data.menuLabelAlt
+                    })
+            // .header__center 
 
-                +header__nav-list(menuRight)
-        // .header__center 
-
-        .header__right
-            .header__actions
-                .header-dropdown.header-dropdown_bottom-right
-                    button.header-dropdown__toggle.header__btn
-                        i.icon-basket.icons(aria-label="Toggle shopping cart")
-                        .header__cart-items(aria-hidden="true") 3
-                    .header-dropdown__backdrop
-                    .header-dropdown__popover
-                        .header-dropdown__top
-                            h2.header-dropdown__title Shopping Cart
-                            button.header-dropdown__close
-                                i.icon-close.icons(aria-label="Hide minicart")
-
-                        .header-dropdown__content
-                            +minicart()
-                    // .header-dropdown__popover 
-                // .header-dropdown 
-                
-                .header-dropdown.header-dropdown_bottom-right
-                    button.header-dropdown__toggle.header__btn
-                        i.icon-magnifier.icons(aria-label="Toggle search")
-                    .header-dropdown__backdrop
-                    .header-dropdown__popover
-                        .header-dropdown__top
-                            h2.header-dropdown__title Search
-                            button.header-dropdown__close
-                                i.icon-close.icons(aria-label="Hide search")
-
-                        .header-dropdown__content
-                            +search()
-                    // .header-dropdown__popover 
-                // .header-dropdown 
-            // .header__actions 
-        // .header__right 
+            .header__right
+                .header__actions
+                    +header__minicart({align: 'right'})
+                    +header__search({align: 'right'})
+                // .header__actions 
+            // .header__right 
     // /.header 

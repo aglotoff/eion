@@ -32,7 +32,20 @@ html(lang="en")
         link(rel="stylesheet", href="css/style.css")
         link(rel="icon", href="img/favicon.ico")
     body.page#top
-        +header({menu: data.menu}).page__header
+        if data.menuCenter
+            -
+                const menu      = data.menu;
+                const menuLeft  = menu.slice(0, Math.floor(menu.length / 2));
+                const menuRight = menu.slice(Math.floor(menu.length / 2));
+            +header({
+                menuLeft     : menuLeft,
+                menuRight    : menuRight,
+            }).page__header
+        else
+            +header({
+                menu         : data.menu,
+            }).page__header
+
         +side-nav({menu: data.menu}).page__nav
 
         block page
