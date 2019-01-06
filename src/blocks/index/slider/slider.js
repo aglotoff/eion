@@ -45,6 +45,7 @@ export const initModule = function() {
 
             prevArrow     : $prevArrow,
             nextArrow     : $nextArrow,
+            dots          : true,
 
             autoplay      : true,
             autoplaySpeed : 5000,

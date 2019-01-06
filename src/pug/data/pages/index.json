@@ -1,21 +1,25 @@
 {
     "content": {
-        "slider": [{
-            "img": "img/content/slider/slide-01.jpg",
-            "titleImg": "img/content/slider/title-01.png",
-            "title": "Flower",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
-        }, {
-            "img": "img/content/slider/slide-02.jpg",
-            "titleImg": "img/content/slider/title-01.png",
-            "title": "Flower",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
-        }, {
-            "img": "img/content/slider/slide-03.jpg",
-            "titleImg": "img/content/slider/title-01.png",
-            "title": "Flower",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
-        }],
+        "slider": {
+            "slides": [{
+                "img": "img/content/slider/slide-02.jpg",
+                "title": "Flower",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+                "theme": "bordered"
+            }, {
+                "img": "img/content/slider/slide-03.jpg",
+                "title": "Flower",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+                "theme": "box"
+            }, {
+                "img": "img/content/slider/slide-01.jpg",
+                "title": "Flower",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+                "theme": "default"
+            }],
+
+            "skipLink": "#banners"
+        },
 
         "banners": [{
             "img": "img/content/banners/banner-01-bg.jpg",

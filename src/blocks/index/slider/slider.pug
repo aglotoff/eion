@@ -1,18 +1,19 @@
 mixin slider(data = {}, mods = {})
     .slider&attributes(attributes)
         .slider__container
-            each slide, i in data
+            each slide, i in data.slides
                 .slider__slide(
-                    class = (i === 0) && 'slider__slide_active'
+                    class = {
+                        slider__slide_active                   : (i == 0),
+                        ['slider__slide_theme_' + slide.theme] : true,
+                    }
                     style = `background-image: url(${slide.img})`
                 )
-                    .slider__content
-                        .slider__title
-                            img(
-                                src = slide.titleImg
-                                alt = slide.title
-                            ).slider__title-img
-                        .slider__text= slide.text
+                    .slider__slide-inner
+                        .slider__content-wrap
+                            .slider__content
+                                h2.slider__title= slide.title
+                                .slider__text= slide.text
             // /.slider__container 
 
         button.slider__arrow.slider__arrow_prev
@@ -20,6 +21,7 @@ mixin slider(data = {}, mods = {})
         button.slider__arrow.slider__arrow_next
             i.fas.fa-angle-right(aria-label="Next Slide")
 
-        a(href="#banners").slider__skip-link
-            .fas.fa-long-arrow-alt-down(aria-label="Skip to content")
+        if data.skipLink
+            a(href=data.skipLink).slider__skip-link
+                .fas.fa-long-arrow-alt-down(aria-label="Skip to content")
     // /.slider 
