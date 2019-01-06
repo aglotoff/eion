@@ -3,6 +3,7 @@
  */
 .banners {
     padding-top: 60px;
+
     &__grid {
         @include breakpoint-up(sm) {
             display: grid;

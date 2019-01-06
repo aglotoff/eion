@@ -2,25 +2,30 @@
  * Styles for the special offers block.
  */
 .special-offers {
-    padding-bottom: 40px;
-
-    @include breakpoint-up(lg) {
-        padding-bottom: 70px;
-    }
-
     &__inner {
         @include breakpoint-up(md) {
             display: flex;
-            margin: 0 -15px;
+            flex-wrap: wrap;
+            margin: -15px;
         }
     }
 
     &__box-wrap {
-        margin-bottom: 30px;
+        margin: 0 auto;
+        max-width: 400px;
 
         @include breakpoint-up(md) {
-            flex: 1;
-            padding: 0 15px;
+            flex: 1 0 300px;
+            max-width: 50%;
+            padding: 15px;
+        }
+
+        &:not(:first-child) {
+            margin-top: 30px;
+
+            @include breakpoint-up(md) {
+                margin-top: 0;
+            }
         }
     }
 
@@ -66,5 +71,13 @@
         &:hover {
             color: $color-secondary;
         }
+    }
+
+    &_padding-top {
+        padding-top: 60px;
+    }
+
+    &_padding-bottom {
+        padding-bottom: 100px;
     }
 }

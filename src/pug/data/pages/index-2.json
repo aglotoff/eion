@@ -20,6 +20,20 @@
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
                 "theme": "default"
             }]
-        }
+        },
+
+        "specialOffers": [{
+            "desc": "For all standard order",
+            "title": "Gift",
+            "link": "javascript:void(0);"
+        }, {
+            "desc": "For all standard order",
+            "title": "Free Shipping",
+            "link": "javascript:void(0);"
+        }, {
+            "desc": "Only in 30 days",
+            "title": "Free Returns",
+            "link": "javascript:void(0);"
+        }]
     }
 }

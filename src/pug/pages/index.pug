@@ -9,7 +9,7 @@ include ../../blocks/index/instagram-feed/instagram-feed.pug
 
 block page
     +slider(data.content.slider)
-    +banners(data.content.banners)#banners
+    +banners(data.content.banners, {paddingTop: true})#banners
     +section({
         title : data.content.products.title,
         text  : data.content.products.text,
@@ -20,5 +20,5 @@ block page
         title: data.content.blog.title
     })
         +post-carousel(data.content.blog.posts)
-    +special-offers(data.content.specialOffers)
+    +special-offers(data.content.specialOffers, {paddingBottom: true})
     +instagram-feed(data.content.instagramFeed)
