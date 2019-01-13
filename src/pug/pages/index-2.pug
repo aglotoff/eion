@@ -4,5 +4,5 @@ include ../../blocks/index/slider/slider.pug
 include ../../blocks/index/special-offers/special-offers.pug
 
 block page
-    +slider(data.content.slider)
-    +special-offers(data.content.specialOffers, {paddingTop: true})
+    +slider(data.content.slider).page__slider
+    +special-offers(data.content.specialOffers).page__section

@@ -1,8 +1,5 @@
 mixin special-offers(data = {}, mods = {})
-    .special-offers(class={
-        'special-offers_padding-top'    : mods.paddingTop,
-        'special-offers_padding-bottom' : mods.paddingBottom,
-    })&attributes(attributes)
+    .special-offers&attributes(attributes)
         .page__container
             .special-offers__inner
                 each box in data

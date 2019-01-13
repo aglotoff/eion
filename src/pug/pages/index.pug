@@ -8,17 +8,17 @@ include ../../blocks/index/special-offers/special-offers.pug
 include ../../blocks/index/instagram-feed/instagram-feed.pug
 
 block page
-    +slider(data.content.slider)
-    +banners(data.content.banners, {paddingTop: true})#banners
+    +slider(data.content.slider).page__slider
+    +banners(data.content.banners, {paddingTop: true}).page__section#banners
     +section({
         title : data.content.products.title,
         text  : data.content.products.text,
     })
         +products(data.content.products.items)
-    +counters(data.content.counters)
+    +counters(data.content.counters).page__section
     +section({
         title: data.content.blog.title
-    })
+    }).page__section
         +post-carousel(data.content.blog.posts)
-    +special-offers(data.content.specialOffers, {paddingBottom: true})
+    +special-offers(data.content.specialOffers).page__section
     +instagram-feed(data.content.instagramFeed)
