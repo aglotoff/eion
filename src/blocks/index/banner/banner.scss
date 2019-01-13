@@ -1,0 +1,79 @@
+/**
+ * Styles for the banner block.
+ */
+.banner {
+    padding: 25px;
+
+    color: $color-white;
+    text-align: center;
+
+    background: {
+        color: $color-silver-chalice;
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+    };
+
+    &__inner {
+        border: 2px dashed $color-white;
+    }
+
+    &__content {
+        max-width: 560px;
+        margin: 30px auto 20px;
+        padding: 15px;
+
+        @include breakpoint-up(md) {
+            margin-bottom: 30px;
+            margin-top: 90px;
+            padding: 25px;
+        }
+
+        @include breakpoint-up(lg) {
+            margin-bottom: 40px;
+            margin-top: 110px;
+        }
+
+        @include breakpoint-up(xl) {
+            margin-bottom: 60px;
+            margin-top: 170px;
+        }
+    }
+
+    &__title {
+        font-family: $font-family-serif;
+        @include font-size(40px);
+        text-transform: uppercase;
+
+        @include breakpoint-up(lg) {
+            @include font-size(50px);
+        }
+
+        @include breakpoint-up(xl) {
+            @include font-size(60px);
+        }
+    }
+
+    &__text {
+        margin-top: 12px;
+
+        font-family: $font-family-serif;
+        line-height: 1.6667;
+
+        @include breakpoint-up(lg) {
+            @include font-size(18px);
+        }
+    }
+
+    &__footer {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 20px 15px 0;
+
+        font-family: $font-family-cursive;
+        @include font-size(30px);
+        text-transform: uppercase;
+
+        border-top: 1px dashed $color-white;
+    }
+}

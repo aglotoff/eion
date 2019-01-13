@@ -1,0 +1,17 @@
+/**
+ * Styles for the columns block.
+ */
+.columns {
+    overflow: hidden;
+
+    @include breakpoint-up(lg) {
+        display: flex;
+    }
+
+    &__left,
+    &__right {
+        @include breakpoint-up(lg) {
+            flex: 0 0 50%;
+        }
+    }
+}

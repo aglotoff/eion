@@ -64,6 +64,12 @@
                 "rating": 5,
                 "link": "javascript:void(0);"
             }]
+        },
+
+        "coupon1": {
+            "img": "img/content/coupons/coupon-01.jpg",
+            "title": "Coupon 15%",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
         }
     }
 }
