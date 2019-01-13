@@ -1,0 +1,71 @@
+/**
+ * Styles for the product gallery block.
+ */
+.product-gallery {
+    @include breakpoint-up(md) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__slide {
+        padding: 0 10px;
+
+        opacity: 0.2;
+
+        transition: opacity linear 0.25s;
+
+        &_active {
+            opacity: 1;
+        }
+    }
+
+    &__img {
+        display: block;
+        max-width: 100%;
+    }
+
+    .slick-list {
+        @include breakpoint-up(md) {
+            margin: auto 0;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+        li {
+            padding: 8px;
+
+            cursor: pointer;
+
+            button {
+                display: block;
+                height: 5px;
+                padding: 0;
+                width: 5px;
+        
+                text-indent: -99px;
+        
+                background: rgba($color-secondary, 0.3);
+                border: 0;
+                border-radius: 50%;
+                cursor: pointer;
+                outline: none;
+    
+                overflow: hidden;
+                transition: background-color 0.25s linear;
+            }
+        }
+
+        .slick-active button {
+            background: $color-secondary;
+        }
+
+        li:hover button,
+        li button:focus {
+            background: $color-secondary;
+        }
+    }
+}

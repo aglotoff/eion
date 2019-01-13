@@ -56,6 +56,7 @@
             }, {
                 "name": "Fl-Model A351",
                 "sale": true,
+                "saleTheme": "ribbon",
                 "oldPrice": 530,
                 "price": 399,
                 "img": "img/content/products/thumbs/310x250/a351-2.jpg",
@@ -80,6 +81,7 @@
             }, {
                 "name": "Fl-Model A351",
                 "sale": true,
+                "saleTheme": "ribbon",
                 "oldPrice": 530,
                 "price": 399,
                 "img": "img/content/products/thumbs/310x250/a351-6.jpg",

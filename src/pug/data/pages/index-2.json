@@ -34,6 +34,36 @@
             "desc": "Only in 30 days",
             "title": "Free Returns",
             "link": "javascript:void(0);"
-        }]
+        }],
+
+        "featuredProducts": {
+            "title": "Featured Products",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+
+            "items": [{
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/510x380/a351.jpg",
+                "rating": 5,
+                "link": "javascript:void(0);"
+            }, {
+                "name": "Fl-Model A123",
+                "sale": true,
+                "oldPrice": 530,
+                "price": 399,
+                "gallery": [{
+                    "img": "img/content/products/thumbs/310x230/a123-01.jpg",
+                    "title": "Fl-Model A123"
+                }, {
+                    "img": "img/content/products/thumbs/310x230/a123-02.jpg",
+                    "title": "Fl-Model A123"
+                }, {
+                    "img": "img/content/products/thumbs/310x230/a123-03.jpg",
+                    "title": "Fl-Model A123"
+                }],
+                "rating": 5,
+                "link": "javascript:void(0);"
+            }]
+        }
     }
 }

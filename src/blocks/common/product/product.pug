@@ -1,24 +1,27 @@
 mixin product(data = {}, mods = {})
-    .product&attributes(attributes)
-        .product__inner
-            if data.sale
-                .product__sale Sale
-            
+    .product(class = mods.large && 'product_large')&attributes(attributes)
+        if data.sale
+            - const saleTheme = data.saleTheme || 'circle';
+            .product__sale(class="product__sale_theme_" + saleTheme) Sale
+        
+        if data.img
             .product__thumb
                 a(href=data.link).product__thumb-link
                     img(src=data.img, alt=data.name).product__thumb-img
-            
-            .product__info
-                +rating(data.rating).product__rating
+        else if data.gallery
+            .product__gallery-wrap
+                +product-gallery(data.gallery).product__gallery
 
-                .product__info-bottom
-                    a(href=data.link).product__name= data.name
+        .product__info
+            +rating(data.rating).product__rating
 
-                    if data.oldPrice
-                        .product__price
-                            del.product__price-old $#{data.oldPrice}
-                            ins.product__price-new $#{data.price}
-                    else
-                        .product__price $#{data.price}
-        // /.product__inner 
+            .product__info-bottom
+                a(href=data.link).product__name= data.name
+
+                if data.oldPrice
+                    .product__price
+                        del.product__price-old $#{data.oldPrice}
+                        ins.product__price-new $#{data.price}
+                else
+                    .product__price $#{data.price}
     // /.product 

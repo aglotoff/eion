@@ -2,40 +2,75 @@
  * Styles for the product block.
  */
 .product {
-    height: 100%;
+    position: relative;
+
+    overflow: hidden;
 
     background: $color-white;
 
     transition: all 0.25s linear;
 
-    &__inner {
-        position: relative;
-
-        overflow: hidden;
+    @include breakpoint-up(sm) {
+        display: flex;
+        flex-direction: column;
     }
 
     &__sale {
         position: absolute;
-        right: 0;
-        top: 0;
+        z-index: 100;
 
-        padding: 7px;
-        width: 110px;
-
-        color: $color-white;
         @include font-size(10px);
         text-align: center;
         text-transform: uppercase;
 
-        background: $color-primary;
+        &_theme_circle {
+            right: 20px;
+            top: 20px;
 
-        transform: translate(30px, 10px) rotate(40deg);
+            height: 40px;
+            width: 40px;
+
+            color: $color-primary;
+            line-height: 40px;
+
+            border: 1px dashed $color-primary;
+            border-radius: 50%;
+
+            .product_large & {
+                @include breakpoint-up(lg) {
+                    right: 30px;
+                    top: 30px;
+
+                    height: 70px;
+                    width: 70px;
+
+                    @include font-size(14px);
+                    line-height: 70px;
+                }
+            }
+        }
+
+        &_theme_ribbon {
+            right: 0;
+            top: 0;
+
+            padding: 7px;
+            width: 110px;
+
+            color: $color-white;
+ 
+            background: $color-primary;
+
+            transform: translate(30px, 10px) rotate(40deg);
+        }
     }
 
     &__thumb {
         padding: 30px;
 
-        border-bottom: 1px solid rgba($color-black, 0.1);
+        .product_large & {
+            padding: 50px 30px 40px;
+        }
     }
 
     &__thumb-link {
@@ -48,8 +83,28 @@
         max-width: 100%;
     }
 
+    &__gallery-wrap {
+        padding: 30px 0;
+    
+        @include breakpoint-up(sm) {
+            flex: 1;
+        }
+    }
+
+    &__gallery {
+        @include breakpoint-up(sm) {
+            height: 100%;
+        }
+    }
+
     &__info {
         padding: 20px 30px 25px;
+
+        border-top: 1px solid rgba($color-black, 0.1);
+
+        @include breakpoint-up(sm) {
+            margin-top: auto;
+        }
     }
 
     &__info-bottom {
@@ -58,6 +113,12 @@
         margin-top: 12px;
 
         @include font-size(18px);
+
+        .product_large & {
+            @include breakpoint-up(lg) {
+                @include font-size(30px);
+            }
+        }
     }
 
     &__name {
@@ -88,6 +149,12 @@
         color: $color-silver;
         text-decoration: line-through;
         vertical-align: text-top;
+
+        .product_large & {
+            @include breakpoint-up(lg) {
+                @include font-size(16px);
+            }
+        }
     }
 
     &__price-new {

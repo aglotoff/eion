@@ -1,0 +1,8 @@
+mixin product-gallery(data = {}, mods = {})
+    .product-gallery&attributes(attributes)
+        each item, i in data
+            .product-gallery__slide(
+                class = (i == 0) && "product-gallery__slide_active"
+            )
+                img(src=item.img, alt=item.alt).product-gallery__img
+    // /.product-gallery 
