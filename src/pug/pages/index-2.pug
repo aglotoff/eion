@@ -4,6 +4,8 @@ include ../../blocks/index/slider/slider.pug
 include ../../blocks/index/special-offers/special-offers.pug
 include ../../blocks/index/featured-products/featured-products.pug
 include ../../blocks/index/banner/banner.pug
+include ../../blocks/index/banner-section/banner-section.pug
+include ../../blocks/index/countdown/countdown.pug
 
 block page
     +slider(data.content.slider).page__slider
@@ -15,3 +17,4 @@ block page
         +featured-products(data.content.featuredProducts.items)
     .columns
         +banner(data.content.coupon1).columns__left
+        +banner-section(data.content.dealOfTheWeek).columns__right

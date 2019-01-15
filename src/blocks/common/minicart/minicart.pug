@@ -34,10 +34,12 @@ mixin minicart(data = {}, mods = {})
 
         .btn-group.minicart__btns
             +btn({
-                href: 'javascript:void(0);',
-            }, {theme: 'secondary'}).btn-group__btn View Cart
+                text : 'View Cart',
+                url  : 'javascript:void(0);',
+            }, {theme: 'secondary'}).btn-group__btn
             +btn({
-                href: 'javascript:void(0);',
-            }, {theme: 'primary'}).btn-group__btn Checkout
+                text : 'Checkout',
+                url  : 'javascript:void(0);',
+            }, {theme: 'primary'}).btn-group__btn
         // /.minicart__btns 
     // /.minicart 

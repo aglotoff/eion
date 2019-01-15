@@ -1,0 +1,13 @@
+mixin banner-section(data = {}, mods = {})
+    section.banner-section&attributes(attributes)
+        .banner-section__inner
+            h2.banner-section__title= data.title
+
+            .banner-section__intro= data.text
+
+            if data.countdown
+                +countdown(data.countdown).banner-section__countdown
+
+            +btn(data.btn, {size: 'large'}).banner-section__btn
+        // /.banner-section__inner 
+    // /.banner-section 

@@ -11,6 +11,7 @@ import * as Share          from '../share/share';
 import * as SideNav        from '../side-nav/side-nav';
 
 import * as Slider         from '../../index/slider/slider';
+import * as Countdown      from '../../index/countdown/countdown';
 import * as Counters       from '../../index/counters/counters';
 import * as InstagramFeed  from '../../index/instagram-feed/instagram-feed';
 import * as PostCarousel   from '../../index/post-carousel/post-carousel';
@@ -122,6 +123,7 @@ export const initModule = function() {
     SideNav.initModule();
 
     Slider.initModule();
+    Countdown.initModule();
     Counters.initModule();
     InstagramFeed.initModule();
     PostCarousel.initModule();

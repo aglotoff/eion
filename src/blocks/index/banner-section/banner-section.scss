@@ -1,0 +1,55 @@
+/**
+ * Styles for the banner section block.
+ */
+.banner-section {
+    background: $color-white;
+    
+    @include breakpoint-up(lg) {
+        display: flex;
+    }
+
+    &__inner {
+        padding: 60px 15px;
+
+        @include breakpoint-up(lg) {
+            padding: 50px 40px;
+            flex: 0 1 630px;
+            margin: auto;
+        }
+    }
+
+    &__title {
+        color: $color-secondary;
+        @include font-size(20px);
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+
+        &:after {
+            content: "";
+
+            display: block;
+            margin-top: 12px;
+            width: 100px;
+
+            border-top: 1px dashed $color-secondary;
+        }
+    }
+
+    &__intro {
+        margin-top: 25px;
+
+        font-family: $font-family-serif;
+        @include font-size(18px);
+        line-height: 1.6666;
+    }
+
+    &__countdown {
+        max-width: 570px;
+        margin-top: 45px;
+    }
+
+    &__btn {
+        margin-top: 55px;
+        width: 170px;
+    }
+}

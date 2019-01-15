@@ -70,6 +70,21 @@
             "img": "img/content/coupons/coupon-01.jpg",
             "title": "Coupon 15%",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        },
+
+        "dealOfTheWeek": {
+            "title": "Deal Of the week",
+            "text": "Sale is only in a week up to 30% off",
+            "countdown": {
+                "days": "06",
+                "hours": "15",
+                "mins": "42",
+                "secs": "17"
+            },
+            "btn": {
+                "text": "Shop now",
+                "url": "javascript:void(0);"
+            }
         }
     }
 }
