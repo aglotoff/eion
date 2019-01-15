@@ -1,5 +1,8 @@
 mixin product(data = {}, mods = {})
-    .product(class = mods.large && 'product_large')&attributes(attributes)
+    .product(class = {
+        product_small : !!mods.small,
+        product_large : !!mods.large,
+    })&attributes(attributes)
         if data.sale
             - const saleTheme = data.saleTheme || 'circle';
             .product__sale(class="product__sale_theme_" + saleTheme) Sale

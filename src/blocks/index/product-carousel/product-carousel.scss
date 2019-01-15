@@ -1,0 +1,59 @@
+/**
+ * Styles for the product carousel block.
+ */
+.product-carousel {
+    &__inner {
+        @include breakpoint-up(md) {
+            margin: 0 -15px;
+        }
+    }
+
+    &__product-wrap {
+        @include breakpoint-up(md) {
+            height: 100%;
+            padding: 0 15px;
+        }
+    }
+
+    &__product {
+        @include breakpoint-up(md) {
+            height: 100%;
+        }
+    }
+
+    .owl-carousel {
+        .owl-stage {
+            display: flex;
+            padding-top: 10px;
+        }
+
+        .owl-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 58px;
+        }
+
+        .owl-dot {
+            margin: 0 10px;
+
+            height: 10px;
+            padding: 0;
+            width: 10px;
+
+            text-indent: 10px;
+
+            border: 1px solid $color-secondary;
+            border-radius: 50%;
+            cursor: pointer;
+
+            background: transparent;
+
+            overflow: hidden;
+            transition: background-color 0.25s linear;
+
+            &.active {
+                background-color: $color-secondary;
+            }
+        }
+    }
+}

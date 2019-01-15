@@ -6,6 +6,7 @@ include ../../blocks/index/featured-products/featured-products.pug
 include ../../blocks/index/banner/banner.pug
 include ../../blocks/index/banner-section/banner-section.pug
 include ../../blocks/index/countdown/countdown.pug
+include ../../blocks/index/product-carousel/product-carousel.pug
 
 block page
     +slider(data.content.slider).page__slider
@@ -18,3 +19,8 @@ block page
     .columns
         +banner(data.content.coupon1).columns__left
         +banner-section(data.content.dealOfTheWeek).columns__right
+    +section({
+        title : data.content.newProducts.title,
+        text  : data.content.newProducts.text,
+    }).page__section
+        +product-carousel(data.content.newProducts.items)

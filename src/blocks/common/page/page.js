@@ -10,11 +10,12 @@ import * as ProductGallery from '../product-gallery/product-gallery';
 import * as Share          from '../share/share';
 import * as SideNav        from '../side-nav/side-nav';
 
-import * as Slider         from '../../index/slider/slider';
-import * as Countdown      from '../../index/countdown/countdown';
-import * as Counters       from '../../index/counters/counters';
-import * as InstagramFeed  from '../../index/instagram-feed/instagram-feed';
-import * as PostCarousel   from '../../index/post-carousel/post-carousel';
+import * as Slider          from '../../index/slider/slider';
+import * as Countdown       from '../../index/countdown/countdown';
+import * as Counters        from '../../index/counters/counters';
+import * as InstagramFeed   from '../../index/instagram-feed/instagram-feed';
+import * as PostCarousel    from '../../index/post-carousel/post-carousel';
+import * as ProductCarousel from '../../index/product-carousel/product-carousel';
 
 // -------------------------- BEGIN MODULE VARIABLES --------------------------
 const STICKY_HEADER_OFFSET  = 300;  // Scroll offset to make the header "sticky"
@@ -127,6 +128,7 @@ export const initModule = function() {
     Counters.initModule();
     InstagramFeed.initModule();
     PostCarousel.initModule();
+    ProductCarousel.initModule();
 
     // Process the initial window size and scroll position.
     onWindowResize();

@@ -68,6 +68,10 @@
     &__thumb {
         padding: 30px;
 
+        .product_small & {
+            padding: 30px 20px;
+        }
+
         .product_large & {
             padding: 50px 30px 40px;
         }
@@ -114,6 +118,12 @@
 
         @include font-size(18px);
 
+        .product_small & {
+            @include breakpoint-up(lg) {
+                @include font-size(16px);
+            }
+        }
+
         .product_large & {
             @include breakpoint-up(lg) {
                 @include font-size(30px);
@@ -150,6 +160,12 @@
         text-decoration: line-through;
         vertical-align: text-top;
 
+        .product_small & {
+            @include breakpoint-up(lg) {
+                @include font-size(10px);
+            }
+        }
+
         .product_large & {
             @include breakpoint-up(lg) {
                 @include font-size(16px);
@@ -164,6 +180,12 @@
 
     &__rating {
         @include font-size(14px);
+
+        .product_small & {
+            @include breakpoint-up(lg) {
+                @include font-size(10px);
+            }
+        }
     }
 
     &:hover {

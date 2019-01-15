@@ -18,7 +18,7 @@ const onSlickBeforeChange = function(event, slick, current, next) {
  */
 export const initModule = function() {
     $('.product-gallery').each(function() {
-        const $gallery    = $(this);
+        const $gallery = $(this);
 
         $gallery.slick({
             rows           : 0,
@@ -34,7 +34,6 @@ export const initModule = function() {
             infinite       : false,
 
             dots           : true,
-            slide          : '.product-gallery__slide',
         });
 
         $gallery.on('beforeChange', onSlickBeforeChange);
