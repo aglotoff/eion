@@ -7,7 +7,13 @@ mixin banner-section(data = {}, mods = {})
 
             if data.countdown
                 +countdown(data.countdown).banner-section__countdown
+            else
+                +subscribe-form().banner-section__subscribe-form
 
-            +btn(data.btn, {size: 'large'}).banner-section__btn
+            if data.footer
+                p.banner-section__footer= data.footer
+
+            if data.btn
+                +btn(data.btn, {size: 'large'}).banner-section__btn
         // /.banner-section__inner 
     // /.banner-section 

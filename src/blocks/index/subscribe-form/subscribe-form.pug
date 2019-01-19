@@ -1,0 +1,15 @@
+mixin subscribe-form(data = {}, mods = {})
+    form(action="" method="post").subscribe-form&attributes(attributes)
+        label(
+            id="subscribe-email-label"
+            for="subscribe-email"
+        ).subscribe-form__label Your Email
+        input(
+            type="email"
+            id="subscribe-email"
+            name="email"
+            aria-labelledby="subsribe-email-label"
+            placeholder="Your Email..."
+            required
+        ).subscribe-form__input
+        +btn({text: 'Subscribe'}, {size: 'large'})(type="submit").subscribe-form__submit

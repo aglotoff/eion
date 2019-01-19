@@ -8,6 +8,7 @@ include ../../blocks/index/banner-section/banner-section.pug
 include ../../blocks/index/countdown/countdown.pug
 include ../../blocks/index/product-carousel/product-carousel.pug
 include ../../blocks/index/counters/counters.pug
+include ../../blocks/index/subscribe-form/subscribe-form.pug
 
 block page
     +slider(data.content.slider).page__slider
@@ -26,3 +27,6 @@ block page
     }).page__section
         +product-carousel(data.content.newProducts.items)
     +counters(data.content.counters, {theme: 'bordered'}).page__section
+    .columns
+        +banner-section(data.content.newsletter).columns__left
+        +banner(data.content.coupon2).columns__right

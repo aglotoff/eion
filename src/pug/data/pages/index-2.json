@@ -184,6 +184,18 @@
         }, {
             "title": "Happy Customers",
             "value": 12023
-        }]
+        }],
+
+        "coupon2": {
+            "img": "img/content/coupons/coupon-02.jpg",
+            "title": "Coupon 15%",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        },
+
+        "newsletter": {
+            "title": "Newsletter",
+            "text": "Sign up to receive the coupon 15% off for your first purchase via email and get informations about flower, accessories, tips,... and many exclusive offers.",
+            "footer": "*Discount applies only to orders over $100"
+        }
     }
 }

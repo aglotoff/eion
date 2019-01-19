@@ -48,6 +48,20 @@
         margin-top: 45px;
     }
 
+    &__subscribe-form {
+        max-width: 570px;
+        margin-top: 45px;
+    }
+
+    &__footer {
+        margin-top: 55px;
+
+        color: $color-silver;
+        font-family: $font-family-serif;
+        @include font-size(14px);
+        font-style: italic;
+    }
+
     &__btn {
         margin-top: 55px;
         width: 170px;
