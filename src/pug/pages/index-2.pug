@@ -9,6 +9,7 @@ include ../../blocks/index/countdown/countdown.pug
 include ../../blocks/index/product-carousel/product-carousel.pug
 include ../../blocks/index/counters/counters.pug
 include ../../blocks/index/subscribe-form/subscribe-form.pug
+include ../../blocks/index/post-carousel/post-carousel.pug
 
 block page
     +slider(data.content.slider).page__slider
@@ -30,3 +31,7 @@ block page
     .columns
         +banner-section(data.content.newsletter).columns__left
         +banner(data.content.coupon2).columns__right
+    +section({
+        title: data.content.blog.title
+    }).page__section
+        +post-carousel(data.content.blog.posts, {twoRows: true})

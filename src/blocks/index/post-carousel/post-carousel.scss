@@ -10,10 +10,14 @@
         }
     }
 
-    &__post {
+    &__post-wrapper {
         @include breakpoint-up(md) {
             padding: 0 15px;
         }
+    }
+
+    &__post:not(:first-child) {
+        margin-top: 30px;
     }
 
     .owl-carousel {
