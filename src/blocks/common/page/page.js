@@ -6,6 +6,7 @@ import * as BackToTop      from '../back-to-top/back-to-top';
 import * as Header         from '../header/header';
 import * as HeaderDropdown from '../header-dropdown/header-dropdown';
 import * as LangMenu       from '../lang-menu/lang-menu';
+import * as PostGallery    from '../post-gallery/post-gallery';
 import * as ProductGallery from '../product-gallery/product-gallery';
 import * as Share          from '../share/share';
 import * as SideNav        from '../side-nav/side-nav';
@@ -78,6 +79,7 @@ const onWindowScroll = function() {
 
 const onWindowResize = function() {
     HeaderDropdown.handleResize();
+    PostGallery.handleResize();
 };
 // ---------------------------- END EVENT HANDLERS ----------------------------
 
@@ -119,6 +121,7 @@ export const initModule = function() {
     Header.initModule();
     HeaderDropdown.initModule();
     LangMenu.initModule();
+    PostGallery.initModule();
     ProductGallery.initModule();
     Share.initModule();
     SideNav.initModule();

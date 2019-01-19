@@ -9,12 +9,16 @@ mixin post(data = {}, mods = {})
         };
 
     article.post&attributes(attributes)
-        a(href=data.link).post__thumb
-            img(src=data.img, alt=data.title).post__thumb-img
-            .post__thumb-overlay
-                i.icon-plus.icons(aria-hidden="true")
+        if data.img
+            a(href=data.link aria-hidden="true" tabindex="-1").post__thumb
+                img(src=data.img, alt=data.title).post__thumb-img
+                .post__thumb-overlay
+                    i.icon-plus.icons(aria-hidden="true")
+        else if data.gallery
+            +post-gallery(data.gallery).post__gallery
         
-        h3.post__title= data.title
+        h3.post__title
+            a(href=data.link).post__title-link= data.title
 
         .post__meta
             .post__pubdate

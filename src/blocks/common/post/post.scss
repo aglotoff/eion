@@ -52,6 +52,18 @@
         text-transform: uppercase;
     }
 
+    &__title-link {
+        color: $color-secondary;
+        text-decoration: none;
+
+        transition: color 0.25s linear;
+
+        &:hover,
+        &:focus {
+            color: $color-primary;
+        }
+    }
+
     &__meta {
         display: flex;
         margin-top: 8px;

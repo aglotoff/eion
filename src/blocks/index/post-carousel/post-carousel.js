@@ -15,6 +15,8 @@ export const initModule = function() {
         $container.owlCarousel({
             loop       : false,
             nav        : false,
+            touchDrag  : false,
+            mouseDrag  : false,
             responsive : {
                 0: {
                     items: 1

@@ -230,7 +230,16 @@
             }, {
                 "title": "Sunt in culpa qui officia desent mollit anim.",
                 "link": "javascript:void(0);",
-                "img": "img/content/blog/thumbs/660x490/post-04.jpg",
+                "gallery": [{
+                    "img": "img/content/blog/thumbs/660x490/post-04.jpg",
+                    "alt": ""
+                }, {
+                    "img": "img/content/blog/thumbs/660x490/post-04.jpg",
+                    "alt": ""
+                }, {
+                    "img": "img/content/blog/thumbs/660x490/post-04.jpg",
+                    "alt": ""
+                }],
                 "date": "2015/06/02",
                 "author": "Author",
                 "authorLink": "javascript:void(0);",
