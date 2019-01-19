@@ -15,7 +15,7 @@ block page
         text  : data.content.products.text,
     })
         +products(data.content.products.items)
-    +counters(data.content.counters).page__section
+    +counters(data.content.counters, {theme: 'light'}).page__section
     +section({
         title: data.content.blog.title
     }).page__section

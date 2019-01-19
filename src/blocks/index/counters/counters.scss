@@ -2,15 +2,17 @@
  * Styles for the counters block.
  */
 .counters {
-    padding: 100px 0 50px;
-
-    background: $color-concrete;
-
     &__container {
+        padding: 100px 0 50px;
+
         @include breakpoint-up(md) {
             display: flex;
             flex-wrap: wrap;
             margin: 0 -15px;
+        }
+
+        .counters_theme_bordered & {
+            border: 2px dashed $color-text;
         }
     }
 
@@ -52,5 +54,9 @@
         font-family: $font-family-serif;
         @include font-size(36px);
         letter-spacing: 0.2em;
+    }
+
+    &_theme_light {
+        background: $color-concrete;
     }
 }

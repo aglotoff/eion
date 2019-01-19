@@ -7,6 +7,7 @@ include ../../blocks/index/banner/banner.pug
 include ../../blocks/index/banner-section/banner-section.pug
 include ../../blocks/index/countdown/countdown.pug
 include ../../blocks/index/product-carousel/product-carousel.pug
+include ../../blocks/index/counters/counters.pug
 
 block page
     +slider(data.content.slider).page__slider
@@ -24,3 +25,4 @@ block page
         text  : data.content.newProducts.text,
     }).page__section
         +product-carousel(data.content.newProducts.items)
+    +counters(data.content.counters, {theme: 'bordered'}).page__section

@@ -1,5 +1,6 @@
 mixin counters(data = {}, mods = {})
-    .counters&attributes(attributes)
+    - const theme = mods.theme || 'default';
+    .counters(class="counters_theme_" + theme)&attributes(attributes)
         .page__container
             .counters__container
                 each counter in data
