@@ -10,6 +10,7 @@ include ../../blocks/index/product-carousel/product-carousel.pug
 include ../../blocks/index/counters/counters.pug
 include ../../blocks/index/subscribe-form/subscribe-form.pug
 include ../../blocks/index/post-carousel/post-carousel.pug
+include ../../blocks/index/cta/cta.pug
 
 block page
     +slider(data.content.slider).page__slider
@@ -35,3 +36,4 @@ block page
         title: data.content.blog.title
     }).page__section
         +post-carousel(data.content.blog.posts, {twoRows: true})
+    +cta(data.content.cta).page__section

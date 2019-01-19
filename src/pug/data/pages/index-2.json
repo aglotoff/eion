@@ -291,6 +291,15 @@
                 "comments": 3,
                 "likes": 8
             }]
+        },
+
+        "cta": {
+            "bg": "img/content/cta/cta-01.jpg",
+            "title": "Free Ship all order",
+            "btn": {
+                "url": "javascript:void(0);",
+                "text": "Apply now"
+            }
         }
     }
 }
