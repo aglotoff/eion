@@ -19,14 +19,14 @@
             "text": "General",
             "link": "javascript:void(0);",
             "submenu": [{
-                "text": "About Us",
-                "link": "javascript:void(0);"
+                "text": "Homepage 1",
+                "link": "index.html"
             }, {
-                "text": "Our Services",
-                "link": "javascript:void(0);"
+                "text": "Homepage 2",
+                "link": "index-2.html"
             }, {
-                "text": "404 Errors",
-                "link": "javascript:void(0);"
+                "text": "Homepage 3",
+                "link": "index-3.html"
             }, {
                 "text": "Under Construction",
                 "link": "javascript:void(0);"

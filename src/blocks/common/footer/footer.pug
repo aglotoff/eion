@@ -25,22 +25,27 @@ mixin footer(data = {}, mods = {})
                     // /.footer__block 
 
                     .footer__block
-                        h2.footer__block-title Newsletter
+                        if data.instagram
+                            h2.footer__block-title Instagram
 
-                        .footer__text.text
-                            p Enter your email and we'll send you a coupon with 10% off your next order.
+                            +footer-instagram(data.instagram).footer__instagram
+                        else
+                            h2.footer__block-title Newsletter
 
-                        form.footer__subscribe-form
-                            input(
-                                type        = "email"
-                                placeholder = "Your email..."
-                                aria-label  = "Your email"
-                                required
-                            ).footer__subscribe-input
-                            +btn({text: 'Submit'}, {theme: 'inverse'})(
-                                type = "submit"
-                                name = "subscribe"
-                            ).footer__subscribe-btn
+                            .footer__text.text
+                                p Enter your email and we'll send you a coupon with 10% off your next order.
+
+                            form.footer__subscribe-form
+                                input(
+                                    type        = "email"
+                                    placeholder = "Your email..."
+                                    aria-label  = "Your email"
+                                    required
+                                ).footer__subscribe-input
+                                +btn({text: 'Submit'}, {theme: 'inverse'})(
+                                    type = "submit"
+                                    name = "subscribe"
+                                ).footer__subscribe-btn
                     // /.footer__block 
 
                     .footer__block
