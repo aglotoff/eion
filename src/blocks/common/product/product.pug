@@ -9,8 +9,25 @@ mixin product(data = {}, mods = {})
         
         if data.img
             .product__thumb
-                a(href=data.link).product__thumb-link
+                .product__thumb-inner
                     img(src=data.img, alt=data.name).product__thumb-img
+
+                    .product__thumb-overlay
+                        +btn({
+                            url: 'javascript:void(0);',
+                            text: 'Add to cart'
+                        }, {
+                            theme: 'primary',
+                            size: mods.large && 'responsive',
+                        }).product__thumb-btn
+
+                        +btn({
+                            url: 'javascript:void(0);',
+                            text: 'View Gallery'
+                        }, {
+                            theme: 'gray',
+                            size: mods.large && 'responsive',
+                        }).product__thumb-btn
         else if data.gallery
             .product__gallery-wrap
                 +product-gallery(data.gallery).product__gallery

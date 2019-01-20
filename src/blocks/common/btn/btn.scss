@@ -45,6 +45,21 @@
         }
     }
 
+    &_theme_gray {
+        color: $color-text;
+
+        background: transparent;
+        border: 1px dashed $color-text;
+
+        &:hover,
+        &:focus {
+            color: $color-white;
+
+            background: $color-secondary;
+            border: 1px solid $color-secondary;
+        }
+    }
+
     &_theme_inverse {
         color: $color-primary;
 
@@ -67,5 +82,19 @@
         line-height: 60px;
 
         border-radius: 30px;
+        border-width: 2px;
+    }
+
+    &_size_responsive {
+        @include breakpoint-up(lg) {
+            height: 60px;
+            padding: 0 30px;
+
+            @include font-size(14px);
+            line-height: 60px;
+
+            border-radius: 30px;
+            border-width: 2px;
+        }
     }
 }
