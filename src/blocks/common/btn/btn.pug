@@ -4,6 +4,7 @@ mixin btn(data = {}, mods = {})
         const size  = mods.size  || 'default';
         const className = {
             btn                    : true,
+            btn_rect               : !!mods.rect,
             ['btn_theme_' + theme] : true,
             ['btn_size_'  + size ] : true,
         };

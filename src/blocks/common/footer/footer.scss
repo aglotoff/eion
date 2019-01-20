@@ -6,21 +6,29 @@
         padding-bottom: 30px;
         padding-top: 45px;
 
+        color: $color-white;
+
         background: $color-hot-pink;
+
+        .footer_light & {
+            color: $color-text;
+
+            background: $color-white;
+        }
     }
 
     &__top-inner {
         @include breakpoint-up(md) {
+            align-items: baseline;
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
             margin: 0 -15px;
         }
     }
 
     &__block {
         padding: 30px 0;
-
-        color: $color-white;
 
         @include breakpoint-up(md) {
             flex: 0 0 50%;
@@ -29,6 +37,16 @@
 
         @include breakpoint-up(lg) {
             flex-basis: 25%;
+        }
+
+        &_wide {
+            @include breakpoint-up(md) {
+                flex: 0 0 100%;
+            }
+
+            @include breakpoint-up(lg) {
+                flex-basis: 66.6667%;
+            }
         }
     }
 
@@ -48,10 +66,31 @@
 
             border-top: 1px dashed $color-white;
         }
+
+        &_large {
+            @include font-size(30px);
+        }
+
+        .footer_light & {
+            color: $color-secondary;
+
+            &:after {
+                border-color: $color-secondary;
+            }
+        }
     }
 
     &__text {
         @include font-size(14px);
+    }
+
+    &__note {
+        margin-top: 36px;
+
+        color: $color-silver;
+        font-family: $font-family-serif;
+        @include font-size(14px);
+        font-style: italic;
     }
 
     &__signature {
@@ -119,39 +158,35 @@
     }
 
     &__social {
-        display: flex;
-        flex-wrap: wrap;
         margin-top: 18px;
     }
 
-    &__social-item {
-        margin-right: 10px;
-        margin-top: 10px;
+    &__newsletter-form {
+        display: flex;
+        margin-top: 32px;
     }
 
-    &__social-link {
+    &__newsletter-input {
         display: block;
-        height: 40px;
-        width: 40px;
+        padding: 15px 18px;
+        width: 100%;
 
-        color: $color-white;
-        @include font-size(14px);
-        line-height: 40px;
-        text-align: center;
-        text-decoration: none;
+        color: $color-text;
+        font-family: $font-family-serif;
+        @include font-size(16px);
+        font-style: italic;
 
         background: transparent;
-        border: 1px dashed $color-white;
-        border-radius: 50%;
+        border: 2px dashed $color-primary;
+        border-right: 0;
 
-        transition: all 0.25s linear;
-
-        &:hover,
-        &:focus {
-            color: $color-primary;
-
-            background: $color-white;
+        &::placeholder {
+            opacity: 0.5;
         }
+    }
+
+    &__newsletter-btn {
+        width: 170px;
     }
 
     &__bottom {
@@ -175,6 +210,10 @@
     &__logo-img {
         display: block;
         max-width: 100%;
+
+        @include breakpoint-up(md) {
+            margin-right: 12px;
+        }
     }
 
     &__copyright {
@@ -185,7 +224,6 @@
         text-transform: uppercase;
 
         @include breakpoint-up(md) {
-            margin-left: 12px;
             margin-top: 0;
         }
     }

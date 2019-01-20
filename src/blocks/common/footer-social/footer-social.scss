@@ -1,0 +1,50 @@
+/**
+ * Styles for the footer-social block.
+ */
+.footer-social {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+
+    &__link {
+        display: block;
+        height: 40px;
+        width: 40px;
+
+        color: $color-white;
+        @include font-size(14px);
+        line-height: 40px;
+        text-align: center;
+        text-decoration: none;
+
+        background: transparent;
+        border: 1px dashed $color-white;
+        border-radius: 50%;
+
+        transition: all 0.25s linear;
+
+        &:hover,
+        &:focus {
+            color: $color-primary;
+
+            background: $color-white;
+        }
+
+        .footer-social_light & {
+            color: $color-primary;
+
+            border-color: $color-primary;
+
+            &:hover,
+            &:focus {
+                color: $color-white;
+
+                background: $color-primary;
+            }
+        }
+    }
+}
