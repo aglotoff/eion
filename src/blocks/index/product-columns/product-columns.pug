@@ -1,0 +1,18 @@
+mixin product-columns(data = {}, mods = {})
+    section.product-columns&attributes(attributes)
+        .page__container
+            .product-columns__inner
+                h2.product-columns__title= data.title
+
+                .product-columns__grid
+                    each product, i in data.items
+                        if i % 2 == 0
+                            .product-columns__item.product-columns__item_right
+                                +product(product, {large: true})
+                        else
+                            .product-columns__item.product-columns__item_left
+                                +product(product, {large: true})
+                // /.product-columns__grid 
+            // /.product-columns__inner 
+        // /.page__container 
+    // /.product-columns 

@@ -17,6 +17,52 @@
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
                 "theme": "default"
             }]
+        },
+
+        "products": {
+            "title": "All Flower",
+
+            "items": [{
+                "name": "Fl-Model A123",
+                "sale": true,
+                "oldPrice": 530,
+                "price": 399,
+                "img": "img/content/products/thumbs/510x380/a351-05.jpg",
+                "rating": 5,
+                "link": "javascript:void(0);"
+            }, {
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/510x380/a351-02.jpg",
+                "rating": 5,
+                "link": "javascript:void(0);"
+            }, {
+                "name": "Fl-Model A123",
+                "sale": true,
+                "oldPrice": 530,
+                "price": 399,
+                "img": "img/content/products/thumbs/510x380/a351-03.jpg",
+                "rating": 5,
+                "link": "javascript:void(0);"
+            }, {
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/510x380/a351-12.jpg",
+                "rating": 5,
+                "link": "javascript:void(0);"
+            }, {
+                "name": "Fl-Model A123",
+                "price": 530,
+                "img": "img/content/products/thumbs/510x380/a351-09.jpg",
+                "rating": 5,
+                "link": "javascript:void(0);"
+            }, {
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/510x380/a351-08.jpg",
+                "rating": 5,
+                "link": "javascript:void(0);"
+            }]
         }
     }
 }

@@ -1,6 +1,8 @@
 extends ../layouts/base.pug
 
 include ../../blocks/index/slider/slider.pug
+include ../../blocks/index/product-columns/product-columns.pug
 
 block page
-    +slider(data.content.slider)
+    +slider(data.content.slider).page__slider
+    +product-columns(data.content.products).page__section
