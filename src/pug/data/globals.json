@@ -4,100 +4,106 @@
 
     "menu": [{
         "text": "About",
-        "link": "javascript:void(0);"
+        "link": "about.html"
     }, {
         "text": "Flower",
-        "link": "javascript:void(0);"
+        "link": "product-details.html"
     }, {
         "text": "Shop",
-        "link": "javascript:void(0);"
+        "link": "product-category-2-columns.html"
     }, {
         "text": "Pages",
         "link": "javascript:void(0);",
         "label": "New",
         "submenu": [{
-            "text": "General",
+            "text": "Home",
             "link": "javascript:void(0);",
             "submenu": [{
-                "text": "Homepage 1",
+                "text": "Home 1",
                 "link": "index.html"
             }, {
-                "text": "Homepage 2",
+                "text": "Home 2",
                 "link": "index-2.html"
             }, {
-                "text": "Homepage 3",
+                "text": "Home 3",
                 "link": "index-3.html"
+            }]
+        }, {
+            "text": "Blog",
+            "link": "javascript:void(0);",
+            "submenu": [{
+                "text": "Blog Category Standard",
+                "link": "blog-category-standard.html"
             }, {
-                "text": "Under Construction",
-                "link": "javascript:void(0);"
+                "text": "Blog Grid Category",
+                "link": "blog-grid-category.html"
             }, {
-                "text": "Coming Soon",
-                "link": "javascript:void(0);"
+                "text": "Blog Masonry Category",
+                "link": "blog-masonry-category.html"
+            }, {
+                "text": "Blog Single Post No Sidebar",
+                "link": "blog-single-post-no-sidebar.html"
+            }, {
+                "text": "Blog Single Post Standard",
+                "link": "blog-single-post-sidebar.html"
             }]
         }, {
             "text": "Product",
             "link": "javascript:void(0);",
             "submenu": [{
-                "text": "Product Category Default",
-                "link": "javascript:void(0);"
+                "text": "Category 2 Columns",
+                "link": "product-category-2-columns.html"
             }, {
-                "text": "Product Category 2 Column",
-                "link": "javascript:void(0);"
+                "text": "Category 3 Columns",
+                "link": "product-category-3-columns.html"
             }, {
-                "text": "Standard Product",
-                "link": "javascript:void(0);"
+                "text": "Category 3 Columns 2",
+                "link": "product-category-3-columns-2.html"
             }, {
-                "text": "Extended Product",
-                "link": "javascript:void(0);"
+                "text": "Category 3 Columns Sidebar",
+                "link": "product-category-3-columns-sidebar.html"
             }, {
-                "text": "Full-screen Product",
-                "link": "javascript:void(0);"
+                "text": "Category 3 Columns Sidebar 2",
+                "link": "product-category-3-columns-sidebar-2.html"
+            }, {
+                "text": "Category 4 Columns",
+                "link": "product-category-4-columns.html"
+            }, {
+                "text": "Category Fullwidth",
+                "link": "product-category-fullwidth.html"
+            }, {
+                "text": "Product Detail",
+                "link": "product-detail.html"
             }]
         }, {
-            "text": "Portfolio",
-            "link": "javascript:void(0);",
-            "submenu": [{
-                "text": "Portfolio Category",
-                "link": "javascript:void(0);"
-            }, {
-                "text": "Single Portfolio",
-                "link": "javascript:void(0);"
-            }, {
-                "text": "Lookbook",
-                "link": "javascript:void(0);"
-            }, {
-                "text": "Photo Gallery",
-                "link": "javascript:void(0);"
-            }, {
-                "text": "Video Gallery",
-                "link": "javascript:void(0);"
-            }]
-        }, {
-            "text": "Shop Pages",
+            "text": "General",
             "link": "javascript:void(0);",
             "submenu": [{
                 "text": "Shopping Cart",
-                "link": "javascript:void(0);"
-            }, {
-                "text": "My Wishlist",
-                "link": "javascript:void(0);"
-            }, {
-                "text": "Track Your Order",
-                "link": "javascript:void(0);"
-            }, {
-                "text": "My Account",
-                "link": "javascript:void(0);"
+                "link": "shopping-cart.html"
             }, {
                 "text": "Checkout",
-                "link": "javascript:void(0);"
+                "link": "checkout.html"
+            }, {
+                "text": "About",
+                "link": "about.html"
+            }, {
+                "text": "Contact",
+                "link": "contact.html"
+            }, {
+                "text": "FAQs",
+                "link": "faqs.html"
+            }, {
+                "text": "Under Construction",
+                "link": "under-construction.html"
             }]
         }]
     }, {
         "text": "Blog",
-        "link": "javascript:void(0);"
+        "link": "blog-category-standard.html"
     }, {
         "text": "Contact",
-        "link": "javascript:void(0);"
+        "link": "contact.html"
     }],
 
     "menuCenter": true,
