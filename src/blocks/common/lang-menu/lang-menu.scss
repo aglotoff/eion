@@ -38,7 +38,7 @@
             visibility: visible;
         }
 
-        .lang-menu_align_left & {
+        .lang-menu_align_right & {
             @include breakpoint-up(sm) {
                 bottom: auto;
                 left: 100%;
