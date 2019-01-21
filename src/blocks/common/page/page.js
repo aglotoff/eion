@@ -5,6 +5,7 @@
 import * as BackToTop      from '../back-to-top/back-to-top';
 import * as Header         from '../header/header';
 import * as HeaderDropdown from '../header-dropdown/header-dropdown';
+import * as InstagramFeed  from '../instagram-feed/instagram-feed';
 import * as LangMenu       from '../lang-menu/lang-menu';
 import * as PostGallery    from '../post-gallery/post-gallery';
 import * as ProductGallery from '../product-gallery/product-gallery';
@@ -14,7 +15,6 @@ import * as SideNav        from '../side-nav/side-nav';
 import * as Slider          from '../../index/slider/slider';
 import * as Countdown       from '../../index/countdown/countdown';
 import * as Counters        from '../../index/counters/counters';
-import * as InstagramFeed   from '../../index/instagram-feed/instagram-feed';
 import * as PostCarousel    from '../../index/post-carousel/post-carousel';
 import * as ProductCarousel from '../../index/product-carousel/product-carousel';
 
@@ -120,6 +120,7 @@ export const initModule = function() {
     BackToTop.initModule();
     Header.initModule();
     HeaderDropdown.initModule();
+    InstagramFeed.initModule();
     LangMenu.initModule();
     PostGallery.initModule();
     ProductGallery.initModule();
@@ -129,7 +130,6 @@ export const initModule = function() {
     Slider.initModule();
     Countdown.initModule();
     Counters.initModule();
-    InstagramFeed.initModule();
     PostCarousel.initModule();
     ProductCarousel.initModule();
 
