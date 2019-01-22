@@ -96,7 +96,8 @@ mixin header(data, mods = {})
                 .header__actions
                     +header__account({align: 'right'})
                     +header__minicart({align: 'right'})
-                    +header__search({align: 'right'})
+                    button.header__btn.header__search-toggle
+                        i.icon-magnifier.icons(aria-label="Toggle search")
                     +header__nav-toggle()
                 // .header__actions 
             // .header__right 

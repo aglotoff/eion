@@ -38,7 +38,6 @@ export const initModule = function() {
 
 export const handleResize = function() {
     for (const $gallery of galleries) {
-        console.log($gallery);
         $gallery[0].slick.refresh();
     }
 };

@@ -9,6 +9,7 @@ import * as InstagramFeed  from '../instagram-feed/instagram-feed';
 import * as LangMenu       from '../lang-menu/lang-menu';
 import * as PostGallery    from '../post-gallery/post-gallery';
 import * as ProductGallery from '../product-gallery/product-gallery';
+import * as SearchModal    from '../search-modal/search-modal';
 import * as Share          from '../share/share';
 import * as SideNav        from '../side-nav/side-nav';
 
@@ -124,6 +125,7 @@ export const initModule = function() {
     LangMenu.initModule();
     PostGallery.initModule();
     ProductGallery.initModule();
+    SearchModal.initModule();
     Share.initModule();
     SideNav.initModule();
 

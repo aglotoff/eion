@@ -10,16 +10,22 @@ import {makeDropdown} from '../../../js/utils';
  * @return true;
  */
 export const initModule = function() {
-    const $page      = $('.page');
-    const $header    = $('.header');
-    const $navToggle = $header.find('.header__nav-toggle');
-    const $megamenu  = $header.find('.header__megamenu');
-    const $megaItem  = $megamenu.closest('.header__nav-item');
-    const $megaLink  = $megamenu.prev('.header__nav-link');
+    const $page         = $('.page');
+    const $header       = $('.header');
+    const $navToggle    = $header.find('.header__nav-toggle');
+    const $searchToggle = $header.find('.header__search-toggle');
+    const $megamenu     = $header.find('.header__megamenu');
+    const $megaItem     = $megamenu.closest('.header__nav-item');
+    const $megaLink     = $megamenu.prev('.header__nav-link');
 
     // Use a global event to show the vertical menu.
     $navToggle.click(function() {
         $page.trigger('sidenav-show');
+    });
+
+    // Use a global event to show the search modal.
+    $searchToggle.click(function() {
+        $page.trigger('search-show');
     });
 
     makeDropdown($megaItem, $megaLink, {

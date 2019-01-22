@@ -360,5 +360,25 @@
             "img/content/instagram-feed/feed-05.jpg",
             "img/content/instagram-feed/feed-06.jpg"
         ]
-    }
+    },
+
+    "searchModal": [{
+        "title": "Flower Model A351",
+        "link": "product-detail.html",
+        "rating": 5,
+        "price": "$530",
+        "img": "img/content/products/thumbs/130x100/a351-01.jpg"
+    }, {
+        "title": "Flower Model A351",
+        "link": "product-detail.html",
+        "rating": 5,
+        "price": "$530",
+        "img": "img/content/products/thumbs/130x100/a351-02.jpg"
+    }, {
+        "title": "Flower Model A351",
+        "link": "product-detail.html",
+        "rating": 5,
+        "price": "$530",
+        "img": "img/content/products/thumbs/130x100/a351-03.jpg"
+    }]
 }
