@@ -16,7 +16,7 @@ mixin post(data = {}, mods = {})
                 frameborder = "no"
             ).post__embed
         
-        #{titleTag}.post__title(class="post__title_lvl_" + (mods.level || '3'))
+        #{titleTag}.post__title(class = mods.largeTitle && "post__title_large")
             a(href=data.link).post__title-link= data.title
 
         .post__meta

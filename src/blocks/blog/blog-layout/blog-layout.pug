@@ -4,7 +4,10 @@ mixin blog-layout(data = {}, mods = {})
             .blog-layout__inner
                 .blog-layout__content
                     each post in data.posts
-                        +post(post, {level: 2}).blog-layout__post
+                        +post(post, {
+                            level      : 2,
+                            largeTitle : true,
+                        }).blog-layout__post
 
                     if data.pagination
                         +pagination(data.pagination).blog-layout__pagination

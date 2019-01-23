@@ -61,10 +61,12 @@
         font-weight: $font-weight-bold;
         text-transform: uppercase;
 
-        &_lvl_2 {
-            margin-bottom: 18px;
+        &_large {
+            @include breakpoint-up(md) {
+                margin-bottom: 18px;
 
-            @include font-size(24px);
+                @include font-size(24px);
+            }
         }
     }
 
