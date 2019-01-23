@@ -72,20 +72,35 @@ mixin header__nav-toggle()
         i.icon-list.icons(aria-label="Toggle menu")
 
 mixin header__logo(data = {})
-    h1(class={
-        header__logo        : true,
-        header__logo_left   : !!data.left,
-        header__logo_center : !!data.center,
-    })
-        img(src="img/logo.png", alt="Eion").header__logo-img
-        .header__logo-alt Eion
+    if data.isHomepage
+        h1(class={
+            header__logo        : true,
+            header__logo_left   : !!data.left,
+            header__logo_center : !!data.center,
+        })
+            img(src="img/logo.png", alt="Eion").header__logo-img
+            .header__logo-alt Eion
+    else
+        a(
+            href  = "."
+            class = {
+                header__logo        : true,
+                header__logo_left   : !!data.left,
+                header__logo_center : !!data.center,
+            }
+        )
+            img(src="img/logo.png", alt="Eion").header__logo-img
+            .header__logo-alt Eion
 
 mixin header(data, mods = {})
     header.header&attributes(attributes)
         if data.menu
             .header__left
                 nav.header__nav
-                    +header__logo({left: true})
+                    +header__logo({
+                        isHomepage : data.isHomepage,
+                        left       : true,
+                    })
                     +header__nav-list({
                         menu     : data.menu,
                         labelAlt : data.menuLabelAlt
@@ -115,7 +130,10 @@ mixin header(data, mods = {})
                         menu     : data.menuLeft,
                         labelAlt : data.menuLabelAlt
                     })
-                    +header__logo({center: true})
+                    +header__logo({
+                        isHomepage : data.isHomepage,
+                        center     : true,
+                    })
                     +header__nav-list({
                         menu     : data.menuRight,
                         labelAlt : data.menuLabelAlt

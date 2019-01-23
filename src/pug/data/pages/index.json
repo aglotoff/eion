@@ -208,5 +208,7 @@
             "title": "Eion Care Protection Plan",
             "link": "javascript:void(0);"
         }]
-    }
+    },
+
+    "isHomepage": true
 }

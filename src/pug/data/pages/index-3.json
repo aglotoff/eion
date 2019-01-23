@@ -104,5 +104,7 @@
             "img/content/instagram-feed/feed-07.jpg",
             "img/content/instagram-feed/feed-08.jpg"
         ]
-    }
+    },
+
+    "isHomepage": true
 }

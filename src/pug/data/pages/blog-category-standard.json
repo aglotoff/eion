@@ -1,0 +1,10 @@
+{
+    "pageTitle": "Blog Category Standard",
+
+    "content": {
+        "pageHeader": {
+            "title": "Blog Category",
+            "bg": "img/content/blog/blog-header-bg-01.jpg"
+        }
+    }
+}

@@ -44,12 +44,14 @@ html(lang="en")
                 const menuLeft  = menu.slice(0, Math.floor(menu.length / 2));
                 const menuRight = menu.slice(Math.floor(menu.length / 2));
             +header({
-                menuLeft     : menuLeft,
-                menuRight    : menuRight,
+                menuLeft   : menuLeft,
+                menuRight  : menuRight,
+                isHomepage : data.isHomepage,
             }).page__header
         else
             +header({
-                menu         : data.menu,
+                menu       : data.menu,
+                isHomepage : data.isHomepage,
             }).page__header
 
         +side-nav({
