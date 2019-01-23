@@ -1,0 +1,25 @@
+/**
+ * Styles for the sidebar widget block.
+ */
+.sidebar-widget {
+    padding: 30px;
+
+    background: $color-concrete;
+
+    &__title {
+        color: $color-secondary;
+        @include font-size(14px);
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+
+        &:after {
+            content: "";
+
+            display: block;
+            margin: 15px 0 30px;
+            width: 50px;
+
+            border-top: 1px dashed $color-text;
+        }
+    }
+}

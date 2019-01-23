@@ -1,14 +1,15 @@
 mixin post-gallery(data = {}, mods = {})
     .post-gallery&attributes(attributes)
-        .post-gallery__container
-            each item, i in data
-                .post-gallery__slide(
-                    class = (i == 0) && "post-gallery__slide_active"
-                )
-                    img(src=item.img, alt=item.alt).post-gallery__img
+        .post-gallery__inner
+            .post-gallery__container
+                each item, i in data
+                    .post-gallery__slide(
+                        class = (i == 0) && "post-gallery__slide_active"
+                    )
+                        img(src=item.img, alt=item.alt).post-gallery__img
 
-        button.post-gallery__arrow.post-gallery__arrow_prev
-            i.fas.fa-angle-left(aria-label="Previous Image")
-        button.post-gallery__arrow.post-gallery__arrow_next
-            i.fas.fa-angle-right(aria-label="Next Image")
+            button.post-gallery__arrow.post-gallery__arrow_prev
+                i.fas.fa-angle-left(aria-label="Previous Image")
+            button.post-gallery__arrow.post-gallery__arrow_next
+                i.fas.fa-angle-right(aria-label="Next Image")
     // /.post-gallery 

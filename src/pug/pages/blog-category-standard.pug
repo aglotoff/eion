@@ -1,6 +1,16 @@
 extends ../layouts/base.pug
 
 include ../../blocks/common/page-header/page-header.pug
+include ../../blocks/common/pagination/pagination.pug
+
+include ../../blocks/blog/blog-layout/blog-layout.pug
+include ../../blocks/blog/sidebar-widget/sidebar-widget.pug
+include ../../blocks/blog/categories/categories.pug
+include ../../blocks/blog/popular-posts/popular-posts.pug
+include ../../blocks/blog/latest-posts/latest-posts.pug
+include ../../blocks/blog/tag-cloud/tag-cloud.pug
+include ../../blocks/blog/sidebar-coupon/sidebar-coupon.pug
 
 block page
     +page-header(data.content.pageHeader)
+    +blog-layout(data.content.blog)

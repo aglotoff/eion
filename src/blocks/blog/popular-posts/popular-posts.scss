@@ -1,0 +1,8 @@
+/**
+ * Styles for the popular posts block.
+ */
+.popular-posts {
+    &__post:not(:first-child) {
+        margin-top: 55px;
+    }
+}

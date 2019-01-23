@@ -25,6 +25,16 @@ include ../../blocks/common/search-modal/search-modal.pug
 
 <!DOCTYPE html>
 html(lang="en")
+    block functions
+        -
+            const blogDate = function(datestr) {
+                const date = new Date(datestr);
+                const month = date.toLocaleString('en-us', { month: 'long'});
+                const day = date.getDate();
+                const year = date.getFullYear();
+                return `${day} ${month}, ${year}`;
+            };
+
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")

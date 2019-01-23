@@ -25,7 +25,7 @@ export const initModule = function() {
             nextArrow     : $nextArrow,
 
             speed         : 350,
-            infinite      : false,
+            infinite      : true,
 
             dots          : false,
         });

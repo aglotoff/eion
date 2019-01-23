@@ -1,0 +1,32 @@
+/**
+ * Styles for the categories block.
+ */
+.categories {
+    &__item {
+        &:not(:first-child) {
+            margin-top: 12px;
+        }
+    }
+
+    &__link {
+        color: $color-secondary;
+        font-family: $font-family-serif;
+        @include font-size(14px);
+        text-decoration: none;
+
+        &:before {
+            content: "+";
+
+            margin-right: 10px;
+        }
+
+        &:hover,
+        &:focus {
+            color: $color-primary;
+
+            &:before {
+                color: $color-malta;
+            }
+        }
+    }
+}
