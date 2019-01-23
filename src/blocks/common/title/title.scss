@@ -5,16 +5,48 @@
     color: $color-secondary;
     @include font-size(20px);
     font-weight: $font-weight-bold;
-    text-align: center;
     text-transform: uppercase;
 
     &:after {
         content: "";
 
         display: block;
-        margin: 16px auto 0;
+        margin-top: 12px;
         width: 100px;
 
         border-top: 1px dashed $color-secondary;
+    }
+
+    &_center {
+        text-align: center;
+
+        &:after {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &_light {
+        color: $color-white;
+
+        &:after {
+            border-color: $color-white;
+        }
+    }
+
+    &_size_small {
+        @include font-size(14px);
+
+        &:after {
+            width: 50px;
+        }
+    }
+
+    &_size_large {
+        @include font-size(30px);
+
+        &:after {
+            width: 50px;
+        }
     }
 }

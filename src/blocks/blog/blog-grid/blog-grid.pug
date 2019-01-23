@@ -1,7 +1,7 @@
 mixin blog-grid(data = {}, mods = {})
     .blog-grid&attributes(attributes)
         .page__container
-            h1.title.blog-grid__title= data.title
+            h1.title.title_center.blog-grid__title= data.title
 
             .blog-grid__items
                 each post in data.posts

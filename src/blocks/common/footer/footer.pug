@@ -7,7 +7,7 @@ mixin footer(data = {}, mods = {})
                 .footer__top-inner
                     if data.alt
                         .footer__block
-                            h2.footer__block-title.footer__block-title_large
+                            h2.title.title_size_large.footer__block-title
                                 | Eion
 
                             address.footer__address= data.address
@@ -23,7 +23,7 @@ mixin footer(data = {}, mods = {})
                         // /.footer__block 
 
                         .footer__block.footer__block_wide
-                            h2.footer__block-title Newsletter
+                            h2.title.title_size_small.footer__block-title Newsletter
 
                             .footer__text.text !{data.newsletter.text}
 
@@ -47,7 +47,7 @@ mixin footer(data = {}, mods = {})
                         // /.footer__block 
                     else
                         .footer__block
-                            h2.footer__block-title About Us
+                            h2.title.title_light.title_size_small.footer__block-title About Us
 
                             .footer__text.text !{data.about}
 
@@ -58,7 +58,7 @@ mixin footer(data = {}, mods = {})
                         // /.footer__block 
 
                         .footer__block
-                            h2.footer__block-title Information
+                            h2.title.title_light.title_size_small.footer__block-title Information
 
                             ul.footer__menu
                                 each item in data.menu
@@ -69,11 +69,11 @@ mixin footer(data = {}, mods = {})
 
                         .footer__block
                             if data.instagram
-                                h2.footer__block-title Instagram
+                                h2.title.title_light.title_size_small.footer__block-title Instagram
 
                                 +footer-instagram(data.instagram).footer__instagram
                             else
-                                h2.footer__block-title Newsletter
+                                h2.title.title_light.title_size_small.footer__block-title Newsletter
 
                                 .footer__text.text
                                     p Enter your email and we'll send you a coupon with 10% off your next order.
@@ -92,7 +92,7 @@ mixin footer(data = {}, mods = {})
                         // /.footer__block 
 
                         .footer__block
-                            h2.footer__block-title Contact us
+                            h2.title.title_light.title_size_small.footer__block-title Contact us
 
                             address.footer__address= data.address
 

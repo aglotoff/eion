@@ -51,33 +51,11 @@
     }
 
     &__block-title {
+        margin-bottom: 22px;
+
         @include font-size(14px);
         font-weight: $font-weight-bold;
         text-transform: uppercase;
-
-        &:after {
-            content: "";
-
-            display: block;
-            height: 1px;
-            margin-bottom: 22px;
-            margin-top: 12px;
-            width: 50px;
-
-            border-top: 1px dashed $color-white;
-        }
-
-        &_large {
-            @include font-size(30px);
-        }
-
-        .footer_light & {
-            color: $color-secondary;
-
-            &:after {
-                border-color: $color-secondary;
-            }
-        }
     }
 
     &__text {
