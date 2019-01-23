@@ -15,9 +15,15 @@ mixin post(data = {}, mods = {})
                 height      = data.embed.height
                 frameborder = "no"
             ).post__embed
-        
-        #{titleTag}.post__title(class = mods.largeTitle && "post__title_large")
-            a(href=data.link).post__title-link= data.title
+        else if data.quote
+            #{titleTag}.post__quote
+                q= data.quote
+        else if data.video
+            +video(data.video, {format: '16x9'}).article__video
+
+        if data.title
+            #{titleTag}.post__title(class = mods.largeTitle && "post__title_large")
+                a(href=data.link).post__title-link= data.title
 
         .post__meta
             .post__pubdate
@@ -41,6 +47,7 @@ mixin post(data = {}, mods = {})
                 p= data.excerpt
             // /.post__excerpt 
 
+        if data.excerpt || data.quote || data.video
             .post__bottom
                 +btn({
                     text : 'Read more',

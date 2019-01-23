@@ -1,0 +1,25 @@
+/**
+ * Styles for the blog-masonry block.
+ */
+.blog-masonry {
+    padding: 110px 0 150px;
+
+    &__items {
+        margin-top: 45px;
+
+        @include breakpoint-up(md) {
+            column-count: 2;
+            column-gap: 30px;
+        }
+
+        @include breakpoint-up(lg) {
+            column-count: 3;
+        }
+    }
+
+    &__item-wrap {
+        display: inline-block;
+        margin-top: 30px;
+        width: 100%;
+    }
+}
