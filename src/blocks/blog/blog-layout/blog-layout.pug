@@ -3,34 +3,44 @@ mixin blog-layout(data = {}, mods = {})
         .page__container
             .blog-layout__inner
                 .blog-layout__content
-                    each post in data.posts
-                        +post(post, {
-                            level      : 2,
+                    if data.posts
+                        each post in data.posts
+                            +post(post, {
+                                level      : 2,
+                                largeTitle : true,
+                            }).blog-layout__post
+
+                        if data.pagination
+                            +pagination(data.pagination).blog-layout__pagination
+                    else if data.singlePost
+                        +post(data.singlePost, {
+                            level      : 1,
                             largeTitle : true,
                         }).blog-layout__post
 
-                    if data.pagination
-                        +pagination(data.pagination).blog-layout__pagination
+                    if data.author
+                        +blog-author(data.author).blog-layout__author
                 // .blog-layout__content 
 
-                .blog-layout__sidebar
-                    +sidebar-widget({
-                        title: 'Categories'
-                    }).blog-layout__sidebar-widget
-                        +categories(data.categories)
-                    +sidebar-widget({
-                        title: 'Popular Posts'
-                    }).blog-layout__sidebar-widget
-                        +popular-posts(data.popularPosts)
-                    +sidebar-widget({
-                        title: 'Latest Posts'
-                    }).blog-layout__sidebar-widget
-                        +latest-posts(data.latestPosts)
-                    +sidebar-widget({
-                        title: 'Tags'
-                    }).blog-layout__sidebar-widget
-                        +tag-cloud(data.tagCloud)
-                    +sidebar-coupon(data.coupon).blog-layout__sidebar-coupon
-                // .blog-layout__sidebar 
+                if data.sidebar
+                    .blog-layout__sidebar
+                        +sidebar-widget({
+                            title: 'Categories'
+                        }).blog-layout__sidebar-widget
+                            +categories(data.sidebar.categories)
+                        +sidebar-widget({
+                            title: 'Popular Posts'
+                        }).blog-layout__sidebar-widget
+                            +popular-posts(data.sidebar.popularPosts)
+                        +sidebar-widget({
+                            title: 'Latest Posts'
+                        }).blog-layout__sidebar-widget
+                            +latest-posts(data.sidebar.latestPosts)
+                        +sidebar-widget({
+                            title: 'Tags'
+                        }).blog-layout__sidebar-widget
+                            +tag-cloud(data.sidebar.tagCloud)
+                        +sidebar-coupon(data.sidebar.coupon).blog-layout__sidebar-coupon
+                    // .blog-layout__sidebar 
         // /.page__container
     // .blog-layout 

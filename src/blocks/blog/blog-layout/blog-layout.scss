@@ -7,6 +7,7 @@
     &__inner {
         @include breakpoint-up(lg) {
             display: flex;
+            justify-content: center;
             margin: 0 -15px;
         }
     }
@@ -24,6 +25,10 @@
 
     &__pagination {
         margin-top: 55px;
+    }
+
+    &__author {
+        margin-top: 30px;
     }
 
     &__sidebar {

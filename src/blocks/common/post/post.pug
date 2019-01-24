@@ -2,10 +2,14 @@ mixin post(data = {}, mods = {})
     - const titleTag = 'h' + (mods.level || '3');
     article.post(class=mods.sidebar && "post_sidebar")&attributes(attributes)
         if data.img
-            a(href=data.link aria-hidden="true" tabindex="-1").post__thumb
-                img(src=data.img, alt=data.title).post__thumb-img
-                .post__thumb-overlay
-                    i.icon-plus.icons(aria-hidden="true")
+            if data.link
+                a(href=data.link aria-hidden="true" tabindex="-1").post__thumb
+                    img(src=data.img, alt=data.title).post__thumb-img
+                    .post__thumb-overlay
+                        i.icon-plus.icons(aria-hidden="true")
+            else
+                .post__thumb
+                    img(src=data.img, alt=data.title).post__thumb-img
         else if data.gallery
             +post-gallery(data.gallery).post__gallery
         else if data.embed
@@ -23,7 +27,10 @@ mixin post(data = {}, mods = {})
 
         if data.title
             #{titleTag}.post__title(class = mods.largeTitle && "post__title_large")
-                a(href=data.link).post__title-link= data.title
+                if data.link
+                    a(href=data.link).post__title-link= data.title
+                else
+                    | #{data.title}
 
         .post__meta
             .post__pubdate
@@ -43,9 +50,12 @@ mixin post(data = {}, mods = {})
         // /.post__meta 
 
         if data.excerpt
-            .post__excerpt.text
+            .text.text_post.post__excerpt
                 p= data.excerpt
             // /.post__excerpt 
+
+        if data.content
+            .text.text_post.post__content !{data.content}
 
         if data.excerpt || data.quote || data.video
             .post__bottom
@@ -56,3 +66,10 @@ mixin post(data = {}, mods = {})
 
                 +share().post__share
             // /.post__bottom 
+
+        else if data.tags
+            .post__bottom
+                .post__tags
+                    i.fas.fa-tags(aria-label="Tags").post__tags-icon
+                    +tag-cloud(data.tags).post__tags-cloud
+                +share().post__share

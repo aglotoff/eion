@@ -1,0 +1,34 @@
+mixin blog-author(data = {}, mods = {})
+    section.blog-author&attributes(attributes)
+        .blog-author__avatar
+            img(src=data.img, alt=data.name).blog-author__avatar-img
+
+        .blog-author__body
+            h2.blog-author__title
+                | #{data.name}
+                span.blog-author__subtitle Author
+            
+            .blog-author__bio= data.bio
+
+            ul.blog-author__social
+                li.blog-author__social-item
+                    a(href="javascript:void(0);").blog-author__social-link
+                        i.fab.fa-twitter(
+                            aria-label="Follow on Twitter"
+                        )
+                li.blog-author__social-item
+                    a(href="javascript:void(0);").blog-author__social-link
+                        i.fab.fa-facebook-f(
+                            aria-label="Follow on Facebook"
+                        )
+                li.blog-author__social-item
+                    a(href="javascript:void(0);").blog-author__social-link
+                        i.fab.fa-instagram(
+                            aria-label="Follow on Instagram"
+                        )
+                li.blog-author__social-item
+                    a(href="javascript:void(0);").blog-author__social-link
+                        i.fab.fa-linkedin-in(
+                            aria-label="Follow on LinkedIn"
+                        )
+                

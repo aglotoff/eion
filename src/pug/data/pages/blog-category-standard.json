@@ -73,84 +73,86 @@
                 "excerpt": "Lorem ipsum dolor sit amet, contur adicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ads minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             }],
 
-            "categories": [
-                "New Flower",
-                "Flower Wedding",
-                "Accessories",
-                "Camping & Picnic",
-                "Travel",
-                "Tips & Advices",
-                "Wedding"
-            ],
+            "sidebar": {
+                "categories": [
+                    "New Flower",
+                    "Flower Wedding",
+                    "Accessories",
+                    "Camping & Picnic",
+                    "Travel",
+                    "Tips & Advices",
+                    "Wedding"
+                ],
 
-            "popularPosts": [{
-                "title": "Sunt in culpa qui officia desent mollit anim.",
-                "link": "blog-single-post-sidebar.html",
-                "img": "img/content/blog/thumbs/660x490/post-08.jpg",
-                "date": "2015/06/02",
-                "author": "Author",
-                "authorLink": "javascript:void(0);",
-                "comments": 3,
-                "likes": 8
-            }, {
-                "title": "Sunt in culpa qui officia desent mollit anim.",
-                "link": "blog-single-post-sidebar.html",
-                "img": "img/content/blog/thumbs/660x490/post-05.jpg",
-                "date": "2015/06/02",
-                "author": "Author",
-                "authorLink": "javascript:void(0);",
-                "comments": 3,
-                "likes": 8
-            }, {
-                "title": "Sunt in culpa qui officia desent mollit anim.",
-                "link": "blog-single-post-sidebar.html",
-                "img": "img/content/blog/thumbs/660x490/post-07.jpg",
-                "date": "2015/06/02",
-                "author": "Author",
-                "authorLink": "javascript:void(0);",
-                "comments": 3,
-                "likes": 8
-            }],
+                "popularPosts": [{
+                    "title": "Sunt in culpa qui officia desent mollit anim.",
+                    "link": "blog-single-post-sidebar.html",
+                    "img": "img/content/blog/thumbs/660x490/post-08.jpg",
+                    "date": "2015/06/02",
+                    "author": "Author",
+                    "authorLink": "javascript:void(0);",
+                    "comments": 3,
+                    "likes": 8
+                }, {
+                    "title": "Sunt in culpa qui officia desent mollit anim.",
+                    "link": "blog-single-post-sidebar.html",
+                    "img": "img/content/blog/thumbs/660x490/post-05.jpg",
+                    "date": "2015/06/02",
+                    "author": "Author",
+                    "authorLink": "javascript:void(0);",
+                    "comments": 3,
+                    "likes": 8
+                }, {
+                    "title": "Sunt in culpa qui officia desent mollit anim.",
+                    "link": "blog-single-post-sidebar.html",
+                    "img": "img/content/blog/thumbs/660x490/post-07.jpg",
+                    "date": "2015/06/02",
+                    "author": "Author",
+                    "authorLink": "javascript:void(0);",
+                    "comments": 3,
+                    "likes": 8
+                }],
 
-            "latestPosts": [{
-                "title": "Sunt in culpa qui officia desent.",
-                "link": "blog-single-post-sidebar.html",
-                "img": "img/content/blog/thumbs/130x100/post-01.jpg",
-                "date": "2015/06/02",
-                "author": "Author",
-                "authorLink": "javascript:void(0);"
-            }, {
-                "title": "Sunt in culpa qui officia desent.",
-                "link": "blog-single-post-sidebar.html",
-                "img": "img/content/blog/thumbs/130x100/post-02.jpg",
-                "date": "2015/06/02",
-                "author": "Author",
-                "authorLink": "javascript:void(0);"
-            }, {
-                "title": "Sunt in culpa qui officia desent.",
-                "link": "blog-single-post-sidebar.html",
-                "img": "img/content/blog/thumbs/130x100/post-03.jpg",
-                "date": "2015/06/02",
-                "author": "Author",
-                "authorLink": "javascript:void(0);"
-            }],
+                "latestPosts": [{
+                    "title": "Sunt in culpa qui officia desent.",
+                    "link": "blog-single-post-sidebar.html",
+                    "img": "img/content/blog/thumbs/130x100/post-01.jpg",
+                    "date": "2015/06/02",
+                    "author": "Author",
+                    "authorLink": "javascript:void(0);"
+                }, {
+                    "title": "Sunt in culpa qui officia desent.",
+                    "link": "blog-single-post-sidebar.html",
+                    "img": "img/content/blog/thumbs/130x100/post-02.jpg",
+                    "date": "2015/06/02",
+                    "author": "Author",
+                    "authorLink": "javascript:void(0);"
+                }, {
+                    "title": "Sunt in culpa qui officia desent.",
+                    "link": "blog-single-post-sidebar.html",
+                    "img": "img/content/blog/thumbs/130x100/post-03.jpg",
+                    "date": "2015/06/02",
+                    "author": "Author",
+                    "authorLink": "javascript:void(0);"
+                }],
 
-            "tagCloud": [
-                "Flower",
-                "Eion",
-                "Fashion",
-                "Wordpress Theme",
-                "Woocommerce",
-                "Bike",
-                "Hashtag"
-            ],
+                "tagCloud": [
+                    "Flower",
+                    "Eion",
+                    "Fashion",
+                    "Wordpress Theme",
+                    "Woocommerce",
+                    "Bike",
+                    "Hashtag"
+                ],
 
-            "coupon": {
-                "bg": "img/content/blog/coupon-bg.jpg",
-                "title": "Coupon 30%",
-                "btn": {
-                    "text": "Apply now",
-                    "url": "javascript:void(0);"
+                "coupon": {
+                    "bg": "img/content/blog/coupon-bg.jpg",
+                    "title": "Coupon 30%",
+                    "btn": {
+                        "text": "Apply now",
+                        "url": "javascript:void(0);"
+                    }
                 }
             },
 

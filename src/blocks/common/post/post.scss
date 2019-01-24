@@ -83,7 +83,7 @@
 
         &_large {
             @include breakpoint-up(md) {
-                margin-bottom: 18px;
+                margin-bottom: 20px;
 
                 @include font-size(24px);
             }
@@ -133,10 +133,31 @@
         margin-top: 10px;
     }
 
+    &__content {
+        margin-bottom: 85px;
+        margin-top: 14px;
+
+        color: $color-dove-gray;
+    }
+
     &__bottom {
         display: flex;
         justify-content: space-between;
         margin-top: 40px;
+    }
+
+    &__tags {
+        align-items: center;
+        display: flex;
+    }
+
+    &__tags-icon {
+        color: $color-primary;
+        @include font-size(18px);
+    }
+
+    &__tags-cloud {
+        margin-left: 20px;
     }
 
     &_sidebar {
