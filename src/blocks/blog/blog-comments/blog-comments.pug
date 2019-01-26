@@ -1,0 +1,30 @@
+mixin blog-comments(data = {}, mods = {})
+    .blog-comments&attributes(attributes)
+        h2.title.title_comments.blog-comments__title #{data.total} Comments
+
+        ol.blog-comments__list
+            each comment in data.comments
+                +comment(comment).blog-comments__comment
+
+        h2.title.title_comments.blog-comments__title Leave a reply
+
+        .blog-comments__social
+            .blog-comments__social-text Connect with:
+            ul.blog-comments__social-list
+                li.blog-comments__social-item
+                    a(href="javascript:void(0);").blog-comments__social-link
+                        i.fab.fa-twitter(
+                            aria-label="Follow us on Twitter"
+                        )
+                li.blog-comments__social-item
+                    a(href="javascript:void(0);").blog-comments__social-link
+                        i.fab.fa-facebook-f(
+                            aria-label="Follow us on Facebook"
+                        )
+                li.blog-comments__social-item
+                    a(href="javascript:void(0);").blog-comments__social-link
+                        i.fab.fa-google-plus-g(
+                            aria-label="Follow us on Google Plus"
+                        )
+
+        +comment-form().blog-comments__form

@@ -19,6 +19,28 @@
                 "name": "Peter Adam",
                 "img": "img/content/avatars/300x300/peter-adam.jpg",
                 "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud sed do eiusmod tempor incididunt ut labore. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium."
+            },
+
+            "comments": {
+                "total": 4,
+                "comments": [{
+                    "img": "img/content/avatars/160x160/kendall-jenner.jpg",
+                    "author": "Kendall Jenner",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+                    "replies": [{
+                        "img": "img/content/avatars/160x160/katie.jpg",
+                        "author": "Katie",
+                        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+                    }]
+                }, {
+                    "img": "img/content/avatars/160x160/emily-stella.jpg",
+                    "author": "Emily Stella",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+                }, {
+                    "img": "img/content/avatars/160x160/kimberly.jpg",
+                    "author": "Kimberly",
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+                }]
             }
         }
     }

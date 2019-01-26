@@ -20,6 +20,9 @@ mixin blog-layout(data = {}, mods = {})
 
                     if data.author
                         +blog-author(data.author).blog-layout__author
+
+                    if data.comments
+                        +blog-comments(data.comments).blog-layout__comments
                 // .blog-layout__content 
 
                 if data.sidebar

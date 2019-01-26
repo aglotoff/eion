@@ -31,6 +31,10 @@
         margin-top: 30px;
     }
 
+    &__comments {
+        margin-top: 30px;
+    }
+
     &__sidebar {
         @include breakpoint-up(lg) {
             flex: 0 0 33.3333%;

@@ -1,0 +1,38 @@
+mixin comment-form(data = {}, mods = {})
+    form.comment-form&attributes(attributes)
+        .comment-form__fields
+            label.comment-form__label
+                i.icon-user.icons.comment-form__icon(
+                    aria-label="Your Name"
+                )
+                input.comment-form__input(
+                    type        = "text"
+                    name        = "name"
+                    placeholder = "Your name *"
+                    required    = true
+                )
+            label.comment-form__label
+                i.icon-envelope.icons.comment-form__icon(
+                    aria-label="Your Email"
+                )
+                input.comment-form__input(
+                    type        = "email"
+                    name        = "email"
+                    placeholder = "Your Email *"
+                    required    = true
+                )
+            label.comment-form__label.comment-form__label_wide
+                i.icon-bubbles.icons.comment-form__icon(
+                    aria-label="Your Review"
+                )
+                textarea.comment-form__input(
+                    name        = "review"
+                    placeholder = "Your Review *"
+                    required    = true
+                    rows        = "6"
+                )
+        
+        +btn({text: 'Submit your review'}, {
+            theme : 'primary',
+            size  : 'large',
+        })(type="submit").comment-form__submit

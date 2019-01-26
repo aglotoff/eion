@@ -1,0 +1,54 @@
+/**
+ * Styles for the blog-comments block.
+ */
+.blog-comments {
+    padding: 30px 30px 55px;
+
+    background: $color-white;
+
+    &__list {
+        margin-bottom: 55px;
+    }
+
+    &__comment {
+        margin-top: 30px;
+    }
+
+    &__social {
+        align-items: center;
+        display: flex;
+        margin-top: 40px;
+
+        @include font-size(14px);
+    }
+
+    &__social-text {
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+    }
+
+    &__social-list {
+        display: flex;
+        margin-left: 18px;
+    }
+
+    &__social-item:not(:first-child) {
+        margin-left: 20px;
+    }
+
+    &__social-link {
+        color: $color-text;
+        text-decoration: none;
+
+        transition: color 0.25s linear;
+
+        &:focus,
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &__form {
+        margin-top: 22px;
+    }
+}

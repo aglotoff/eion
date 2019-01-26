@@ -17,6 +17,10 @@
         border-top: 1px dashed $color-secondary;
     }
 
+    &_comments:after {
+        margin-top: 6px;
+    }
+
     &_center {
         text-align: center;
 
