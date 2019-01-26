@@ -23,6 +23,14 @@ mixin blog-layout(data = {}, mods = {})
 
                     if data.comments
                         +blog-comments(data.comments).blog-layout__comments
+
+                    if data.relatedPosts
+                        .blog-layout__related
+                            each related in data.relatedPosts
+                                .blog-layout__related-post
+                                    +post(related, {
+                                        level      : 2,
+                                    })
                 // .blog-layout__content 
 
                 if data.sidebar
