@@ -1,5 +1,5 @@
 {
-    "pageTitle": "Blog Single Post no Sidebar",
+    "pageTitle": "Blog Single Post Sidebar",
 
     "content": {
         "blog": {
@@ -45,6 +45,89 @@
                     "author": "Kimberly",
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
                 }]
+            },
+
+            "sidebar": {
+                "categories": [
+                    "New Flower",
+                    "Flower Wedding",
+                    "Accessories",
+                    "Camping & Picnic",
+                    "Travel",
+                    "Tips & Advices",
+                    "Wedding"
+                ],
+
+                "popularPosts": [{
+                    "title": "Sunt in culpa qui officia desent mollit anim.",
+                    "link": "blog-single-post-sidebar.html",
+                    "img": "img/content/blog/thumbs/660x490/post-08.jpg",
+                    "date": "2015/06/02",
+                    "author": "Author",
+                    "authorLink": "javascript:void(0);",
+                    "comments": 3,
+                    "likes": 8
+                }, {
+                    "title": "Sunt in culpa qui officia desent mollit anim.",
+                    "link": "blog-single-post-sidebar.html",
+                    "img": "img/content/blog/thumbs/660x490/post-05.jpg",
+                    "date": "2015/06/02",
+                    "author": "Author",
+                    "authorLink": "javascript:void(0);",
+                    "comments": 3,
+                    "likes": 8
+                }, {
+                    "title": "Sunt in culpa qui officia desent mollit anim.",
+                    "link": "blog-single-post-sidebar.html",
+                    "img": "img/content/blog/thumbs/660x490/post-07.jpg",
+                    "date": "2015/06/02",
+                    "author": "Author",
+                    "authorLink": "javascript:void(0);",
+                    "comments": 3,
+                    "likes": 8
+                }],
+
+                "latestPosts": [{
+                    "title": "Sunt in culpa qui officia desent.",
+                    "link": "blog-single-post-sidebar.html",
+                    "img": "img/content/blog/thumbs/130x100/post-01.jpg",
+                    "date": "2015/06/02",
+                    "author": "Author",
+                    "authorLink": "javascript:void(0);"
+                }, {
+                    "title": "Sunt in culpa qui officia desent.",
+                    "link": "blog-single-post-sidebar.html",
+                    "img": "img/content/blog/thumbs/130x100/post-02.jpg",
+                    "date": "2015/06/02",
+                    "author": "Author",
+                    "authorLink": "javascript:void(0);"
+                }, {
+                    "title": "Sunt in culpa qui officia desent.",
+                    "link": "blog-single-post-sidebar.html",
+                    "img": "img/content/blog/thumbs/130x100/post-03.jpg",
+                    "date": "2015/06/02",
+                    "author": "Author",
+                    "authorLink": "javascript:void(0);"
+                }],
+
+                "tagCloud": [
+                    "Flower",
+                    "Eion",
+                    "Fashion",
+                    "Wordpress Theme",
+                    "Woocommerce",
+                    "Bike",
+                    "Hashtag"
+                ],
+
+                "coupon": {
+                    "bg": "img/content/blog/coupon-bg.jpg",
+                    "title": "Coupon 30%",
+                    "btn": {
+                        "text": "Apply now",
+                        "url": "javascript:void(0);"
+                    }
+                }
             }
         }
     }
