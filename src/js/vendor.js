@@ -3,6 +3,7 @@ import jQuery from 'jquery';
 import svg4everybody from 'svg4everybody';
 
 import 'jquery-countdown';
+import 'jquery-validation';
 import 'slick-carousel';
 
 // Expose libraries to global Window object

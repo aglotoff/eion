@@ -24,19 +24,23 @@
             "comments": {
                 "total": 4,
                 "comments": [{
+                    "id": 1,
                     "img": "img/content/avatars/160x160/kendall-jenner.jpg",
                     "author": "Kendall Jenner",
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
                     "replies": [{
+                        "id": 2,
                         "img": "img/content/avatars/160x160/katie.jpg",
                         "author": "Katie",
                         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
                     }]
                 }, {
+                    "id": 3,
                     "img": "img/content/avatars/160x160/emily-stella.jpg",
                     "author": "Emily Stella",
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
                 }, {
+                    "id": 4,
                     "img": "img/content/avatars/160x160/kimberly.jpg",
                     "author": "Kimberly",
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."

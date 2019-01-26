@@ -1,5 +1,11 @@
 mixin comment-form(data = {}, mods = {})
-    form.comment-form&attributes(attributes)
+    form(
+        action = "#"
+        method = "post"
+        id     = "comment-form"
+    ).comment-form&attributes(attributes)
+        input(type="hidden" name="reply-to")
+
         .comment-form__fields
             label.comment-form__label
                 i.icon-user.icons.comment-form__icon(

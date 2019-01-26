@@ -19,6 +19,9 @@ import * as Counters        from '../../index/counters/counters';
 import * as PostCarousel    from '../../index/post-carousel/post-carousel';
 import * as ProductCarousel from '../../index/product-carousel/product-carousel';
 
+import * as Comment     from '../../blog/comment/comment';
+import * as CommentForm from '../../blog/comment-form/comment-form';
+
 // -------------------------- BEGIN MODULE VARIABLES --------------------------
 const STICKY_HEADER_OFFSET  = 300;  // Scroll offset to make the header "sticky"
 const VISIBLE_HEADER_OFFSET = 600; // Scroll offset to show the "sticky" header
@@ -134,6 +137,9 @@ export const initModule = function() {
     Counters.initModule();
     PostCarousel.initModule();
     ProductCarousel.initModule();
+
+    Comment.initModule();
+    CommentForm.initModule();
 
     // Process the initial window size and scroll position.
     onWindowResize();

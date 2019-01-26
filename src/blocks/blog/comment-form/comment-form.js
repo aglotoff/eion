@@ -1,30 +1,35 @@
 /**
- * @file Implementation of the comment-form block
+ * @file Implementation of the comment form block
+ * @author Andrey Glotov
  */
-
-// -------------------------- BEGIN MODULE VARIABLES --------------------------
-// TODO: add code here
-// --------------------------- END MODULE VARIABLES ---------------------------
-
-// -------------------------- BEGIN UTILITY FUNCTIONS -------------------------
-// TODO: add code here
-// --------------------------- END UTILITY FUNCTIONS --------------------------
-
-// ----------------------------- BEGIN DOM METHODS ----------------------------
-// TODO: add code here
-// ------------------------------ END DOM METHODS -----------------------------
-
-// --------------------------- BEGIN EVENT HANDLERS ---------------------------
-// TODO: add code here
-// ---------------------------- END EVENT HANDLERS ----------------------------
 
 // --------------------------- BEGIN PUBLIC METHODS ---------------------------
 /**
- * Initialize the comment-form module.
- * @return true;
+ * Initialize the comment form module.
+ * @return true
  */
 export const initModule = function() {
-    // TODO: add code here
+    const $page = $('.page');
+
+    const $form    = $('.comment-form');
+    const $replyTo = $form.find('[name="reply-to"]');
+
+    $form.validate({
+        errorClass  : 'error comment-form__error',
+        highlight   : Function.prototype,
+        unhighlight : Function.prototype,
+    });
+
+    $page.on('comment-reply', function(event, id) {      
+        $replyTo.val(id);
+
+        $('html, body').animate({
+            scrollTop: $form.offset().top - 100
+        }, 400, function() {
+            $('.comment-form__input:first', $form).focus();
+        });
+    });
+
     return true;
 };
 // ---------------------------- END PUBLIC METHODS ----------------------------

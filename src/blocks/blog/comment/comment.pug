@@ -1,5 +1,5 @@
 mixin comment(data = {}, mods = {})
-    li.comment&attributes(attributes)
+    li.comment(data-id=data.id)&attributes(attributes)
         .comment__inner
             .comment__avatar
                 img(src=data.img, alt=data.author).comment__img
@@ -11,7 +11,8 @@ mixin comment(data = {}, mods = {})
                     i.fas.fa-reply(aria-label="Reply")
                     span.comment__reply-link-text Reply
 
-        if data.replies
-            ul.comment__replies
-                each comment in data.replies
-                    +comment(comment).comment__reply
+        .comment__replies
+            if data.replies
+                ul.comment__reply-list
+                    each comment in data.replies
+                        +comment(comment).comment__reply

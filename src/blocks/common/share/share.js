@@ -4,22 +4,6 @@
 
 import {makeDropdown} from '../../../js/utils';
 
-// -------------------------- BEGIN MODULE VARIABLES --------------------------
-// TODO: add code here
-// --------------------------- END MODULE VARIABLES ---------------------------
-
-// -------------------------- BEGIN UTILITY FUNCTIONS -------------------------
-// TODO: add code here
-// --------------------------- END UTILITY FUNCTIONS --------------------------
-
-// ----------------------------- BEGIN DOM METHODS ----------------------------
-// TODO: add code here
-// ------------------------------ END DOM METHODS -----------------------------
-
-// --------------------------- BEGIN EVENT HANDLERS ---------------------------
-// TODO: add code here
-// ---------------------------- END EVENT HANDLERS ----------------------------
-
 // --------------------------- BEGIN PUBLIC METHODS ---------------------------
 /**
  * Initialize the share module.
