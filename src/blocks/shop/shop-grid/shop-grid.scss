@@ -151,14 +151,26 @@
     }
 
     &__item {
-        padding: 30px 15px;
+        margin-top: 30px;
 
         @include breakpoint-up(md) {
             flex: 0 0 50%;
+            margin-bottom: 30px;
+            padding: 0 15px;
+        }
+
+        &_col_1-3 {
+            @include breakpoint-up(lg) {
+                flex-basis: 33.3333%;
+            }
         }
     }
 
     &__pagination {
-        margin-top: 30px;
+        margin-top: 60px;
+
+        @include breakpoint-up(md) {
+            margin-top: 30px;
+        }
     }
 }

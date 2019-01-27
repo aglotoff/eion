@@ -44,8 +44,10 @@ mixin shop-grid(data = {}, mods = {})
             .shop-grid__container
                 .shop-grid__items
                     each product in data.products
-                        .shop-grid__item
-                            +product(product, {large: true})
+                        .shop-grid__item(
+                            class="shop-grid__item_col_" + data.itemCol
+                        )
+                            +product(product, {large: data.itemCol == "1-2"})
             // /.shop-grid__container 
 
             +pagination(data.pagination).shop-grid__pagination

@@ -13,7 +13,7 @@
         }, {
             "label": "3 Columns",
             "iconClass": "fas fa-th-list",
-            "link": "product-category-2-columns"
+            "link": "product-category-3-columns"
         }, {
             "label": "4 Columns",
             "iconClass": "fas fa-th",
@@ -24,6 +24,7 @@
 
         "sort": ["Newest", "Popylarity", "Price: low to high", "Price: high to low"],
 
+        "itemCol": "1-2",
         "products": [{
             "name": "Fl-Model A351",
             "price": 530,
