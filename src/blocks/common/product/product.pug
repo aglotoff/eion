@@ -3,9 +3,13 @@ mixin product(data = {}, mods = {})
         product_small : !!mods.small,
         product_large : !!mods.large,
     })&attributes(attributes)
-        if data.sale
-            - const saleTheme = data.saleTheme || 'circle';
-            .product__sale(class="product__sale_theme_" + saleTheme) Sale
+        if data.label
+            - const labelShape = data.label.shape || 'circle';
+            - const labelTheme = data.label.theme || 'sale';
+            .product__label(class={
+                ['product__label_shape_' + labelShape]: true,
+                ['product__label_theme_' + labelTheme]: true,
+            })= data.label.text
         
         if data.img
             .product__thumb

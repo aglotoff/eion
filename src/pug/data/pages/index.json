@@ -55,7 +55,11 @@
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
-                "sale": true,
+                "label": {
+                    "shape": "ribbon",
+                    "theme": "sale",
+                    "text": "Sale"
+                },
                 "saleTheme": "ribbon",
                 "oldPrice": 530,
                 "price": 399,
@@ -80,7 +84,11 @@
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
-                "sale": true,
+                "label": {
+                    "shape": "ribbon",
+                    "theme": "sale",
+                    "text": "Sale"
+                },
                 "saleTheme": "ribbon",
                 "oldPrice": 530,
                 "price": 399,

@@ -24,7 +24,11 @@
 
             "items": [{
                 "name": "Fl-Model A123",
-                "sale": true,
+                "label": {
+                    "shape": "circle",
+                    "theme": "sale",
+                    "text": "Sale"
+                },
                 "oldPrice": 530,
                 "price": 399,
                 "img": "img/content/products/thumbs/510x380/a351-05.jpg",
@@ -38,7 +42,11 @@
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A123",
-                "sale": true,
+                "label": {
+                    "shape": "circle",
+                    "theme": "sale",
+                    "text": "Sale"
+                },
                 "oldPrice": 530,
                 "price": 399,
                 "img": "img/content/products/thumbs/510x380/a351-03.jpg",

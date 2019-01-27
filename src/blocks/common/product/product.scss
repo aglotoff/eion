@@ -15,7 +15,7 @@
         flex-direction: column;
     }
 
-    &__sale {
+    &__label {
         position: absolute;
         z-index: 100;
 
@@ -23,18 +23,19 @@
         text-align: center;
         text-transform: uppercase;
 
-        &_theme_circle {
+        &_shape_circle {
             right: 20px;
             top: 20px;
 
+            align-items: center;
+            display: flex;
+            justify-content: center;
             height: 40px;
             width: 40px;
 
-            color: $color-primary;
-            line-height: 40px;
-
-            border: 1px dashed $color-primary;
             border-radius: 50%;
+            border-style: dashed;
+            border-width: 1px;
 
             .product_large & {
                 @include breakpoint-up(lg) {
@@ -45,23 +46,48 @@
                     width: 70px;
 
                     @include font-size(14px);
-                    line-height: 70px;
+
+                    border-width: 2px;
                 }
             }
         }
 
-        &_theme_ribbon {
+        &_shape_ribbon {
             right: 0;
             top: 0;
 
             padding: 7px;
             width: 110px;
 
-            color: $color-white;
- 
-            background: $color-primary;
-
             transform: translate(30px, 10px) rotate(40deg);
+        }
+
+        &_theme_sale {
+            &.product__label_shape_circle {
+                color: $color-primary;
+
+                border-color: $color-primary;
+            }
+
+            &.product__label_shape_ribbon {
+                color: $color-white;
+
+                background: $color-primary;
+            }
+        }
+
+        &_theme_sold-out {
+            &.product__label_shape_circle {
+                color: $color-silver;
+
+                border-color: $color-silver;
+            }
+
+            &.product__label_shape_ribbon {
+                color: $color-white;
+
+                background: $color-silver;
+            }
         }
     }
 

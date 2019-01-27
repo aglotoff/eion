@@ -1,0 +1,86 @@
+{
+    "pageTitle": "Product Category 2 Columns",
+
+    "content": {
+        "title": "Popular Products",
+        "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+
+        "layouts": [{
+            "label": "2 Columns",
+            "iconClass": "fas fa-th-large",
+            "link": "product-category-2-columns",
+            "selected": true
+        }, {
+            "label": "3 Columns",
+            "iconClass": "fas fa-th-list",
+            "link": "product-category-2-columns"
+        }, {
+            "label": "4 Columns",
+            "iconClass": "fas fa-th",
+            "link": "product-category-4-columns"
+        }],
+        "totalProducts": 30,
+        "views": ["6", "12", "23", "All"],
+
+        "sort": ["Newest", "Popylarity", "Price: low to high", "Price: high to low"],
+
+        "products": [{
+            "name": "Fl-Model A351",
+            "price": 530,
+            "img": "img/content/products/thumbs/510x380/a351-02.jpg",
+            "rating": 5,
+            "link": "product-detail.html"
+        }, {
+            "name": "Fl-Model A123",
+            "oldPrice": 530,
+            "price": 399,
+            "label": {
+                "shape": "circle",
+                "theme": "sale",
+                "text": "Sale"
+            },
+            "img": "img/content/products/thumbs/510x380/a351-05.jpg",
+            "rating": 5,
+            "link": "product-detail.html"
+        }, {
+            "name": "Fl-Model A351",
+            "price": 530,
+            "img": "img/content/products/thumbs/510x380/a351-03.jpg",
+            "rating": 5,
+            "link": "product-detail.html"
+        }, {
+            "name": "Fl-Model A351",
+            "price": 399,
+            "label": {
+                "shape": "circle",
+                "theme": "sold-out",
+                "text": "Sold Out"
+            },
+            "img": "img/content/products/thumbs/510x380/a351-12.jpg",
+            "rating": 5,
+            "link": "product-detail.html"
+        }, {
+            "name": "Fl-Model A351",
+            "price": 530,
+            "img": "img/content/products/thumbs/510x380/a351-09.jpg",
+            "rating": 5,
+            "link": "product-detail.html"
+        }, {
+            "name": "Fl-Model A351",
+            "price": 399,
+            "label": {
+                "shape": "circle",
+                "theme": "sold-out",
+                "text": "Sold Out"
+            },
+            "img": "img/content/products/thumbs/510x380/a351-08.jpg",
+            "rating": 5,
+            "link": "product-detail.html"
+        }],
+
+        "pagination": {
+            "pages": 2,
+            "activePage": 1
+        }
+    }
+}

@@ -1,0 +1,8 @@
+extends ../layouts/base.pug
+
+include ../../blocks/common/pagination/pagination.pug
+
+include ../../blocks/shop/shop-grid/shop-grid.pug
+
+block page
+    +shop-grid(data.content)

@@ -1,0 +1,164 @@
+/**
+ * Styles for the shop grid block.
+ */
+.shop-grid {
+    padding: 110px 0 100px;
+
+    &__intro {
+        margin-top: 26px;
+
+        font-family: $font-family-serif;
+        @include font-size(18px);
+        text-align: center;
+
+        @include breakpoint-up(sm) {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 570px;
+        }
+    }
+
+    &__header {
+        margin-top: 60px;
+
+        font-family: $font-family-serif;
+        @include font-size(14px);
+
+        border-top: 1px solid rgba($color-black, 0.1);
+
+        @include breakpoint-up(md) {
+            display: flex;
+        }
+    }
+
+    &__header-left {
+        display: flex;
+        margin-top: 16px;
+    }
+
+    &__header-right {
+        margin-top: 16px;
+
+        @include breakpoint-up(sm) {
+            align-items: baseline;
+            display: flex;
+        }
+
+        @include breakpoint-up(md) {
+            margin-left: auto;
+        }
+    }
+
+    &__layouts {
+        display: flex;
+    }
+
+    &__layout-link {
+        color: $color-text;
+        text-decoration: none;
+
+        transition: color 0.25s linear;
+
+        &:hover,
+        &:focus,
+        &_selected {
+            color: $color-primary;
+        }
+    }
+
+    &__layout-item:not(:first-child) {
+        margin-left: 18px;
+    }
+
+    &__result-number {
+        margin-left: auto;
+
+        @include breakpoint-up(sm) {
+            margin-left: 40px;
+        }
+    }
+
+    &__views {
+        @include breakpoint-up(md) {
+            margin-left: auto;
+        }
+    }
+
+    &__view-link {
+        color: $color-text;
+        text-decoration: none;
+
+        transition: all 0.25s linear;
+
+        &:hover,
+        &:focus {
+            color: $color-primary;
+            text-decoration: underline;
+        }
+    }
+
+    &__order-form {
+        position: relative;
+
+        display: inline-block;
+        margin-top: 16px;
+
+        @include breakpoint-up(sm) {
+            margin-left: 40px;
+            margin-top: 0;
+        }
+
+        &:after {
+            content: "";
+
+            top: 8px;
+            position: absolute;
+            right: 0;
+
+            display: block;
+            height: 6px;
+            width: 6px;
+
+            border-right: 1px solid $color-text;
+            border-bottom: 1px solid $color-text;
+
+            transform: rotate(45deg);
+        }
+    }
+
+    &__order-select {
+        color: $color-text;
+        font: inherit;
+
+        background: transparent;
+        border: 0;
+
+        appearance: none;
+    }
+
+    &__container {
+        @include breakpoint-up(md) {
+            overflow: hidden;
+        }
+    }
+
+    &__items {
+        @include breakpoint-up(md) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+    }
+
+    &__item {
+        padding: 30px 15px;
+
+        @include breakpoint-up(md) {
+            flex: 0 0 50%;
+        }
+    }
+
+    &__pagination {
+        margin-top: 30px;
+    }
+}
