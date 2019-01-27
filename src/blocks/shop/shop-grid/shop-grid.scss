@@ -164,6 +164,16 @@
                 flex-basis: 33.3333%;
             }
         }
+
+        &_col_1-4 {
+            @include breakpoint-up(lg) {
+                flex-basis: 33.3333%;
+            }
+
+            @include breakpoint-up(xl) {
+                flex-basis: 25%;
+            }
+        }
     }
 
     &__pagination {
