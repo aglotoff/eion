@@ -1,0 +1,7 @@
+mixin shop-category-list(data = {}, mods = {})
+    .shop-category-list&attributes(attributes)
+        each product in data.products
+            +product(product, {
+                wide : true,
+                size : !!mods.large ? 'large' : 'small',
+            }).shop-category-list__item

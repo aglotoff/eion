@@ -1,0 +1,37 @@
+mixin shop-category-filter(data = {}, mods = {})
+    .shop-category-filter&attributes(attributes)
+        .shop-category-filter__left
+            ul.shop-category-filter__layouts
+                each layout in data.layouts
+                    li.shop-category-filter__layout-item
+                        a.shop-category-filter__layout-link(
+                            class = layout.selected && "shop-category-filter__layout-link_selected"
+                            href  = layout.link
+                        )
+                            i(
+                                class      = layout.iconClass
+                                aria-label = layout.label
+                            )
+            // /.shop-category-filter__layouts
+        
+            .shop-category-filter__result-number Showing 1-#{data.showProducts} of 
+                | #{data.totalProducts} products
+        // .shop-category-filter__left 
+        
+        .shop-category-filter__right
+            .shop-category-filter__views View 
+                each view, i in data.views
+                    if i > 0
+                        | #{' / '}
+                    a(href="javascript:void(0);").shop-category-filter__view-link
+                        | #{view}
+            // /.shop-grid__views
+
+            form(action="#").shop-category-filter__order-form
+                select.shop-category-filter__order-select
+                    each option in data.sort
+                        option(value=option).shop-category-filter__order-option
+                            | Sort by #{option}
+            // .shop-category-filter__order-form 
+        // .shop-category-filter__right 
+    // /.shop-category-filter 

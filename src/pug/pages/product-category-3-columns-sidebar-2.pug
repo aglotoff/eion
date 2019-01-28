@@ -6,11 +6,12 @@ include ../../blocks/common/sidebar-coupon/sidebar-coupon.pug
 include ../../blocks/common/sidebar-widget/sidebar-widget.pug
 include ../../blocks/common/sidebar-list/sidebar-list.pug
 
-include ../../blocks/blog/blog-layout/blog-layout.pug
-include ../../blocks/blog/popular-posts/popular-posts.pug
-include ../../blocks/blog/latest-posts/latest-posts.pug
-include ../../blocks/blog/tag-cloud/tag-cloud.pug
+include ../../blocks/shop/shop-category/shop-category.pug
+include ../../blocks/shop/shop-category-filter/shop-category-filter.pug
+include ../../blocks/shop/shop-category-list/shop-category-list.pug
+include ../../blocks/shop/shop-category-grid/shop-category-grid.pug
+include ../../blocks/shop/sidebar-cart/sidebar-cart.pug
 
 block page
     +page-header(data.content.pageHeader)
-    +blog-layout(data.content.blog)
+    +shop-category(data.content.blog)

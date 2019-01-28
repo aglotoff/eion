@@ -1,7 +1,7 @@
 /**
- * Styles for the categories block.
+ * Styles for the sidebar list block.
  */
-.categories {
+.sidebar-list {
     &__item {
         &:not(:first-child) {
             margin-top: 12px;
@@ -14,12 +14,6 @@
         @include font-size(14px);
         text-decoration: none;
 
-        &:before {
-            content: "+";
-
-            margin-right: 10px;
-        }
-
         &:hover,
         &:focus {
             color: $color-primary;
@@ -27,6 +21,12 @@
             &:before {
                 color: $color-malta;
             }
+        }
+
+        .sidebar-list_blog &:before {
+            content: "+";
+
+            margin-right: 10px;
         }
     }
 }

@@ -8,10 +8,10 @@ mixin product-columns(data = {}, mods = {})
                     each product, i in data.items
                         if i % 2 == 0
                             .product-columns__item.product-columns__item_right
-                                +product(product, {large: true})
+                                +product(product, {size: 'large'})
                         else
                             .product-columns__item.product-columns__item_left
-                                +product(product, {large: true})
+                                +product(product, {size: 'large'})
                 // /.product-columns__grid 
             // /.product-columns__inner 
         // /.page__container 

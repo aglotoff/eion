@@ -1,8 +1,8 @@
 mixin product(data = {}, mods = {})
+    - const size = mods.size || 'default';
     .product(class = {
-        product_small : !!mods.small,
-        product_large : !!mods.large,
-        product_wide  : !!mods.wide,
+        ['product_size_' + size]: true,
+        product_wide            : !!mods.wide,
     })&attributes(attributes)
         .product__thumb
             if data.label
@@ -23,16 +23,16 @@ mixin product(data = {}, mods = {})
                                 url: 'javascript:void(0);',
                                 text: 'Add to cart'
                             }, {
-                                theme: 'primary',
-                                size: mods.large && 'responsive',
+                                size  : (mods.size == 'large') && 'responsive',
+                                theme : 'primary',
                             }).product__thumb-btn
 
                             +btn({
                                 url: 'javascript:void(0);',
                                 text: 'View Gallery'
                             }, {
-                                theme: 'gray',
-                                size: mods.large && 'responsive',
+                                size  : (mods.size == 'large') && 'responsive',
+                                theme : 'gray',
                             }).product__thumb-btn
             else if data.gallery
                 +product-gallery(data.gallery).product__gallery
@@ -54,18 +54,18 @@ mixin product(data = {}, mods = {})
                 .product__desc !{data.desc}
 
             if mods.wide
-                .btn-group.product__btns
+                .product__btns
                     +btn({
                         url: 'javascript:void(0);',
                         text: 'Add to cart'
                     }, {
                         theme: 'primary',
-                    }).btn-group__btn
+                    }).product__btn
 
                     +btn({
                         url: 'javascript:void(0);',
                         text: 'View Gallery'
                     }, {
                         theme: 'gray',
-                    }).btn-group__btn
+                    }).product__btn
     // /.product 

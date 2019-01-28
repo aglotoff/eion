@@ -1,0 +1,73 @@
+/**
+ * Styles for the shop category block.
+ */
+.shop-category {
+    padding: 30px 0 100px;
+
+    &__header {
+        margin-bottom: 60px;
+        margin-top: 80px;
+    }
+
+    &__intro {
+        margin-top: 26px;
+
+        font-family: $font-family-serif;
+        @include font-size(18px);
+        text-align: center;
+
+        @include breakpoint-up(sm) {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 570px;
+        }
+    }
+
+    &__row {
+        @include breakpoint-up(lg) {
+            display: flex;
+            flex-direction: row-reverse;
+            margin: 0 -15px;
+        }
+    }
+
+    &__content {
+        @include breakpoint-up(lg) {
+            flex: 1;
+            padding: 0 15px;
+        }
+    }
+
+    &__sidebar {
+        margin-top: 60px;
+
+        @include breakpoint-up(lg) {
+            flex: 0 0 25%;
+            margin-top: 0;
+            padding: 0 15px;
+        }
+    }
+
+    &__sidebar-widget,
+    &__sidebar-coupon {
+        &:not(:first-child) {
+            margin-top: 30px;
+        }
+    }
+
+    &__grid {
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        margin-bottom: 60px;
+    }
+
+    &__pagination {
+        margin-top: 60px;
+
+        @include breakpoint-up(md) {
+            margin-top: 30px;
+        }
+    }
+}
