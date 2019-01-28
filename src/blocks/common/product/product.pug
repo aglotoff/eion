@@ -2,44 +2,45 @@ mixin product(data = {}, mods = {})
     .product(class = {
         product_small : !!mods.small,
         product_large : !!mods.large,
+        product_wide  : !!mods.wide,
     })&attributes(attributes)
-        if data.label
-            - const labelShape = data.label.shape || 'circle';
-            - const labelTheme = data.label.theme || 'sale';
-            .product__label(class={
-                ['product__label_shape_' + labelShape]: true,
-                ['product__label_theme_' + labelTheme]: true,
-            })= data.label.text
+        .product__thumb
+            if data.label
+                - const labelShape = data.label.shape || 'circle';
+                - const labelTheme = data.label.theme || 'sale';
+                .product__label(class={
+                    ['product__label_shape_' + labelShape]: true,
+                    ['product__label_theme_' + labelTheme]: true,
+                })= data.label.text
         
-        if data.img
-            .product__thumb
+            if data.img
                 .product__thumb-inner
                     img(src=data.img, alt=data.name).product__thumb-img
 
-                    .product__thumb-overlay
-                        +btn({
-                            url: 'javascript:void(0);',
-                            text: 'Add to cart'
-                        }, {
-                            theme: 'primary',
-                            size: mods.large && 'responsive',
-                        }).product__thumb-btn
+                    if !mods.wide
+                        .product__thumb-overlay
+                            +btn({
+                                url: 'javascript:void(0);',
+                                text: 'Add to cart'
+                            }, {
+                                theme: 'primary',
+                                size: mods.large && 'responsive',
+                            }).product__thumb-btn
 
-                        +btn({
-                            url: 'javascript:void(0);',
-                            text: 'View Gallery'
-                        }, {
-                            theme: 'gray',
-                            size: mods.large && 'responsive',
-                        }).product__thumb-btn
-        else if data.gallery
-            .product__gallery-wrap
+                            +btn({
+                                url: 'javascript:void(0);',
+                                text: 'View Gallery'
+                            }, {
+                                theme: 'gray',
+                                size: mods.large && 'responsive',
+                            }).product__thumb-btn
+            else if data.gallery
                 +product-gallery(data.gallery).product__gallery
 
         .product__info
             +rating(data.rating).product__rating
 
-            .product__info-bottom
+            .product__info-header
                 a(href=data.link).product__name= data.name
 
                 if data.oldPrice
@@ -48,4 +49,23 @@ mixin product(data = {}, mods = {})
                         ins.product__price-new $#{data.price}
                 else
                     .product__price $#{data.price}
+
+            if data.desc
+                .product__desc !{data.desc}
+
+            if mods.wide
+                .btn-group.product__btns
+                    +btn({
+                        url: 'javascript:void(0);',
+                        text: 'Add to cart'
+                    }, {
+                        theme: 'primary',
+                    }).btn-group__btn
+
+                    +btn({
+                        url: 'javascript:void(0);',
+                        text: 'View Gallery'
+                    }, {
+                        theme: 'gray',
+                    }).btn-group__btn
     // /.product 
