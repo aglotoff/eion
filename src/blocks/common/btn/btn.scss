@@ -60,6 +60,18 @@
         }
     }
 
+    &_theme_dark {
+        color: $color-white;
+
+        background: $color-secondary;
+        border: 0;
+
+        &:hover,
+        &:focus {
+            background: $color-primary;
+        }
+    }
+
     &_theme_inverse {
         color: $color-primary;
 

@@ -3,6 +3,7 @@
  */
 
 import * as BackToTop      from '../back-to-top/back-to-top';
+import * as Countdown      from '../../common/countdown/countdown';
 import * as Header         from '../header/header';
 import * as HeaderDropdown from '../header-dropdown/header-dropdown';
 import * as InstagramFeed  from '../instagram-feed/instagram-feed';
@@ -14,7 +15,6 @@ import * as Share          from '../share/share';
 import * as SideNav        from '../side-nav/side-nav';
 
 import * as Slider          from '../../index/slider/slider';
-import * as Countdown       from '../../index/countdown/countdown';
 import * as Counters        from '../../index/counters/counters';
 import * as PostCarousel    from '../../index/post-carousel/post-carousel';
 import * as ProductCarousel from '../../index/product-carousel/product-carousel';
@@ -22,8 +22,10 @@ import * as ProductCarousel from '../../index/product-carousel/product-carousel'
 import * as Comment     from '../../blog/comment/comment';
 import * as CommentForm from '../../blog/comment-form/comment-form';
 
+import * as ShopCategoryFullwidth from '../../shop/shop-category-fullwidth/shop-category-fullwidth';
+
 // -------------------------- BEGIN MODULE VARIABLES --------------------------
-const STICKY_HEADER_OFFSET  = 300;  // Scroll offset to make the header "sticky"
+const STICKY_HEADER_OFFSET  = 300; // Scroll offset to make the header "sticky"
 const VISIBLE_HEADER_OFFSET = 600; // Scroll offset to show the "sticky" header
 const RESIZE_INTERVAL       = 200; // Resize debouncing interval
 const SCROLL_INTERVAL       = 200; // Scroll throttling interval
@@ -140,6 +142,8 @@ export const initModule = function() {
 
     Comment.initModule();
     CommentForm.initModule();
+
+    ShopCategoryFullwidth.initModule();
 
     // Process the initial window size and scroll position.
     onWindowResize();
