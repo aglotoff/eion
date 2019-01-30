@@ -1,0 +1,13 @@
+mixin social(data = {}, mods = {})
+    .social&attributes(attributes)
+        if data.text
+            .social__text= data.text
+
+            ul.social__list
+                each link in data.links
+                    li.social__item
+                        a(href="javascript:void(0);").social__link
+                            i(
+                                class      = "fab fa-" + link.className
+                                aria-label = link.text
+                            )

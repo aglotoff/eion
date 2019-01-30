@@ -22,7 +22,27 @@
             "large": "img/content/products/thumbs/720x556/a351-05.jpg",
             "small": "img/content/products/thumbs/152x112/a351-05.jpg",
             "link": "img/content/products/thumbs/720x556/a351-05.jpg"
-        }]
+        }],
+
+        "rating": 5,
+        "title": "FL Model A351",
+        "id": 1459124,
+        "price": 530,
+        "shortDesc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrup exercitation ullamco.</p>",
+
+        "social": {
+            "text": "Share:",
+            "links": [{
+                "className": "twitter",
+                "text": "Share on Twitter"
+            }, {
+                "className": "facebook-f",
+                "text": "Share on Facebook"
+            }, {
+                "className": "google-plus-g",
+                "text": "Share on Google Plus"
+            }]
+        }
     },
 
     "footer": {

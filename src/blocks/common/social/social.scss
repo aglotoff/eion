@@ -1,0 +1,33 @@
+/**
+ * Styles for the social block.
+ */
+.social {
+    @include font-size(14px);
+
+    &__text {
+        display: inline-block;
+        margin-right: 25px;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+    }
+
+    &__list {
+        display: inline-flex;
+    }
+
+    &__item:not(:first-child) {
+        margin-left: 18px;
+    }
+
+    &__link {
+        color: $color-text;
+        text-decoration: none;
+
+        transition: color 0.25s linear;
+
+        &:focus,
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}

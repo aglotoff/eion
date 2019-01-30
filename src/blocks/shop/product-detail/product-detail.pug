@@ -3,4 +3,35 @@ mixin product-detail(data = {}, mods = {})
         .page__container
             .product-detail__inner
                 +shop-gallery(data.gallery).product-detail__gallery
+
                 .product-detail__info
+                    +rating(data.rating).product-detail__rating
+
+                    h1.product-detail__title= data.title
+                    .product-detail__item-id Item ##{data.id}
+
+                    .product-detail__price $#{data.price}
+
+                    .text.product-detail__short-desc !{data.shortDesc}
+
+                    .product-detail__additional
+                        .product-detail__in-stock
+                            span.product-detail__small-text In stock 
+                            i.fas.fa-check-circle(aria-hidden="true")
+
+                        a(href="javascript:void(0);").product-detail__link
+                            span.product-detail__small-text Size Guide 
+                            i.fas.fa-info-circle(aria-hidden="true")
+
+                        a(href="javascript:void(0);").product-detail__link
+                            span.product-detail__small-text Add to Wishlist 
+                            i.far.fa-heart(aria-hidden="true")
+
+                    +btn({
+                        text: 'Add to cart',
+                    }, {
+                        size: 'large',
+                        theme: 'dark',
+                    }).product-detail__add-btn
+
+                    +social(data.social).product-detail__social
