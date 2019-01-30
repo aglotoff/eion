@@ -9,6 +9,7 @@
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "../../node_modules/simple-line-icons/scss/simple-line-icons.scss";
+@import "../../node_modules/magnific-popup/src/css/main.scss";
 
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/owl.carousel/src/scss/owl.carousel.scss";
@@ -82,3 +83,5 @@
 @import "../blocks/shop/shop-category-list/shop-category-list";
 @import "../blocks/shop/shop-category-fullwidth/shop-category-fullwidth";
 @import "../blocks/shop/sidebar-cart/sidebar-cart";
+@import "../blocks/shop/product-detail/product-detail";
+@import "../blocks/shop/shop-gallery/shop-gallery";

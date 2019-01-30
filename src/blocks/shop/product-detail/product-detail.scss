@@ -1,0 +1,27 @@
+/**
+ * Styles for the product detail block.
+ */
+.product-detail {
+    padding: 100px 0 120px;
+
+    &__inner {
+        @include breakpoint-up(lg) {
+            display: flex;
+            margin: 0 -15px;
+        }
+    }
+
+    &__gallery {
+        @include breakpoint-up(lg) {
+            flex: 0 0 50%;
+            padding: 0 15px;
+        }
+    }
+
+    &__info {
+        @include breakpoint-up(lg) {
+            flex: 0 0 50%;
+            padding: 0 15px;
+        }
+    }
+}

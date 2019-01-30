@@ -5,6 +5,7 @@ import svg4everybody from 'svg4everybody';
 import 'jquery-countdown';
 import 'jquery.scrollbar';
 import 'jquery-validation';
+import 'magnific-popup';
 import 'slick-carousel';
 
 // Expose libraries to global Window object

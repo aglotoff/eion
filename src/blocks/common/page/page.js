@@ -23,6 +23,7 @@ import * as Comment     from '../../blog/comment/comment';
 import * as CommentForm from '../../blog/comment-form/comment-form';
 
 import * as ShopCategoryFullwidth from '../../shop/shop-category-fullwidth/shop-category-fullwidth';
+import * as ShopGallery           from '../../shop/shop-gallery/shop-gallery';
 
 // -------------------------- BEGIN MODULE VARIABLES --------------------------
 const STICKY_HEADER_OFFSET  = 300; // Scroll offset to make the header "sticky"
@@ -144,6 +145,7 @@ export const initModule = function() {
     CommentForm.initModule();
 
     ShopCategoryFullwidth.initModule();
+    ShopGallery.initModule();
 
     // Process the initial window size and scroll position.
     onWindowResize();

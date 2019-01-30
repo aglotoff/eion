@@ -1,0 +1,7 @@
+extends ../layouts/base.pug
+
+include ../../blocks/shop/product-detail/product-detail.pug
+include ../../blocks/shop/shop-gallery/shop-gallery.pug
+
+block page
+    +product-detail(data.content)

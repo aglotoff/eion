@@ -1,0 +1,6 @@
+mixin product-detail(data = {}, mods = {})
+    .product-detail&attributes(attributes)
+        .page__container
+            .product-detail__inner
+                +shop-gallery(data.gallery).product-detail__gallery
+                .product-detail__info
