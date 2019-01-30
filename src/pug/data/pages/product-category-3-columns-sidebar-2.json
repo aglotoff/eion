@@ -58,15 +58,15 @@
                 "layouts": [{
                     "label": "2 Columns",
                     "iconClass": "fas fa-th-large",
-                    "link": "product-category-2-columns"
+                    "link": "product-category-2-columns.html"
                 }, {
                     "label": "3 Columns",
                     "iconClass": "fas fa-th-list",
-                    "link": "product-category-3-columns"
+                    "link": "product-category-3-columns.html"
                 }, {
                     "label": "4 Columns",
                     "iconClass": "fas fa-th",
-                    "link": "product-category-4-columns"
+                    "link": "product-category-4-columns.html"
                 }],
                 "showProducts": 6,
                 "totalProducts": 30,
