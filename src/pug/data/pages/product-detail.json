@@ -61,7 +61,103 @@
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
         }],
 
-        "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrup exercitation ullamco.</p>"
+        "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrup exercitation ullamco.</p>",
+
+        "newProducts": {
+            "title": "New Products",
+
+            "items": [{
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/510x380/a351.jpg",
+                "rating": 5,
+                "link": "product-detail.html"
+            }, {
+                "name": "Fl-Model A351",
+                "label": {
+                    "shape": "circle",
+                    "theme": "sale",
+                    "text": "Sale"
+                },
+                "oldPrice": 530,
+                "price": 399,
+                "img": "img/content/products/thumbs/510x380/a351-02.jpg",
+                "rating": 5,
+                "link": "product-detail.html"
+            }, {
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/510x380/a351-03.jpg",
+                "rating": 5,
+                "link": "product-detail.html"
+            }, {
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/510x380/a351-04.jpg",
+                "rating": 5,
+                "link": "product-detail.html"
+            }, {
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/510x380/a351-05.jpg",
+                "rating": 5,
+                "link": "product-detail.html"
+            }, {
+                "name": "Fl-Model A351",
+                "label": {
+                    "shape": "circle",
+                    "theme": "sale",
+                    "text": "Sale"
+                },
+                "oldPrice": 530,
+                "price": 399,
+                "img": "img/content/products/thumbs/510x380/a351-06.jpg",
+                "rating": 5,
+                "link": "product-detail.html"
+            }, {
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/510x380/a351-07.jpg",
+                "rating": 5,
+                "link": "product-detail.html"
+            }, {
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/510x380/a351-08.jpg",
+                "rating": 5,
+                "link": "product-detail.html"
+            }, {
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/510x380/a351-09.jpg",
+                "rating": 5,
+                "link": "product-detail.html"
+            }, {
+                "name": "Fl-Model A351",
+                "label": {
+                    "shape": "circle",
+                    "theme": "sale",
+                    "text": "Sale"
+                },
+                "oldPrice": 530,
+                "price": 399,
+                "img": "img/content/products/thumbs/510x380/a351-10.jpg",
+                "rating": 5,
+                "link": "product-detail.html"
+            }, {
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/510x380/a351-11.jpg",
+                "rating": 5,
+                "link": "product-detail.html"
+            }, {
+                "name": "Fl-Model A351",
+                "price": 530,
+                "img": "img/content/products/thumbs/510x380/a351-12.jpg",
+                "rating": 5,
+                "link": "product-detail.html"
+            }]
+        }
     },
 
     "footer": {

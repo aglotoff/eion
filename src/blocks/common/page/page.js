@@ -2,23 +2,23 @@
  * @file Implementation of the page block
  */
 
-import * as BackToTop      from '../back-to-top/back-to-top';
-import * as Countdown      from '../../common/countdown/countdown';
-import * as Header         from '../header/header';
-import * as HeaderDropdown from '../header-dropdown/header-dropdown';
-import * as InstagramFeed  from '../instagram-feed/instagram-feed';
-import * as LangMenu       from '../lang-menu/lang-menu';
-import * as PostGallery    from '../post-gallery/post-gallery';
-import * as ProductGallery from '../product-gallery/product-gallery';
-import * as SearchModal    from '../search-modal/search-modal';
-import * as Share          from '../share/share';
-import * as SideNav        from '../side-nav/side-nav';
-import * as Tabs           from '../tabs/tabs';
+import * as BackToTop       from '../back-to-top/back-to-top';
+import * as Countdown       from '../countdown/countdown';
+import * as Header          from '../header/header';
+import * as HeaderDropdown  from '../header-dropdown/header-dropdown';
+import * as InstagramFeed   from '../instagram-feed/instagram-feed';
+import * as LangMenu        from '../lang-menu/lang-menu';
+import * as PostGallery     from '../post-gallery/post-gallery';
+import * as ProductCarousel from '../product-carousel/product-carousel';
+import * as ProductGallery  from '../product-gallery/product-gallery';
+import * as SearchModal     from '../search-modal/search-modal';
+import * as Share           from '../share/share';
+import * as SideNav         from '../side-nav/side-nav';
+import * as Tabs            from '../tabs/tabs';
 
 import * as Slider          from '../../index/slider/slider';
 import * as Counters        from '../../index/counters/counters';
 import * as PostCarousel    from '../../index/post-carousel/post-carousel';
-import * as ProductCarousel from '../../index/product-carousel/product-carousel';
 
 import * as Comment     from '../../blog/comment/comment';
 import * as CommentForm from '../../blog/comment-form/comment-form';
@@ -132,6 +132,7 @@ export const initModule = function() {
     InstagramFeed.initModule();
     LangMenu.initModule();
     PostGallery.initModule();
+    ProductCarousel.initModule();
     ProductGallery.initModule();
     SearchModal.initModule();
     Share.initModule();
@@ -142,8 +143,7 @@ export const initModule = function() {
     Countdown.initModule();
     Counters.initModule();
     PostCarousel.initModule();
-    ProductCarousel.initModule();
-
+    
     Comment.initModule();
     CommentForm.initModule();
 
