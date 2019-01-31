@@ -15,7 +15,7 @@ export const initModule = function() {
         errorClass  : 'error review-form__error',
         errorPlacement : function(error, element) {
             if (element.attr('name') == 'rating') {
-                error.insertAfter(element.closest('.star-rating'))
+                error.insertAfter(element.closest('.star-rating'));
             } else {
                 error.insertAfter(element);
             }

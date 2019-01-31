@@ -13,6 +13,7 @@ import * as ProductGallery from '../product-gallery/product-gallery';
 import * as SearchModal    from '../search-modal/search-modal';
 import * as Share          from '../share/share';
 import * as SideNav        from '../side-nav/side-nav';
+import * as Tabs           from '../tabs/tabs';
 
 import * as Slider          from '../../index/slider/slider';
 import * as Counters        from '../../index/counters/counters';
@@ -135,6 +136,7 @@ export const initModule = function() {
     SearchModal.initModule();
     Share.initModule();
     SideNav.initModule();
+    Tabs.initModule();
 
     Slider.initModule();
     Countdown.initModule();

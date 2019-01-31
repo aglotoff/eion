@@ -42,7 +42,26 @@
                 "className": "google-plus-g",
                 "text": "Share on Google Plus"
             }]
-        }
+        },
+
+        "reviews": [{
+            "avatar": "img/content/avatars/160x160/kendall-jenner.jpg",
+            "author": "Kendall Jenner",
+            "rating": 5,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+        }, {
+            "avatar": "img/content/avatars/160x160/emily-stella.jpg",
+            "author": "Emily Stella",
+            "rating": 5,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+        }, {
+            "avatar": "img/content/avatars/160x160/peter-adam.jpg",
+            "author": "Peter Adam",
+            "rating": 5,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+        }],
+
+        "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrup exercitation ullamco.</p>"
     },
 
     "footer": {

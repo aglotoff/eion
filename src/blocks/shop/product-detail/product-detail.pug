@@ -6,7 +6,8 @@ mixin product-detail(data = {}, mods = {})
                 span.product-detail__back-link-text Back
 
             .product-detail__inner
-                +shop-gallery(data.gallery).product-detail__gallery
+                .product-detail__gallery
+                    +shop-gallery(data.gallery)
 
                 .product-detail__info
                     +rating(data.rating).product-detail__rating
@@ -42,3 +43,17 @@ mixin product-detail(data = {}, mods = {})
 
                 .product-detail__review-form
                     +review-form()
+
+                .product-detail__tabs
+                    +tabs([{
+                        active: true,
+                        id: 'product-reviews',
+                        title: 'Reviews (' + data.reviews.length + ')',
+                        blockName: 'reviews',
+                        content: data.reviews,
+                    }, {
+                        id: 'product-description',
+                        title: 'Description',
+                        blockName: 'product-desc',
+                        content: data.desc,
+                    }])

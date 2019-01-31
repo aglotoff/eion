@@ -133,7 +133,8 @@
         margin-top: 50px;
     }
 
-    &__review-form {
+    &__review-form,
+    &__tabs {
         margin-top: 30px;
 
         @include breakpoint-up(lg) {
