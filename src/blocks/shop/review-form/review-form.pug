@@ -1,0 +1,58 @@
+mixin review-form(data = {}, mods = {})
+    form.review-form&attributes(attributes)
+        h2.title Add Your Review
+
+        .review-form__top
+            +social({
+                text: 'Connect with:',
+                links: [{
+                    className : 'twitter',
+                    text      : 'Share on Twitter',
+                }, {
+                    className : 'facebook-f',
+                    text      : 'Share on Facebook',
+                }, {
+                    className : 'google-plus-g',
+                    text      : 'Share on Google Plus',
+                }]
+            })
+
+            .review-form__rating
+                +star-rating({name: 'rating', required: true})
+
+        .review-form__fields
+            label.review-form__label
+                i.icon-user.icons.review-form__icon(
+                    aria-label="Your Name"
+                )
+                input.review-form__input(
+                    type        = "text"
+                    name        = "name"
+                    placeholder = "Your name *"
+                    required    = true
+                )
+            label.review-form__label
+                i.icon-envelope.icons.review-form__icon(
+                    aria-label="Your Email"
+                )
+                input.review-form__input(
+                    type        = "email"
+                    name        = "email"
+                    placeholder = "Your Email *"
+                    required    = true
+                )
+            label.review-form__label
+                i.icon-bubbles.icons.review-form__icon(
+                    aria-label="Your Review"
+                )
+                textarea.review-form__input(
+                    name        = "review"
+                    placeholder = "Your Review *"
+                    required    = true
+                    rows        = "6"
+                )
+        
+        +btn({text: 'Submit your review'}, {
+            theme : 'primary',
+            size  : 'large',
+        })(type="submit").review-form__submit

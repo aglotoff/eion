@@ -22,6 +22,7 @@ import * as ProductCarousel from '../../index/product-carousel/product-carousel'
 import * as Comment     from '../../blog/comment/comment';
 import * as CommentForm from '../../blog/comment-form/comment-form';
 
+import * as ReviewForm            from '../../shop/review-form/review-form';
 import * as ShopCategoryFullwidth from '../../shop/shop-category-fullwidth/shop-category-fullwidth';
 import * as ShopGallery           from '../../shop/shop-gallery/shop-gallery';
 
@@ -144,6 +145,7 @@ export const initModule = function() {
     Comment.initModule();
     CommentForm.initModule();
 
+    ReviewForm.initModule();
     ShopCategoryFullwidth.initModule();
     ShopGallery.initModule();
 
