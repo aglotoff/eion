@@ -4,11 +4,33 @@
 .product-detail {
     padding: 100px 0 120px;
 
+    &__back-link {
+        color: $color-text;
+        @include font-size(14px);
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        transition: color 0.25s linear;
+
+        &:hover,
+        &:focus {
+            color: $color-primary;
+        }
+    }
+
+    &__back-link-text {
+        margin-left: 2px;
+    }
+
     &__inner {
+        margin-top: 25px;
+
         @include breakpoint-up(lg) {
             display: flex;
             flex-wrap: wrap;
-            margin: 0 -15px;
+            margin-left: -15px;
+            margin-right: -15px;
         }
     }
 

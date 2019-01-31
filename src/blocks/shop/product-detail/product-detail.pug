@@ -1,6 +1,10 @@
 mixin product-detail(data = {}, mods = {})
     .product-detail&attributes(attributes)
         .page__container
+            a(href="product-category-3-columns.html").product-detail__back-link
+                i.fas.fa-long-arrow-alt-left(aria-hidden="true")
+                span.product-detail__back-link-text Back
+
             .product-detail__inner
                 +shop-gallery(data.gallery).product-detail__gallery
 
