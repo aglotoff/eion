@@ -1,0 +1,247 @@
+mixin checkout(data = {}, mods = {})
+    form(action="#" method="post").checkout&attributes(attributes)
+        .page__container
+            h1.checkout__title
+
+            .checkout__inner
+                .checkout__left
+                    a(href="shopping-cart.html").checkout__back-link
+                        i.fas.fa-long-arrow-alt-left(aria-hidden="true")
+                        span.checkout__back-link-text Back
+
+                    h2.title.checkout__section-title Billing Details
+
+                    .checkout__fields
+                        label.checkout__label
+                            input(
+                                type="text"
+                                id="billing-first-name"
+                                name="billing_first_name"
+                                aria-label="First Name"
+                                placeholder="First Name *"
+                                required
+                            ).checkout__input
+                        
+                        label.checkout__label
+                            input(
+                                type="text"
+                                id="billing-last-name"
+                                name="billing_last_name"
+                                aria-label="Last Name"
+                                placeholder="Last Name *"
+                                required
+                            ).checkout__input
+
+                        label.checkout__label.checkout__label_wide
+                            input(
+                                type="email"
+                                id="billing-email"
+                                name="billing_email"
+                                aria-label="Your email"
+                                placeholder="Your email *"
+                                required
+                            ).checkout__input
+                            i.icons.icon-envelope.checkout__icon(
+                                aria-hidden="true"
+                            )
+
+                        label.checkout__label.checkout__label_wide
+                            input(
+                                type="tel"
+                                id="billing-phone"
+                                name="billing_phone"
+                                aria-label="Your phone"
+                                placeholder="Your phone *"
+                                required
+                            ).checkout__input
+                            i.icons.icon-screen-smartphone.checkout__icon(
+                                aria-hidden="true"
+                            )
+
+                        label.checkout__label.checkout__label_wide
+                            select(
+                                id="billing-country"
+                                name="billing_country"
+                                aria-label="Country"
+                                required
+                            ).checkout__input.checkout__input_select
+                                option(value="" disabled selected) Country *
+                                option(value="ru") Russia (RU)
+                            i.fas.fa-angle-down.checkout__icon(
+                                aria-hidden="true"
+                            )
+
+                        label.checkout__label
+                            input(
+                                type="text"
+                                id="billing-city"
+                                name="billing_city"
+                                aria-label="Town / City"
+                                placeholder="Town / City *"
+                                required
+                            ).checkout__input
+                        
+                        label.checkout__label
+                            input(
+                                type="text"
+                                id="billing-postcode"
+                                name="billing_postcode"
+                                aria-label="Postcode / Zip"
+                                placeholder="Postcode / Zip *"
+                                required
+                            ).checkout__input
+
+                        label.checkout__label.checkout__label_wide
+                            input(
+                                type="text"
+                                id="billing-address1"
+                                name="billing_address1"
+                                aria-label="Address 1"
+                                placeholder="Address 1 *"
+                                required
+                            ).checkout__input
+                            i.icons.icon-location-pin.checkout__icon(
+                                aria-hidden="true"
+                            )
+                        
+                        label.checkout__label.checkout__label_wide
+                            input(
+                                type="text"
+                                id="billing-address2"
+                                name="billing_address2"
+                                aria-label="Address 2"
+                                placeholder="Address 2"
+                            ).checkout__input
+                            i.icons.icon-location-pin.checkout__icon(
+                                aria-hidden="true"
+                            )
+
+                    label.checkout__check
+                        input(
+                            type        = "checkbox"
+                            name        = "create_account"
+                            value       = "1"
+                            data-toggle = "create-account"
+                        ).checkout__check-input
+                        span.checkout__check-mark(aria-hidden="true")
+                        span.checkout__check-text.checkout__check-text_small Create an account?
+
+                    .checkout__account-fields#create-account
+                        p.checkout__account-text Create an account by entering the information below. If you are a returning customer please login at the top of the page.
+                        
+                        .checkout__fields
+                            label.checkout__label.checkout__label_wide
+                                input(
+                                    type="password"
+                                    id="account-password"
+                                    name="account-password"
+                                    aria-label="Password"
+                                    placeholder="Password *"
+                                    required
+                                ).checkout__input
+                                i.icons.icon-lock.checkout__icon(
+                                    aria-hidden="true"
+                                )
+                                
+                    h2.title.checkout__section-title 
+                        label.checkout__check.checkout__check_title
+                            span.checkout__check-text Ship to a different address?
+                            input(
+                                type        = "checkbox"
+                                name        = "create_account"
+                                value       = "1"
+                                data-toggle = "shipping-fields"
+                            ).checkout__check-input
+                            span.checkout__check-mark(aria-hidden="true")
+
+                    .checkout__shipping-fields#shipping-fields
+                        .checkout__fields
+                            label.checkout__label
+                                input(
+                                    type="text"
+                                    id="shipping-first-name"
+                                    name="shipping_first_name"
+                                    aria-label="First Name"
+                                    placeholder="First Name *"
+                                    required
+                                ).checkout__input
+                            
+                            label.checkout__label
+                                input(
+                                    type="text"
+                                    id="shipping-last-name"
+                                    name="shipping_last_name"
+                                    aria-label="Last Name"
+                                    placeholder="Last Name *"
+                                    required
+                                ).checkout__input
+
+                            label.checkout__label.checkout__label_wide
+                                select(
+                                    id="shipping-country"
+                                    name="shipping_country"
+                                    aria-label="Country"
+                                    required
+                                ).checkout__input.checkout__input_select
+                                    option(value="" disabled selected) Country *
+                                    option(value="ru") Russia (RU)
+                                i.fas.fa-angle-down.checkout__icon(
+                                    aria-hidden="true"
+                                )
+
+                            label.checkout__label
+                                input(
+                                    type="text"
+                                    id="shipping-city"
+                                    name="shipping_city"
+                                    aria-label="Town / City"
+                                    placeholder="Town / City *"
+                                    required
+                                ).checkout__input
+                            
+                            label.checkout__label
+                                input(
+                                    type="text"
+                                    id="shipping-postcode"
+                                    name="shipping_postcode"
+                                    aria-label="Postcode / Zip"
+                                    placeholder="Postcode / Zip *"
+                                    required
+                                ).checkout__input
+
+                            label.checkout__label.checkout__label_wide
+                                input(
+                                    type="text"
+                                    id="shipping-address1"
+                                    name="shipping_address1"
+                                    aria-label="Address 1"
+                                    placeholder="Address 1 *"
+                                    required
+                                ).checkout__input
+                                i.icons.icon-location-pin.checkout__icon(
+                                    aria-hidden="true"
+                                )
+                            
+                            label.checkout__label.checkout__label_wide
+                                input(
+                                    type="text"
+                                    id="shipping-address2"
+                                    name="shipping_address2"
+                                    aria-label="Address 2"
+                                    placeholder="Address 2"
+                                ).checkout__input
+                                i.icons.icon-location-pin.checkout__icon(
+                                    aria-hidden="true"
+                                )
+
+                    .checkout__fields
+                        label.checkout__label.checkout__label_wide
+                            textarea(
+                                id="shipping-notes"
+                                name="shipping_notes"
+                                aria-label="Order Notes"
+                                placeholder="Order Notes"
+                            ).checkout__input
+                            i.icons.icon-pencil.checkout__icon(
+                                aria-hidden="true"
+                            )
