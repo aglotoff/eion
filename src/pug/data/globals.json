@@ -7,10 +7,10 @@
         "link": "about.html"
     }, {
         "text": "Flower",
-        "link": "product-details.html"
+        "link": "product-detail.html"
     }, {
         "text": "Shop",
-        "link": "product-category-2-columns.html"
+        "link": "product-category-3-columns.html"
     }, {
         "text": "Pages",
         "link": "javascript:void(0);",
