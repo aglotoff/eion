@@ -245,3 +245,8 @@ mixin checkout(data = {}, mods = {})
                             i.icons.icon-pencil.checkout__icon(
                                 aria-hidden="true"
                             )
+
+                .checkout__right
+                    .checkout__review-order
+                        h2.title.checkout__section-title Your order
+                        +review-order(data.order)

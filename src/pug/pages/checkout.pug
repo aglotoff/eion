@@ -1,6 +1,7 @@
 extends ../layouts/base.pug
 
 include ../../blocks/shop/checkout/checkout.pug
+include ../../blocks/shop/review-order/review-order.pug
 
 block page
-    +checkout()
+    +checkout(data.content)
