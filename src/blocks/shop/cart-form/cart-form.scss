@@ -1,0 +1,102 @@
+/**
+ * Styles for the cart-form block.
+ */
+.cart-form {
+    &__table {
+        width: 100%;
+
+        border-collapse: separate; 
+        border-spacing: 0 10px;
+    }
+
+    &__item {
+        background: $color-white;
+    }
+
+    &__cell {
+        padding: 20px 10px;
+
+        text-align: left;
+        vertical-align: middle;
+
+        &:first-child {
+            display: none;
+
+            @include breakpoint-up(sm) {
+                display: table-cell;
+            }
+        }
+
+        @include breakpoint-up(md) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        &_img {
+            width: 16.6667%;
+        }
+
+        &_title {
+            width: 33.3333%;
+        }
+
+        &_price {
+            width: 16.6667%;
+        }
+
+        &_qty {
+            width: 16.6667%;
+        }
+
+        &_total {
+            width: 8.3333%;
+        }
+
+        &_remove {
+            width: 8.3333%;
+
+            text-align: center;
+        }
+    }
+
+    &__item-thumb {
+        display: block;
+    }
+
+    &__item-img {
+        display: block;
+        max-width: 100%;
+    }
+
+    &__item-title {
+        color: $color-secondary;
+        font-family: $font-family-serif;
+        text-decoration: none;
+
+        transition: color 0.25s linear;
+
+        &:hover,
+        &:focus {
+            color: $color-primary;
+        }
+    }
+
+    &__item-total {
+        color: $color-primary;
+    }
+
+    &__remove-btn {
+        display: inline-block;
+
+        color: $color-text;
+        @include font-size(12px);
+        text-decoration: none;
+
+        transition: color 0.25s linear;
+
+        &:hover,
+        &:focus {
+            color: $color-secondary;
+        }
+    }
+}

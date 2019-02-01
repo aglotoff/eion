@@ -15,6 +15,7 @@ import * as SearchModal     from '../search-modal/search-modal';
 import * as Share           from '../share/share';
 import * as SideNav         from '../side-nav/side-nav';
 import * as Tabs            from '../tabs/tabs';
+import * as Qty             from '../qty/qty';
 
 import * as Slider          from '../../index/slider/slider';
 import * as Counters        from '../../index/counters/counters';
@@ -138,6 +139,7 @@ export const initModule = function() {
     Share.initModule();
     SideNav.initModule();
     Tabs.initModule();
+    Qty.initModule();
 
     Slider.initModule();
     Countdown.initModule();

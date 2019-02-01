@@ -1,0 +1,49 @@
+/**
+ * Styles for the cart block.
+ */
+.cart {
+    padding: 115px 0 100px;
+
+    &__text {
+        margin-top: 25px;
+
+        font-family: $font-family-serif;
+        @include font-size(18px);
+        text-align: center;
+    }
+
+    &__form {
+        margin-top: 75px;
+    }
+
+    &__bottom {
+        @include breakpoint-up(md) {
+            overflow: hidden;
+        }
+    }
+
+    &__bottom-inner {
+        @include breakpoint-up(md) {
+            display: flex;
+            margin: 0 -15px;
+        }
+    }
+
+    &__coupon {
+        margin-top: 75px;
+
+        @include breakpoint-up(md) {
+            flex: 0 0 66.6667%;
+            padding: 0 15px;
+        }
+    }
+
+    &__totals {
+        margin-top: 75px;
+        
+        @include breakpoint-up(md) {
+            flex: 0 0 33.3333%;
+            padding: 0 15px;
+        }
+    }
+}
