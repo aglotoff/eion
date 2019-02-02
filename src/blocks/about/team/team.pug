@@ -1,0 +1,12 @@
+mixin team(data = {}, mods = {})
+    .team&attributes(attributes)
+        each person in data
+            .team__person
+                img(src=person.img, alt=person.name).team__img
+
+                .team__header
+                    h3.team__name= person.name
+
+                    +social(person.social, {theme: 'team'}).team__social
+
+                .team__position= person.position

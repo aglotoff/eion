@@ -25,6 +25,10 @@
 
         transition: color 0.25s linear;
 
+        .social_theme_team & {
+            color: $color-silver;
+        }
+
         &:focus,
         &:hover {
             color: $color-primary;

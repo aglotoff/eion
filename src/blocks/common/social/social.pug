@@ -1,5 +1,6 @@
 mixin social(data = {}, mods = {})
-    .social&attributes(attributes)
+    - const theme = mods.theme || 'default';
+    .social(class="social_theme_" + theme)&attributes(attributes)
         if data.text
             .social__text= data.text
 

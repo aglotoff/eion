@@ -35,6 +35,73 @@
                 "position": "Buyer",
                 "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p><p>I love it!</p>"
             }]
+        },
+
+        "team": {
+            "title": "Our team",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
+
+            "people": [{
+                "img": "img/content/about/team/john-doe.jpg",
+                "name": "John Doe",
+                "position": "Founder",
+
+                "social": {
+                    "links": [{
+                        "className" : "twitter",
+                        "text"      : "Follow on Twitter"
+                    }, {
+                        "className" : "facebook-f",
+                        "text"      : "Follow on Facebook"
+                    }, {
+                        "className" : "google-plus-g",
+                        "text"      : "Follow on Google Plus"
+                    }, {
+                        "className" : "instagram",
+                        "text"      : "Follow on Instagram"
+                    }]
+                }
+            }, {
+                "img": "img/content/about/team/lucy-mary.jpg",
+                "name": "Lucy Mary",
+                "position": "Sales Director",
+
+                "social": {
+                    "links": [{
+                        "className" : "twitter",
+                        "text"      : "Follow on Twitter"
+                    }, {
+                        "className" : "facebook-f",
+                        "text"      : "Follow on Facebook"
+                    }, {
+                        "className" : "google-plus-g",
+                        "text"      : "Follow on Google Plus"
+                    }, {
+                        "className" : "instagram",
+                        "text"      : "Follow on Instagram"
+                    }]
+                }
+            }, {
+                "img": "img/content/about/team/alex-kim.jpg",
+                "name": "Alex Kim",
+                "position": "Marketer",
+
+                "social": {
+                    "links": [{
+                        "className" : "twitter",
+                        "text"      : "Follow on Twitter"
+                    }, {
+                        "className" : "facebook-f",
+                        "text"      : "Follow on Facebook"
+                    }, {
+                        "className" : "google-plus-g",
+                        "text"      : "Follow on Google Plus"
+                    }, {
+                        "className" : "instagram",
+                        "text"      : "Follow on Instagram"
+                    }]
+                }
+            }]
         }
     }
 }
