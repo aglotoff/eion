@@ -17,9 +17,9 @@ import * as SkipLink        from '../skip-link/skip-link';
 import * as SideNav         from '../side-nav/side-nav';
 import * as Tabs            from '../tabs/tabs';
 import * as Qty             from '../qty/qty';
+import * as Counters        from '../counters/counters';
 
 import * as Slider          from '../../index/slider/slider';
-import * as Counters        from '../../index/counters/counters';
 import * as PostCarousel    from '../../index/post-carousel/post-carousel';
 
 import * as Comment     from '../../blog/comment/comment';
@@ -146,10 +146,10 @@ export const initModule = function() {
     SkipLink.initModule();
     Tabs.initModule();
     Qty.initModule();
+    Counters.initModule();
 
     Slider.initModule();
     Countdown.initModule();
-    Counters.initModule();
     PostCarousel.initModule();
     
     Comment.initModule();

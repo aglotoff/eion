@@ -1,5 +1,7 @@
 extends ../layouts/base.pug
 
+include ../../blocks/common/counters/counters.pug
+
 include ../../blocks/about/hero/hero.pug
 include ../../blocks/about/about-section/about-section.pug
 include ../../blocks/about/testimonials/testimonials.pug
@@ -11,6 +13,6 @@ block page
         .text !{data.content.section1.text}
     +about-section(data.content.section2)
         +testimonials(data.content.section2.testimonials).about-section__testimonials
-    
     +section(data.content.team).page__section
         +team(data.content.team.people)
+    +counters(data.content.counters, {theme: 'light'})
