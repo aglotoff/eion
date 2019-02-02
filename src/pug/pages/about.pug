@@ -1,6 +1,12 @@
 extends ../layouts/base.pug
 
 include ../../blocks/about/hero/hero.pug
+include ../../blocks/about/about-section/about-section.pug
+include ../../blocks/about/testimonials/testimonials.pug
 
 block page
     +hero(data.content.hero)
+    +about-section(data.content.section1)
+        .text !{data.content.section1.text}
+    +about-section(data.content.section2)
+        +testimonials(data.content.section2.testimonials).about-section__testimonials

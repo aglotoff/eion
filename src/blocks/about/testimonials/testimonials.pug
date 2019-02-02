@@ -1,0 +1,16 @@
+mixin testimonials(data = {}, mods = {})
+    .testimonials&attributes(attributes)
+        each quote in data
+            .testimonial__quote-wrap
+                .testimonials__quote
+                    .testimonials__avatar
+                        img(
+                            src=quote.img
+                            alt=quote.author
+                        ).testimonials__avatar-img
+
+                    .testimonials__body
+                        .testimonials__author= quote.author
+                        .testimonials__position= quote.position
+
+                        .testimonials__text !{quote.text}

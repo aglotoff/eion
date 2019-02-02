@@ -1,0 +1,58 @@
+/**
+ * Styles for the about-section block.
+ */
+.about-section {
+    @include breakpoint-up(lg) {
+        display: flex;
+    }
+
+    &__img {
+        min-height: 600px;
+
+        background: {
+            position: center;
+            repeat: no-repeat;
+            size: cover;
+        };
+
+        @include breakpoint-up(lg) {
+            flex: 0 0 50%;
+        }
+    }
+
+    &__content {
+        background: $color-white;
+
+        @include breakpoint-up(lg) {
+            flex: 0 0 50%;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        
+        padding: 95px 15px 75px;
+
+        @include breakpoint-up(sm) {
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        @include breakpoint-up(md) {
+            max-width: 630px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+
+    &__title {
+        flex: 0 0 auto;
+        margin-bottom: 30px;
+    }
+
+    &__testimonials {
+        flex: 1;
+    }
+}

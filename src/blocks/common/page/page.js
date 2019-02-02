@@ -31,6 +31,8 @@ import * as ReviewForm            from '../../shop/review-form/review-form';
 import * as ShopCategoryFullwidth from '../../shop/shop-category-fullwidth/shop-category-fullwidth';
 import * as ShopGallery           from '../../shop/shop-gallery/shop-gallery';
 
+import * as Testimonials from '../../about/testimonials/testimonials';
+
 // -------------------------- BEGIN MODULE VARIABLES --------------------------
 const STICKY_HEADER_OFFSET  = 300; // Scroll offset to make the header "sticky"
 const VISIBLE_HEADER_OFFSET = 600; // Scroll offset to show the "sticky" header
@@ -158,6 +160,8 @@ export const initModule = function() {
     ReviewForm.initModule();
     ShopCategoryFullwidth.initModule();
     ShopGallery.initModule();
+
+    Testimonials.initModule();
 
     // Process the initial window size and scroll position.
     onWindowResize();
