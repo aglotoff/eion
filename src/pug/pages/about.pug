@@ -1,0 +1,6 @@
+extends ../layouts/base.pug
+
+include ../../blocks/about/hero/hero.pug
+
+block page
+    +hero(data.content.hero)

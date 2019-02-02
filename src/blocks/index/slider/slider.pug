@@ -22,6 +22,5 @@ mixin slider(data = {}, mods = {})
             i.fas.fa-angle-right(aria-label="Next Slide")
 
         if data.skipLink
-            a(href=data.skipLink).slider__skip-link
-                .fas.fa-long-arrow-alt-down(aria-label="Skip to content")
+            +skip-link(data.skipLink).slider__skip-link
     // /.slider 

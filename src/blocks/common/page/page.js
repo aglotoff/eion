@@ -13,6 +13,7 @@ import * as ProductCarousel from '../product-carousel/product-carousel';
 import * as ProductGallery  from '../product-gallery/product-gallery';
 import * as SearchModal     from '../search-modal/search-modal';
 import * as Share           from '../share/share';
+import * as SkipLink        from '../skip-link/skip-link';
 import * as SideNav         from '../side-nav/side-nav';
 import * as Tabs            from '../tabs/tabs';
 import * as Qty             from '../qty/qty';
@@ -140,6 +141,7 @@ export const initModule = function() {
     SearchModal.initModule();
     Share.initModule();
     SideNav.initModule();
+    SkipLink.initModule();
     Tabs.initModule();
     Qty.initModule();
 

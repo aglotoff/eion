@@ -30,8 +30,6 @@
         }
 
         &_scroll {
-            box-shadow: 0 2px 5px rgba($color-black, 0.1);
-
             @include breakpoint-up(lg) {
                 position: fixed;
 
