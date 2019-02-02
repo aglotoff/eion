@@ -247,6 +247,16 @@ mixin checkout(data = {}, mods = {})
                             )
 
                 .checkout__right
-                    .checkout__review-order
-                        h2.title.checkout__section-title Your order
-                        +review-order(data.order)
+                    .checkout__right-inner
+                        .checkout__review-order
+                            h2.title.checkout__section-title Your order
+                            +review-order(data.order)
+
+                        .checkout__payment
+                            +payment()
+
+                        .checkout__btn-wrap
+                            +btn({text: 'Place Order'}, {
+                                size: 'large',
+                                theme: 'primary',
+                            }).checkout__btn
