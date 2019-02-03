@@ -1,0 +1,22 @@
+/**
+ * Styles for the contact block.
+ */
+.contact {
+    &__bottom {
+        @include breakpoint-up(lg) {
+            display: flex;
+        }
+    }
+
+    &__map {
+        @include breakpoint-up(lg) {
+            flex: 0 0 50%;
+        }
+    }
+
+    &__form {
+        @include breakpoint-up(lg) {
+            flex: 0 0 50%;
+        }
+    }
+}
