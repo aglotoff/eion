@@ -1,0 +1,12 @@
+mixin faq-hero(data = {}, mods = {})
+    .faq-hero(style=`background-image: url(${data.bg})`)&attributes(attributes)
+        .faq-hero__inner
+            h1.faq-hero__title= data.title
+
+            form(action="#" method="get").faq-hero__search
+                input(
+                    type="text"
+                    name="s"
+                    placeholder="Search our help center"
+                ).faq-hero__search-input
+                button(type="submit").faq-hero__search-btn Search

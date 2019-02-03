@@ -1,0 +1,72 @@
+/**
+ * Styles for the faq hero block.
+ */
+.faq-hero {
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    justify-content: center;
+
+    background: {
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+    }
+
+    &__inner {
+        padding: 0 15px;
+    }
+
+    &__title {
+        color: $color-white;
+        @include font-size(36px);
+        font-weight: $font-weight-bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__search {
+        display: flex;
+        margin: 18px auto 0;
+        max-width: 570px;
+    }
+
+    &__search-input {
+        display: block;
+        flex: 1;
+        height: 60px;
+        min-width: 0;
+        padding: 0 25px;
+        width: 100%;
+
+        color: $color-text;
+        font-family: $font-family-serif;
+        font-style: italic;
+
+        background: $color-white;
+        border: 0;
+    }
+
+    &__search-btn {
+        min-width: 100px;
+    
+        color: $color-white;
+        @include font-size(14px);
+        text-transform: uppercase;
+
+        background: $color-primary;
+        border: 0;
+        cursor: pointer;
+
+        transition: background-color 0.25s linear;
+
+        &:hover,
+        &:focus {
+            background: $color-secondary;
+        }
+
+        @include breakpoint-up(sm) {
+            min-width: 170px;
+        }
+    }
+}

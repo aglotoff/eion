@@ -36,6 +36,8 @@ import * as Testimonials from '../../about/testimonials/testimonials';
 import * as Map from '../../contact/map/map';
 import * as ContactForm from '../../contact/contact-form/contact-form';
 
+import * as Accordion from '../../faq/accordion/accordion';
+
 // -------------------------- BEGIN MODULE VARIABLES --------------------------
 const STICKY_HEADER_OFFSET  = 300; // Scroll offset to make the header "sticky"
 const VISIBLE_HEADER_OFFSET = 600; // Scroll offset to show the "sticky" header
@@ -168,6 +170,8 @@ export const initModule = function() {
 
     Map.initModule();
     ContactForm.initModule();
+
+    Accordion.initModule();
 
     // Process the initial window size and scroll position.
     onWindowResize();

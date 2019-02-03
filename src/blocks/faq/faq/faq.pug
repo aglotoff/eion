@@ -1,0 +1,14 @@
+mixin faq(data = {}, mods = {})
+    .faq&attributes(attributes)
+        +faq-hero(data.hero)
+        .page__container
+            .faq__content
+                .faq__topics
+                    h2.title.faq__title Help Topics
+
+                    +topics(data.topics)
+
+                .faq__popular-articles
+                    h2.title.faq__title Popular Articles
+
+                    +accordion(data.popularArticles)
