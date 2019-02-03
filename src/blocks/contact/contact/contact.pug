@@ -1,6 +1,6 @@
 mixin contact(data = {}, mods = {})
     .contact&attributes(attributes)
         +contact-info(data.info)
-        .contact__bottom
+        .contact__bottom#contact-bottom
             +map().contact__map
             +contact-form().contact__form

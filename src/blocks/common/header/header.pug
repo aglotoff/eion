@@ -38,7 +38,7 @@ mixin header__minicart(data)
     .header-dropdown(class = "header-dropdown_bottom-" + data.align)
         button.header-dropdown__toggle.header__btn
             i.icon-basket.icons(aria-label="Toggle shopping cart")
-            .header__cart-items(aria-hidden="true") 3
+            span.header__cart-items(aria-hidden="true") 3
         .header-dropdown__backdrop
         .header-dropdown__popover
             .header-dropdown__top
@@ -79,7 +79,7 @@ mixin header__logo(data = {})
             header__logo_center : !!data.center,
         })
             img(src="img/logo.png", alt="Eion").header__logo-img
-            .header__logo-alt Eion
+            span.header__logo-alt Eion
     else
         a(
             href  = "."

@@ -17,7 +17,6 @@ mixin post(data = {}, mods = {})
                 src         = data.embed.src
                 width       = data.embed.width
                 height      = data.embed.height
-                frameborder = "no"
             ).post__embed
         else if data.quote
             #{titleTag}.post__quote

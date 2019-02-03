@@ -17,7 +17,7 @@ mixin latest-posts(data = {}, mods = {})
 
                     .latest-posts__pubdate
                         i.far.fa-clock(aria-label="Publised on")
-                        time(datetime=data.date)= blogDate(post.date)
+                        time(datetime=post.date)= blogDate(post.date)
                         |  by 
                         a(href=post.authorLink).latest-posts__author-link
                             | #{post.author}

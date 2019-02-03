@@ -8,7 +8,8 @@
             "phone": "+1 (2) 345 6789",
             "fax": "+1 (2) 345 6789",
             "email": "Contact@yourdomain.com",
-            "bg": "img/content/contact/contact-header-bg.jpg"
+            "bg": "img/content/contact/contact-header-bg.jpg",
+            "skipLink": "#contact-bottom"
         }
     },
 

@@ -20,10 +20,14 @@ const accordionProto = {
         const $nextPanel = this._$panels.eq(nextIndex);
 
         $prevPanel.slideUp();
-        $prevHeader.removeClass('accordion__header_active');
+        $prevHeader
+            .removeClass('accordion__header_active')
+            .attr('aria-expanded', 'false');
 
         $nextPanel.slideDown();
-        $nextHeader.addClass('accordion__header_active');
+        $nextHeader
+            .addClass('accordion__header_active')
+            .attr('aria-expanded', 'true');
 
         this._activeIndex = nextIndex;
     },

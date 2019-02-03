@@ -5,7 +5,8 @@
         "hero": {
             "bg": "img/content/about/about-hero-bg.jpg",
             "title": "Since 1992",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "skipLink": "#about-content"
         },
 
         "section1": {

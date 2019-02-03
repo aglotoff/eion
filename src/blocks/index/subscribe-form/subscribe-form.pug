@@ -1,5 +1,5 @@
 mixin subscribe-form(data = {}, mods = {})
-    form(action="" method="post").subscribe-form&attributes(attributes)
+    form(action="#" method="post").subscribe-form&attributes(attributes)
         label(
             id="subscribe-email-label"
             for="subscribe-email"
@@ -8,7 +8,7 @@ mixin subscribe-form(data = {}, mods = {})
             type="email"
             id="subscribe-email"
             name="email"
-            aria-labelledby="subsribe-email-label"
+            aria-label="Your Email"
             placeholder="Your Email..."
             required
         ).subscribe-form__input

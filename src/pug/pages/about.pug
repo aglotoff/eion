@@ -9,7 +9,7 @@ include ../../blocks/about/team/team.pug
 
 block page
     +hero(data.content.hero)
-    +about-section(data.content.section1)
+    +about-section(data.content.section1)#about-content
         .text !{data.content.section1.text}
     +about-section(data.content.section2)
         +testimonials(data.content.section2.testimonials).about-section__testimonials
