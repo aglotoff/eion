@@ -1,5 +1,7 @@
 mixin countdown(data = {}, mods = {})
-    .countdown&attributes(attributes)
+    .countdown(
+        class=mods.justified && "countdown_justified"
+    )&attributes(attributes)
         .countdown__inner
             .countdown__item
                 .countdown__item-inner

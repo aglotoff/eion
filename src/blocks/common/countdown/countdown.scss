@@ -7,6 +7,10 @@
     &__inner {
         display: flex;
         margin: 0 -5px;
+
+        .countdown_justified & {
+            justify-content: space-between;
+        }
     }
 
     &__item {

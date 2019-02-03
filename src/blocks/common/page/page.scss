@@ -2,6 +2,7 @@
  * Styles for the page block
  */
 .page {
+    height: 100%;
     padding-top: 70px;
 
     color: $color-text;
@@ -91,5 +92,9 @@
             transition-delay: 0s;
             visibility: visible;
         }
+    }
+
+    &_no-padding {
+        padding-top: 0;
     }
 }
