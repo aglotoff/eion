@@ -59,7 +59,6 @@ const accordionProto = {
     },
 
     focusTab(nextIndex) {
-        console.log(nextIndex, this._$headers.eq(nextIndex).find('.accordion__toggle'));
         this._$headers.eq(nextIndex).find('.accordion__toggle').focus();
     },
 
