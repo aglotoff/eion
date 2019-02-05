@@ -14,8 +14,9 @@
 
     &__content {
         @include breakpoint-up(lg) {
-            flex: 0 0 66.6667%;
+            // flex: 0 0 66.6667%;
             padding: 0 15px;
+            width: 66.6667%;
         }
     }
 
@@ -37,8 +38,9 @@
 
     &__sidebar {
         @include breakpoint-up(lg) {
-            flex: 0 0 33.3333%;
+            // flex: 0 0 33.3333%;
             padding: 0 15px;
+            width: 33.3333%;
         }
     }
 

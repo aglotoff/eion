@@ -1,9 +1,10 @@
 mixin instagram-feed(data = {}, mods = {})
     .instagram-feed&attributes(attributes)
-        .instagram-feed__carousel.owl-carousel
-            each img in data
-                .instagram-feed__item
-                    img(src=img, alt="Instagram feed").instagram-feed__img
+        .instagram-feed__carousel.swiper-container
+            .swiper-wrapper
+                each img in data
+                    .swiper-slide
+                        img(src=img, alt="Instagram feed").instagram-feed__img
         // /.instagram-feed__carousel 
 
         a(href="javascript:void(0)").instagram-feed__link

@@ -2,69 +2,59 @@
  * Styles for the product gallery block.
  */
 .product-gallery {
-    @include breakpoint-up(md) {
+    @include breakpoint-up(sm) {
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 
-    &__slide {
-        padding: 0 10px;
+    .swiper-wrapper {
+        height: auto;
+    }
+
+    &__img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
 
         opacity: 0.2;
 
         transition: opacity linear 0.25s;
 
-        &_active {
+        .swiper-slide-active & {
             opacity: 1;
         }
     }
 
-    &__img {
-        display: block;
-        max-width: 100%;
-    }
+    &__pagination {
+        position: static;
 
-    .slick-list {
-        @include breakpoint-up(md) {
-            margin: auto 0;
-        }
-    }
-
-    .slick-dots {
         display: flex;
         justify-content: center;
         margin-top: 20px;
+    }
 
-        li {
-            padding: 8px;
+    &__bullet {
+        display: block;
+        height: 10px;
+        margin: 0 4px;   
+        padding: 0;
+        width: 10px;
 
-            cursor: pointer;
+        text-indent: -99px;
 
-            button {
-                display: block;
-                height: 5px;
-                padding: 0;
-                width: 5px;
-        
-                text-indent: -99px;
-        
-                background: rgba($color-secondary, 0.3);
-                border: 0;
-                border-radius: 50%;
-                cursor: pointer;
-                outline: none;
-    
-                overflow: hidden;
-                transition: background-color 0.25s linear;
-            }
-        }
+        background: rgba($color-secondary, 0.3);
+        border: 3px solid $color-white;
+        border-radius: 50%;
+        cursor: pointer;
+        outline: none;
 
-        .slick-active button {
-            background: $color-secondary;
-        }
+        overflow: hidden;
+        transition: background-color 0.25s linear;
 
-        li:hover button,
-        li button:focus {
+        &_active,
+        &:hover,
+        &:focus {
             background: $color-secondary;
         }
     }

@@ -2,14 +2,7 @@
  * @file Implementation of the product gallery block
  */
 
-// --------------------------- BEGIN EVENT HANDLERS ---------------------------
-const onSlickBeforeChange = function(event, slick, current, next) {
-    // Remove the "active" modifier from the previous slide and apply it to the
-    // current one
-    slick.$slides.eq(current).removeClass('product-gallery__slide_active');
-    slick.$slides.eq(next).addClass('product-gallery__slide_active');
-};
-// ---------------------------- END EVENT HANDLERS ----------------------------
+/* global Swiper */
 
 // --------------------------- BEGIN PUBLIC METHODS ---------------------------
 /**
@@ -19,24 +12,30 @@ const onSlickBeforeChange = function(event, slick, current, next) {
 export const initModule = function() {
     $('.product-gallery').each(function() {
         const $gallery = $(this);
+        const $pagination = $gallery.find('.product-gallery__pagination');
 
-        $gallery.slick({
-            rows           : 0,
-            centerMode     : true,
+        new Swiper($gallery.get(0), {
+            spaceBetween: 20,
+            centeredSlides: true,
+            slidesPerView: 1,
+            watchSlidesVisibility: true,
 
-            arrows         : false,
-            slidesToShow   : 1,
-            slidesToScroll : 1,
-            variableWidth  : true,
-            variableHeight : true,
+            pagination: {
+                el: $pagination.get(0),
+                clickable: true,
+                bulletClass: 'product-gallery__bullet',
+                bulletActiveClass: 'product-gallery__bullet_active',
+                modifierClass: 'product-gallery__pagination_',
+                clickableClass: 'product-gallery__pagination_clickable',
+            },
 
-            speed          : 350,
-            infinite       : false,
-
-            dots           : true,
+            breakpointsInverse: true,
+            breakpoints: {
+                480: {
+                    slidesPerView: 2,
+                },
+            }
         });
-
-        $gallery.on('beforeChange', onSlickBeforeChange);
     });
 
     return true;

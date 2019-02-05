@@ -2,6 +2,8 @@
  * @file Implementation of the testimonials block
  */
 
+/* global Swiper */
+
 // --------------------------- BEGIN PUBLIC METHODS ---------------------------
 /**
  * Initialize the testimonials module.
@@ -9,13 +11,20 @@
  */
 export const initModule = function() {
     $('.testimonials').each(function() {
-        $(this).slick({
-            rows: 0,
+        const $testimonials = $(this);
+        const $container = $testimonials.find('.testimonials__container');
+        const $pagination = $testimonials.find('.testimonials__pagination');
 
-            arrows: false,
-            dots: true,
-
-            zIndex: 1,
+        new Swiper($container.get(0), {
+            loop: true,
+            pagination: {
+                el: $pagination.get(0),
+                clickable: true,
+                bulletClass: 'testimonials__bullet',
+                bulletActiveClass: 'testimonials__bullet_active',
+                modifierClass: 'testimonials__pagination_',
+                clickableClass: 'testimonials__pagination_clickable',
+            }
         });
     });
 

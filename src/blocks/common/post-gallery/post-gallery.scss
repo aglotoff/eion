@@ -2,14 +2,16 @@
  * Styles for the post-gallery block.
  */
 .post-gallery {
-    &__inner {
-        position: relative;
+    position: relative;
+
+    max-width: 100%;
+
+    .swiper-container {
+        max-width: 100%;
     }
 
-    &__container {
-        overflow: hidden;
-        min-width: 100%;
-        width: 0;
+    .swiper-slide {
+        height: auto;
     }
 
     &__img {
@@ -24,6 +26,7 @@
 
         display: block;
         height: 40px;
+        margin-top: 0;
         padding: 0;
         width: 20px;
 

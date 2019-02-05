@@ -80,6 +80,8 @@
     }
 
     &__products {
+        position: relative;
+
         overflow: hidden;
 
         @include breakpoint-up(lg) {
@@ -88,79 +90,57 @@
     }
 
     &__products-inner {
-        padding: 60px 15px;
+        padding: 60px 0 60px 15px;
 
         @include breakpoint-up(lg) {
-            padding: 100px 40px;
+            padding: 100px 0 100px 40px;
         }
 
         @include breakpoint-up(xl) {
             padding-left: 60px;
-            padding-right: 60px;
         }
     }
 
     &__items {
-        display: flex;
-        margin: 50px -15px 0;
+        margin-top: 40px;
+        padding-right: 15px;
 
-        &:after {
-            content: "";
+        overflow: hidden;
 
-            padding-left: 15px;
+        @include breakpoint-up(lg) {
+            padding-right: 40px;
+        }
 
-            @include breakpoint-up(lg) {
-                padding-left: 45px;
-            }
-
-            @include breakpoint-up(xl) {
-                padding-left: 60px;
-            }
+        @include breakpoint-up(xl) {
+            padding-right: 60px;
         }
     }
 
-    &__items-col {
-        flex: 1 0 300px;
-        padding: 0 15px;
+    .swiper-container {
+        padding-top: 10px;
+
+        overflow: visible;
     }
 
-    &__item:not(:first-child) {
-        margin-top: 30px;
-    }
-
-    .scroll-element_outer {
-        position: relative;
-    }
-
-    .scroll-element_size {
-        height: 15px;
-    }
-
-    .scroll-element_track {
+    &__scrollbar {
         bottom: 0;
         left: 0;
         position: absolute;
         right: 0;
-        top: 0;
+
+        height: 15px;
 
         background: $color-alto;
     }
 
-    .scroll-bar {
-        position: absolute;
-        top: 0;
-
-        height: 15px;
-
+    &__scrollbar-drag {
         background: repeating-linear-gradient(-50deg,
             $color-gallery,
             $color-gallery 1px,
             $color-white 1px,
             $color-white 7px);
         cursor: pointer;
-    }
 
-    .scroll-y {
-        display: none;
+        height: 15px;
     }
 }

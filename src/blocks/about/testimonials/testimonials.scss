@@ -6,6 +6,10 @@
     flex-direction: column;
     justify-content: space-between;
 
+    .swiper-container {
+        max-width: 100%;
+    }
+
     &__quote {
         display: flex;
     }
@@ -51,41 +55,37 @@
         font-family: $font-family-serif;
     }
 
-    .slick-dots {
+    &__pagination {
         display: flex;
         margin-top: 30px;
+    }
 
-        li {
-            &:not(:first-child) {
-                margin-left: 20px;
-            }
+    &__bullet {
+        display: block;
+        height: 10px;
+        padding: 0;
+        width: 10px;
 
-            button {
-                display: block;
-                height: 10px;
-                padding: 0;
-                width: 10px;
-        
-                text-indent: -9999px;
-        
-                background: transparent;
-                border: 1px solid $color-secondary;
-                border-radius: 50%;
-                cursor: pointer;
-                outline: none;
-    
-                transition: background-color 0.25s linear;
-            }
+        text-indent: -9999px;
+
+        background: transparent;
+        border: 1px solid $color-secondary;
+        border-radius: 50%;
+        cursor: pointer;
+        outline: none;
+
+        transition: background-color 0.25s linear;
+
+        &:not(:first-child) {
+            margin-left: 20px;
         }
 
-        .slick-active {
-            button {
-                background: $color-secondary;
-            }
+        &_active {
+            background: $color-secondary;
         }
 
-        li button:hover,
-        li button:focus {
+        &:hover,
+        &:focus {
             box-shadow: 0 0 2px 1px $color-primary;
         }
     }

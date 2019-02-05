@@ -1,28 +1,29 @@
 mixin shop-gallery(data = {}, mods = {})
     .shop-gallery&attributes(attributes)
-        .shop-gallery__content
-            each slide in data
-                .shop-gallery__content-item
-                    img(src=slide.large, alt="").shop-gallery__content-img
+        .shop-gallery__content.swiper-container
+            .swiper-wrapper
+                each slide in data
+                    .swiper-slide.shop-gallery__content-item
+                        img(src=slide.large, alt="").shop-gallery__content-img
 
-                    a(href=slide.link).shop-gallery__link
-                        i.icon-size-fullscreen.icons(
-                            aria-label="view fullscreen image"
-                        )
+                        a(href=slide.link).shop-gallery__link
+                            i.icon-size-fullscreen.icons(
+                                aria-label="view fullscreen image"
+                            )
 
-        .shop-gallery__thumbs
-            .shop-gallery__thumbs-container
+        .shop-gallery__thumbs.swiper-container
+            .swiper-wrapper
                 each slide, i in data
-                    .shop-gallery__thumb-wrap
+                    .swiper-slide
                         a.shop-gallery__thumb(
                             href       = "javascript:void(0);"
                             role       = "button"
-                            class      = (i == 0) && "shop-gallery__thumb_active"
+                           
                             data-slide = i
                         )
                             img(src=slide.small, alt="").shop-gallery__thumb-img
             
-            button.shop-gallery__arrow.shop-gallery__arrow_prev
+            button.shop-gallery__arrow.shop-gallery__arrow_prev.swiper-button-prev
                 i.fas.fa-angle-left(aria-label="Previous")
-            button.shop-gallery__arrow.shop-gallery__arrow_next
+            button.shop-gallery__arrow.shop-gallery__arrow_next.swiper-button-next
                 i.fas.fa-angle-right(aria-label="Next")

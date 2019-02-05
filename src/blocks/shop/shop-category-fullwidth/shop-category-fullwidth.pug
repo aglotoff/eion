@@ -17,15 +17,10 @@ mixin shop-category-fullwidth(data = {}, mods = {})
                 h2.title.shop-category-fullwidth__products-title= data.products.title
 
                 .shop-category-fullwidth__items
-                    - let i = 0;
-                    while i < data.products.items.length
-                        .shop-category-fullwidth__items-col                 
-                            +product(data.products.items[i], {
-                                size: 'small'
-                            }).shop-category-fullwidth__item
-                            - i++;
-                            if i < data.products.items.length
-                                +product(data.products.items[i], {
-                                    size: 'small'
-                                }).shop-category-fullwidth__item
-                                - i++;
+                    .swiper-container
+                        .swiper-wrapper
+                            each item in data.products.items
+                                .swiper-slide
+                                    +product(item, {size: 'small'})
+
+            .shop-category-fullwidth__scrollbar

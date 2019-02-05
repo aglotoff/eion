@@ -49,15 +49,6 @@
         line-height: 1;
 
         overflow: hidden;
-
-        .slick-list {
-            margin-left: -5px;
-            margin-right: -5px;
-        }
-    }
-
-    &__thumb-wrap {
-        padding: 0 5px;
     }
 
     &__thumb {
@@ -73,7 +64,7 @@
 
         transition: opacity 0.25s linear;
 
-        .shop-gallery__thumb_active &,
+        .swiper-slide-thumb-active &,
         .shop-gallery__thumb:hover &,
         .shop-gallery__thumb:focus & {
             opacity: 0.2;
@@ -81,11 +72,13 @@
     }
 
     &__arrow {
-        bottom: 2px;
+        bottom: 0;
         position: absolute;
         top: 0;
 
         display: block;
+        height: auto;
+        margin-top: 0;
         width: 35px;
 
         color: $color-secondary;
