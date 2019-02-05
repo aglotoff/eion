@@ -2,14 +2,7 @@
  * @file Implementation of the slider block
  */
 
-// --------------------------- BEGIN EVENT HANDLERS ---------------------------
-const onSlickBeforeChange = function(event, slick, current, next) {
-    // Remove the "active" modifier from the previous slide and apply it to the
-    // current one
-    slick.$slides.eq(current).removeClass('slider__slide_active');
-    slick.$slides.eq(next).addClass('slider__slide_active');
-};
-// ---------------------------- END EVENT HANDLERS ----------------------------
+/* global Swiper */
 
 // ---------------------------- BEGIN PUBLIC METHODS --------------------------
 /**
@@ -18,31 +11,38 @@ const onSlickBeforeChange = function(event, slick, current, next) {
  */
 export const initModule = function() {
     $('.slider').each(function() {
-        const $slider    = $(this);
+        const $slider = $(this);
         const $container = $slider.find('.slider__container');
-        const $prevArrow = $slider.find('.slider__arrow_prev');
         const $nextArrow = $slider.find('.slider__arrow_next');
+        const $prevArrow = $slider.find('.slider__arrow_prev');
+        const $pagination = $slider.find('.slider__pagination');
 
-        $container.slick({
-            rows          : 0,
+        new Swiper($container.get(0), {
+            autoplay: {
+                delay: 5000,
+            },
+            effect: 'fade',
+            loop: true,
+            
+            navigation: {
+                nextEl: $nextArrow.get(0),
+                prevEl: $prevArrow.get(0),
+            },
 
-            prevArrow     : $prevArrow,
-            nextArrow     : $nextArrow,
-            dots          : true,
-
-            autoplay      : true,
-            autoplaySpeed : 5000,
-
-            cssEase       : 'linear',
-            fade          : true,
-            speed         : 500,
-            zIndex        : 1,
-
-            pauseOnFocus  : false,
-            pauseOnHover  : false,
+            pagination: {
+                el: $pagination.get(0),
+                clickable: true,
+                bulletClass: 'slider__bullet',
+                bulletActiveClass: 'slider__bullet_active',
+                modifierClass: 'slider__pagination_',
+                clickableClass: 'slider__pagination_clickable',
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' 
+                        + '<span class="slider__bullet-inner"></span>'
+                        + '</span>';
+                },
+            },
         });
-
-        $container.on('beforeChange', onSlickBeforeChange);
     });
 
     return true;

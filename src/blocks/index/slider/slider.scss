@@ -52,7 +52,7 @@
             max-width: 800px;
         }
 
-        .slider__slide_active & {
+        .swiper-slide-active & {
             opacity: 1;
         }
 
@@ -243,16 +243,16 @@
         bottom: 5px;
         left: 50%;
         position: absolute;
+        z-index: 2;
 
         @include breakpoint-up(md) {
             bottom: 25px;
         }
     }
 
-    .slick-dots {
+    &__pagination {
         bottom: 70px;
         left: 0;
-        position: absolute;
         right: 0;
 
         display: flex;
@@ -269,47 +269,51 @@
         @include breakpoint-up(xl) {
             bottom: 200px;
         }
+    }
 
-        li {
-            padding: 5px;
+    &__bullet {
+        height: auto;
+        padding: 5px;
+        width: auto;
 
-            border: 1px solid transparent;
-            border-radius: 50%;
+        background: transparent;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        opacity: 1;
 
-            transition: border-color 0.25s linear;
+        transition: border-color 0.25s linear;
 
-            &:not(:first-child) {
-                margin-left: 1px;
-            }
-
-            button {
-                display: block;
-                height: 9px;
-                padding: 0;
-                width: 9px;
-        
-                text-indent: -9999px;
-        
-                background: $color-secondary;
-                border: 0;
-                border-radius: 50%;
-                cursor: pointer;
-                outline: none;
-    
-                transition: background-color 0.25s linear;
-            }
+        &:not(:first-child) {
+            margin-left: 1px;
         }
 
-        .slick-active {
+        &_active {
             border-color: $color-primary;
+        }
+    }
 
-            button {
-                background: $color-primary;
-            }
+    &__bullet-inner {
+        display: block;
+        height: 9px;
+        padding: 0;
+        width: 9px;
+
+        text-indent: -9999px;
+
+        background: $color-secondary;
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        outline: none;
+
+        transition: background-color 0.25s linear;
+
+        &:hover,
+        &:focus {
+            background: $color-primary;
         }
 
-        li button:hover,
-        li button:focus {
+        .slider__bullet_active & {
             background: $color-primary;
         }
     }

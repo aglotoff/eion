@@ -1,7 +1,7 @@
 extends ../layouts/base.pug
 
 include ../../blocks/common/countdown/countdown.pug
-include ../../blocks/common/product-carousel/product-carousel.pug
+include ../../blocks/common/carousel/carousel.pug
 include ../../blocks/common/counters/counters.pug
 
 include ../../blocks/index/slider/slider.pug
@@ -10,7 +10,6 @@ include ../../blocks/index/featured-products/featured-products.pug
 include ../../blocks/index/banner/banner.pug
 include ../../blocks/index/banner-section/banner-section.pug
 include ../../blocks/index/subscribe-form/subscribe-form.pug
-include ../../blocks/index/post-carousel/post-carousel.pug
 include ../../blocks/index/cta/cta.pug
 
 block page
@@ -28,7 +27,7 @@ block page
         title : data.content.newProducts.title,
         text  : data.content.newProducts.text,
     }).page__section
-        +product-carousel(data.content.newProducts.items)
+        +carousel(data.content.newProducts.items, {fourCols: true}, 'product')
     +counters(data.content.counters, {theme: 'bordered'}).page__section
     .columns
         +banner-section(data.content.newsletter).columns__left
@@ -36,5 +35,5 @@ block page
     +section({
         title: data.content.blog.title
     }).page__section
-        +post-carousel(data.content.blog.posts, {twoRows: true})
+        +carousel(data.content.blog.posts, {twoRows: true}, 'post')
     +cta(data.content.cta).page__section

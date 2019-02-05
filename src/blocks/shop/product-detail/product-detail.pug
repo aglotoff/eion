@@ -59,4 +59,4 @@ mixin product-detail(data = {}, mods = {})
                     }])
 
         +section({title: data.newProducts.title}).product-detail__new-products
-            +product-carousel(data.newProducts.items)
+            +carousel(data.newProducts.items, {fourCols: true}, 'product')

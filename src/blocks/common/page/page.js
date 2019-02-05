@@ -9,7 +9,7 @@ import * as HeaderDropdown  from '../header-dropdown/header-dropdown';
 import * as InstagramFeed   from '../instagram-feed/instagram-feed';
 import * as LangMenu        from '../lang-menu/lang-menu';
 import * as PostGallery     from '../post-gallery/post-gallery';
-import * as ProductCarousel from '../product-carousel/product-carousel';
+import * as Carousel        from '../carousel/carousel';
 import * as ProductGallery  from '../product-gallery/product-gallery';
 import * as SearchModal     from '../search-modal/search-modal';
 import * as Share           from '../share/share';
@@ -20,7 +20,6 @@ import * as Qty             from '../qty/qty';
 import * as Counters        from '../counters/counters';
 
 import * as Slider          from '../../index/slider/slider';
-import * as PostCarousel    from '../../index/post-carousel/post-carousel';
 
 import * as Comment     from '../../blog/comment/comment';
 import * as CommentForm from '../../blog/comment-form/comment-form';
@@ -143,7 +142,7 @@ export const initModule = function() {
     InstagramFeed.initModule();
     LangMenu.initModule();
     PostGallery.initModule();
-    ProductCarousel.initModule();
+    Carousel.initModule();
     ProductGallery.initModule();
     SearchModal.initModule();
     Share.initModule();
@@ -155,7 +154,6 @@ export const initModule = function() {
 
     Slider.initModule();
     Countdown.initModule();
-    PostCarousel.initModule();
     
     Comment.initModule();
     CommentForm.initModule();

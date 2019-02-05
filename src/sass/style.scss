@@ -14,8 +14,8 @@
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/owl.carousel/src/scss/owl.carousel.scss";
 
-@import "../blocks/common/page/page.scss";
-
+@import "../blocks/common/page/page";
+@import "../blocks/common/swiper/swiper";
 @import "../blocks/common/header/header";
 @import "../blocks/common/header-dropdown/header-dropdown";
 @import "../blocks/common/account/account";
@@ -53,7 +53,7 @@
 @import "../blocks/common/countdown/countdown";
 @import "../blocks/common/social/social";
 @import "../blocks/common/tabs/tabs";
-@import "../blocks/common/product-carousel/product-carousel";
+@import "../blocks/common/carousel/carousel";
 @import "../blocks/common/qty/qty";
 @import "../blocks/common/skip-link/skip-link";
 @import "../blocks/common/counters/counters";
@@ -61,7 +61,6 @@
 @import "../blocks/index/slider/slider";
 @import "../blocks/index/banners/banners";
 @import "../blocks/index/banner/banner";
-@import "../blocks/index/post-carousel/post-carousel";
 @import "../blocks/index/special-offers/special-offers";
 @import "../blocks/index/featured-products/featured-products.scss";
 @import "../blocks/index/banner-section/banner-section";

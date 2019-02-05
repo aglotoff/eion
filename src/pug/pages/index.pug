@@ -1,10 +1,10 @@
 extends ../layouts/base.pug
 
+include ../../blocks/common/carousel/carousel.pug
 include ../../blocks/common/counters/counters.pug
 
 include ../../blocks/index/slider/slider.pug
 include ../../blocks/index/banners/banners.pug
-include ../../blocks/index/post-carousel/post-carousel.pug
 include ../../blocks/index/special-offers/special-offers.pug
 
 block page
@@ -19,5 +19,5 @@ block page
     +section({
         title: data.content.blog.title
     }).page__section
-        +post-carousel(data.content.blog.posts)
+        +carousel(data.content.blog.posts, {}, 'post')
     +special-offers(data.content.specialOffers).page__section
