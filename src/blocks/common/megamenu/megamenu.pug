@@ -3,7 +3,7 @@ mixin megamenu(data = {}, mods = {})
         .megamenu__inner
             each cat in data
                 .megamenu__cat
-                    a(href=cat.link).megamenu__title= cat.text
+                    span.megamenu__title= cat.text
 
                     ul.megamenu__list
                         each item in cat.submenu

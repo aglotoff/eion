@@ -1,0 +1,35 @@
+/**
+ * Styles for the form group block.
+ */
+.form-group {
+    position: relative;
+
+    display: block;
+
+    &__input {
+        display: block;
+        padding: 5px 10px;
+        width: 100%;
+
+        color: $color-text;
+        font-family: $font-family-serif;
+        font-style: italic;
+
+        border: 1px solid $color-mercury;
+
+        &::placeholder {
+            color: $color-silver;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+
+        color: $color-silver;
+        @include font-size(12px);
+
+        transform: translateY(-50%);
+    }
+}

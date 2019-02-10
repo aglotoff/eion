@@ -7,41 +7,10 @@
     padding: 29px 20px;
     min-width: 270px;
 
-    &__label {
-        position: relative;
-
-        display: block;
-
+    &__form-group {
         &:not(:first-child) {
             margin-top: 10px;
         }
-    }
-
-    &__input {
-        display: block;
-        padding: 5px 10px;
-        width: 100%;
-
-        color: $color-text;
-        font-family: $font-family-serif;
-        font-style: italic;
-
-        border: 1px solid $color-mercury;
-
-        &::placeholder {
-            color: $color-silver;
-        }
-    }
-
-    &__icon {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-
-        color: $color-silver;
-        @include font-size(12px);
-
-        transform: translateY(-50%);
     }
 
     &__btns {
@@ -50,33 +19,6 @@
 
     &__social {
         margin-top: 28px;
-    }
-
-    &__social-text {
-        @include font-size(10px);
-        text-transform: uppercase;
-    }
-
-    &__social-list {
-        display: flex;
-        margin-top: 10px;
-    }
-
-    &__social-item:not(:first-child) {
-        margin-left: 15px;
-    }
-
-    &__social-link {
-        color: $color-text;
-        @include font-size(12px);
-        text-decoration: none;
-
-        transition: color 0.25s linear;
-
-        &:hover,
-        &:focus {
-            color: $color-primary;
-        }
     }
 
     &__lang {

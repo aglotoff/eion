@@ -1,26 +1,43 @@
 mixin account(data = {}, mods = {})
     .account&attributes(attributes)
         form.account__form(method="post" action="#")
-            label.account__label
-                i.icon-user.icons.account__icon(
-                    aria-label="Username or Email Address"
-                )
-                input.account__input(
-                    type        = "text"
-                    name        = "username"
-                    placeholder = "Username or Email Address"
-                    required    = true
-                )
-            label.account__label
-                i.icon-lock.icons.account__icon(
-                    aria-label="Passwords"
-                )
-                input.account__input(
-                    type        = "password"
-                    name        = "password"
-                    placeholder = "Password"
-                    required    = true
-                )
+            //- label.account__label
+            //-     i.icon-user.icons.account__icon(
+            //-         aria-label="Username or Email Address"
+            //-     )
+            //-     input.account__input(
+            //-         type        = "text"
+            //-         name        = "username"
+            //-         placeholder = "Username or Email Address"
+            //-         required    = true
+            //-     )
+            //- label.account__label
+            //-     i.icon-lock.icons.account__icon(
+            //-         aria-label="Passwords"
+            //-     )
+            //-     input.account__input(
+            //-         type        = "password"
+            //-         name        = "password"
+            //-         placeholder = "Password"
+            //-         required    = true
+            //-     )
+            +form-group({
+                type: 'text',
+                name: 'username',
+                id: 'account-username',
+                required: true,
+                placeholder: 'Username or Email Address',
+                icon: 'user'
+            }).account__form-group
+
+            +form-group({
+                type: 'text',
+                name: 'password',
+                id: 'account-password',
+                required: true,
+                placeholder: 'Password',
+                icon: 'lock'
+            }).account__form-group
             
             .btn-group.account__btns
                 +btn({text: 'Register'}, {theme: 'secondary'})(
@@ -33,25 +50,19 @@ mixin account(data = {}, mods = {})
                 ).btn-group__btn
         // /.account__form 
         
-        .account__social
-            .account__social-text Connect with
-            ul.account__social-list
-                li.account__social-item
-                    a(href="javascript:void(0);").account__social-link
-                        i.fab.fa-twitter(
-                            aria-label="Follow us on Twitter"
-                        )
-                li.account__social-item
-                    a(href="javascript:void(0);").account__social-link
-                        i.fab.fa-facebook-f(
-                            aria-label="Follow us on Facebook"
-                        )
-                li.account__social-item
-                    a(href="javascript:void(0);").account__social-link
-                        i.fab.fa-google-plus-g(
-                            aria-label="Follow us on Google Plus"
-                        )
-        // /.account__social 
+        +social({
+            text: 'Connect with:',
+            links: [{
+                className : 'twitter',
+                text      : 'Share on Twitter',
+            }, {
+                className : 'facebook-f',
+                text      : 'Share on Facebook',
+            }, {
+                className : 'google-plus-g',
+                text      : 'Share on Google Plus',
+            }]
+        }, {theme: 'account'}).account__social
 
         .account__lang
             +lang-menu({align: data.langMenuAlign})

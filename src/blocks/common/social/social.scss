@@ -34,4 +34,27 @@
             color: $color-primary;
         }
     }
+
+    &_theme_account {
+        .social__text {
+            display: block;
+            margin-right: 0;
+
+            @include font-size(10px);
+            font-weight: $font-weight-regular;
+            text-transform: uppercase;
+        }
+
+        .social__list {
+            margin-top: 10px;
+        }
+
+        .social__item:not(:first-child) {
+            margin-left: 15px;
+        }
+
+        .social__link {
+            @include font-size(12px);
+        }
+    }
 }

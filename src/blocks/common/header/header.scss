@@ -28,6 +28,13 @@
         border: 0;
         cursor: pointer;
 
+        transition: all 0.25s linear;
+
+        &:hover,
+        &:focus {
+            color: $color-secondary;
+        }
+
         @include breakpoint-up(lg) {
             height: 100px;
             line-height: 100px;
@@ -114,7 +121,8 @@
             padding: 0 40px;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $color-primary;
         }
     }
