@@ -39,9 +39,15 @@
 
         color: $color-secondary;
         font-family: $font-family-serif;
-        
         font-style: italic;
         text-decoration: none;
+
+        transition: color 0.25s linear;
+
+        &:hover,
+        &:focus {
+            color: $color-primary;
+        }
     }
 
     &__price {
@@ -53,6 +59,7 @@
     &__thumb {
         display: block;
         margin-left: 20px;
+        width: 120px;
     }
 
     &__img {

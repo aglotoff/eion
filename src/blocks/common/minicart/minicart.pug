@@ -1,30 +1,20 @@
 mixin minicart(data = {}, mods = {})
     .minicart&attributes(attributes)
         ul.minicart__items
-            li.minicart__item
-                a(href="javascript:void(0);").minicart__thumb
-                    img(
-                        src = "img/content/products/thumbs/80x60/a315.jpg"
-                        alt = "Fl Model A315"
-                    ).minicart__img
-                .minicart__product-info
-                    a(href="javascript:void(0);").minicart__name Fl Model A315
-                    .minicart__price $530
-                .minicart__qty x2
-                button.minicart__remove
-                    span(aria-hidden="true") &times;
-            li.minicart__item
-                a(href="javascript:void(0);").minicart__thumb
-                    img(
-                        src = "img/content/products/thumbs/80x60/a210.jpg"
-                        alt = "Fl Model A210"
-                    ).minicart__img
-
-                .minicart__product-info
-                    a(href="javascript:void(0);").minicart__name Fl Model A210
-                    .minicart__price $399
-                button.minicart__remove
-                    span(aria-hidden="true") &times;
+            each item in data
+                li.minicart__item
+                    a(href=item.link tabindex="-1").minicart__thumb
+                        img(
+                            src=item.thumb
+                            alt=item.name
+                        ).minicart__img
+                    .minicart__product-info
+                        a(href=item.link).minicart__name= item.name
+                        .minicart__price $#{item.price}
+                    if item.qty > 1
+                        .minicart__qty x#{item.qty}
+                    button.minicart__remove
+                        i.fas.fa-times(aria-label="Remove this item")
         // /.minicart__items 
             
         .minicart__total

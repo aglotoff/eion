@@ -106,6 +106,30 @@
         "link": "contact.html"
     }],
 
+    "search": {
+        "results": [{
+            "rating": 5,
+            "link": "product-detail.html",
+            "thumb": "img/content/products/thumbs/120x90/a351.jpg",
+            "price": 530,
+            "name": "Fl Model A351"
+        }]
+    },
+
+    "minicart": [{
+        "link": "product-detail.html",
+        "thumb": "img/content/products/thumbs/120x90/a315.jpg",
+        "price": 530,
+        "name": "Fl Model A315",
+        "qty": 2
+    }, {
+        "link": "product-detail.html",
+        "thumb": "img/content/products/thumbs/120x90/a210.jpg",
+        "price": 399,
+        "name": "Fl Model A210",
+        "qty": 1
+    }],
+
     "menuCenter": true,
     "sideNavAlign": "left",
 

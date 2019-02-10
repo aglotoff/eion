@@ -43,8 +43,8 @@ mixin header__account(data)
         // .header-dropdown__popover 
     // .header-dropdown 
 
-mixin header__minicart(data)
-    .header-dropdown(class = "header-dropdown_align_" + data.align)
+mixin header__minicart(data, mods)
+    .header-dropdown(class = "header-dropdown_align_" + mods.align)
         button.header-dropdown__toggle.header__btn
             i.icon-basket.icons(aria-label="Toggle shopping cart")
             span.header__cart-items(aria-hidden="true") 3
@@ -56,12 +56,12 @@ mixin header__minicart(data)
                     i.icon-close.icons(aria-label="Hide minicart")
 
             .header-dropdown__content
-                +minicart()
+                +minicart(data)
         // .header-dropdown__popover 
     // .header-dropdown 
 
-mixin header__search(data)
-    .header-dropdown(class = "header-dropdown_align_" + data.align)
+mixin header__search(data, mods)
+    .header-dropdown(class = "header-dropdown_align_" + mods.align)
         button.header-dropdown__toggle.header__btn
             i.icon-magnifier.icons(aria-label="Toggle search")
         .header-dropdown__backdrop
@@ -72,7 +72,7 @@ mixin header__search(data)
                     i.icon-close.icons(aria-label="Hide search")
 
             .header-dropdown__content
-                +search()
+                +search(data)
         // .header-dropdown__popover 
     // .header-dropdown 
 
@@ -101,7 +101,7 @@ mixin header__logo(data = {})
             img(src="img/logo.png", alt="Eion").header__logo-img
             .header__logo-alt Eion
 
-mixin header(data, mods = {})
+mixin header(data = {}, mods = {})
     header.header&attributes(attributes)
         if data.menu
             .header__left
@@ -119,7 +119,7 @@ mixin header(data, mods = {})
             .header__right
                 .header__actions
                     +header__account({align: 'right'})
-                    +header__minicart({align: 'right'})
+                    +header__minicart(data.minicart, {align: 'right'})
                     button.header__btn.header__search-toggle
                         i.icon-magnifier.icons(aria-label="Toggle search")
                     +header__nav-toggle()
@@ -151,8 +151,8 @@ mixin header(data, mods = {})
 
             .header__right
                 .header__actions
-                    +header__minicart({align: 'right'})
-                    +header__search({align: 'right'})
+                    +header__minicart(data.minicart, {align: 'right'})
+                    +header__search(data.search, {align: 'right'})
                 // .header__actions 
             // .header__right 
     // /.header 

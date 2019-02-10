@@ -59,14 +59,18 @@ html(lang="en")
                 const menuLeft  = menu.slice(0, Math.floor(menu.length / 2));
                 const menuRight = menu.slice(Math.floor(menu.length / 2));
             +header({
-                menuLeft   : menuLeft,
-                menuRight  : menuRight,
-                isHomepage : data.isHomepage,
+                menuLeft: menuLeft,
+                menuRight: menuRight,
+                isHomepage: data.isHomepage,
+                search: data.search,
+                minicart: data.minicart,
             }).page__header
         else
             +header({
-                menu       : data.menu,
-                isHomepage : data.isHomepage,
+                menu: data.menu,
+                isHomepage: data.isHomepage,
+                search: data.search,
+                minicart: data.minicart,
             }).page__header
 
         +side-nav({

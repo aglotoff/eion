@@ -1,26 +1,6 @@
 mixin account(data = {}, mods = {})
     .account&attributes(attributes)
         form.account__form(method="post" action="#")
-            //- label.account__label
-            //-     i.icon-user.icons.account__icon(
-            //-         aria-label="Username or Email Address"
-            //-     )
-            //-     input.account__input(
-            //-         type        = "text"
-            //-         name        = "username"
-            //-         placeholder = "Username or Email Address"
-            //-         required    = true
-            //-     )
-            //- label.account__label
-            //-     i.icon-lock.icons.account__icon(
-            //-         aria-label="Passwords"
-            //-     )
-            //-     input.account__input(
-            //-         type        = "password"
-            //-         name        = "password"
-            //-         placeholder = "Password"
-            //-         required    = true
-            //-     )
             +form-group({
                 type: 'text',
                 name: 'username',
