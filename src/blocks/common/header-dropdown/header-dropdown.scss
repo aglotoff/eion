@@ -2,10 +2,6 @@
  * Styles for the header dropdown block.
  */
 .header-dropdown {
-    @include breakpoint-up(md) {
-        position: relative;
-    }
-
     &__backdrop {
         bottom: 0;
         left: 0;
@@ -58,7 +54,7 @@
                         opacity 0.25s ease-out;
         }
 
-        .header-dropdown_bottom-left > & {
+        .header-dropdown_align_left > & {
             left: 0;
 
             transform: translateX(-100%);
@@ -68,7 +64,7 @@
             }
         }
 
-        .header-dropdown_bottom-right > & {
+        .header-dropdown_align_right > & {
             right: 0;
 
             transform: translateX(100%);
@@ -76,6 +72,11 @@
             @include breakpoint-up(md) {
                 transform: none;
             }
+        }
+
+        .header-dropdown_align_mega > & {
+            left: 0;
+            right: 0;
         }
 
         .header-dropdown_visible > & {
@@ -112,5 +113,12 @@
         background: transparent;
         border: 0;
         cursor: pointer;
+    }
+
+    &_align_left,
+    &_align_right {
+        @include breakpoint-up(md) {
+            position: relative;
+        }
     }
 }

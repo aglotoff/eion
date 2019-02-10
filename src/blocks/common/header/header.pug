@@ -1,23 +1,32 @@
 mixin header__nav-list(data)
     ul.header__nav-list
         each item in data.menu
-            li.header__nav-item
-                a(
-                    href = item.link
-                    role = item.submenu && "button"
-                ).header__nav-link= item.text
-                    if item.label
-                        .header__nav-label
-                            i.icon-bell.icons(aria-hidden="true")
-                    if item.submenu
-                        i.icon-arrow-down.icons.header__nav-arrow(
-                            aria-hidden="true"
-                        )
-                if item.submenu
-                    +megamenu(item.submenu).header__megamenu
+            if item.submenu
+                li.header-dropdown.header-dropdown_align_mega.header__nav-item
+                    a(
+                        href="javascript:void(0);"
+                        role="button"
+                    ).header__nav-link.header-dropdown__toggle= item.text
+                        if item.label
+                            .header__nav-label
+                                i.icon-bell.icons(aria-hidden="true")
+                        if item.submenu
+                            i.icon-arrow-down.icons.header__nav-arrow(
+                                aria-hidden="true"
+                            )
+                    .header-dropdown__popover
+                        +megamenu(item.submenu)
+            else
+                li.header__nav-item
+                    a(
+                        href = item.link
+                    ).header__nav-link= item.text
+                        if item.label
+                            .header__nav-label
+                                i.icon-bell.icons(aria-hidden="true")
 
 mixin header__account(data)
-    .header-dropdown(class = "header-dropdown_bottom-" + data.align)
+    .header-dropdown(class = "header-dropdown_align_" + data.align)
         button.header-dropdown__toggle.header__btn
             i.icon-user.icons(aria-label="Toggle account")
         .header-dropdown__backdrop
@@ -35,7 +44,7 @@ mixin header__account(data)
     // .header-dropdown 
 
 mixin header__minicart(data)
-    .header-dropdown(class = "header-dropdown_bottom-" + data.align)
+    .header-dropdown(class = "header-dropdown_align_" + data.align)
         button.header-dropdown__toggle.header__btn
             i.icon-basket.icons(aria-label="Toggle shopping cart")
             span.header__cart-items(aria-hidden="true") 3
@@ -52,7 +61,7 @@ mixin header__minicart(data)
     // .header-dropdown 
 
 mixin header__search(data)
-    .header-dropdown(class = "header-dropdown_bottom-" + data.align)
+    .header-dropdown(class = "header-dropdown_align_" + data.align)
         button.header-dropdown__toggle.header__btn
             i.icon-magnifier.icons(aria-label="Toggle search")
         .header-dropdown__backdrop

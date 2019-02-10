@@ -1,5 +1,6 @@
 /**
  * @file Implementation of the page block
+ * @author Andrey Glotov
  */
 
 import * as BackToTop       from '../back-to-top/back-to-top';
