@@ -1,7 +1,7 @@
 import focusTrap from 'focus-trap';
 import jQuery from 'jquery';
 import svg4everybody from 'svg4everybody';
-import Swiper from 'swiper';
+import Swiper from 'swiper/dist/js/swiper.js';
 
 import 'jquery-countdown';
 import 'jquery-validation';
