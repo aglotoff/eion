@@ -27,52 +27,51 @@ mixin side-nav(data, mods = {})
         .side-nav__backdrop
 
         .side-nav__drawer
-            .side-nav__logo
-                img(src="img/logo-alt.png", alt="Eion")
-            
-            button.side-nav__close
-                i.icon-close.icons(aria-label="Hide side nav")
+            .side-nav__inner
+                .side-nav__logo
+                    img(src="img/logo-alt.png", alt="Eion")
+                
+                button.side-nav__close
+                    i.icon-close.icons(aria-label="Hide side nav")
 
-            ul.side-nav__social
-                li.side-nav__social-item
-                    a(href="javascript:void(0);").side-nav__social-link
-                        i.fab.fa-twitter(
-                            aria-label="Follow us on Twitter"
-                        )
-                li.side-nav__social-item
-                    a(href="javascript:void(0);").side-nav__social-link
-                        i.fab.fa-facebook-f(
-                            aria-label="Follow us on Facebook"
-                        )
-                li.side-nav__social-item
-                    a(href="javascript:void(0);").side-nav__social-link
-                        i.fab.fa-instagram(
-                            aria-label="Follow us on Instagram"
-                        )
-                li.side-nav__social-item
-                    a(href="javascript:void(0);").side-nav__social-link
-                        i.fab.fa-google-plus-g(
-                            aria-label="Follow us on Google Plus"
-                        )
-                li.side-nav__social-item
-                    a(href="javascript:void(0);").side-nav__social-link
-                        i.fab.fa-pinterest(
-                            aria-label="Follow us on Pinterest"
-                        )
-            // /.side-nav__social 
-            
-            +side-nav__menu(data.menu)
+                +social({
+                    links: [{
+                        className: 'twitter',
+                        text: 'Follow us on Twitter',
+                    }, {
+                        className: 'facebook-f',
+                        text: 'Follow us on Facebook',
+                    }, {
+                        className: 'instagram',
+                        text: 'Follow us on Instagram',
+                    }, {
+                        className: 'google-plus-g',
+                        text: 'Follow us on Google Plus',
+                    }, {
+                        className: 'pinterest',
+                        text: 'Follow us on Pinterest',
+                    }]
+                }, {theme: 'side-nav'}).side-nav__social
+                
+                +side-nav__menu(data.menu)
 
-            form.side-nav__search(method="post" action=".")
-                label.side-nav__search-inner
-                    i.icon-magnifier.icons.side-nav__search-icon(
-                        aria-label="Search"
-                    )
-                    input(
-                        type        = "text"
-                        name        = "search"
-                        placeholder = "Search..."
-                    ).side-nav__search-input
-            // /.side-nav__search 
+                form.side-nav__search(method="post" action=".")
+                    .side-nav__search-inner
+                        label.side-nav__search-icon(
+                            for="side-search"
+                            id="side-search-label"
+                        )
+                            i.icon-magnifier.icons(
+                                aria-label="Search"
+                            )
+                        input(
+                            type="text"
+                            name="s"
+                            id="side-search"
+                            aria-labelledby="side-search-label"
+                            placeholder="Search..."
+                        ).side-nav__search-input
+                // /.side-nav__search 
+            // /.side-nav__inner 
         // /.side-nav__drawer 
     // /.side-nav 
