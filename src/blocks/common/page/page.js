@@ -19,7 +19,7 @@ import * as SideNav         from '../side-nav/side-nav';
 import * as Tabs            from '../tabs/tabs';
 import * as Qty             from '../qty/qty';
 import * as Counters        from '../counters/counters';
-
+import * as Product         from '../product/product';
 import * as Slider          from '../../index/slider/slider';
 
 import * as Comment     from '../../blog/comment/comment';
@@ -152,6 +152,7 @@ export const initModule = function() {
     Tabs.initModule();
     Qty.initModule();
     Counters.initModule();
+    Product.initModule();
 
     Slider.initModule();
     Countdown.initModule();

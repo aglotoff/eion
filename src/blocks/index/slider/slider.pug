@@ -17,12 +17,12 @@ mixin slider(data = {}, mods = {})
                                     .slider__text= slide.text
             // /.slider__container 
 
-            .slider__pagination.swiper-pagination
-
             button.slider__arrow.slider__arrow_prev.swiper-button-prev
                 i.fas.fa-angle-left(aria-label="Previous Slide")
             button.slider__arrow.slider__arrow_next.swiper-button-next
                 i.fas.fa-angle-right(aria-label="Next Slide")
+
+            .slider__pagination.swiper-pagination
 
         if data.skipLink
             +skip-link(data.skipLink).slider__skip-link

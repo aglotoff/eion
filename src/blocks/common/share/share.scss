@@ -6,25 +6,20 @@
 
     transition: all 0.25s linear;
 
-    &__toggle,
-    &__link {
+    &__toggle {
         display: block;
         height: 30px;
         padding: 0;
         width: 30px;
 
+        color: $color-primary;
         @include font-size(10px);
         line-height: 30px;
         text-align: center;
 
-        border-radius: 50%;
-    }
-
-    &__toggle {
-        color: $color-primary;
-
         background: $color-white;
         border: 1px dashed $color-primary;
+        border-radius: 50%;
         cursor: pointer;
 
         &:hover,
@@ -35,23 +30,11 @@
         }
     }
 
-    &__link {
-        color: $color-white;
-
-        background: $color-silver;
-
-        &:hover,
-        &:focus {
-            background: $color-primary;
-        }
-    }
-
     &__menu {
         position: absolute;
         right: 100%;
         top: 50%;
 
-        display: flex;
         padding: 5px;
 
         opacity: 0;
@@ -67,9 +50,5 @@
             transition-delay: 0s;
             visibility: visible;
         }
-    }
-
-    &__item {
-        padding: 5px;
     }
 }

@@ -68,7 +68,8 @@
 
         transition: color 0.25s linear;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $color-secondary;
         }
     }

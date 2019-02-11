@@ -3,14 +3,18 @@ mixin banners(data = {}, mods = {})
         .page__container
             .banners__grid
                 each banner in data
-                    .banners__banner(
-                        style = `background-image: url(${banner.img})`
-                        class = 'banners__banner_size_' + banner.size
+                    .banners__item(
+                        class = {
+                            banners__item_wide: !!banner.wide,
+                            banners__item_tall: !!banner.tall
+                        }
                     )
-                        .banners__banner-inner
-                            a(href=banner.link).banners__banner-link
-                                .banners__banner-text= banner.text
-                    // /.banners__banner 
+                        .banners__item-inner(
+                            style = `background-image: url(${banner.img})`
+                        )
+                            a(href=banner.link).banners__link
+                                .banners__text= banner.text
+                    // /.banners__item 
             // /.banners__grid 
         // /.page__container 
     // /.banners 

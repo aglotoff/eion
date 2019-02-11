@@ -1,5 +1,6 @@
 /**
  * @file Implementation of the counters block
+ * @author Andrey Glotov
  */
 
 // -------------------------- BEGIN MODULE VARIABLES --------------------------

@@ -15,11 +15,27 @@
         display: inline-flex;
     }
 
-    &__item:not(:first-child) {
-        margin-left: 18px;
+    &__item {
+        .social_theme_share & {
+            padding: 5px;
+        }
+
+        &:not(:first-child) {
+            margin-left: 18px;
+
+            .social_theme_account & {
+                margin-left: 15px;
+            }
+
+            .social_theme_share & {
+                margin-left: 0;
+            }
+        }
     }
 
     &__link {
+        display: block;
+
         color: $color-text;
         text-decoration: none;
 
@@ -29,9 +45,38 @@
             color: $color-silver;
         }
 
+        .social_theme_side-nav & {
+            color: $color-white;
+            @include font-size(12px);
+        }
+
+        .social_theme_account & {
+            @include font-size(12px);
+        }
+
+        .social_theme_share & {
+            height: 30px;
+            padding: 0;
+            width: 30px;
+
+            color: $color-white;
+            @include font-size(10px);
+            line-height: 30px;
+            text-align: center;
+
+            background: $color-silver;
+            border-radius: 50%;
+        }
+
         &:focus,
         &:hover {
             color: $color-primary;
+
+            .social_theme_share & {
+                color: $color-white;
+
+                background: $color-primary;
+            }
         }
     }
 
@@ -47,26 +92,6 @@
 
         .social__list {
             margin-top: 10px;
-        }
-
-        .social__item:not(:first-child) {
-            margin-left: 15px;
-        }
-
-        .social__link {
-            @include font-size(12px);
-        }
-    }
-
-    &_theme_side-nav {
-        .social__link {
-            color: $color-white;
-            @include font-size(12px);
-
-            &:focus,
-            &:hover {
-                color: $color-primary;
-            }
         }
     }
 }

@@ -6,20 +6,17 @@ mixin share(data = {}, mods = {})
         )
             i.fas.fa-share-alt(aria-label="Share")
         
-        ul.share__menu
-            li.share__item
-                a(href="javascript:void(0)").share__link
-                    i.fab.fa-twitter(
-                        aria-label="Share with Twitter"
-                    )
-            li.share__item
-                a(href="javascript:void(0)").share__link
-                    i.fab.fa-facebook-f(
-                        aria-label="Share with Facebook"
-                    )
-            li.share__item
-                a(href="javascript:void(0)").share__link
-                    i.fab.fa-google-plus-g(
-                        aria-label="Follow us on Google Plus"
-                    )
+        .share__menu
+            +social({
+                links: [{
+                    className : 'twitter',
+                    text      : 'Share on Twitter',
+                }, {
+                    className : 'facebook-f',
+                    text      : 'Share on Facebook',
+                }, {
+                    className : 'google-plus-g',
+                    text      : 'Share on Google Plus',
+                }]
+            }, {theme: 'share'})
     // /.share

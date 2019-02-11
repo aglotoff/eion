@@ -3,15 +3,26 @@
  */
 .products {
     &__grid {
-        @include breakpoint-up(sm) {
-            display: grid;
-            grid-gap: 30px;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        @include breakpoint-up(md) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
         }
     }
 
     &__product {
-        margin-bottom: 30px;
+        padding: 0 15px;
+        margin: 0 auto 30px;
+        max-width: 450px;
+
+        @include breakpoint-up(md) {
+            max-width: none;
+            width: 50%;
+        }
+
+        @include breakpoint-up(lg) {
+            width: 33.3333%;
+        }
     }
 
     &__view-more {

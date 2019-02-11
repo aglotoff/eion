@@ -4,45 +4,54 @@
 .banners {
     &__grid {
         @include breakpoint-up(sm) {
-            display: grid;
-            grid-gap: 30px;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            flex-wrap: wrap;
+            margin: -15px;
+
+            @supports (display: grid) {
+                display: grid;
+                grid-gap: 30px;
+                grid-template-columns: repeat(2, 1fr);
+                margin: 0;
+            }
         }
 
         @include breakpoint-up(lg) {
-            grid-template-columns: repeat(4, 1fr);
+            @supports (display: grid) {
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
     }
 
-    &__banner {
-        position: relative;
-
+    &__item {
         @include font-size(18px);
 
-        background: {
-            color: $color-gray;
-            position: center;
-            repeat: no-repeat;
-            size: cover;
+        @include breakpoint-up(sm) {
+            padding: 15px;
+            width: 50%;
         }
 
-        &_size_default {
+        @include breakpoint-up(lg) {
+            width: 25%;
+        }
+
+        @supports (display: grid) {
             @include breakpoint-up(sm) {
                 grid-area: span 1 / span 1;
-            }
-        }
+                padding: 0;
+                width: auto;
 
-        &_size_wide {
-            @include breakpoint-up(sm) {
-                grid-area: span 1 / span 2;
-            }
-        }
-
-        &_size_large {
-            @include breakpoint-up(sm) {
-                grid-area: span 2 / span 2;
-
-                @include font-size(48px);
+                &_wide {
+                    grid-column: span 2;
+                }
+        
+                &_tall {
+                    grid-row: span 2;
+        
+                    &.banners__item_wide {
+                        @include font-size(48px);
+                    }
+                }
             }
         }
 
@@ -55,18 +64,30 @@
         }
     }
 
-    &__banner-inner {
+    &__item-inner {
+        position: relative;
+
         display: block;
+        height: 100%;
         padding-bottom: 100%;
 
-        .banners__banner_size_wide & {
+        background: {
+            color: $color-gray;
+            position: center;
+            repeat: no-repeat;
+            size: cover;
+        }
+
+        .banners__item_wide:not(.banners__item_tall) & {
             @include breakpoint-up(sm) {
-                padding-bottom: 50%;
+                @supports (display: grid) {
+                    padding-bottom: 50%;
+                }
             }
         }
     }
 
-    &__banner-link {
+    &__link {
         bottom: 0;
         left: 0;
         position: absolute;
@@ -95,7 +116,7 @@
         }
     }
 
-    &__banner-text {
+    &__text {
         align-items: center;
         display: flex;
         justify-content: center;
@@ -107,15 +128,17 @@
 
         transition: border-color 0.25s linear;
 
-        .banners__banner_size_large & {
+        .banners__item_wide.banners__item_tall & {
             @include breakpoint-up(sm) {
-                height: 400px;
-                width: 400px;
+                @supports (display: grid) {
+                    height: 400px;
+                    width: 400px;
+                }
             }
         }
 
-        .banners__banner:hover &,
-        .banners__banner-link:focus & {
+        .banners__item:hover &,
+        .banners__link:focus & {
             border-color: $color-white;
         }
     }

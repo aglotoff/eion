@@ -1,11 +1,9 @@
 /**
  * @file Implementation of the language menu block
+ * @author Andrey Glotov
  */
 
-// -------------------------- BEGIN MODULE VARIABLES --------------------------
-const KEY_ESC   = 27;
-const KEY_SPACE = 32;
-// --------------------------- END MODULE VARIABLES ---------------------------
+import {makeDropdown} from '../../../js/utils';
 
 // --------------------------- BEGIN PUBLIC METHODS ---------------------------
 /**
@@ -13,95 +11,15 @@ const KEY_SPACE = 32;
  * @return true
  */
 export const initModule = function() {
-    const $menu = $('.lang-menu');
-    const $toggle = $menu.find('.lang-menu__toggle');
+    const $langMenu = $('.lang-menu');
+    const $toggle = $('.lang-menu__toggle');
 
-    let isExpanded = false;
-
-    const toggleLangMenu = function(open) {
-        isExpanded = open;
-
-        if (open) {
-            setTimeout(() => {
-                $(document).on({
-                    'click': onOutsideLangMenuClick,
-                    'focusin': onOutsideLangMenuClick,
-                });
-                $menu.on('keydown', onLangMenuKeydown);
-            }, 0);
-        } else {
-            $(document).off({
-                'click': onOutsideLangMenuClick,
-                'focusin': onOutsideLangMenuClick,
-            });
-            $menu.on('keydown', onLangMenuKeydown);
-        }
-
-        $menu.toggleClass('lang-menu_visible', open);
-        $toggle.attr('aria-expanded', String(open));
-    };
-
-    const onOutsideLangMenuClick = function(event) {
-        const target = event.target;
-        if (!(
-            target === document
-            || $menu.is($(target))
-            || $.contains($menu.get(0), target)
-        )) {
-            toggleLangMenu(false);
-        }
-    };
-
-    const onLangMenuToggleClick = function() {
-        if (!isExpanded) {
-            toggleLangMenu(true);
-        } else {
-            toggleLangMenu(false);
-        }
-    };
-
-    const onLangMenuToggleKeydown = function(event) {
-        if (event.which === KEY_SPACE) {
-            event.preventDefault();
-            
-            if (!this._isExpanded) {
-                toggleLangMenu(true);
-            } else {
-                toggleLangMenu(false);
-            }
-        }
-    };
-
-    const onLangMenuToggleKeyup = function(event) {
-        if (event.which === KEY_SPACE) {
-            event.preventDefault();
-        }
-    };
-
-    const onLangMenuKeydown = function(event) {
-        if ((event.which === KEY_ESC) && isExpanded) {
-            toggleLangMenu(false);
-            $toggle.focus();
-            event.stopPropagation();
-        }
-    };
-
-    const onLangMenuMouseenter = function() {
-        toggleLangMenu(true);
-    };
-
-    const onLangMenuMouseleave = function() {
-        toggleLangMenu(false);
-    };
-
-    $toggle.on({
-        'click': onLangMenuToggleClick,
-        'keydown': onLangMenuToggleKeydown,
-        'keyup': onLangMenuToggleKeyup,
+    makeDropdown($langMenu, $toggle, {
+        hoverToggles: true,
+        onToggle: function onShareToggle(open) {
+            $toggle.attr('aria-expanded', String(open));
+            $langMenu.toggleClass('lang-menu_visible', open);
+        },
     });
-
-    $menu.hover(onLangMenuMouseenter, onLangMenuMouseleave);
-
-    return true;
 };
 // ---------------------------- END PUBLIC METHODS ----------------------------

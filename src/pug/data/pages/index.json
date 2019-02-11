@@ -25,7 +25,8 @@
             "img": "img/content/banners/banner-01-bg.jpg",
             "link": "javascript:void(0);",
             "text": "All flower",
-            "size": "large"
+            "tall": true,
+            "wide": true
         }, {
             "img": "img/content/banners/banner-02-bg.jpg",
             "link": "javascript:void(0);",
@@ -40,7 +41,7 @@
             "img": "img/content/banners/banner-04-bg.jpg",
             "link": "javascript:void(0);",
             "text": "Wedding flowers",
-            "size": "wide"
+            "wide": true
         }],
 
         "products": {
@@ -50,7 +51,7 @@
             "items": [{
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/310x250/a351-1.jpg",
+                "img": "img/content/products/thumbs/496x400/a351-1.jpg",
                 "rating": 4.5,
                 "link": "product-detail.html"
             }, {
@@ -63,24 +64,24 @@
                 "saleTheme": "ribbon",
                 "oldPrice": 530,
                 "price": 399,
-                "img": "img/content/products/thumbs/310x250/a351-2.jpg",
+                "img": "img/content/products/thumbs/496x400/a351-2.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/310x250/a351-3.jpg",
+                "img": "img/content/products/thumbs/496x400/a351-3.jpg",
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/310x250/a351-4.jpg",
+                "img": "img/content/products/thumbs/496x400/a351-4.jpg",
                 "rating": 3.5,
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/310x250/a351-5.jpg",
+                "img": "img/content/products/thumbs/496x400/a351-5.jpg",
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
@@ -92,7 +93,7 @@
                 "saleTheme": "ribbon",
                 "oldPrice": 530,
                 "price": 399,
-                "img": "img/content/products/thumbs/310x250/a351-6.jpg",
+                "img": "img/content/products/thumbs/496x400/a351-6.jpg",
                 "rating": 4.5,
                 "link": "product-detail.html"
             }]
