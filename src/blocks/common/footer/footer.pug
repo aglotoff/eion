@@ -1,7 +1,7 @@
 mixin footer(data = {}, mods = {})
     .footer(class = data.alt && "footer_light")&attributes(attributes)
         if data.instagramFeed && !data.alt
-            +instagram-feed(data.instagramFeed)
+            +instagram-carousel(data.instagramFeed)
         .footer__top
             .page__container
                 .footer__top-inner
@@ -17,9 +17,24 @@ mixin footer(data = {}, mods = {})
                                 li.footer__contact-item Fax: #{data.fax}
                                 li.footer__contact-item Email: #{data.email}
 
-                            +footer-social({}, {
-                                light: data.alt
-                            }).footer__social
+                            +social({
+                                links: [{
+                                    className: 'twitter',
+                                    text: 'Follow us on Twitter',
+                                }, {
+                                    className: 'facebook-f',
+                                    text: 'Follow us on Facebook',
+                                }, {
+                                    className: 'instagram',
+                                    text: 'Follow us on Instagram',
+                                }, {
+                                    className: 'google-plus-g',
+                                    text: 'Follow us on Google Plus',
+                                }, {
+                                    className: 'pinterest',
+                                    text: 'Follow us on Pinterest',
+                                }]
+                            }, {theme:'footer-alt'}).footer__social
                         // /.footer__block 
 
                         .footer__block.footer__block_wide
@@ -78,17 +93,7 @@ mixin footer(data = {}, mods = {})
                                 .footer__text.text
                                     p Enter your email and we'll send you a coupon with 10% off your next order.
 
-                                form.footer__subscribe-form
-                                    input(
-                                        type        = "email"
-                                        placeholder = "Your email..."
-                                        aria-label  = "Your email"
-                                        required
-                                    ).footer__subscribe-input
-                                    +btn({text: 'Submit'}, {theme: 'inverse'})(
-                                        type = "submit"
-                                        name = "subscribe"
-                                    ).footer__subscribe-btn
+                                +footer-subscribe().footer__subscribe
                         // /.footer__block 
 
                         .footer__block
@@ -101,8 +106,24 @@ mixin footer(data = {}, mods = {})
                                 li.footer__contact-item Fax: #{data.fax}
                                 li.footer__contact-item Email: #{data.email}
 
-                            +footer-social().footer__social
-
+                            +social({
+                                links: [{
+                                    className: 'twitter',
+                                    text: 'Follow us on Twitter',
+                                }, {
+                                    className: 'facebook-f',
+                                    text: 'Follow us on Facebook',
+                                }, {
+                                    className: 'instagram',
+                                    text: 'Follow us on Instagram',
+                                }, {
+                                    className: 'google-plus-g',
+                                    text: 'Follow us on Google Plus',
+                                }, {
+                                    className: 'pinterest',
+                                    text: 'Follow us on Pinterest',
+                                }]
+                            }, {theme:'footer'}).footer__social
                     // /.footer__block 
                 // /.footer__top-inner 
             // /.page__container 
@@ -118,7 +139,7 @@ mixin footer(data = {}, mods = {})
                                 alt = "Eion"
                             ).footer__logo-img
 
-                    .footer__copyright= data.copyright
+                    .footer__copyright !{data.copyright}
 
                     +payments().footer__payments
                 // /.footer__bottom-inner 
@@ -126,4 +147,4 @@ mixin footer(data = {}, mods = {})
         // /.footer__bottom 
 
         if data.instagramFeed && !!data.alt
-            +instagram-feed(data.instagramFeed)
+            +instagram-carousel(data.instagramFeed)

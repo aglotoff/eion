@@ -8,7 +8,7 @@ mixin account(data = {}, mods = {})
                 required: true,
                 placeholder: 'Username or Email Address',
                 icon: 'user'
-            }).account__form-group
+            }, {theme: 'account'}).account__form-group
 
             +form-group({
                 type: 'text',
@@ -17,7 +17,7 @@ mixin account(data = {}, mods = {})
                 required: true,
                 placeholder: 'Password',
                 icon: 'lock'
-            }).account__form-group
+            }, {theme: 'account'}).account__form-group
             
             .btn-group.account__btns
                 +btn({text: 'Register'}, {theme: 'secondary'})(

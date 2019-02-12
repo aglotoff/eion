@@ -8,21 +8,46 @@
 
     &__input {
         display: block;
-        padding: 5px 10px;
+        
         width: 100%;
 
         color: $color-text;
         font-family: $font-family-serif;
         font-style: italic;
 
-        border: 1px solid $color-mercury;
+        background: transparent;
+
+        .form-group_theme_account & {
+            padding: 5px 10px;
+
+            color: $color-text;
+
+            border: 1px solid $color-mercury;
+        }
+
+        .form-group_theme_footer & {
+            padding: 15px 18px;
+
+            color: $color-white;
+            @include font-size(14px);
+
+            border: 1px dashed $color-white;
+        }
 
         &::placeholder {
-            color: $color-silver;
+            opacity: 1;
+
+            .form-group_theme_account & {
+                color: $color-silver;
+            }
+
+            .form-group_theme_footer & {
+                color: $color-gallery;
+            }
         }
     }
 
-    &__label {
+    &__icon {
         position: absolute;
         right: 10px;
         top: 50%;
@@ -31,5 +56,9 @@
         @include font-size(12px);
 
         transform: translateY(-50%);
+    }
+
+    &__hidden-label {
+        @include visually-hidden();
     }
 }

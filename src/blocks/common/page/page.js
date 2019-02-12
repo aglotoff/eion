@@ -3,33 +3,33 @@
  * @author Andrey Glotov
  */
 
-import * as BackToTop       from '../back-to-top/back-to-top';
-import * as Countdown       from '../countdown/countdown';
-import * as Header          from '../header/header';
-import * as HeaderDropdown  from '../header-dropdown/header-dropdown';
-import * as InstagramFeed   from '../instagram-feed/instagram-feed';
-import * as LangMenu        from '../lang-menu/lang-menu';
-import * as PostGallery     from '../post-gallery/post-gallery';
-import * as Carousel        from '../carousel/carousel';
-import * as ProductGallery  from '../product-gallery/product-gallery';
-import * as SearchModal     from '../search-modal/search-modal';
-import * as Share           from '../share/share';
-import * as SkipLink        from '../skip-link/skip-link';
-import * as SideNav         from '../side-nav/side-nav';
-import * as Tabs            from '../tabs/tabs';
-import * as Qty             from '../qty/qty';
-import * as Counters        from '../counters/counters';
-import * as Product         from '../product/product';
-import * as Slider          from '../../index/slider/slider';
+import * as BackToTop from '../back-to-top/back-to-top';
+import * as Countdown from '../countdown/countdown';
+import * as Header from '../header/header';
+import * as HeaderDropdown from '../header-dropdown/header-dropdown';
+import * as InstagramCarousel from '../instagram-carousel/instagram-carousel';
+import * as LangMenu from '../lang-menu/lang-menu';
+import * as PostGallery from '../post-gallery/post-gallery';
+import * as Carousel from '../carousel/carousel';
+import * as ProductGallery from '../product-gallery/product-gallery';
+import * as SearchModal from '../search-modal/search-modal';
+import * as Share from '../share/share';
+import * as SkipLink from '../skip-link/skip-link';
+import * as SideNav from '../side-nav/side-nav';
+import * as Tabs from '../tabs/tabs';
+import * as Qty from '../qty/qty';
+import * as Counters from '../counters/counters';
+import * as Product from '../product/product';
+import * as Slider from '../../index/slider/slider';
 
-import * as Comment     from '../../blog/comment/comment';
+import * as Comment from '../../blog/comment/comment';
 import * as CommentForm from '../../blog/comment-form/comment-form';
 
-import * as Checkout              from '../../shop/checkout/checkout';
-import * as Payment               from '../../shop/payment/payment';
-import * as ReviewForm            from '../../shop/review-form/review-form';
+import * as Checkout from '../../shop/checkout/checkout';
+import * as Payment from '../../shop/payment/payment';
+import * as ReviewForm from '../../shop/review-form/review-form';
 import * as ShopCategoryFullwidth from '../../shop/shop-category-fullwidth/shop-category-fullwidth';
-import * as ShopGallery           from '../../shop/shop-gallery/shop-gallery';
+import * as ShopGallery from '../../shop/shop-gallery/shop-gallery';
 
 import * as Testimonials from '../../about/testimonials/testimonials';
 
@@ -140,7 +140,7 @@ export const initModule = function() {
     BackToTop.initModule();
     Header.initModule();
     HeaderDropdown.initModule();
-    InstagramFeed.initModule();
+    InstagramCarousel.initModule();
     LangMenu.initModule();
     PostGallery.initModule();
     Carousel.initModule();

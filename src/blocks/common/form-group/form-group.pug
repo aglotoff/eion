@@ -1,5 +1,6 @@
 mixin form-group(data = {}, mods = {})
-    .form-group&attributes(attributes)
+    - const theme = mods.theme || 'default';
+    .form-group(class="form-group_theme_"+theme)&attributes(attributes)
         input.form-group__input(
             id=data.id
             type=data.type
@@ -8,9 +9,15 @@ mixin form-group(data = {}, mods = {})
             required=!!data.required
             aria-labelledby=data.id+"-label"
         )
-        label.form-group__label(
-            aria-label=data.label
-            id=data.id+"-label"
-            for=data.id
-        )
-            i.icons(class="icon-"+data.icon)
+        if data.icon
+            label.form-group__icon(
+                aria-label=data.label
+                id=data.id+"-label"
+                for=data.id
+            )
+                i.icons(class="icon-"+data.icon)
+        else
+            label.form-group__hidden-label(
+                id=data.id+"-label"
+                for=data.id
+            )= data.label
