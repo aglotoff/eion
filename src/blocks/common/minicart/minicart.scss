@@ -11,7 +11,17 @@
         display: flex;
         padding-bottom: 10px;
 
-        border-bottom: 1px dashed $color-silver;
+        background: {
+            image: repeating-linear-gradient(
+                to right,
+                $color-silver,
+                $color-silver 9px,
+                transparent 9px,
+                transparent 12px);
+            position: bottom;
+            repeat: no-repeat;
+            size: auto 1px;
+        }
 
         &:not(:first-child) {
             margin-top: 20px;

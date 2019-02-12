@@ -42,9 +42,17 @@
             display: block;
             margin: 14px auto 0;
 
-            width: 100px;
+            height: 1px;
+            width: 105px;
 
-            border-top: 1px dashed rgba($color-secondary, 0.2);
+            background: {
+                image: repeating-linear-gradient(
+                    to right,
+                    rgba($color-secondary, 0.2),
+                    rgba($color-secondary, 0.2) 9px,
+                    transparent 9px,
+                    transparent 12px);
+            }
         }
     }
 

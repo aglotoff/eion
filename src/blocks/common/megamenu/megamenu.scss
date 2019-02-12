@@ -4,8 +4,6 @@
 .megamenu {
     @include font-size(14px);
 
-    background: $color-white;
-    border-top: 1px solid $color-mercury;
     box-shadow: 0 2px 5px rgba($color-black, 0.1);
 
     &__inner {
@@ -34,7 +32,17 @@
         text-decoration: none;
         text-transform: uppercase;
 
-        border-bottom: 1px dashed $color-secondary;
+        background: {
+            image: repeating-linear-gradient(
+                to right,
+                $color-secondary,
+                $color-secondary 9px,
+                transparent 9px,
+                transparent 12px);
+            position: bottom;
+            repeat: no-repeat;
+            size: auto 1px;
+        }
     }
 
     &__list {

@@ -109,14 +109,30 @@
         text-decoration: none;
         text-transform: uppercase;
 
-        border-bottom: 1px dashed $color-text;
+        background: {
+            image: repeating-linear-gradient(
+                to right,
+                $color-text,
+                $color-text 9px,
+                transparent 9px,
+                transparent 12px);
+            position: bottom;
+            repeat: no-repeat;
+            size: auto 1px;
+        }
 
-        transition: color 0.25s linear;
+        transition: all 0.25s linear;
 
         &_submenu {
             padding: 16px 0;
             text-transform: none;
-            border: 0;
+            
+            background-image: repeating-linear-gradient(
+                to right,
+                $color-white,
+                $color-white 9px,
+                transparent 9px,
+                transparent 12px);
         }
 
         &:hover,
