@@ -6,28 +6,45 @@
         @include breakpoint-up(md) {
             display: flex;
             flex-wrap: wrap;
-            margin: 0 -15px;
+            margin: -15px;
         }
     }
 
-    &__product {
-        padding: 0 15px;
+    &__item {
         margin: 0 auto 30px;
         max-width: 450px;
 
         @include breakpoint-up(md) {
             max-width: none;
-            width: 50%;
+            padding: 15px;
         }
 
-        @include breakpoint-up(lg) {
-            width: 33.3333%;
+        &_size_1-2 {
+            @include breakpoint-up(md) {
+                width: 50%;
+            }
+        }
+
+        &_size_1-3 {
+            @include breakpoint-up(md) {
+                width: 50%;
+            }
+
+            @include breakpoint-up(lg) {
+                width: 33.3333%;
+            }
+        }
+    }
+
+    &__product {
+        @include breakpoint-up(md) {
+            height: 100%;
         }
     }
 
     &__view-more {
         display: block;
-        margin: 40px auto 0;
+        margin: 70px auto 0;
         width: 170px;
     }
 }

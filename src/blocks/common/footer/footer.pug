@@ -86,14 +86,14 @@ mixin footer(data = {}, mods = {})
                             if data.instagram
                                 h2.title.title_light.title_size_small.footer__block-title Instagram
 
-                                +footer-instagram(data.instagram).footer__instagram
+                                +instagram-grid(data.instagram).footer__instagram
                             else
                                 h2.title.title_light.title_size_small.footer__block-title Newsletter
 
                                 .footer__text.text
                                     p Enter your email and we'll send you a coupon with 10% off your next order.
 
-                                +footer-subscribe().footer__subscribe
+                                +subscribe({}, {footer: true}).footer__subscribe
                         // /.footer__block 
 
                         .footer__block

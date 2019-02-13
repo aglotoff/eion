@@ -4,15 +4,15 @@ mixin product(data = {}, mods = {})
         ['product_size_' + size]: true,
         product_wide            : !!mods.wide,
     })&attributes(attributes)
+        if data.label
+            - const labelShape = data.label.shape || 'circle';
+            - const labelTheme = data.label.theme || 'sale';
+            .product__label(class={
+                ['product__label_shape_' + labelShape]: true,
+                ['product__label_theme_' + labelTheme]: true,
+            })= data.label.text
+
         .product__thumb
-            if data.label
-                - const labelShape = data.label.shape || 'circle';
-                - const labelTheme = data.label.theme || 'sale';
-                .product__label(class={
-                    ['product__label_shape_' + labelShape]: true,
-                    ['product__label_theme_' + labelTheme]: true,
-                })= data.label.text
-        
             if data.img
                 .product__thumb-inner
                     img(src=data.img, alt=data.name).product__thumb-img

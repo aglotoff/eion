@@ -1,0 +1,22 @@
+mixin side-section(data = {}, mods = {})
+    section.side-section&attributes(attributes)
+        .side-section__inner
+            h2.title= data.title
+
+            if data.text
+                .text.side-section__intro= data.text
+
+            .side-section__content
+                if data.countdown
+                    +countdown(data.countdown).side-section__countdown
+
+                if data.subscribe
+                    +subscribe().side-section__subscribe
+
+                if data.small
+                    p.side-section__small= data.small
+
+                if data.btn
+                    +btn(data.btn, {size: 'large'}).side-section__btn
+        // /.side-section__inner 
+    // /.side-section 

@@ -1,13 +1,21 @@
 mixin products(data = {}, mods = {})
+    - const col = mods.col || 3;
     .products&attributes(attributes)
         .products__grid
-            each product in data
-                .products__product
-                    +product(product)
+            each product in data.items
+                .products__item(class="products__item_size_1-" + col)
+                    +product(product, {
+                        size: (col == 2)
+                            ? 'large'
+                            : (col == 4)
+                                ? 'small'
+                                : 'default',
+                    }).products__product
         // /.products__grid 
 
-        +btn({
-            text : 'View more',
-            url  : 'javascript:void(0);',
-        }, {size: 'large'}).products__view-more
+        if data.moreLink
+            +btn({
+                text: 'View more',
+                url: data.moreLink,
+            }, {size: 'large'}).products__view-more
     // /.products 

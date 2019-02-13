@@ -117,8 +117,8 @@
                 transparent 9px,
                 transparent 12px);
             position: bottom;
-            repeat: no-repeat;
-            size: auto 1px;
+            repeat: repeat-x;
+            size: 100% 1px;
         }
 
         transition: all 0.25s linear;
@@ -127,12 +127,7 @@
             padding: 16px 0;
             text-transform: none;
             
-            background-image: repeating-linear-gradient(
-                to right,
-                $color-white,
-                $color-white 9px,
-                transparent 9px,
-                transparent 12px);
+            background: transparent;
         }
 
         &:hover,

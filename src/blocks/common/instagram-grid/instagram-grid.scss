@@ -1,11 +1,16 @@
 /**
- * Styles for the footer instagram block.
+ * Styles for the instagram grid block.
  */
-.footer-instagram {
+.instagram-grid {
     &__list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: -8px;
+    }
+
+    &__item {
+        padding: 8px;
+        width: 33.3333%;
     }
 
     &__img {
@@ -24,11 +29,9 @@
         letter-spacing: 0.1em;
         text-decoration: none;
 
-        transition: color 0.25s linear;
-
         &:hover,
         &:focus {
-            color: $color-primary;
+            border-bottom: 1px solid $color-white;
         }
     }
 }

@@ -2,11 +2,11 @@
  * Styles for the product block.
  */
 .product {
+    position: relative;
+
     background: $color-white;
 
     transition: all 0.25s linear;
-
-    overflow: hidden;
 
     @include breakpoint-up(sm) {
         display: flex;

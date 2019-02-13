@@ -43,7 +43,7 @@
             "items": [{
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/510x380/a351.jpg",
+                "img": "img/content/products/thumbs/750x560/a351.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
@@ -56,13 +56,13 @@
                 "oldPrice": 530,
                 "price": 399,
                 "gallery": [{
-                    "img": "img/content/products/thumbs/310x230/a123-01.jpg",
+                    "img": "img/content/products/thumbs/500x370/a123-01.jpg",
                     "title": "Fl-Model A123"
                 }, {
-                    "img": "img/content/products/thumbs/310x230/a123-02.jpg",
+                    "img": "img/content/products/thumbs/500x370/a123-02.jpg",
                     "title": "Fl-Model A123"
                 }, {
-                    "img": "img/content/products/thumbs/310x230/a123-03.jpg",
+                    "img": "img/content/products/thumbs/500x370/a123-03.jpg",
                     "title": "Fl-Model A123"
                 }],
                 "rating": 5,
@@ -211,7 +211,8 @@
         "newsletter": {
             "title": "Newsletter",
             "text": "Sign up to receive the coupon 15% off for your first purchase via email and get informations about flower, accessories, tips,... and many exclusive offers.",
-            "footer": "*Discount applies only to orders over $100"
+            "small": "*Discount applies only to orders over $100",
+            "subscribe": true
         },
 
         "blog": {

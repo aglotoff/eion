@@ -96,7 +96,9 @@
                 "img": "img/content/products/thumbs/496x400/a351-6.jpg",
                 "rating": 4.5,
                 "link": "product-detail.html"
-            }]
+            }],
+
+            "moreLink": "product-category-3-columns.html"
         },
 
         "counters": [{

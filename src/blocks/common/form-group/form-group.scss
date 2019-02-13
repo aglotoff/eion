@@ -34,10 +34,20 @@
             border: 1px dashed $color-white;
         }
 
+        .form-group_theme_default & {
+            padding: 18px 23px;
+
+            color: $color-text;
+            @include font-size(14px);
+
+            border: 2px dashed $color-silver;
+        }
+
         &::placeholder {
             opacity: 1;
 
-            .form-group_theme_account & {
+            .form-group_theme_account &,
+            .form-group_theme_default & {
                 color: $color-silver;
             }
 

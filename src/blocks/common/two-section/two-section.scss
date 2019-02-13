@@ -1,7 +1,7 @@
 /**
- * Styles for the columns block.
+ * Styles for the two section block.
  */
-.columns {
+.two-section {
     overflow: hidden;
 
     @include breakpoint-up(lg) {
@@ -11,7 +11,7 @@
     &__left,
     &__right {
         @include breakpoint-up(lg) {
-            flex: 0 0 50%;
+            width: 50%;
         }
     }
 }

@@ -2,6 +2,12 @@
  * Styles for the counters block.
  */
 .counters {
+    &__inner {
+        .counters_theme_bordered & {
+            border: 2px dashed $color-text;
+        }
+    }
+
     &__container {
         padding: 100px 0 50px;
 
@@ -9,10 +15,6 @@
             display: flex;
             flex-wrap: wrap;
             margin: 0 -15px;
-        }
-
-        .counters_theme_bordered & {
-            border: 2px dashed $color-text;
         }
     }
 
