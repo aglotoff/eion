@@ -75,18 +75,5 @@
 
     &__pubdate {
         margin-top: 8px;
-
-        color: $color-silver;
-        font-family: $font-family-serif;
-    }
-
-    &__author-link {
-        color: $color-silver;
-
-        transition: color 0.25s linear;
-
-        &:hover {
-            color: $color-secondary;
-        }
     }
 }

@@ -38,6 +38,12 @@
         cursor: pointer;
 
         transform: translateY(-50%);
+        transition: background-color 0.25s linear;
+
+        &:hover,
+        &:focus {
+            background: rgba($color-black, 0.8);
+        }
 
         &_prev {
             left: 0;

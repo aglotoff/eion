@@ -32,11 +32,11 @@ mixin post(data = {}, mods = {})
                     | #{data.title}
 
         .post__meta
-            .post__pubdate
-                i.far.fa-clock(aria-label="Publised on")
-                time(datetime=data.date)= blogDate(data.date)
-                |  by 
-                a(href=data.authorLink).post__author-link= data.author
+            +pubdate({
+                date: data.date,
+                authorLink: data.authorLink,
+                author: data.author,
+            }).post__pubdate
             
             .post__comments
                 i.far.fa-comment(aria-label="Comments")

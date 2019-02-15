@@ -110,16 +110,6 @@
         margin-right: auto;
     }
 
-    &__author-link {
-        color: $color-silver;
-
-        transition: color 0.25s linear;
-
-        &:hover {
-            color: $color-secondary;
-        }
-    }
-
     &__likes {
         margin-left: 10px;
     }

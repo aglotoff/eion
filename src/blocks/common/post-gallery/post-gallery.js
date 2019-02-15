@@ -1,5 +1,6 @@
 /**
  * @file Implementation of the post gallery block
+ * @author Andrey Glotov
  */
 
 /* global Swiper */
