@@ -30,9 +30,6 @@ mixin side-nav(data, mods = {})
             .side-nav__inner
                 .side-nav__logo
                     img(src="img/logo-alt.png", alt="Eion")
-                
-                button.side-nav__close
-                    i.icon-close.icons(aria-label="Hide side nav")
 
                 +social({
                     links: [{
@@ -72,6 +69,9 @@ mixin side-nav(data, mods = {})
                             placeholder="Search..."
                         ).side-nav__search-input
                 // /.side-nav__search 
+
+                button.side-nav__close
+                    i.icon-close.icons(aria-label="Hide side nav")
             // /.side-nav__inner 
         // /.side-nav__drawer 
     // /.side-nav 

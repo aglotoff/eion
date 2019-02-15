@@ -31,15 +31,13 @@ mixin header__account(data)
             i.icon-user.icons(aria-label="Toggle account")
         .header-dropdown__backdrop
         .header-dropdown__popover
-            .header-dropdown__top
-                h2.header-dropdown__title Account
-                button.header-dropdown__close
-                    i.icon-close.icons(aria-label="Hide account")
-
+            h2.header-dropdown__title Account
             .header-dropdown__content
                 +account({
                     langMenuAlign: (data.align === 'right') ? 'bottom' : 'right'
                 })
+            button.header-dropdown__close
+                i.icon-close.icons(aria-label="Hide account")
         // .header-dropdown__popover 
     // .header-dropdown 
 
@@ -50,13 +48,11 @@ mixin header__minicart(data, mods)
             span.header__cart-items(aria-hidden="true") 3
         .header-dropdown__backdrop
         .header-dropdown__popover
-            .header-dropdown__top
-                h2.header-dropdown__title Shopping Cart
-                button.header-dropdown__close
-                    i.icon-close.icons(aria-label="Hide minicart")
-
+            h2.header-dropdown__title Shopping Cart
             .header-dropdown__content
                 +minicart(data)
+            button.header-dropdown__close
+                i.icon-close.icons(aria-label="Hide minicart")
         // .header-dropdown__popover 
     // .header-dropdown 
 
@@ -66,13 +62,11 @@ mixin header__search(data, mods)
             i.icon-magnifier.icons(aria-label="Toggle search")
         .header-dropdown__backdrop
         .header-dropdown__popover
-            .header-dropdown__top
-                h2.header-dropdown__title Search
-                button.header-dropdown__close
-                    i.icon-close.icons(aria-label="Hide search")
-
+            h2.header-dropdown__title Search
             .header-dropdown__content
                 +search(data)
+            button.header-dropdown__close
+                i.icon-close.icons(aria-label="Hide search")
         // .header-dropdown__popover 
     // .header-dropdown 
 

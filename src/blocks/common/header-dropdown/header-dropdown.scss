@@ -89,30 +89,39 @@
             }
         }
     }
-
-    &__top {
-        display: flex;
-        justify-content: space-between;
+  
+    &__title {
         padding: 10px 20px;
-    
+
+        color: $color-secondary;
+        @include font-size(14px);
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+
         @include breakpoint-up(md) {
             display: none;
         }
     }
     
-    &__title {
-        color: $color-secondary;
-        @include font-size(14px);
-        font-weight: $font-weight-bold;
-        text-transform: uppercase;
-    }
-    
     &__close {
+        position: absolute;
+        right: 20px;
+        top: 12px;
+        
         padding: 0;
     
         background: transparent;
         border: 0;
         cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: $color-primary;
+        }
+
+        @include breakpoint-up(md) {
+            display: none;
+        }
     }
 
     &_align_left,
