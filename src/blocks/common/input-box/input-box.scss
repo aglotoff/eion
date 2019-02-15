@@ -1,0 +1,14 @@
+/**
+ * Styles for the input box block.
+ */
+.input-box {
+    display: flex;
+
+    &__field {
+        flex: 1 1 auto;
+    }
+
+    &__newsletter-btn {
+        width: 170px;
+    }
+}

@@ -42,22 +42,20 @@ mixin footer(data = {}, mods = {})
 
                             .footer__text.text !{data.newsletter.text}
 
-                            form.footer__newsletter-form
-                                input(
-                                    type        = "email"
-                                    placeholder = "Your Email..."
-                                    aria-label  = "Your email"
-                                    required
-                                ).footer__newsletter-input
-                                +btn({text: 'Subscribe'}, {
-                                    theme: 'primary',
-                                    rect: true,
-                                    size: 'large',
-                                })(
-                                    type = "submit"
-                                    name = "subscribe"
-                                ).footer__newsletter-btn
-                            
+                            +input-box({
+                                input: {
+                                    id: 'subscribe-email',
+                                    name: 'email',
+                                    type: 'email',
+                                    placeholder: 'Your email...',
+                                    label: 'Your email',
+                                    required: true
+                                },
+                                btn: {
+                                    text: 'Subscribe'
+                                },
+                            }).footer__subscribe-box
+
                             .footer__note= data.newsletter.note
                         // /.footer__block 
                     else

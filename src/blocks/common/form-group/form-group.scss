@@ -47,11 +47,23 @@
             border: 2px dashed $color-silver;
         }
 
+        .form-group_theme_box & {
+            height: 100%;
+            padding: 15px 18px;
+
+            color: $color-text;
+            @include font-size(16px);
+
+            border: 2px dashed $color-primary;
+            border-right: 0;
+        }
+
         &::placeholder {
             opacity: 1;
 
             .form-group_theme_account &,
-            .form-group_theme_default & {
+            .form-group_theme_default &,
+            .form-group_theme_box & {
                 color: $color-silver;
             }
 
