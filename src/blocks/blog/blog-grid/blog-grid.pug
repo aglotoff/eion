@@ -3,8 +3,10 @@ mixin blog-grid(data = {}, mods = {})
         .page__container
             h1.title.title_center.blog-grid__title= data.title
 
-            .blog-grid__items
-                each post in data.posts
-                    +post(post, {level: 2}).blog-grid__item
+            .blog-grid__inner
+                .blog-grid__items
+                    each post in data.posts
+                        .blog-grid__item
+                            +post(post, {level: 2})
             
             +pagination(data.pagination).blog-grid__pagination

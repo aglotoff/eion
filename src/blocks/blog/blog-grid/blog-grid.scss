@@ -4,13 +4,33 @@
 .blog-grid {
     padding: 110px 0 100px;
 
-    &__items {
+    &__inner {
         margin-top: 80px;
+        max-width: 450px;
 
-        @include breakpoint-up(sm) {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            grid-gap: 30px;
+        @include breakpoint-up(md) {
+            max-width: none;
+        }
+    }
+
+    &__items {
+        margin: 0 auto;
+
+        @include breakpoint-up(md) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -15px;
+        }
+    }
+
+    &__item {
+        @include breakpoint-up(md) {
+            padding: 15px;
+            width: 50%;
+        }
+
+        @include breakpoint-up(lg) {
+            width: 33.3333%;
         }
     }
 
