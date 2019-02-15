@@ -6,6 +6,7 @@
 
     background: $color-white;
 
+    overflow: hidden;
     transition: all 0.25s linear;
 
     @include breakpoint-up(sm) {

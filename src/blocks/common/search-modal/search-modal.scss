@@ -44,6 +44,10 @@
         background: transparent;
         border: none;
 
+        &::-ms-clear {
+            display: none;
+        }
+
         @include breakpoint-up(sm) {
             height: 100px;
 
@@ -77,11 +81,8 @@
     }
 
     &__result-thumb {
+        max-width: 130px;
         width: 35%;
-
-        @include breakpoint-up(sm) {
-            width: auto;
-        }
     }
 
     &__result-img {
@@ -153,12 +154,24 @@
     }
 
     &__results-link {   
+        display: inline-block;
+
         color: $color-text;
         @include font-size(18px);
         font-weight: $font-weight-bold;
         text-decoration: none;
 
-        border-bottom: 1px dashed $color-text;
+        background: {
+            image: repeating-linear-gradient(
+                to right,
+                $color-text,
+                $color-text 9px,
+                transparent 9px,
+                transparent 12px);
+            position: bottom;
+            repeat: repeat-x;
+            size: 100% 1px;
+        }
 
         transition: all 0.25s linear;
 
@@ -166,7 +179,12 @@
         &:focus {
             color: $color-primary;
 
-            border-color: $color-primary;
+            background-image: repeating-linear-gradient(
+                to right,
+                $color-primary,
+                $color-primary 9px,
+                transparent 9px,
+                transparent 12px);;
         }
     }
 
@@ -183,7 +201,7 @@
 
         color: $color-malta;
         @include font-size(20px);
-        line-height: 1;
+        line-height: 1.2;
 
         background: transparent;
         border: 0;

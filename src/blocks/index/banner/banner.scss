@@ -74,14 +74,29 @@
     }
 
     &__footer {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 20px 15px 0;
+        &:before {
+            content: "";
+
+            display: block;
+            height: 1px;
+            margin: 20px auto 20px;
+            width: 90px;
+            
+            background: {
+                image: repeating-linear-gradient(
+                    to right,
+                    $color-white,
+                    $color-white 9px,
+                    transparent 9px,
+                    transparent 12px);
+                position: bottom;
+                repeat: repeat-x;
+                size: 100% 1px;
+            }
+        }
 
         font-family: $font-family-cursive;
         @include font-size(30px);
         text-transform: uppercase;
-
-        border-top: 1px dashed $color-white;
     }
 }

@@ -1,8 +1,9 @@
 /**
  * @file Implementation of the search modal block
+ * @author Andrey Glotov
  */
 
-import {makeModal} from '../../../js/utils';
+/* global focusTrap */
 
 // --------------------------- BEGIN PUBLIC METHODS ---------------------------
 /**
@@ -18,26 +19,30 @@ export const initModule = function() {
         return false;
     }
 
-    const modalLogic = makeModal($modal, {
-        focusDelay: 100,
-        onToggle(open) {
+    const trap = new focusTrap($modal.get(0), {
+        clickOutsideDeactivates: true,
+        escapeDeactivates: true,
+        onDeactivate() {
             $modal
-                .attr('aria-hidden', String(!open))
-                .toggleClass('search-modal_visible', open);
-
-            if (open) {
-                $modal.scrollTop(0);
-            }
+                .removeClass('search-modal_visible')
+                .attr('aria-hidden', 'true');
         },
     });
 
-    $close.click(function closeSidenav() {
-        modalLogic.hide();
+    $close.click(function hideSearchModal() {
+        trap.deactivate();
     });
 
     // Listen for a global event to show the modal
-    $page.on('search-show', function showModal() {
-        modalLogic.show();
+    $page.on('search-show', function showSearchModal() {
+        $modal
+            .addClass('search-modal_visible')
+            .attr('aria-hidden', 'false')
+            .scrollTop(0);
+
+        setTimeout(() => {
+            trap.activate();
+        }, 100);
     });
 
     return true;
