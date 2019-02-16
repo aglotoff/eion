@@ -1,9 +1,0 @@
-mixin blog-masonry(data = {}, mods = {})
-    .blog-masonry&attributes(attributes)
-        .page__container
-            h1.title.title_center.blog-grid__title= data.title
-
-            .blog-masonry__items
-                each post in data.posts
-                    .blog-masonry__item-wrap
-                        +post(post, {level: 2}).blog-masonry__item

@@ -6,7 +6,17 @@
         display: flex;
         padding-bottom: 28px;
 
-        border-bottom: 1px dashed $color-text;
+        background: {
+            image: repeating-linear-gradient(
+                to right,
+                $color-text,
+                $color-text 6px,
+                transparent 6px,
+                transparent 11px);
+            position: bottom;
+            repeat: repeat-x;
+            size: 100% 1px;
+        }
     }
 
     &__avatar {
@@ -86,7 +96,7 @@
             }
 
             @include breakpoint-up(lg) {
-                margin-left: 70px;
+                padding-left: 70px;
             }
         }
 

@@ -4,7 +4,7 @@
     "content": {
         "title": "Latest From the Blog",
 
-        "posts": [{
+        "masonry": [{
             "link": "blog-single-post-sidebar.html",
             "quote": "Sometimes I ride my bike to nowhere, to see nothing, just so I can ride my bike.",
             "date": "2015-06-02",

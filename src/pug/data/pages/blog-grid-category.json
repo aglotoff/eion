@@ -4,7 +4,7 @@
     "content": {
         "title": "Latest From the Blog",
 
-        "posts": [{
+        "grid": [{
             "title": "Sunt in culpa qui officia desent mollit anim.",
             "link": "blog-single-post-sidebar.html",
             "img": "img/content/blog/thumbs/660x490/post-01.jpg",

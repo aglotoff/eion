@@ -10,7 +10,7 @@ mixin subscribe(data = {}, mods = {})
             label: 'Your email',
             required: true
         }, {
-            theme: mods.footer ? 'footer' : 'default'
+            theme: mods.footer ? 'footer' : 'newsletter'
         }).subscribe__input
         +btn({
             text: mods.footer ? 'Subscribe' : 'Submit',

@@ -1,8 +1,8 @@
 mixin blog-layout(data = {}, mods = {})
-    main.blog-layout&attributes(attributes)
+    .blog-layout&attributes(attributes)
         .page__container
             .blog-layout__inner
-                .blog-layout__content
+                main.blog-layout__content
                     if data.posts
                         each post in data.posts
                             +post(post, {
@@ -25,16 +25,12 @@ mixin blog-layout(data = {}, mods = {})
                         +blog-comments(data.comments).blog-layout__comments
 
                     if data.relatedPosts
-                        .blog-layout__related
-                            each related in data.relatedPosts
-                                .blog-layout__related-post
-                                    +post(related, {
-                                        level      : 2,
-                                    })
+                        +post-grid(data.relatedPosts).blog-layout__related
+
                 // .blog-layout__content 
 
                 if data.sidebar
-                    .blog-layout__sidebar
+                    aside.blog-layout__sidebar
                         +sidebar-widget({
                             title: 'Categories'
                         }).blog-layout__sidebar-widget

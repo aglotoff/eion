@@ -22,8 +22,7 @@ import * as Counters from '../counters/counters';
 import * as Product from '../product/product';
 import * as Slider from '../../index/slider/slider';
 
-import * as Comment from '../../blog/comment/comment';
-import * as CommentForm from '../../blog/comment-form/comment-form';
+import * as BlogComments from '../../blog/blog-comments/blog-comments';
 
 import * as Checkout from '../../shop/checkout/checkout';
 import * as Payment from '../../shop/payment/payment';
@@ -156,9 +155,8 @@ export const initModule = function() {
 
     Slider.initModule();
     Countdown.initModule();
-    
-    Comment.initModule();
-    CommentForm.initModule();
+
+    BlogComments.initModule();
 
     Checkout.initModule();
     Payment.initModule();
