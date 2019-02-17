@@ -24,7 +24,6 @@
 @import "../blocks/common/side-nav/side-nav";
 @import "../blocks/common/megamenu/megamenu";
 @import "../blocks/common/section/section";
-@import "../blocks/common/products/products";
 @import "../blocks/common/product/product";
 @import "../blocks/common/product-gallery/product-gallery";
 @import "../blocks/common/rating/rating";
@@ -59,6 +58,7 @@
 @import "../blocks/common/input-box/input-box";
 @import "../blocks/common/pubdate/pubdate";
 @import "../blocks/common/form-fields/form-fields";
+@import "../blocks/common/product-grid/product-grid";
 
 @import "../blocks/index/slider/slider";
 @import "../blocks/index/banners/banners";
@@ -67,6 +67,7 @@
 @import "../blocks/index/featured-products/featured-products.scss";
 @import "../blocks/index/cta/cta";
 @import "../blocks/index/product-masonry/product-masonry";
+@import "../blocks/index/popular-products/popular-products";
 
 @import "../blocks/blog/blog-layout/blog-layout";
 @import "../blocks/blog/blog-page/blog-page";
@@ -80,10 +81,8 @@
 @import "../blocks/blog/blog-comments/blog-comments";
 @import "../blocks/blog/comment/comment";
 
-@import "../blocks/shop/shop-category/shop-category";
-@import "../blocks/shop/shop-category-filter/shop-category-filter";
-@import "../blocks/shop/shop-category-grid/shop-category-grid";
-@import "../blocks/shop/shop-category-list/shop-category-list";
+@import "../blocks/shop/product-filter/product-filter";
+@import "../blocks/shop/product-list/product-list";
 @import "../blocks/shop/shop-category-fullwidth/shop-category-fullwidth";
 @import "../blocks/shop/sidebar-cart/sidebar-cart";
 @import "../blocks/shop/product-detail/product-detail";
@@ -99,6 +98,8 @@
 @import "../blocks/shop/checkout/checkout";
 @import "../blocks/shop/review-order/review-order";
 @import "../blocks/shop/payment/payment";
+@import "../blocks/shop/category-page/category-page";
+@import "../blocks/shop/category-layout/category-layout";
 
 @import "../blocks/about/hero/hero";
 @import "../blocks/about/about-section/about-section";

@@ -2,10 +2,9 @@ extends ../layouts/base.pug
 
 include ../../blocks/common/pagination/pagination.pug
 
-include ../../blocks/shop/shop-category/shop-category.pug
-include ../../blocks/shop/shop-category-filter/shop-category-filter.pug
-include ../../blocks/shop/shop-category-list/shop-category-list.pug
-include ../../blocks/shop/shop-category-grid/shop-category-grid.pug
+include ../../blocks/shop/category-page/category-page.pug
+include ../../blocks/shop/product-filter/product-filter.pug
+include ../../blocks/shop/product-list/product-list.pug
 
 block page
-    +shop-category(data.content)
+    +category-page(data.content)

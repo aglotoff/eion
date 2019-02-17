@@ -48,7 +48,9 @@
             "title": "Popular Products",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
             
-            "items": [{
+            "itemSize": "default",
+            "itemCol": "1-3",
+            "products": [{
                 "name": "Fl-Model A351",
                 "price": 530,
                 "img": "img/content/products/thumbs/496x400/a351-1.jpg",

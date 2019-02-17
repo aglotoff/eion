@@ -4,12 +4,14 @@ include ../../blocks/common/countdown/countdown.pug
 include ../../blocks/common/carousel/carousel.pug
 include ../../blocks/common/counters/counters.pug
 include ../../blocks/common/side-section/side-section.pug
+include ../../blocks/common/product-grid/product-grid.pug
 
 include ../../blocks/index/slider/slider.pug
 include ../../blocks/index/special-offers/special-offers.pug
 include ../../blocks/index/featured-products/featured-products.pug
 include ../../blocks/index/banner/banner.pug
 include ../../blocks/index/cta/cta.pug
+include ../../blocks/index/popular-products/popular-products.pug
 
 block page
     +slider(data.content.slider).page__slider
@@ -18,7 +20,7 @@ block page
         title: data.content.featuredProducts.title,
         text: data.content.featuredProducts.text,
     }).page__section
-        +products(data.content.featuredProducts, {col: 2})
+        +popular-products(data.content.featuredProducts)
     .two-section
         +banner(data.content.coupon1).two-section__left
         +side-section(data.content.dealOfTheWeek).two-section__right

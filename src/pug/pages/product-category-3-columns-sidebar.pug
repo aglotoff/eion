@@ -5,13 +5,13 @@ include ../../blocks/common/pagination/pagination.pug
 include ../../blocks/common/sidebar-coupon/sidebar-coupon.pug
 include ../../blocks/common/sidebar-widget/sidebar-widget.pug
 include ../../blocks/common/sidebar-list/sidebar-list.pug
+include ../../blocks/common/product-grid/product-grid.pug
 
-include ../../blocks/shop/shop-category/shop-category.pug
-include ../../blocks/shop/shop-category-filter/shop-category-filter.pug
-include ../../blocks/shop/shop-category-list/shop-category-list.pug
-include ../../blocks/shop/shop-category-grid/shop-category-grid.pug
+include ../../blocks/shop/category-layout/category-layout.pug
+include ../../blocks/shop/product-filter/product-filter.pug
+include ../../blocks/shop/product-list/product-list.pug
 include ../../blocks/shop/sidebar-cart/sidebar-cart.pug
 
 block page
     +page-header(data.content.pageHeader)
-    +shop-category(data.content.blog)
+    +category-layout(data.content.blog)

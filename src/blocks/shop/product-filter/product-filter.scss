@@ -1,7 +1,7 @@
 /**
- * Styles for the shop category filter block.
+ * Styles for the product filter block.
  */
-.shop-category-filter {
+.product-filter {
     font-family: $font-family-serif;
     @include font-size(14px);
 
@@ -19,11 +19,9 @@
     &__right {
         margin-top: 16px;
 
-        @include breakpoint-up(sm) {
-            align-items: baseline;
-            display: flex;
-        }
-
+        align-items: baseline;
+        display: flex;
+       
         @include breakpoint-up(md) {
             margin-left: auto;
         }
@@ -53,7 +51,7 @@
     &__result-number {
         margin-left: auto;
 
-        @include breakpoint-up(sm) {
+        @include breakpoint-up(md) {
             margin-left: 40px;
         }
     }
@@ -81,11 +79,10 @@
         position: relative;
 
         display: inline-block;
-        margin-top: 16px;
+        margin-left: auto;
 
-        @include breakpoint-up(sm) {
+        @include breakpoint-up(md) {
             margin-left: 40px;
-            margin-top: 0;
         }
 
         &:after {
@@ -114,5 +111,9 @@
         border: 0;
 
         appearance: none;
+
+        &::-ms-expand {
+            display: none;
+        }
     }
 }
