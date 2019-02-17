@@ -27,7 +27,7 @@ import * as BlogComments from '../../blog/blog-comments/blog-comments';
 import * as Checkout from '../../shop/checkout/checkout';
 import * as Payment from '../../shop/payment/payment';
 import * as ReviewForm from '../../shop/review-form/review-form';
-import * as ShopCategoryFullwidth from '../../shop/shop-category-fullwidth/shop-category-fullwidth';
+import * as ProductScroll from '../../shop/product-scroll/product-scroll';
 import * as ShopGallery from '../../shop/shop-gallery/shop-gallery';
 
 import * as Testimonials from '../../about/testimonials/testimonials';
@@ -161,7 +161,7 @@ export const initModule = function() {
     Checkout.initModule();
     Payment.initModule();
     ReviewForm.initModule();
-    ShopCategoryFullwidth.initModule();
+    ProductScroll.initModule();
     ShopGallery.initModule();
 
     Testimonials.initModule();

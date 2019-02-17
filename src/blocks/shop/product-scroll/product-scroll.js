@@ -1,5 +1,5 @@
 /**
- * @file Implementation of the shop category fullwidth block
+ * @file Implementation of the product scroll block
  */
 
 /* global Swiper */
@@ -9,13 +9,13 @@
  * @return true;
  */
 export const initModule = function() {
-    const $container = $('.shop-category-fullwidth');
+    const $container = $('.product-scroll');
     if ($container.length < 1) {
         return false;
     }
 
     const $items = $container.find('.swiper-container');
-    const $scrollbar = $container.find('.shop-category-fullwidth__scrollbar');
+    const $scrollbar = $container.find('.product-scroll__scrollbar');
 
     new Swiper($items.get(0), {
         slidesPerColumn: 2,
@@ -27,7 +27,7 @@ export const initModule = function() {
             hide: false,
             draggable: true,
             snapOnRelease: true,
-            dragClass: 'shop-category-fullwidth__scrollbar-drag'
+            dragClass: 'product-scroll__scrollbar-drag'
         },
 
         breakpointsInverse: true,
