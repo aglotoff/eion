@@ -31,6 +31,18 @@
         }
     }
 
+    &_theme_coupon {
+        color: $color-white;
+
+        background: $color-text;
+        border: 0;
+
+        &:hover,
+        &:focus {
+            background: $color-secondary;
+        }
+    }
+
     &_theme_secondary {
         color: $color-primary;
 

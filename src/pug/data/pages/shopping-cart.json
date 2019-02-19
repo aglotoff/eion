@@ -7,19 +7,19 @@
 
         "items": [{
             "link": "product-detail.html",
-            "img": "img/content/products/thumbs/130x100/a351-01.jpg",
+            "img": "img/content/products/thumbs/200x150/a351-01.jpg",
             "title": "Flower Model A351",
             "price": "530",
             "qty": 2
         }, {
             "link": "product-detail.html",
-            "img": "img/content/products/thumbs/130x100/a351-02.jpg",
+            "img": "img/content/products/thumbs/200x150/a351-02.jpg",
             "title": "Flower Model A351",
             "price": "530",
             "qty": 1
         }, {
             "link": "product-detail.html",
-            "img": "img/content/products/thumbs/130x100/a351-03.jpg",
+            "img": "img/content/products/thumbs/200x150/a351-03.jpg",
             "title": "Flower Model A351",
             "price": "530",
             "qty": 1

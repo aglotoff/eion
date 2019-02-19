@@ -8,7 +8,9 @@
         flex: 1 1 auto;
     }
 
-    &__newsletter-btn {
-        width: 170px;
+    &__submit {
+        @include breakpoint-up(sm) {
+            min-width: 170px;
+        }
     }
 }

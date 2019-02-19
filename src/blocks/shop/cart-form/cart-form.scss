@@ -7,6 +7,10 @@
 
         border-collapse: separate; 
         border-spacing: 0 10px;
+
+        @include breakpoint-up(md) {
+            table-layout: fixed;
+        }
     }
 
     &__item {
@@ -33,34 +37,49 @@
         }
 
         &_img {
-            width: 16.6667%;
+            @include breakpoint-up(md) {
+                width: 16.6667%;
+            }
         }
 
         &_title {
-            width: 33.3333%;
+            @include breakpoint-up(md) {
+                width: 33.3333%;
+            }
         }
 
         &_price {
-            width: 16.6667%;
+            @include breakpoint-up(md) {
+                width: 16.6667%;
+            }
         }
 
         &_qty {
-            width: 16.6667%;
+            @include breakpoint-up(md) {
+                width: 16.6667%;
+            }
         }
 
         &_total {
-            width: 8.3333%;
+            @include breakpoint-up(md) {
+                width: 8.3333%;
+            }
         }
 
-        &_remove {
-            width: 8.3333%;
-
+        &_remove {   
             text-align: center;
+
+            @include breakpoint-up(md) {
+                max-width: none;
+                width: 8.3333%;
+            }
         }
     }
 
     &__item-thumb {
         display: block;
+        width: 100%;
+        max-width: 130px;
     }
 
     &__item-img {

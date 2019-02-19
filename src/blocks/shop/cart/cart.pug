@@ -9,7 +9,20 @@ mixin cart(data = {}, mods = {})
             .cart__bottom
                 .cart__bottom-inner
                     .cart__coupon
-                        +cart-coupon()
+                        +input-box({
+                            input: {
+                                id: 'cart-coupon',
+                                name: 'coupon',
+                                type: 'text',
+                                placeholder: 'Coupon code...',
+                                label: 'Coupon code',
+                                required: true
+                            },
+                            btn: {
+                                text: 'Apply Coupon'
+                            },
+                            btnTheme: 'coupon',
+                        }, {theme: 'coupon'}).cart__coupon-box
                     .cart__totals
                         +cart-totals({
                             total: data.items.reduce((acc, item) => {

@@ -33,17 +33,29 @@
         margin-top: 75px;
 
         @include breakpoint-up(md) {
-            flex: 0 0 66.6667%;
             padding: 0 15px;
+            width: 60%;
         }
+
+        @include breakpoint-up(lg) {
+            width: 66.6667%;
+        }
+    }
+
+    &__coupon-box {
+        max-width: 570px;
     }
 
     &__totals {
         margin-top: 75px;
         
         @include breakpoint-up(md) {
-            flex: 0 0 33.3333%;
             padding: 0 15px;
+            width: 40%;
+        }
+
+        @include breakpoint-up(lg) {
+            width: 33.3333%;
         }
     }
 }

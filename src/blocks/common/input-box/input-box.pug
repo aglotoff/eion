@@ -1,8 +1,9 @@
 mixin input-box(data = {}, mods = {})
+    - const theme = mods.theme || 'default'
     form.input-box&attributes(attributes)
-        +form-group(data.input, {theme: 'box'}).input-box__field
+        +form-group(data.input, {theme: 'box-'+theme}).input-box__field
         +btn(data.btn, {
-            theme: 'primary',
+            theme: data.btnTheme,
             rect: true,
             size: 'large',
         })(

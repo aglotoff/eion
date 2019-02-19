@@ -5,7 +5,10 @@ mixin cart-form(data = {}, mods = {})
                 each item in data
                     tr.cart-form__item
                         td.cart-form__cell.cart-form__cell_img
-                            a(href=item.link).cart-form__item-thumb
+                            a(
+                                href=item.link
+                                tabindex="-1"
+                            ).cart-form__item-thumb
                                 img(
                                     src=item.img
                                     alt=item.title
