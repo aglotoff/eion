@@ -87,9 +87,7 @@
 
     &__icon {
         position: absolute;
-        right: 10px;
 
-        color: $color-silver;
         @include font-size(12px);
 
         .form-group_theme_default & {
@@ -97,6 +95,13 @@
             top: 16px;
 
             color: $color-text;
+        }
+
+        .form-group_theme_account & {
+            right: 10px;
+            top: 6px;
+
+            color: $color-silver;
         }
     }
 
