@@ -1,5 +1,5 @@
 /**
- * @file Implementation of the shop gallery block
+ * @file Implementation of the product gallery block
  */
 
 /* global Swiper */
@@ -10,15 +10,15 @@
  * @return true if the block is present, false otherwise
  */
 export const initModule = function() {
-    const $gallery = $('.shop-gallery');
+    const $gallery = $('.product-gallery');
     if ($gallery.length == 0) {
         return false;
     }
 
-    const $content = $gallery.find('.shop-gallery__content');
-    const $thumbsContainer = $gallery.find('.shop-gallery__thumbs');
-    const $prevArrow = $gallery.find('.shop-gallery__arrow_prev');
-    const $nextArrow = $gallery.find('.shop-gallery__arrow_next');
+    const $content = $gallery.find('.product-gallery__content');
+    const $thumbsContainer = $gallery.find('.product-gallery__thumbs');
+    const $prevArrow = $gallery.find('.product-gallery__arrow_prev');
+    const $nextArrow = $gallery.find('.product-gallery__arrow_next');
 
     const thumbs = new Swiper($thumbsContainer.get(0), {
         slidesPerView: 3,
@@ -47,7 +47,7 @@ export const initModule = function() {
 
     $content.magnificPopup({
         type                : 'image',
-        delegate            : ':not(.swiper-slide-duplicate) > .shop-gallery__link',
+        delegate            : ':not(.swiper-slide-duplicate) > .product-gallery__link',
         closeOnContentClick : false,
         mainClass           : 'mfp-zoom-in mfp-img-mobile',
 

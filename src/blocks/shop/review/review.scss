@@ -5,7 +5,17 @@
     display: flex;
     padding: 30px 0;
 
-    border-bottom: 1px dashed $color-text;
+    background: {
+        image: repeating-linear-gradient(
+            to right,
+            $color-text,
+            $color-text 5px,
+            transparent 5px,
+            transparent 8px);
+        position: bottom;
+        repeat: repeat-x;
+        size: 100% 1px;
+    }
 
     &__thumb {
         flex: 0 0 50px;

@@ -25,7 +25,7 @@
 @import "../blocks/common/megamenu/megamenu";
 @import "../blocks/common/section/section";
 @import "../blocks/common/product/product";
-@import "../blocks/common/product-gallery/product-gallery";
+@import "../blocks/common/product-carousel/product-carousel";
 @import "../blocks/common/rating/rating";
 @import "../blocks/common/post/post";
 @import "../blocks/common/post-gallery/post-gallery";
@@ -85,8 +85,8 @@
 @import "../blocks/shop/product-list/product-list";
 @import "../blocks/shop/product-scroll/product-scroll";
 @import "../blocks/shop/sidebar-cart/sidebar-cart";
-@import "../blocks/shop/product-detail/product-detail";
-@import "../blocks/shop/shop-gallery/shop-gallery";
+@import "../blocks/shop/product-page/product-page";
+@import "../blocks/shop/product-gallery/product-gallery";
 @import "../blocks/shop/review-form/review-form";
 @import "../blocks/shop/star-rating/star-rating";
 @import "../blocks/shop/review/review";
@@ -101,6 +101,8 @@
 @import "../blocks/shop/category-page/category-page";
 @import "../blocks/shop/category-layout/category-layout";
 @import "../blocks/shop/special-offer/special-offer";
+@import "../blocks/shop/product-info/product-info";
+@import "../blocks/shop/back-link/back-link";
 
 @import "../blocks/about/hero/hero";
 @import "../blocks/about/about-section/about-section";

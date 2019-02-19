@@ -11,7 +11,7 @@ import * as InstagramCarousel from '../instagram-carousel/instagram-carousel';
 import * as LangMenu from '../lang-menu/lang-menu';
 import * as PostGallery from '../post-gallery/post-gallery';
 import * as Carousel from '../carousel/carousel';
-import * as ProductGallery from '../product-gallery/product-gallery';
+import * as ProductCarousel from '../product-carousel/product-carousel';
 import * as SearchModal from '../search-modal/search-modal';
 import * as Share from '../share/share';
 import * as SkipLink from '../skip-link/skip-link';
@@ -28,7 +28,7 @@ import * as Checkout from '../../shop/checkout/checkout';
 import * as Payment from '../../shop/payment/payment';
 import * as ReviewForm from '../../shop/review-form/review-form';
 import * as ProductScroll from '../../shop/product-scroll/product-scroll';
-import * as ShopGallery from '../../shop/shop-gallery/shop-gallery';
+import * as ProductGallery from '../../shop/product-gallery/product-gallery';
 
 import * as Testimonials from '../../about/testimonials/testimonials';
 
@@ -143,7 +143,7 @@ export const initModule = function() {
     LangMenu.initModule();
     PostGallery.initModule();
     Carousel.initModule();
-    ProductGallery.initModule();
+    ProductCarousel.initModule();
     SearchModal.initModule();
     Share.initModule();
     SideNav.initModule();
@@ -162,7 +162,7 @@ export const initModule = function() {
     Payment.initModule();
     ReviewForm.initModule();
     ProductScroll.initModule();
-    ShopGallery.initModule();
+    ProductGallery.initModule();
 
     Testimonials.initModule();
 

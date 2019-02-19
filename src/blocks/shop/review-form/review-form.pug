@@ -20,37 +20,39 @@ mixin review-form(data = {}, mods = {})
             .review-form__rating
                 +star-rating({name: 'rating', required: true})
 
-        .review-form__fields
-            label.review-form__label
-                i.icon-user.icons.review-form__icon(
-                    aria-label="Your Name"
-                )
-                input.review-form__input(
-                    type        = "text"
-                    name        = "name"
-                    placeholder = "Your name *"
-                    required    = true
-                )
-            label.review-form__label
-                i.icon-envelope.icons.review-form__icon(
-                    aria-label="Your Email"
-                )
-                input.review-form__input(
-                    type        = "email"
-                    name        = "email"
-                    placeholder = "Your Email *"
-                    required    = true
-                )
-            label.review-form__label
-                i.icon-bubbles.icons.review-form__icon(
-                    aria-label="Your Review"
-                )
-                textarea.review-form__input(
-                    name        = "review"
-                    placeholder = "Your Review *"
-                    required    = true
-                    rows        = "6"
-                )
+        .form-fields.review-form__fields
+            .form-fields__inner
+                .form-fields__field
+                    +form-group({
+                        type: 'text',
+                        id: 'review-name',
+                        name: 'name',
+                        placeholder: 'Your Name *',
+                        required: true,
+                        label: 'Your name',
+                        icon: 'user'
+                    })
+                .form-fields__field
+                    +form-group({
+                        type: 'email',
+                        id: 'review-email',
+                        name: 'email',
+                        placeholder: 'Your Email *',
+                        required: true,
+                        label: 'Your email',
+                        icon: 'envelope'
+                    })
+                .form-fields__field
+                    +form-group({
+                        type: 'textarea',
+                        id: 'review-review',
+                        name: 'review',
+                        placeholder: 'Your Review *',
+                        required: true,
+                        label: 'Your review',
+                        icon: 'bubbles',
+                        rows: 6,
+                    })
         
         +btn({text: 'Submit your review'}, {
             theme : 'primary',

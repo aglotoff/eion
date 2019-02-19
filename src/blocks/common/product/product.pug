@@ -35,7 +35,7 @@ mixin product(data = {}, mods = {})
                                 theme : 'gray',
                             }).product__thumb-btn
             else if data.gallery
-                +product-gallery(data.gallery).product__gallery
+                +product-carousel(data.gallery).product__carousel
 
         .product__info
             +rating(data.rating).product__rating

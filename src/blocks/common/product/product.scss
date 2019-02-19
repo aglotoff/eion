@@ -175,7 +175,7 @@
         max-width: 100%;
     }
 
-    &__gallery {
+    &__carousel {
         @include breakpoint-up(sm) {
             height: 100%;
         }

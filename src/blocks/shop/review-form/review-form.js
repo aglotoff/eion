@@ -12,10 +12,12 @@ export const initModule = function() {
     const $form    = $('.review-form');
 
     $form.validate({
-        errorClass  : 'error review-form__error',
+        errorClass  : 'error form-fields__error',
         errorPlacement : function(error, element) {
             if (element.attr('name') == 'rating') {
                 error.insertAfter(element.closest('.star-rating'));
+                error.removeClass('form-fields__error');
+                error.addClass('review-form__rating-error');
             } else {
                 error.insertAfter(element);
             }

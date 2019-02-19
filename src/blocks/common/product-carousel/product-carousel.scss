@@ -1,7 +1,7 @@
 /**
- * Styles for the product gallery block.
+ * Styles for the product carousel block.
  */
-.product-gallery {
+.product-carousel {
     @include breakpoint-up(sm) {
         display: flex;
         flex-direction: column;

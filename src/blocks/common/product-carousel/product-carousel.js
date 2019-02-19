@@ -1,18 +1,19 @@
 /**
- * @file Implementation of the product gallery block
+ * @file Implementation of the product carousel block
+ * @author Andrey Glotov
  */
 
 /* global Swiper */
 
 // --------------------------- BEGIN PUBLIC METHODS ---------------------------
 /**
- * Initialize the product gallery module.
+ * Initialize the product carousel module.
  * @return true;
  */
 export const initModule = function() {
-    $('.product-gallery').each(function() {
+    $('.product-carousel').each(function() {
         const $gallery = $(this);
-        const $pagination = $gallery.find('.product-gallery__pagination');
+        const $pagination = $gallery.find('.product-carousel__pagination');
 
         new Swiper($gallery.get(0), {
             spaceBetween: 20,
@@ -23,10 +24,10 @@ export const initModule = function() {
             pagination: {
                 el: $pagination.get(0),
                 clickable: true,
-                bulletClass: 'product-gallery__bullet',
-                bulletActiveClass: 'product-gallery__bullet_active',
-                modifierClass: 'product-gallery__pagination_',
-                clickableClass: 'product-gallery__pagination_clickable',
+                bulletClass: 'product-carousel__bullet',
+                bulletActiveClass: 'product-carousel__bullet_active',
+                modifierClass: 'product-carousel__pagination_',
+                clickableClass: 'product-carousel__pagination_clickable',
             },
 
             breakpointsInverse: true,

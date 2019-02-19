@@ -1,7 +1,7 @@
 /**
- * Styles for the shop gallery block.
+ * Styles for the product gallery block.
  */
-.shop-gallery {
+.product-gallery {
     &__content {
         overflow: hidden;
         min-width: 100%;
@@ -65,8 +65,8 @@
         transition: opacity 0.25s linear;
 
         .swiper-slide-thumb-active &,
-        .shop-gallery__thumb:hover &,
-        .shop-gallery__thumb:focus & {
+        .product-gallery__thumb:hover &,
+        .product-gallery__thumb:focus & {
             opacity: 0.2;
         }
     }
