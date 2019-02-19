@@ -70,7 +70,8 @@
             border-right: 0;
         }
 
-        .form-group_theme_default & {
+        .form-group_theme_default &,
+        .form-group_theme_checkout & {
             height: 100%;
             padding: 15px 35px 15px 18px;
 
@@ -94,6 +95,22 @@
             .form-group_theme_footer & {
                 color: $color-gallery;
             }
+
+            .form-group_theme_checkout & {
+                color: rgba($color-text, 0.6);
+            }
+        }
+
+        &_select {
+            appearance: none;
+
+            &::-ms-expand {
+                display: none;
+            }
+
+            &:invalid {
+                color: rgba($color-text, 0.6);
+            }
         }
     }
 
@@ -102,7 +119,8 @@
 
         @include font-size(12px);
 
-        .form-group_theme_default & {
+        .form-group_theme_default &,
+        .form-group_theme_checkout & {
             right: 18px;
             top: 16px;
 

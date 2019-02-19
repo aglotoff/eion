@@ -21,16 +21,13 @@ export const initModule = function() {
         return false;
     }
 
-    // const $shipping = $form.find('#shipping-fields');
-    // $shipping.hide();
-
     const $checkboxes = $form.find('.checkout__check-input');
     $checkboxes.change(onCheckboxChange);
 
     $form.validate({
-        errorClass     : 'error checkout__error',
+        errorClass     : 'error form-fields__error',
     
-        ignore         : '.checkout__input:hidden',
+        ignore         : ':hidden',
     
         highlight: function(element) {
             if ($(element).hasClass('input')) {
