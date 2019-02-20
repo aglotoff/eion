@@ -8,7 +8,7 @@ mixin review-order(data = {}, mods = {})
         tbody
             each item in data.items
                 tr.review-order__row.review-order__row_body
-                    td.review-order__cell #{item.title} x #{item.quantity}
+                    td.review-order__cell #{item.title} x #{item.qty}
                     td.review-order__cell $#{item.total}
 
         tfoot
