@@ -19,6 +19,9 @@ mixin side-section(data = {}, mods = {})
                 if data.small
                     p.side-section__small= data.small
 
+                if data.contactForm
+                    +contact-form().side-section__contact
+
                 if data.btn
                     +btn(data.btn, {size: 'large'}).side-section__btn
 

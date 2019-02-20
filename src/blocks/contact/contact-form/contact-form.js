@@ -12,7 +12,7 @@ export const initModule = function() {
     const $form    = $('.contact-form');
 
     $form.validate({
-        errorClass  : 'error contact-form__error',
+        errorClass  : 'error form-fields__error',
         highlight   : Function.prototype,
         unhighlight : Function.prototype,
     });

@@ -1,51 +1,49 @@
 mixin contact-form(data = {}, mods = {})
     form(action="#" method="post").contact-form&attributes(attributes)
-        .contact-form__inner
-            h2.title.contact-form__title Leave a Message
-
-            p.contact-form__text Please don't heristate to contact us for more information.
-
-            .contact-form__fields
-                label.contact-form__label
-                    i.icon-envelope.icons.contact-form__icon(
-                        aria-label="Your Email"
-                    )
-                    input.contact-form__input(
-                        type        = "email"
-                        name        = "email"
-                        placeholder = "Your Email *"
-                        required    = true
-                    )
-                label.contact-form__label
-                    i.icon-user.icons.contact-form__icon(
-                        aria-label="Your Name"
-                    )
-                    input.contact-form__input(
-                        type        = "text"
-                        name        = "name"
-                        placeholder = "Your name *"
-                        required    = true
-                    )
-                label.contact-form__label.contact-form__label_wide
-                    i.icon-note.icons.contact-form__icon(
-                        aria-label="Your Subject"
-                    )
-                    input.contact-form__input(
-                        type        = "text"
-                        name        = "subject"
-                        placeholder = "Your Subject *"
-                        required    = true
-                    )
-                label.contact-form__label.contact-form__label_wide
-                    i.icon-bubbles.icons.contact-form__icon(
-                        aria-label="Your Message"
-                    )
-                    textarea.contact-form__input(
-                        name        = "message"
-                        placeholder = "Your Message *"
-                        required    = true
-                        rows        = "6"
-                    )
+        .form-fields
+            .form-fields__inner
+                .form-fields__field.form-fields__field_small
+                    +form-group({
+                        type: 'email',
+                        id: 'contact-email',
+                        name: 'email',
+                        placeholder: 'Your Email *',
+                        required: true,
+                        label: 'Your email',
+                        icon: 'envelope'
+                    })
+                .form-fields__field.form-fields__field_small
+                    +form-group({
+                        type: 'text',
+                        id: 'contact-name',
+                        name: 'name',
+                        placeholder: 'Your Name *',
+                        required: true,
+                        label: 'Your name',
+                        icon: 'user'
+                    })
+                .form-fields__field
+                    +form-group({
+                        type: 'text',
+                        id: 'contact-subject',
+                        name: 'subject',
+                        placeholder: 'Your Subject *',
+                        required: true,
+                        label: 'Your subject',
+                        icon: 'note'
+                    })
+                
+                .form-fields__field
+                    +form-group({
+                        type: 'textarea',
+                        id: 'contact-message',
+                        name: 'message',
+                        placeholder: 'Your Message *',
+                        required: true,
+                        label: 'Your message',
+                        icon: 'bubbles',
+                        rows: 6,
+                    })
         
             +btn({text: 'Send message'}, {
                 theme : 'primary',
