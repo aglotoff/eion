@@ -3,9 +3,11 @@
  */
 .side-section {
     background: $color-white;
-    
 
     &__inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
         max-width: 630px;
         padding: 80px 15px;
 
@@ -26,10 +28,18 @@
         }
     }
 
+    &__title {
+        margin-bottom: 25px;
+    }
+
     &__intro {
         margin-top: 25px;
 
         @include font-size(18px);
+    }
+
+    &__content {
+        flex: 1 1 auto;
     }
 
     &__countdown {
@@ -38,6 +48,10 @@
 
     &__subscribe {
         margin-top: 45px;
+    }
+
+    &__testimonials {
+        height: 100%;
     }
 
     &__small {

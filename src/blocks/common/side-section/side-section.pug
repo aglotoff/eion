@@ -1,14 +1,17 @@
 mixin side-section(data = {}, mods = {})
     section.side-section&attributes(attributes)
         .side-section__inner
-            h2.title= data.title
+            h2.title.side-section__title= data.title
 
-            if data.text
-                .text.side-section__intro= data.text
+            if data.intro
+                .text.side-section__intro= data.intro
 
             .side-section__content
                 if data.countdown
                     +countdown(data.countdown).side-section__countdown
+
+                if data.text
+                    .text.side-section__text !{data.text}
 
                 if data.subscribe
                     +subscribe().side-section__subscribe
@@ -18,5 +21,8 @@ mixin side-section(data = {}, mods = {})
 
                 if data.btn
                     +btn(data.btn, {size: 'large'}).side-section__btn
+
+                if data.testimonials
+                    +testimonials(data.testimonials).side-section__testimonials
         // /.side-section__inner 
     // /.side-section 

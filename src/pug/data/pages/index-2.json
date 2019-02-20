@@ -80,7 +80,7 @@
 
         "dealOfTheWeek": {
             "title": "Deal Of the week",
-            "text": "Sale is only in a week up to 30% off",
+            "intro": "Sale is only in a week up to 30% off",
             "countdown": {
                 "days": "06",
                 "hours": "15",
@@ -212,7 +212,7 @@
 
         "newsletter": {
             "title": "Newsletter",
-            "text": "Sign up to receive the coupon 15% off for your first purchase via email and get informations about flower, accessories, tips,... and many exclusive offers.",
+            "intro": "Sign up to receive the coupon 15% off for your first purchase via email and get informations about flower, accessories, tips,... and many exclusive offers.",
             "small": "*Discount applies only to orders over $100",
             "subscribe": true
         },
