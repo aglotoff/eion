@@ -9,9 +9,20 @@ mixin under-construction(data = {}, mods = {})
 
             +countdown({}, {justified: true}).under-construction__countdown
 
-            form(action="#" method="post").under-construction__form
-                input(type="text" placeholder="Your Email...").under-construction__input
-                button(type="submit").under-construction__btn Subscribe
+            +input-box({
+                input: {
+                    id: 'subscribe-email',
+                    name: 'subscribe_email',
+                    type: 'email',
+                    placeholder: 'Your Email...',
+                    label: 'Your Email',
+                    required: true
+                },
+                btn: {
+                    text: 'Subscribe'
+                },
+                btnTheme: 'gray',
+            }, {theme: 'white'}).under-construction__subscribe
 
         footer.under-construction__footer
-            p © Copyright 2015. Powered by WordPress. Eion Theme by SunriseThemes
+            p © Copyright 2015. Powered by WordPress. Eion Theme by SunriseThemes <br> HTML template by polarfawx

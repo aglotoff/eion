@@ -32,7 +32,7 @@ mixin product(data = {}, mods = {})
                                 text: 'View Gallery'
                             }, {
                                 size  : (mods.size == 'large') && 'responsive',
-                                theme : 'gray',
+                                theme : 'light',
                             }).product__thumb-btn
             else if data.gallery
                 +product-carousel(data.gallery).product__carousel
@@ -66,6 +66,6 @@ mixin product(data = {}, mods = {})
                         url: 'javascript:void(0);',
                         text: 'View Gallery'
                     }, {
-                        theme: 'gray',
+                        theme: 'light',
                     }).product__btn
     // /.product 
