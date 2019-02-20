@@ -1,5 +1,6 @@
 /**
  * @file Implementation of the accordion block
+ * @author Andrey Glotov
  */
 
 // -------------------------- BEGIN MODULE VARIABLES --------------------------

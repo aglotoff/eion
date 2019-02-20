@@ -8,7 +8,7 @@
 
     &__input {
         display: block;
-        
+        height: 100%;
         width: 100%;
 
         color: $color-text;
@@ -48,8 +48,17 @@
             border: 2px dashed $color-silver;
         }
 
-        .form-group_theme_box-default & {
-            height: 100%;
+        .form-group_theme_box-faq & {
+            padding: 15px 18px;
+
+            color: $color-text;
+            @include font-size(16px);
+
+            background: $color-white;
+            border: 0;
+        }
+
+        .form-group_theme_box-footer & {
             padding: 15px 18px;
 
             color: $color-text;
@@ -87,7 +96,8 @@
             .form-group_theme_account &,
             .form-group_theme_newsletter &,
             .form-group_theme_default &,
-            .form-group_theme_box-default &,
+            .form-group_theme_box-faq &,
+            .form-group_theme_box-footer &,
             .form-group_theme_box-coupon & {
                 color: $color-silver;
             }

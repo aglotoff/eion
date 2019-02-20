@@ -1,9 +1,8 @@
 extends ../layouts/base.pug
 
-include ../../blocks/faq/faq/faq.pug
-include ../../blocks/faq/faq-hero/faq-hero.pug
-include ../../blocks/faq/topics/topics.pug
+include ../../blocks/faq/faq-page/faq-page.pug
+include ../../blocks/faq/faq-topics/faq-topics.pug
 include ../../blocks/faq/accordion/accordion.pug
 
 block page
-    +faq(data.content)
+    +faq-page(data.content)

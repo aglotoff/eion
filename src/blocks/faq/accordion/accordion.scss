@@ -22,6 +22,8 @@
         &:hover,
         &:focus {
             color: $color-primary;
+
+            border-color: $color-primary;
         }
 
         .accordion__header_active & {
@@ -33,6 +35,9 @@
             &:hover,
             &:focus {
                 color: $color-white;
+
+                background: $color-secondary;
+                border: 0;
             }
         }
     }
