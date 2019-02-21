@@ -4,35 +4,47 @@ Eion
 HTML template for flower or beauty shops based on
 [the free PSD template by SunriseTheme](http://sunrisetheme.com/freebie/eion/) 
 
+Watch demo: [https://polarfawx.github.io/demos/eion/](https://polarfawx.github.io/demos/eion/)
+
 Features
 --------
-* Tasks automation with Gulp
+
+* 22 modern design pages
+* Fully responsive
 * BEM code organization methodology
-* HTML markup generation with Pug
-* Sass & automatic vendor prefixes
-* JavaScript bundling with Webpack & Babel
-* Code linting with Stylelint & ESLint
-* CSS & JS minification and optimization
-* Image optimization
-* Icon system with SVG sprites
-* Development server with live-reload capability
-* Deployment over FTP
+* W3C validated, clean code
+* Crossbrowser compatible (Chrome, Opera, Firefox, Safari, IE11+, Edge)
+* Accessibility-ready
+
+Resources
+---------
+
+* [focus-trap](https://github.com/davidtheclark/focus-trap)
+* [jQuery](https://jquery.com/)
+* [jQuery.countdown](hilios.github.io/jQuery.countdown/)
+* [jQuery Validation](https://jqueryvalidation.org/)
+* [Magnific Popup](dimsemenov.com/plugins/magnific-popup/)
+* [svg4everybody](https://github.com/jonathantneal/svg4everybody)
+* [Swiper](idangero.us/swiper/)
+
+Fonts
+-----
+
+* [Montserrat](https://fonts.google.com/specimen/Montserrat)
+* [PT Serif](https://fonts.google.com/specimen/PT+Serif)
+* [No. Seven](https://www.cufonfonts.com/font/no-seven-regular)
+
+Images
+------
+
+* [PxHere](https://pxhere.com/)
+* [TopPNG](https://toppng.com/)
+* [GoodFon.ru](https://www.goodfon.ru)
+* [Business photo created by freepik - www.freepik.com](https://www.freepik.com/free-photos-vectors/business)
+* [Flower photo created by freepik - www.freepik.com](https://www.freepik.com/free-photos-vectors/flower)
 
 Usage
 -----
 
-Install project dependencies:
-```
-npm install
-```
-
-To start the development server, run:
-```
-npm start
-```
-The server reloads automatically when any source files are modified.
-
-To build the site for production, run:
-```
-npm run build
-```
+See the documentation for the [starter template](https://github.com/polarfawx/frontend-template)
+this project is based on.
