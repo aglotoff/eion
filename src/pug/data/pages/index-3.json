@@ -31,13 +31,13 @@
                 },
                 "oldPrice": 530,
                 "price": 399,
-                "img": "img/content/products/thumbs/510x380/a351-05.jpg",
+                "img": "img/content/products/760x570/flower-01.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/510x380/a351-02.jpg",
+                "img": "img/content/products/760x570/flower-02.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
@@ -49,25 +49,25 @@
                 },
                 "oldPrice": 530,
                 "price": 399,
-                "img": "img/content/products/thumbs/510x380/a351-03.jpg",
+                "img": "img/content/products/760x570/flower-03.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/510x380/a351-12.jpg",
+                "img": "img/content/products/760x570/flower-04.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A123",
                 "price": 530,
-                "img": "img/content/products/thumbs/510x380/a351-09.jpg",
+                "img": "img/content/products/760x570/flower-05.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/510x380/a351-08.jpg",
+                "img": "img/content/products/760x570/flower-06.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }]

@@ -3,13 +3,14 @@ mixin product-gallery(data = {}, mods = {})
         .product-gallery__content.swiper-container
             .swiper-wrapper
                 each slide in data
-                    .swiper-slide.product-gallery__content-item
-                        img(src=slide.large, alt="").product-gallery__content-img
+                    .swiper-slide
+                        .product-gallery__content-item
+                            img(src=slide.large, alt="").product-gallery__content-img
 
-                        a(href=slide.link).product-gallery__link
-                            i.icon-size-fullscreen.icons(
-                                aria-label="view fullscreen image"
-                            )
+                            a(href=slide.link).product-gallery__link
+                                i.icon-size-fullscreen.icons(
+                                    aria-label="view fullscreen image"
+                                )
 
         .product-gallery__thumbs.swiper-container
             .swiper-wrapper

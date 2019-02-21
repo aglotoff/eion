@@ -79,7 +79,7 @@
                 "products": [{
                     "name": "Fl-Model A351",
                     "price": 530,
-                    "img": "img/content/products/thumbs/510x380/a351.jpg",
+                    "img": "img/content/products/480x360/flower-01.jpg",
                     "rating": 5,
                     "link": "product-detail.html",
                     "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>"
@@ -92,14 +92,14 @@
                         "theme": "sale",
                         "text": "Sale"
                     },
-                    "img": "img/content/products/thumbs/510x380/a351-02.jpg",
+                    "img": "img/content/products/480x360/flower-02.jpg",
                     "rating": 5,
                     "link": "product-detail.html",
                     "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>"
                 }, {
                     "name": "Fl-Model A351",
                     "price": 530,
-                    "img": "img/content/products/thumbs/510x380/a351-03.jpg",
+                    "img": "img/content/products/480x360/flower-03.jpg",
                     "rating": 5,
                     "link": "product-detail.html",
                     "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>"
@@ -112,21 +112,21 @@
                         "theme": "sale",
                         "text": "Sale"
                     },
-                    "img": "img/content/products/thumbs/510x380/a351-04.jpg",
+                    "img": "img/content/products/480x360/flower-04.jpg",
                     "rating": 5,
                     "link": "product-detail.html",
                     "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>"
                 }, {
                     "name": "Fl-Model A351",
                     "price": 530,
-                    "img": "img/content/products/thumbs/510x380/a351-05.jpg",
+                    "img": "img/content/products/480x360/flower-05.jpg",
                     "rating": 5,
                     "link": "product-detail.html",
                     "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>"
                 }, {
                     "name": "Fl-Model A351",
                     "price": 530,
-                    "img": "img/content/products/thumbs/510x380/a351-06.jpg",
+                    "img": "img/content/products/480x360/flower-06.jpg",
                     "rating": 5,
                     "link": "product-detail.html",
                     "desc": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>"

@@ -47,7 +47,7 @@ export const initModule = function() {
 
     $content.magnificPopup({
         type                : 'image',
-        delegate            : ':not(.swiper-slide-duplicate) > .product-gallery__link',
+        delegate            : ':not(.swiper-slide-duplicate) > .product-gallery__content-item .product-gallery__link',
         closeOnContentClick : false,
         mainClass           : 'mfp-zoom-in mfp-img-mobile',
 

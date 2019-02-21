@@ -38,7 +38,8 @@
     &__img-container {
         position: relative;
 
-        margin-top: 10px;
+        margin-top: 40px;
+        max-width: 480px;
     }
 
     &__img {
@@ -64,7 +65,7 @@
     }
 
     &__countdown {
-        margin-top: 20px;
+        margin-top: 100px;
         max-width: 570px;
         width: 100%;
     }

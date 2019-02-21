@@ -8,6 +8,11 @@
         width: 0;
     }
 
+    &__content-item {
+        padding: 20px;
+        background: $color-white;
+    }
+
     &__content-img {
         display: block;
         max-width: 100%;

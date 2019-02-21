@@ -5,7 +5,7 @@
         "blog": {
             "singlePost": {
                 "title": "Sunt in culpa qui officia desent mollit anim.",
-                "img": "img/content/blog/posts/post-04.jpg",
+                "img": "img/content/blog/1024x768/post-05.jpg",
                 "date": "2015-06-02",
                 "author": "Author",
                 "authorLink": "javascript:void(0);",
@@ -50,7 +50,7 @@
             "relatedPosts": [{
                 "title": "Sunt in culpa qui officia desent mollit anim.",
                 "link": "blog-single-post-no-sidebar.html",
-                "img": "img/content/blog/thumbs/660x490/post-02.jpg",
+                "img": "img/content/blog/480x360/post-02.jpg",
                 "date": "2015-06-02",
                 "author": "Author",
                 "authorLink": "javascript:void(0);",
@@ -59,7 +59,7 @@
             }, {
                 "title": "Sunt in culpa qui officia desent mollit anim.",
                 "link": "blog-single-post-no-sidebar.html",
-                "img": "img/content/blog/thumbs/660x490/post-04.jpg",
+                "img": "img/content/blog/480x360/post-04.jpg",
                 "date": "2015-06-02",
                 "author": "Author",
                 "authorLink": "javascript:void(0);",

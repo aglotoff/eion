@@ -45,7 +45,7 @@
             "products": [{
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/750x560/a351.jpg",
+                "img": "img/content/products/760x570/flower-01.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
@@ -58,13 +58,13 @@
                 "oldPrice": 530,
                 "price": 399,
                 "gallery": [{
-                    "img": "img/content/products/thumbs/500x370/a123-01.jpg",
+                    "img": "img/content/products/480x360/flower-03.jpg",
                     "title": "Fl-Model A123"
                 }, {
-                    "img": "img/content/products/thumbs/500x370/a123-02.jpg",
+                    "img": "img/content/products/480x360/flower-07.jpg",
                     "title": "Fl-Model A123"
                 }, {
-                    "img": "img/content/products/thumbs/500x370/a123-03.jpg",
+                    "img": "img/content/products/480x360/flower-08.jpg",
                     "title": "Fl-Model A123"
                 }],
                 "rating": 5,
@@ -100,7 +100,7 @@
             "items": [{
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/510x380/a351.jpg",
+                "img": "img/content/products/480x360/flower-01.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
@@ -112,25 +112,25 @@
                 },
                 "oldPrice": 530,
                 "price": 399,
-                "img": "img/content/products/thumbs/510x380/a351-02.jpg",
+                "img": "img/content/products/480x360/flower-02.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/510x380/a351-03.jpg",
+                "img": "img/content/products/480x360/flower-03.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/510x380/a351-04.jpg",
+                "img": "img/content/products/480x360/flower-04.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/510x380/a351-05.jpg",
+                "img": "img/content/products/480x360/flower-05.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
@@ -142,25 +142,25 @@
                 },
                 "oldPrice": 530,
                 "price": 399,
-                "img": "img/content/products/thumbs/510x380/a351-06.jpg",
+                "img": "img/content/products/480x360/flower-06.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/510x380/a351-07.jpg",
+                "img": "img/content/products/480x360/flower-09.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/510x380/a351-08.jpg",
+                "img": "img/content/products/480x360/flower-10.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/510x380/a351-09.jpg",
+                "img": "img/content/products/480x360/flower-11.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
@@ -172,19 +172,19 @@
                 },
                 "oldPrice": 530,
                 "price": 399,
-                "img": "img/content/products/thumbs/510x380/a351-10.jpg",
+                "img": "img/content/products/480x360/flower-12.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/510x380/a351-11.jpg",
+                "img": "img/content/products/480x360/flower-13.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }, {
                 "name": "Fl-Model A351",
                 "price": 530,
-                "img": "img/content/products/thumbs/510x380/a351-12.jpg",
+                "img": "img/content/products/480x360/flower-14.jpg",
                 "rating": 5,
                 "link": "product-detail.html"
             }]
@@ -222,7 +222,7 @@
             "posts": [{
                 "title": "Sunt in culpa qui officia desent mollit anim.",
                 "link": "blog-single-post-sidebar.html",
-                "img": "img/content/blog/thumbs/660x490/post-01.jpg",
+                "img": "img/content/blog/480x360/post-01.jpg",
                 "date": "2015-06-02",
                 "author": "Author",
                 "authorLink": "javascript:void(0);",
@@ -231,7 +231,7 @@
             }, {
                 "title": "Sunt in culpa qui officia desent mollit anim.",
                 "link": "blog-single-post-sidebar.html",
-                "img": "img/content/blog/thumbs/660x490/post-02.jpg",
+                "img": "img/content/blog/480x360/post-02.jpg",
                 "date": "2015-06-02",
                 "author": "Author",
                 "authorLink": "javascript:void(0);",
@@ -240,7 +240,7 @@
             }, {
                 "title": "Sunt in culpa qui officia desent mollit anim.",
                 "link": "blog-single-post-sidebar.html",
-                "img": "img/content/blog/thumbs/660x490/post-03.jpg",
+                "img": "img/content/blog/480x360/post-03.jpg",
                 "date": "2015-06-02",
                 "author": "Author",
                 "authorLink": "javascript:void(0);",
@@ -250,13 +250,13 @@
                 "title": "Sunt in culpa qui officia desent mollit anim.",
                 "link": "blog-single-post-sidebar.html",
                 "gallery": [{
-                    "img": "img/content/blog/thumbs/660x490/post-04.jpg",
+                    "img": "img/content/blog/480x360/post-04.jpg",
                     "alt": ""
                 }, {
-                    "img": "img/content/blog/thumbs/660x490/post-04.jpg",
+                    "img": "img/content/blog/480x360/post-10.jpg",
                     "alt": ""
                 }, {
-                    "img": "img/content/blog/thumbs/660x490/post-04.jpg",
+                    "img": "img/content/blog/480x360/post-11.jpg",
                     "alt": ""
                 }],
                 "date": "2015-06-02",
@@ -267,7 +267,7 @@
             }, {
                 "title": "Sunt in culpa qui officia desent mollit anim.",
                 "link": "blog-single-post-sidebar.html",
-                "img": "img/content/blog/thumbs/660x490/post-05.jpg",
+                "img": "img/content/blog/480x360/post-05.jpg",
                 "date": "2015-06-02",
                 "author": "Author",
                 "authorLink": "javascript:void(0);",
@@ -276,7 +276,7 @@
             }, {
                 "title": "Sunt in culpa qui officia desent mollit anim.",
                 "link": "blog-single-post-sidebar.html",
-                "img": "img/content/blog/thumbs/660x490/post-06.jpg",
+                "img": "img/content/blog/480x360/post-06.jpg",
                 "date": "2015-06-02",
                 "author": "Author",
                 "authorLink": "javascript:void(0);",
@@ -285,7 +285,7 @@
             }, {
                 "title": "Sunt in culpa qui officia desent mollit anim.",
                 "link": "blog-single-post-sidebar.html",
-                "img": "img/content/blog/thumbs/660x490/post-07.jpg",
+                "img": "img/content/blog/480x360/post-07.jpg",
                 "date": "2015-06-02",
                 "author": "Author",
                 "authorLink": "javascript:void(0);",
@@ -294,7 +294,7 @@
             }, {
                 "title": "Sunt in culpa qui officia desent mollit anim.",
                 "link": "blog-single-post-sidebar.html",
-                "img": "img/content/blog/thumbs/660x490/post-08.jpg",
+                "img": "img/content/blog/480x360/post-08.jpg",
                 "date": "2015-06-02",
                 "author": "Author",
                 "authorLink": "javascript:void(0);",
@@ -303,7 +303,7 @@
             }, {
                 "title": "Sunt in culpa qui officia desent mollit anim.",
                 "link": "blog-single-post-sidebar.html",
-                "img": "img/content/blog/thumbs/660x490/post-09.jpg",
+                "img": "img/content/blog/480x360/post-09.jpg",
                 "date": "2015-06-02",
                 "author": "Author",
                 "authorLink": "javascript:void(0);",
@@ -386,19 +386,19 @@
         "link": "product-detail.html",
         "rating": 5,
         "price": "$530",
-        "img": "img/content/products/thumbs/200x150/a351-01.jpg"
+        "img": "img/content/products/200x150/flower-05.jpg"
     }, {
         "title": "Flower Model A351",
         "link": "product-detail.html",
         "rating": 5,
         "price": "$530",
-        "img": "img/content/products/thumbs/200x150/a351-02.jpg"
+        "img": "img/content/products/200x150/flower-02.jpg"
     }, {
         "title": "Flower Model A351",
         "link": "product-detail.html",
         "rating": 5,
         "price": "$530",
-        "img": "img/content/products/thumbs/200x150/a351-03.jpg"
+        "img": "img/content/products/200x150/flower-03.jpg"
     }],
 
     "isHomepage": true
