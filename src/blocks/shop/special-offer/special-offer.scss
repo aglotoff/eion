@@ -58,8 +58,7 @@
 
         transform: translate(-50%, -50%);
 
-        .special-offer__img-container:hover &,
-        .special-offer__img-container:focus-within & {
+        .special-offer__img-container:hover & {
             opacity: 1;
         }
     }

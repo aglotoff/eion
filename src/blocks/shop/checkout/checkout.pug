@@ -114,8 +114,8 @@ mixin checkout(data = {}, mods = {})
                                 .form-fields__field
                                     +form-group({
                                         type: 'password',
-                                        id: 'account-password',
-                                        name: 'account_password',
+                                        id: 'checkout-account-password',
+                                        name: 'checkout_account_password',
                                         placeholder: 'Password *',
                                         required: true,
                                         label: 'Password',
@@ -127,7 +127,7 @@ mixin checkout(data = {}, mods = {})
                             span.checkout__check-text Ship to a different address?
                             input(
                                 type        = "checkbox"
-                                name        = "create_account"
+                                name        = "ship_different_address"
                                 value       = "1"
                                 data-toggle = "shipping-fields"
                             ).checkout__check-input
