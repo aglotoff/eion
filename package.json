@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/polarfawx/eion.git"
+    "url": "git+https://github.com/aglotoff/eion.git"
   },
   "author": "Andrey Glotov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/polarfawx/eion/issues"
+    "url": "https://github.com/aglotoff/eion/issues"
   },
-  "homepage": "https://github.com/polarfawx/eion#readme",
+  "homepage": "https://github.com/aglotoff/eion#readme",
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
